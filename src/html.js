@@ -28,6 +28,12 @@ export default class HTML extends React.Component {
             href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap"
             rel="stylesheet"
           />
+          <link
+            rel="stylesheet"
+            media="screen"
+            href="https://fontlibrary.org/face/bebas"
+            type="text/css"
+          />
           <script src="/js/scripts.js" />
           {/* Add custom css or scripts here */}
 

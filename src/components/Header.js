@@ -6,7 +6,6 @@ import { Link } from 'gatsby';
 
 const Section = styled.section`
   padding: 1rem 1.5rem;
-  font-family: ${props => props.theme.primaryFontFamily};
   .navbar {
     background-color: transparent;
   }
@@ -25,7 +24,7 @@ const Section = styled.section`
   }
   .navbar-item {
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     :hover {
       color: ${props => props.theme.darkAccent};
     }
@@ -68,7 +67,7 @@ export default class Header extends React.Component {
           >
             <div className="navbar-brand">
               <Link className="navbar-item" to="/">
-                <img src="/images/logo-1024.png" alt="site logo" />
+                <img src="/images/logo@3x.png" alt="site logo" />
               </Link>
               <a
                 href="#"
@@ -89,18 +88,30 @@ export default class Header extends React.Component {
               </a>
             </div>
             <div className={isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
-              <div className="navbar-start">
+              <div className="navbar-end">
                 <Link to="/" className="navbar-item">
-                  Home
+                  HOME
                 </Link>
-                <Link to="/about" className="navbar-item">
-                  About
+                <Link to="/hire" className="navbar-item">
+                  HIRE OPTIONS
                 </Link>
-                <Link to="/news" className="navbar-item">
-                  News
+                <Link to="/" className="navbar-item">
+                  WEDDINGS
                 </Link>
-                <Link to="/contact" className="navbar-item">
-                  Contact
+                <Link to="/" className="navbar-item">
+                  PARTIES
+                </Link>
+                <Link to="/" className="navbar-item">
+                  EVENTS
+                </Link>
+                <Link to="/" className="navbar-item">
+                  HOSPITALITY
+                </Link>
+                <Link to="/" className="navbar-item">
+                  TOP BAR
+                </Link>
+                <Link to="/" className="navbar-item">
+                  CONTACT
                 </Link>
               </div>
             </div>

@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset-advanced';
 import { darken, lighten } from 'polished';
 
-const mainBrandColor = '#00D1B2';
+const mainBrandColor = '#811112';
 const lightShades = '#F5F5F5';
 const darkAccent = '#3173DC';
 const darkShades = '#0A0A0A';
@@ -38,8 +38,8 @@ export const theme = {
   textColorInverse: lightShades,
   textColorLite: '#8B8989',
   menuTintColor: darkAccent,
-  primaryFontFamily: "'Open Sans', sans-serif",
-  secondaryFontFamily: "'Open Sans', sans-serif",
+  primaryFontFamily: "'Arial Narrow,Arial',sans-serif",
+  secondaryFontFamily: "'BebasNeueRegular', sans-serif",
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
 };
 
@@ -49,11 +49,14 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: ${theme.secondaryFontFamily};
     color: ${theme.textColor};
-    letter-spacing: 0.03rem !important;
     font-size: 17px;
   }
   .title {
-    font-family: ${theme.primaryFontFamily};
+    font-family: ${theme.secondaryFontFamily};
+    letter-spacing: 1px;
+  }
+  .subtitle{
+    font-family: ${props => props.theme.primaryFontFamily};
   }
   .button {
     font-family: ${theme.primaryFontFamily};
@@ -62,38 +65,46 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5rem;
   }
   p, .title, .box {
-    color: ${theme.textColor} !important;
-  }
-  .subtitle {
-    color: ${lighten(0.06, theme.textColor)} !important;
+    color: ${theme.textColor};
   }
   .button.is-primary {
-    background-color: ${theme.mainBrandColor};
-    transition: background-color 0.2s ease;
-    :hover {
-      background-color: ${darken(0.06, theme.mainBrandColor)};
-    }
+   
   }
   .button.is-secondary {
-    background-color: ${theme.lightAccent};
-    transition: background-color 0.2s ease;
-    color: #ffffff;
-    :hover {
-      background-color: ${darken(0.06, theme.lightAccent)};
+   
+  }
+  .button.is-primary{
+    background: transparent;
+    font-family: ${theme.secondaryFontFamily} !important;
+    border-color:#363636;
+    border-width: 2.5px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: black;
+    :hover{
+      color: black;
+      background: transparent;
+      border-width: 4px;
+      border-color:#363636;
     }
   }
-  .button.is-link {
-    background-color: ${theme.darkAccent};
-    transition: background-color 0.2s ease;
-    :hover {
-      background-color: ${darken(0.06, theme.darkAccent)};
+  .button.is-danger{
+    background: transparent;
+    font-family: ${theme.secondaryFontFamily} !important;
+    border-color:#FFFF;
+    border-width: 2.5px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: black;
+    :hover{
+      color:#ffff;
+      background: transparent;
+      border-width: 4px;
+      border-color:#363636;
     }
-  }
-  .button, .input, .card {
-    box-shadow: ${theme.boxShadow};
   }
   .has-text-warning {
-    color: ${theme.lightAccent} !important;
+    color: ${theme.mainBrandColor} !important;
   }
 `;
 
