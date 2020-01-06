@@ -3,12 +3,21 @@ import Testimonials from './Testimonials';
 
 const TestimonialsData = () => (
   <div className="columns is-multiline">
-    <Testimonials image="https://bulma.io/images/placeholders/128x128.png" />
-    <Testimonials image="https://bulma.io/images/placeholders/128x128.png" />
-    <Testimonials image="https://bulma.io/images/placeholders/128x128.png" />
-    <Testimonials image="https://bulma.io/images/placeholders/128x128.png" />
-    <Testimonials image="https://bulma.io/images/placeholders/128x128.png" />
-    <Testimonials image="https://bulma.io/images/placeholders/128x128.png" />
+    <Testimonials bgImage="/images/gallery/dummy.png" title="Beautiful Bride" />
+    <Testimonials
+      bgImage="/images/gallery/dummy.png"
+      title="Weddings at deckerdence"
+    />
+    <Testimonials bgImage="/images/gallery/dummy.png" title="Sweet Treats" />
+    <Testimonials
+      bgImage="/images/gallery/dummy.png"
+      title="celebrate with loved ones"
+    />
+    <Testimonials bgImage="/images/gallery/dummy.png" title="Summer Bouquet" />
+    <Testimonials
+      bgImage="/images/gallery/dummy.png"
+      title="weddings that sparkle"
+    />
   </div>
 );
 export default TestimonialsData;

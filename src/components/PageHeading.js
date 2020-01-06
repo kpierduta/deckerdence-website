@@ -11,7 +11,7 @@ const PageHeading = props => {
   const { title } = props;
 
   return (
-    <Section className="hero section is-normal">
+    <Section className="section hero is-normal">
       <div className="container">
         <div className="columns is-centered">
           <div className="column has-text-centered">
