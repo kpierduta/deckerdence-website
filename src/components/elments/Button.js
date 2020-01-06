@@ -11,7 +11,7 @@ const Linkstyled = styled(Link)`
 const Button = props => (
   <Linkstyled to="/">
     <figure className="image-button">
-      <img src="/images/learn-more@3x.png" />
+      <img src="/images/learn-more@3x.png" alt="" />
     </figure>
   </Linkstyled>
 );

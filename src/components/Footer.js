@@ -27,19 +27,19 @@ const Footer = () => (
     <div className="container">
       <div className="has-text-centered">
         <Link to="/">
-          <img src="/images/icon/facebook.png" />
+          <img src="/images/icon/facebook.png" alt="" />
         </Link>
         <Link to="/">
-          <img src="/images/icon/twitter.png" />
+          <img src="/images/icon/twitter.png" alt="" />
         </Link>
         <Link to="/">
-          <img src="/images/icon/linked-in.png" />
+          <img src="/images/icon/linked-in.png" alt="" />
         </Link>
         <Link to="/">
-          <img src="/images/icon/instagram.png" />{' '}
+          <img src="/images/icon/instagram.png" alt="" />{' '}
         </Link>
         <Link to="/">
-          <img src="/images/icon/pinterest.png" />{' '}
+          <img src="/images/icon/pinterest.png" alt="" />{' '}
         </Link>
       </div>
       <div className="columns has-text-centered is-variable is-6">
@@ -62,11 +62,19 @@ const Footer = () => (
           </h4>
         </div>
         <div className="column">
-          <h3 className="title is-3 is-spaced">THE GALLERY</h3>
-          <h4 className="subtitle is-5">Our Wedding Gallery</h4>
-          <h4 className="subtitle is-5">Our Events Gallery</h4>
+          <Link to="/">
+            <h3 className="title is-3 is-spaced">THE GALLERY</h3>
+          </Link>
+          <Link to="/wedding">
+            <h4 className="subtitle is-5">Our Wedding Gallery</h4>
+          </Link>
+          <Link to="/">
+            <h4 className="subtitle is-5">Our Events Gallery</h4>
+          </Link>
           <h4 className="subtitle is-5">Our Hospitality Gallery</h4>
-          <h4 className="subtitle is-5">Our Party Gallery</h4>
+          <Link to="/">
+            <h4 className="subtitle is-5">Our Party Gallery</h4>
+          </Link>
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ const Section = styled.section`
 const Hospitality = () => (
   <Section>
     <div className="columns">
-      <div className="column is-4"></div>
+      <div className="column is-4" />
       <div className="column first">
         <section className="section">
           <div className="container">

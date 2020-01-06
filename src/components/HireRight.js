@@ -36,7 +36,7 @@ const HireRight = props => (
         <div className="column is-8 has-text-centered">
           <section className="section content">
             <div className="container">
-              <img src="/images/hire/red.png" />
+              <img src="/images/hire/red.png" alt="" />
               <div className="is-inline-block">
                 <h3 className="title is-3 has-text-warning ">{props.option}</h3>
               </div>
