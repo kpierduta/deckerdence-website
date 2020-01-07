@@ -1,5 +1,6 @@
 import React from 'react';
 import Testimonials from './Testimonials';
+import BlackButton from './elments/BlackButton';
 
 const TestimonialsData = () => (
   <div className="columns is-multiline">
@@ -27,6 +28,7 @@ const TestimonialsData = () => (
       bgImage="/images/gallery/photo-6@2x.png"
       title="weddings that sparkle"
     />
+    <BlackButton />
   </div>
 );
 export default TestimonialsData;

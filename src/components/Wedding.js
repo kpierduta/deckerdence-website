@@ -23,7 +23,7 @@ const Weddings = () => (
   <Section className="section">
     <div className="container">
       <figure className="image">
-        <img src="/images/events/bunting@2x.png" />
+        <img src="/images/events/bunting@2x.png" alt="" />
       </figure>
       <div className="columns">
         <div className="column is-8 first">
