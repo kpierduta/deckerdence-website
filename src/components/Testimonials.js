@@ -13,15 +13,13 @@ const Section = styled.div`
 
 class Testimonials extends React.Component {
   render() {
+    const { bgImage, title } = this.props;
     return (
-      <Section className="column is-4">
-        <div
-          className="card section hero is-medium"
-          bgImage={this.props.bgImage}
-        >
+      <Section className="column is-4" bgImage={bgImage}>
+        <div className="card section hero is-medium">
           <div className="card-content">
             <h1 className="title is-2 has-text-info has-text-centered">
-              {this.props.title}
+              {title}
             </h1>
             <figure className="">
               <img
