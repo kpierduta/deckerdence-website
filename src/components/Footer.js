@@ -54,7 +54,9 @@ const Footer = () => (
         </div>
         <div className="column">
           <h3 className="title is-3 is-spaced">HIRE OPTIONS</h3>
-          <h4 className="subtitle is-5">Vintage Bus Bar</h4>
+          <Link to="/hirePage">
+            <h4 className="subtitle is-5">Vintage Bus Bar</h4>
+          </Link>
           <h4 className="subtitle is-5">Bus bar With Awning Hire</h4>
           <h4 className="subtitle is-5">Bus Bar Half Wraparound Marquee</h4>
           <h4 className="subtitle is-5">
