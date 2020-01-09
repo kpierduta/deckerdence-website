@@ -21,8 +21,7 @@ const OptionToIncludes = () => {
           <h1
             className="title has-text-weight-bold is-3 is-spaced has-text-centered"
             id="simple_arc"
-            curve={curve}
-          >
+            curve={curve}>
             OPTIONS To Includes
           </h1>
         </header>
