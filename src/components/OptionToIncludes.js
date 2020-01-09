@@ -25,11 +25,9 @@ const OptionToIncludes = () => {
             <img src="/images/hire/background@2x.png" alt="" />
           </div>
           <div className="column is-one-quarter">
-            {' '}
             <img src="/images/hire/background@2x.png" alt="" />
           </div>
           <div className="column is-one-quarter">
-            {' '}
             <img src="/images/hire/background@2x.png" alt="" />
           </div>
         </div>
