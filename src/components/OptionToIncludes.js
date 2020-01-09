@@ -3,8 +3,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  .main-heading {
-    margin-bottom: 3rem;
+  .column {
+    background-image: url('/images/hire/background@2x.png');
+    background-size: cover;
+    margin: 0 0.5rem;
+    min-height: 9rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
   }
 `;
 
@@ -12,23 +18,29 @@ const OptionToIncludes = () => {
   return (
     <Section className="">
       <div className="container">
-        <header className="main-heading">
-          <h1 className="title has-text-weight-bold is-3 is-spaced has-text-centered">
-            OPTIONS To Includes
-          </h1>
-        </header>
         <div className="columns is-multiline">
-          <div className="column is-one-quarter">
-            <img src="/images/hire/background@2x.png" alt="" />
+          <div className="column">
+            <h2 className="title is-3 is-capatalized has-text-weight-normal">
+              vintage bus bar
+            </h2>
           </div>
-          <div className="column is-one-quarter">
-            <img src="/images/hire/background@2x.png" alt="" />
+          <div className="column">
+            {' '}
+            <h2 className="title is-3 is-capatalized has-text-weight-normal">
+              traditional bar
+            </h2>
           </div>
-          <div className="column is-one-quarter">
-            <img src="/images/hire/background@2x.png" alt="" />
+          <div className="column">
+            {' '}
+            <h2 className="title is-3 is-capatalized has-text-weight-normal">
+              cocktail lounge
+            </h2>
           </div>
-          <div className="column is-one-quarter">
-            <img src="/images/hire/background@2x.png" alt="" />
+          <div className="column">
+            {' '}
+            <h2 className="title is-3 is-capatalized has-text-weight-normal">
+              side awning
+            </h2>
           </div>
         </div>
       </div>
