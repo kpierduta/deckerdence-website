@@ -6,22 +6,14 @@ const Section = styled.div`
   .main-heading {
     margin-bottom: 3rem;
   }
-  .title {
-  }
 `;
 
 const OptionToIncludes = () => {
-  const curve = () => {
-    `$('#simple_arc').circleType({ radius: 135 });`;
-  };
   return (
     <Section className="">
       <div className="container">
         <header className="main-heading">
-          <h1
-            className="title has-text-weight-bold is-3 is-spaced has-text-centered"
-            id="simple_arc"
-            curve={curve}>
+          <h1 className="title has-text-weight-bold is-3 is-spaced has-text-centered">
             OPTIONS To Includes
           </h1>
         </header>
