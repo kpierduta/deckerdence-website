@@ -13,7 +13,14 @@ export default class HirePage extends React.Component {
         <Seo title="Home" description="Welcome to GatsbyJs v1" />
         <HireOptions hirebgImage="/images/hire/header-photo@2x.png" />
         <OptionToIncludes />
-        <HireForm />
+        <HireForm
+          para=""
+          avatar="/images/hire/icon@2x.png"
+          email="Email"
+          phone="Phone Number"
+          buttonName="DOWNLOAD"
+          subtitle="By submitting this form you agree to our contact conditions."
+        />
       </Layout>
     );
   }
