@@ -4,6 +4,7 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import HireOptions from '../components/HireOptions';
 import OptionToIncludes from '../components/OptionToIncludes';
+import HireForm from '../components/HireForm';
 
 export default class HirePage extends React.Component {
   render() {
@@ -12,6 +13,7 @@ export default class HirePage extends React.Component {
         <Seo title="Home" description="Welcome to GatsbyJs v1" />
         <HireOptions hirebgImage="/images/hire/header-photo@2x.png" />
         <OptionToIncludes />
+        <HireForm />
       </Layout>
     );
   }
