@@ -44,14 +44,13 @@ const HireForm = () => {
                 />
               </figure>
             </div>
-            <div className="column is-1 " />
             <div className="column is-vcentered is-desktop section">
               <div className="field">
                 <div className="control">
                   <input
                     className="input is-medium"
                     type="text"
-                    placeholder="Medium input"
+                    placeholder="Email"
                   />
                 </div>
               </div>
@@ -60,12 +59,15 @@ const HireForm = () => {
                   <input
                     className="input is-medium"
                     type="text"
-                    placeholder="Medium input"
+                    placeholder="Phone Number"
                   />
                 </div>
                 <p className="subtitle is-4">
                   By submitting this form you agree to our contact conditions.
                 </p>
+                <button type="button" className="button is-light is-medium">
+                  Download
+                </button>
               </div>
             </div>
           </div>
