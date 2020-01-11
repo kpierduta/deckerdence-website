@@ -13,7 +13,7 @@ const HomeHero = () => (
   <Section className="section">
     <div className="container">
       <figure className="image">
-        <img src="/images/home/title-banner@2x.png" />
+        <img src="/images/home/title-banner@2x.png" alt="" />
       </figure>
       <div className="columns  is-centered">
         <div className="column is-10 has-text-centered">

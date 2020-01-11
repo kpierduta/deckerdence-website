@@ -5,7 +5,8 @@ import Layout from '../components/Layout';
 import HireOptions from '../components/HireOptions';
 import OptionToIncludes from '../components/OptionToIncludes';
 import HireForm from '../components/HireForm';
-import Measurement from '../components/Measurement';
+import MeasurementData from '../components/MeasurementData';
+import Diagram from '../components/Diagram';
 
 export default class HirePage extends React.Component {
   render() {
@@ -28,7 +29,8 @@ export default class HirePage extends React.Component {
           subtitle="By submitting this form you agree to our contact conditions."
           mainSubtitle="mainSubtitle"
         />
-        <Measurement />
+        <MeasurementData />
+        <Diagram avatar="/images/hire/diagram@2x.png" />
       </Layout>
     );
   }
