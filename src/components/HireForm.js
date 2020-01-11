@@ -7,8 +7,11 @@ const Wrapper = styled.div`
   .backgrounds {
     background-color: #811112;
   }
-  .text {
+  .pera {
     margin-top: 2rem;
+  }
+  .text {
+    color: ${props => props.theme.darkAccent} !important;
   }
 `;
 
@@ -20,7 +23,7 @@ class HireForm extends React.Component {
         <section className="section">
           <div className="container">
             <header className="Header has-text-centered">
-              <p className="subtitle is-4 text">{para}</p>
+              <p className="subtitle is-4 para">{para}</p>
             </header>
           </div>
         </section>
@@ -34,8 +37,8 @@ class HireForm extends React.Component {
               </div>
               <div className="column is-vcentered is-desktop section">
                 <Input type="email" text="Email" />
-                <Input type="email" text="Email" />
-                <p className="subtitle is-4 has-text-white">{subtitle}</p>
+                <Input type="email" text="Phone Number" />
+                <p className="subtitle is-4 has-text-white text">{subtitle}</p>
                 <button type="button" className="button is-light is-medium">
                   {buttonName}
                 </button>

@@ -7,6 +7,9 @@ const Section = styled.div`
   background-image: url('/images/hire/basic@2x.png');
   background-size: cover;
   background-repeat: no-repeat;
+  .subtitle {
+    color: ${props => props.theme.darkAccent} !important;
+  }
 `;
 
 class ContactForm extends React.Component {
@@ -20,7 +23,7 @@ class ContactForm extends React.Component {
           <div className="column is-6">
             <Input type="email" text="Email" />
             <Input type="text" text="Phone Number" />
-            <p className="subtitle is-4 has-text-white has-text-centered">
+            <p className="subtitle is-4 has-text-centered">
               By submitting this form you agree to our contact T & C
             </p>
             <div className="has-text-centered">
