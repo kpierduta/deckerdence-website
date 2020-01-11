@@ -3,6 +3,7 @@ import React from 'react';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import PageHeading from '../components/PageHeading';
+import TowBar from '../components/TowBar';
 
 export default class TowBarPage extends React.Component {
   render() {
@@ -13,6 +14,7 @@ export default class TowBarPage extends React.Component {
           title="The Tow Bar"
           subtitle="Our converted trailer bar makes a great addition to any event. The To Bar is ideal for serving welcome drinks as your guests arrive."
         />
+        <TowBar />
       </Layout>
     );
   }
