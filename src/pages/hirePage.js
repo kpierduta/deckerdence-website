@@ -7,6 +7,7 @@ import OptionToIncludes from '../components/OptionToIncludes';
 import HireForm from '../components/HireForm';
 import MeasurementData from '../components/MeasurementData';
 import Diagram from '../components/Diagram';
+import ContactForm from '../components/ContactForm';
 
 export default class HirePage extends React.Component {
   render() {
@@ -31,6 +32,7 @@ export default class HirePage extends React.Component {
         />
         <MeasurementData />
         <Diagram avatar="/images/hire/diagram@2x.png" />
+        <ContactForm />
       </Layout>
     );
   }

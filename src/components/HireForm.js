@@ -42,7 +42,7 @@ class HireForm extends React.Component {
                   <div className="control">
                     <input
                       className="input is-medium"
-                      type="text"
+                      type="email"
                       placeholder={email}
                     />
                   </div>
