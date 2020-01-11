@@ -1,31 +1,26 @@
 import React from 'react';
-
 import styled from 'styled-components';
+
+import Input from './elments/Input';
 
 const Wrapper = styled.div`
   .backgrounds {
     background-color: #811112;
   }
-  .subtitle {
-    margin-bottom: 2rem;
-  }
-  .is-4 {
+  .text {
     margin-top: 2rem;
-  }
-  .input {
-    margin-top: 1rem;
   }
 `;
 
 class HireForm extends React.Component {
   render() {
-    const { para, avatar, email, phone, buttonName, subtitle } = this.props;
+    const { para, avatar, buttonName, subtitle } = this.props;
     return (
       <Wrapper>
         <section className="section">
           <div className="container">
             <header className="Header has-text-centered">
-              <p className="subtitle is-4">{para}</p>
+              <p className="subtitle is-4 text">{para}</p>
             </header>
           </div>
         </section>
@@ -38,28 +33,12 @@ class HireForm extends React.Component {
                 </figure>
               </div>
               <div className="column is-vcentered is-desktop section">
-                <div className="field">
-                  <div className="control">
-                    <input
-                      className="input is-medium"
-                      type="email"
-                      placeholder={email}
-                    />
-                  </div>
-                </div>
-                <div className="field">
-                  <div className="control">
-                    <input
-                      className="input is-medium"
-                      type="text"
-                      placeholder={phone}
-                    />
-                  </div>
-                  <p className="subtitle is-4 has-text-white">{subtitle}</p>
-                  <button type="button" className="button is-light is-medium">
-                    {buttonName}
-                  </button>
-                </div>
+                <Input type="email" text="Email" />
+                <Input type="email" text="Email" />
+                <p className="subtitle is-4 has-text-white">{subtitle}</p>
+                <button type="button" className="button is-light is-medium">
+                  {buttonName}
+                </button>
               </div>
             </div>
           </div>
