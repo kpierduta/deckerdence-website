@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Section = styled.div`
   .card {
-    border: 2px solid #f7f7f7;
+    border: 3px solid ${props => props.theme.borderColor};
   }
 `;
 

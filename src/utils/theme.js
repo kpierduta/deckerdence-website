@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset-advanced';
-import { darken, lighten } from 'polished';
 
 const mainBrandColor = '#811112';
 const lightShades = 'rgba(255, 255, 255, 0.7)';
@@ -25,7 +24,7 @@ export const theme = {
   dangerColor: '#f44336',
 
   primaryColor: mainBrandColor,
-  borderColor: '#e0e6ef',
+  borderColor: '#f7f7f7',
   backgroundColor: '#FFFFFF',
   backgroundInputColor: lightShades,
   backgroundInputColorDark: darkShades,
