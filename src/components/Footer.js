@@ -36,10 +36,10 @@ const Footer = () => (
           <img src="/images/icon/linked-in.png" alt="" />
         </Link>
         <Link to="/">
-          <img src="/images/icon/instagram.png" alt="" />{' '}
+          <img src="/images/icon/instagram.png" alt="" />
         </Link>
         <Link to="/">
-          <img src="/images/icon/pinterest.png" alt="" />{' '}
+          <img src="/images/icon/pinterest.png" alt="" />
         </Link>
       </div>
       <div className="columns has-text-centered is-variable is-6">
@@ -94,7 +94,7 @@ const Footer = () => (
           <Linkstyled to="/">
             <h4 className="subtitle is-5">Our Hospitality Gallery</h4>
           </Linkstyled>
-          <Link to="/">
+          <Link to="/hire">
             <h4 className="subtitle is-5">Our Party Gallery</h4>
           </Link>
         </div>
