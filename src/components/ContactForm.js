@@ -8,7 +8,7 @@ const Section = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   .subtitle {
-    color: ${props => props.theme.darkAccent} !important;
+    color: ${props => props.theme.lightShades} !important;
   }
 `;
 

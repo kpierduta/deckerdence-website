@@ -11,7 +11,7 @@ const Wrapper = styled.div`
     margin-top: 2rem;
   }
   .text {
-    color: ${props => props.theme.darkAccent} !important;
+    color: ${props => props.theme.lightShades} !important;
   }
 `;
 
