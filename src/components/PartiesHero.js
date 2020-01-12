@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  background-image: url(/images/parties/photo@2x.png);
+  background-image: url(${props => props.partybgImage});
   background-size: cover;
   background-repeat: no-repeat;
   .thumbnail {
@@ -22,9 +22,11 @@ const Section = styled.div`
 
 class PartiesHero extends React.Component {
   render() {
-    const {} = this.props;
+    const { title, partybgImage } = this.props;
     return (
-      <Section className="section is-block is-relative is-medium">
+      <Section
+        className="section is-block is-medium"
+        partybgImage={partybgImage}>
         <div className="columns is-centered is-desktop">
           <div className="column is-7">
             <div id="box-search">
@@ -32,7 +34,7 @@ class PartiesHero extends React.Component {
                 <img src="/images/parties/text-frame@2x.png" alt="" />
                 <div className="caption">
                   <h1 className="title is-1 has-text-centered has-text-white is-size-4-mobile">
-                    Parties for all occasions
+                    {title}
                   </h1>
                 </div>
               </div>

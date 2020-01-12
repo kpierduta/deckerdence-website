@@ -23,7 +23,7 @@ const Party = () => (
   <Section className="section">
     <div className="container">
       <div className="columns">
-        <div className="column"></div>
+        <div className="column" />
         <div className="column is- 6 first">
           <section className="section">
             <div className="container">
