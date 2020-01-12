@@ -35,7 +35,7 @@ export const theme = {
   fontSizeLarge: 22,
   textColor: darkShades, // '#0A0B11',
   textColorInverse: lightShades,
-  textColorLite: '#8B8989',
+  textColorLite: '#2c2c2a',
   menuTintColor: darkAccent,
   primaryFontFamily: "'Arial Narrow,Arial',sans-serif",
   secondaryFontFamily: "'BebasNeueRegular', sans-serif",

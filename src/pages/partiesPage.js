@@ -4,6 +4,7 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import PartiesHero from '../components/PartiesHero';
 import PageHeading from '../components/PageHeading';
+import StagesData from '../components/StagesData';
 
 export default class PartiesPage extends React.Component {
   render() {
@@ -18,6 +19,7 @@ export default class PartiesPage extends React.Component {
           subtitle="The bus provides an amazing focal point, and provides
           many different zones for your party."
         />
+        <StagesData />
       </Layout>
     );
   }
