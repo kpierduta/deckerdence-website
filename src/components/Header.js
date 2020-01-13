@@ -110,7 +110,7 @@ export default class Header extends React.Component {
                 <Link to="/towBar" className="navbar-item">
                   TOW BAR
                 </Link>
-                <Link to="/" className="navbar-item">
+                <Link to="/contactPage" className="navbar-item">
                   CONTACT
                 </Link>
               </div>
