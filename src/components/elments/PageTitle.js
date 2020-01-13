@@ -9,7 +9,7 @@ const PageTitle = props => {
   return (
     <Section className="hero section is-normal">
       <div className="container">
-        <div className="columns is-centered">
+        <div className="columns is-centered is-mobile">
           <div className="column is-narrow has-text-centered">
             <div className="left">
               <figure className="image is-48x48">
