@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  background-image: url(${props => props.partybgImage});
+  background-image: url(${props => props.towbgImage});
   background-size: cover;
   background-repeat: no-repeat;
   .thumbnail {

@@ -14,7 +14,7 @@ export default class TowBarPage extends React.Component {
           title="The Tow Bar"
           subtitle="Our converted trailer bar makes a great addition to any event. The To Bar is ideal for serving welcome drinks as your guests arrive."
         />
-        <TowBar />
+        <TowBar towbgImage="/images/towbar/photo@2x.png" />
       </Layout>
     );
   }
