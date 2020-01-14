@@ -10,7 +10,7 @@ const Linkstyled = styled(Link)`
 
 const BlackButton = props => (
   <Linkstyled to="/">
-    <figure className="image-button is-pulled-right">
+    <figure className="image-button">
       <img src="/images/view-more@3xx.png" alt="" />
     </figure>
   </Linkstyled>

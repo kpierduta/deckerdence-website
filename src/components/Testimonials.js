@@ -8,12 +8,18 @@ const Section = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     max-height: 24rem;
-    opacity: 0.7;
-    filter: alpha(opacity=50);
-    :hover {
-      opacity: 1;
-      filter: alpha(opacity=100);
+    :before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
     }
+  }
+  .title {
+    position: relative;
   }
 `;
 
