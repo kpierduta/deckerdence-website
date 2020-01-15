@@ -69,7 +69,7 @@ const Footer = () => (
           <Linkstyled to="/hirePage">
             <h4 className="subtitle is-5">Vintage Bus Bar</h4>
           </Linkstyled>
-          <Linkstyled to="/hirePage">
+          <Linkstyled to="/sideAwning">
             <h4 className="subtitle is-5">Bus bar With Awning Hire</h4>
           </Linkstyled>
           <Linkstyled to="/hirePage">

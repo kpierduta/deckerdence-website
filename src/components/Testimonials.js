@@ -22,6 +22,12 @@ const Section = styled.div`
     position: relative;
   }
 `;
+const ImageWrapper = styled.div`
+  justify-content: center;
+  img {
+    width: 50%;
+  }
+`;
 
 class Testimonials extends React.Component {
   render() {
@@ -33,13 +39,13 @@ class Testimonials extends React.Component {
             <h1 className="title is-2 has-text-white has-text-centered">
               {title}
             </h1>
-            <figure className="">
+            <ImageWrapper className="media align">
               <img
                 className=""
                 src="/images/gallery/decorative-line@2x.png"
                 alt=""
               />
-            </figure>
+            </ImageWrapper>
           </div>
         </div>
       </Section>
