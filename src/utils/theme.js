@@ -88,19 +88,11 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   .button.is-danger{
-    background: transparent;
-    font-family: ${theme.secondaryFontFamily} !important;
-    border-color:#FFFF;
-    border-width: 2.5px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    color: black;
-    :hover{
-      color:#ffff;
-      background: transparent;
-      border-width: 4px;
-      border-color:#363636;
-    }
+    color: white;
+    font-size: 1.5em;
+    padding: 0em 1em;
+    border-radius: 3px;
+    background: #a34442 !important;
   }
   .has-text-warning {
     color: ${theme.mainBrandColor} !important;

@@ -39,7 +39,7 @@ class HireForm extends React.Component {
                 <Input type="email" text="Email" />
                 <Input type="email" text="Phone Number" />
                 <p className="subtitle is-4 has-text-white text">{subtitle}</p>
-                <button type="button" className="button is-light is-medium">
+                <button type="button" className="button is-danger">
                   {buttonName}
                 </button>
               </div>

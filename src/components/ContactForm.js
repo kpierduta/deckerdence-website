@@ -27,7 +27,7 @@ class ContactForm extends React.Component {
               By submitting this form you agree to our contact T & C
             </p>
             <div className="has-text-centered">
-              <button type="button" className="button is-light is-medium">
+              <button type="button" className="button is-danger">
                 Download
               </button>
             </div>
