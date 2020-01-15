@@ -4,28 +4,20 @@ import BarTile from './BarTile';
 
 class BarInfo extends React.Component {
   render() {
-    const {} = this.props;
     return (
       <section className="section">
         <div className="container">
           <div className="tile is-ancestor">
             <div className="tile is-parent">
-              <div className="tile is-child box">
-                <p className="title has-text-weight-normal">
-                  Marquee information
-                </p>
-                <p className="subtitle is-4">
-                  The awning marquee structure measures 8m x 6m and is fitted
-                  directly from the bus covering the window of the bar where the
-                  serving hatch is. As the awning fits directly to the bus
-                  between decks, the upstairs view is not spoiled.
-                </p>
-                <p className="subtitle is-4">
-                  Suspendisse varius ligula in molestie lacinia. Maecenas varius
-                  eget ligula a sagittis. Pellentesque interdum, nisl nec
-                  interdum
-                </p>
-              </div>
+              <BarTile
+                title="Marquee information"
+                subtitle="The awning marquee structure measures 8m x 6m and is fitted
+                directly from the bus covering the window of the bar where the
+                serving hatch is. As the awning fits directly to the bus
+                between decks, the upstairs view is not spoiled. Suspendisse
+                varius ligula in molestie lacinia. Maecenas varius eget ligula
+                a sagittis. Pellentesque interdum, nisl nec interdum"
+              />
             </div>
             <div className="tile is-6 is-vertical is-parent">
               <BarTile
