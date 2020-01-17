@@ -47,7 +47,7 @@ const Footer = () => (
           <Link to="/">
             <h3 className="title is-3 is-spaced">CONTACT</h3>
           </Link>
-          <Linkstyled to="/">
+          <Linkstyled to="/blogPage">
             <h4 className="subtitle is-5">Tel: 01675 463 555</h4>
           </Linkstyled>
           <Linkstyled to="/">
