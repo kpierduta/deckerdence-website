@@ -97,6 +97,9 @@ const GlobalStyle = createGlobalStyle`
   .has-text-warning {
     color: ${theme.mainBrandColor} !important;
   }
+  .button.is-normal {
+    background: transparent !important;
+  }
 `;
 
 export default GlobalStyle;
