@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   .box {
-    background-image: url('/images/blog/fotoone.png');
+    background-image: url('${props => props.boxImage}');
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -11,10 +11,9 @@ const Wrapper = styled.div`
 
 class BlogData extends React.Component {
   render() {
-    const { title, subtitle } = this.props;
+    const { title, subtitle, boxImage } = this.props;
     return (
-      <Wrapper>
-        {' '}
+      <Wrapper boxImage={boxImage}>
         <div className="tile is-child box">
           <p className="title has-text-weight-normal has-text-centered">
             {title}
