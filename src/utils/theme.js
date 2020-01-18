@@ -99,6 +99,8 @@ const GlobalStyle = createGlobalStyle`
   }
   .button.is-normal {
     background: transparent !important;
+    border-radius: 0px !important;
+    border-color: black;
   }
 `;
 
