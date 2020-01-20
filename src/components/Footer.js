@@ -50,7 +50,7 @@ const Footer = () => (
           <Linkstyled to="/blogPage">
             <h4 className="subtitle is-5">Tel: 01675 463 555</h4>
           </Linkstyled>
-          <Linkstyled to="/blogArticle">
+          <Linkstyled to="/blogArticles">
             <h4 className="subtitle is-5">Email: enquiries@deckerdence.com</h4>
           </Linkstyled>
           <Linkstyled to="/">
