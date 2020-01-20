@@ -6,19 +6,22 @@ const Wrapper = styled.div`
     background-image: url('${props => props.boxImage}');
     background-size: cover;
     background-repeat: no-repeat;
+    .text {
+        color: ${props => props.color} !important;
+    }
   }
 `;
 
 class BlogData extends React.Component {
   render() {
-    const { title, subtitle, boxImage } = this.props;
+    const { title, subtitle, boxImage, color } = this.props;
     return (
-      <Wrapper boxImage={boxImage}>
+      <Wrapper boxImage={boxImage} color={color}>
         <div className="tile is-child box">
-          <p className="title has-text-weight-normal has-text-centered">
+          <p className="title has-text-weight-normal has-text-centered text">
             {title}
           </p>
-          <p className="subtitle is-4 has-text-centered has-text-weight-semibold">
+          <p className="subtitle is-4 has-text-centered has-text-weight-semibold text">
             {subtitle}
           </p>
           <div className="has-text-centered">
