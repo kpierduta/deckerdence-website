@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BlogArticles = () => (
+const BlogArticle = () => (
   <section className="section">
     <div className="container">
       <h1 className="title is-1 is-spaced is-uppercase">
@@ -11,4 +11,4 @@ const BlogArticles = () => (
   </section>
 );
 
-export default BlogArticles;
+export default BlogArticle;
