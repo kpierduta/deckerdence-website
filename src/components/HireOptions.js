@@ -34,8 +34,7 @@ class HireOptions extends React.Component {
       <Section
         className="section hero is-large"
         hirebgImage={hirebgImage}
-        textcolor={textcolor}
-      >
+        textcolor={textcolor}>
         <div className="container">
           <div className="columns is-vcentered is-desktop">
             <div className="column has-text-centered ">
