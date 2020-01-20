@@ -13,31 +13,32 @@ const Section = styled.section`
   }
 `;
 
-const HireHero = () => (
-  <Section className="section">
-    <div className="container">
-      <div className="columns  is-centered">
-        <div className="column is-9 has-text-centered">
-          <section className="section">
-            <div className="container">
-              <h1 className="title is-4 has-text-white has-text-weight-normal">
-                Unique Mobile Venue
-              </h1>
-              <h1 className="title is-1 has-text-white has-text-weight-semibold	">
-                Find the perfect Deckerdence Hire option for your event
-              </h1>
-              <img src="/images/hire/decorative-line.png" alt="" />
-              <h1 className="subtitle is-4 has-text-white">
-                Deckerdence is a unique mobile venue that is avalible to hire in
-                4 different options. All these options are fully customisable so
-                that you can create the perfect setup for your event.
-              </h1>
+class HireHero extends React.Component {
+  render() {
+    const { title, subtitle, para } = this.props;
+    return (
+      <Section className="section">
+        <div className="container">
+          <div className="columns  is-centered">
+            <div className="column is-9 has-text-centered">
+              <section className="section">
+                <div className="container">
+                  <h1 className="title is-4 has-text-white has-text-weight-normal">
+                    {title}
+                  </h1>
+                  <h1 className="title is-1 has-text-white has-text-weight-semibold	">
+                    {subtitle}
+                  </h1>
+                  <img src="/images/hire/decorative-line.png" alt="" />
+                  <h1 className="subtitle is-4 has-text-white">{para}</h1>
+                </div>
+              </section>
             </div>
-          </section>
+          </div>
         </div>
-      </div>
-    </div>
-  </Section>
-);
+      </Section>
+    );
+  }
+}
 
 export default HireHero;

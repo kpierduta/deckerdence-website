@@ -11,7 +11,13 @@ export default class HirePage extends React.Component {
     return (
       <Layout>
         <Seo title="Home" description="Welcome to GatsbyJs v1" />
-        <HireHero />
+        <HireHero
+          title="Unique Mobile Venue"
+          subtitle=" Find the perfect Deckerdence Hire option for your event"
+          para="  Deckerdence is a unique mobile venue that is avalible to hire in
+          4 different options. All these options are fully customisable so
+          that you can create the perfect setup for your event."
+        />
         <HireRight
           frame="/images/hire/frame-1.png"
           image="/images/hire/photo.png"
