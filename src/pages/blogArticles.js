@@ -3,6 +3,8 @@ import React from 'react';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import HireOptions from '../components/HireOptions';
+import OptionToIncludes from '../components/OptionToIncludes';
+import BlogArticles from '../components/BlogArticles';
 
 export default class BlogArticle extends React.Component {
   render() {
@@ -16,6 +18,8 @@ export default class BlogArticle extends React.Component {
           subTitle="Wedding venue"
           textcolor={props => props.theme.darkShades}
         />
+        <OptionToIncludes />
+        <BlogArticles />
       </Layout>
     );
   }
