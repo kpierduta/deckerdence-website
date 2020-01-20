@@ -16,13 +16,26 @@ const Section = styled.div`
       padding: 0rem 0rem;
     }
   }
+  .has-text-white {
+    color: ${props => props.textcolor} !important ;
+  }
 `;
 
 class HireOptions extends React.Component {
   render() {
-    const { hirebgImage, mainTitle, subTitle, centerText } = this.props;
+    const {
+      hirebgImage,
+      mainTitle,
+      subTitle,
+      centerText,
+      textcolor,
+    } = this.props;
     return (
-      <Section className="section hero is-large" hirebgImage={hirebgImage}>
+      <Section
+        className="section hero is-large"
+        hirebgImage={hirebgImage}
+        textcolor={textcolor}
+      >
         <div className="container">
           <div className="columns is-vcentered is-desktop">
             <div className="column has-text-centered ">

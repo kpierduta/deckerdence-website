@@ -14,6 +14,7 @@ export default class BlogArticle extends React.Component {
           mainTitle="05/01/2020"
           centerText="Top 5 reasons"
           subTitle="Wedding venue"
+          textcolor={props => props.theme.darkShades}
         />
       </Layout>
     );
