@@ -25,7 +25,10 @@ class BlogData extends React.Component {
             {subtitle}
           </p>
           <div className="has-text-centered">
-            <button className="button is-normal" type="button">
+            <button
+              className="button is-normal has-text-weight-bold text"
+              type="button"
+            >
               READ MORE
             </button>
           </div>
