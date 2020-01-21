@@ -4,7 +4,7 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import HireOptions from '../components/HireOptions';
 import OptionToIncludes from '../components/OptionToIncludes';
-import BlogArticle from '../components/BlogArticle';
+import BlogArticleData from '../components/BlogArticleData';
 
 export default class BlogArticles extends React.Component {
   render() {
@@ -19,7 +19,7 @@ export default class BlogArticles extends React.Component {
           textcolor={props => props.theme.darkShades}
         />
         <OptionToIncludes />
-        <BlogArticle />
+        <BlogArticleData />
       </Layout>
     );
   }
