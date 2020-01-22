@@ -16,17 +16,8 @@ class HireCardSlider extends React.Component {
       <section className="section is-medium">
         <div className="container">
           <div className="columns is-centered">
-            <div className="column is-8">
+            <div className="column is-4">
               <Slider {...settings}>
-                <div>
-                  <HireCard title="" para="" subtitle="" />
-                </div>
-                <div>
-                  <HireCard />
-                </div>
-                <div>
-                  <HireCard />
-                </div>
                 <div>
                   <HireCard />
                 </div>
