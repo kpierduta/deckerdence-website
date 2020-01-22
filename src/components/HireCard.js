@@ -6,7 +6,7 @@ class HireCard extends React.Component {
     return (
       <div className="card">
         <div className="card-content">
-          <h1 className="title is-spaced has-text-centered is-4 is-uppercase">
+          <h1 className="title is-spaced has-text-centered is-3 is-uppercase">
             {title}
           </h1>
           <p className="subtitle has-text-centered">{subtitle}</p>
