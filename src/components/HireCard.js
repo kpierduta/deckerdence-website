@@ -16,7 +16,7 @@ class HireCard extends React.Component {
             was amazing but the new team led by yourself and Mark, excelled even
             that.”
           </p>
-          <h1 className="subtitle is-3 has-text-centered is-spaced has-text-weight-bold ">
+          <h1 className="subtitle is-3 has-text-centered is-spaced has-text-weight-bold">
             Emily 00/00/00
           </h1>
         </div>

@@ -1,7 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
 import Slider from 'react-slick';
-
 import HireCard from './HireCard';
+
+const Section = styled.div`
+  background-image: url(/images/hire/decar.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+`;
 
 class HireCardSlider extends React.Component {
   render() {
@@ -13,10 +19,10 @@ class HireCardSlider extends React.Component {
       slidesToScroll: 1,
     };
     return (
-      <section className="section is-medium">
+      <Section className="section is-medium">
         <div className="container">
           <div className="columns is-centered">
-            <div className="column is-4">
+            <div className="column is-8">
               <Slider {...settings}>
                 <div>
                   <HireCard />
@@ -31,7 +37,7 @@ class HireCardSlider extends React.Component {
             </div>
           </div>
         </div>
-      </section>
+      </Section>
     );
   }
 }
