@@ -11,7 +11,7 @@ const Section = styled.div`
 
 class HireCardSlider extends React.Component {
   render() {
-    let settings = {
+    const settings = {
       dots: false,
       infinite: true,
       speed: 500,

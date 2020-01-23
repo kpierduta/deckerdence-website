@@ -6,8 +6,9 @@ import PartiesHero from '../components/PartiesHero';
 import PageHeading from '../components/PageHeading';
 import StagesSection from '../components/StagesSection';
 import Festival from '../components/Festival';
+import DetailsSection from '../components/DetailsSection';
 
-export default class Wedding extends React.Component {
+export default class EventPage extends React.Component {
   render() {
     return (
       <Layout>
@@ -19,6 +20,7 @@ export default class Wedding extends React.Component {
         <PageHeading title="We can provide everything you need for the ultimate event" />
         <StagesSection title="We can provide everything you need for the ultimate event" />
         <Festival />
+        <DetailsSection />
       </Layout>
     );
   }
