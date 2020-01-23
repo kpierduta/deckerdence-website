@@ -10,7 +10,8 @@ const Heading = ({ title, size, color }) => (
   <Wrapper
     className={`title has-text-weight-semibold is-spaced has-text-centered ${size ||
       'is-1'}`}
-    color={color}>
+    color={color}
+  >
     {title}
   </Wrapper>
 );
