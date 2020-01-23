@@ -10,7 +10,7 @@ class Stages extends React.Component {
     const { title, subtitle } = this.props;
     return (
       <section className="column is-4 is-multiline">
-        <div className=" card-content">
+        <div className="card-content">
           <div className="card-image">
             <ImageWrapper className="media align">
               <figure className="image is-128x128">
