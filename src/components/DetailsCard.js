@@ -6,7 +6,7 @@ const Section = styled.div`
     background-image: url(/images/events/frame@2x.png);
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 40rem;
+    min-height: 50rem;
     padding-top: 8rem;
   }
 `;
