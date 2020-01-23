@@ -19,7 +19,7 @@ export default class PartiesPage extends React.Component {
           subtitle="The bus provides an amazing focal point, and provides
           many different zones for your party."
         />
-        <StagesData />
+        <StagesData title="Stages" />
       </Layout>
     );
   }

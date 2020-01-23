@@ -6,10 +6,11 @@ import Heading from './elments/Heading';
 
 class StagesData extends React.Component {
   render() {
+    const { title } = this.props;
     return (
       <section className="section">
         <div className="container">
-          <Heading title="THREE SIMPLE STAGESs" />
+          <Heading title={title} />
           <div className="columns is-multiline">
             <Stages
               title="1. Choose your location"
