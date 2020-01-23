@@ -13,7 +13,12 @@ const Festival = () => {
         <div className="columns is-multiline is-variable is-5">
           <div className="column">
             <figure className="image">
-              <img src="/images/festival/festivals@2x.png" alt="" />
+              <img src="/images/festival/exhibitions@2x.png" alt="" />
+            </figure>
+          </div>
+          <div className="column">
+            <figure className="image">
+              <img src="/images/festival/fairs@2x.png" alt="" />
             </figure>
           </div>
           <div className="column">
@@ -23,12 +28,7 @@ const Festival = () => {
           </div>
           <div className="column">
             <figure className="image">
-              <img src="/images/festival/festivals@2x.png" alt="" />
-            </figure>
-          </div>
-          <div className="column">
-            <figure className="image">
-              <img src="/images/festival/festivals@2x.png" alt="" />
+              <img src="/images/festival/fetes@2x.png" alt="" />
             </figure>
           </div>
         </div>
