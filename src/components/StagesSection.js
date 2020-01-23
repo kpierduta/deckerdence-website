@@ -4,7 +4,7 @@ import Stages from './Stages';
 
 import Heading from './elments/Heading';
 
-class StagesData extends React.Component {
+class StagesSection extends React.Component {
   render() {
     const { title } = this.props;
     return (
@@ -36,4 +36,4 @@ class StagesData extends React.Component {
     );
   }
 }
-export default StagesData;
+export default StagesSection;

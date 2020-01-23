@@ -4,7 +4,7 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import PartiesHero from '../components/PartiesHero';
 import PageHeading from '../components/PageHeading';
-import StagesData from '../components/StagesData';
+import StagesSection from '../components/StagesSection';
 import Festival from '../components/Festival';
 
 export default class Wedding extends React.Component {
@@ -17,7 +17,7 @@ export default class Wedding extends React.Component {
           partybgImage="/images/parties/photo@2x.png"
         />
         <PageHeading title="We can provide everything you need for the ultimate event" />
-        <StagesData title="We can provide everything you need for the ultimate event" />
+        <StagesSection title="We can provide everything you need for the ultimate event" />
         <Festival />
       </Layout>
     );
