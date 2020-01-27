@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import HireOptions from '../components/HireOptions';
 import OptionToIncludes from '../components/OptionToIncludes';
 import BlogArticleData from '../components/BlogArticleData';
+import CalendarSlider from '../components/CalendarSlider';
 
 export default class BlogArticles extends React.Component {
   render() {
@@ -20,6 +21,7 @@ export default class BlogArticles extends React.Component {
         />
         <OptionToIncludes />
         <BlogArticleData />
+        <CalendarSlider />
       </Layout>
     );
   }
