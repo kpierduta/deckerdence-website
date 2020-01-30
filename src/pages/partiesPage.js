@@ -25,6 +25,7 @@ export default class PartiesPage extends React.Component {
           leftFrame="/images/parties/frame@2x.png"
           leftText="We remain on site to look after everything from start to finish."
           leftAlt="main"
+          FrameBgImage=" /images/parties/photo-black-and-white@2x.png"
         />
       </Layout>
     );

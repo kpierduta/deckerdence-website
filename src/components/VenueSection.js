@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  background-image: url(/images/parties/photo-black-and-white@2x.png);
+  background-image: url(${props => props.FrameBgImage});
   background-repeat: no-repeat;
   background-size: cover;
   .text {
@@ -26,9 +26,13 @@ class VenueSection extends React.Component {
       rightText,
       leftAlt,
       rightAlt,
+      FrameBgImage,
     } = this.props;
     return (
-      <Section className="hero section is-block is-relative  is-medium">
+      <Section
+        className="hero section is-block is-relative  is-medium"
+        FrameBgImage={FrameBgImage}
+      >
         <div className="container">
           <div className="columns is-vcentered is-desktop">
             <div className="column is-5-desktop">
