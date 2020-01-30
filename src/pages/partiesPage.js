@@ -24,6 +24,7 @@ export default class PartiesPage extends React.Component {
         <VenueSection
           leftFrame="/images/parties/frame@2x.png"
           leftText="We remain on site to look after everything from start to finish."
+          leftAlt="main"
         />
       </Layout>
     );

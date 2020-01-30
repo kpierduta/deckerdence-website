@@ -19,7 +19,14 @@ const Section = styled.div`
 
 class VenueSection extends React.Component {
   render() {
-    const { leftFrame, leftText, rightFrame, rightText } = this.props;
+    const {
+      leftFrame,
+      leftText,
+      rightFrame,
+      rightText,
+      leftAlt,
+      rightAlt,
+    } = this.props;
     return (
       <Section className="hero section is-block is-relative  is-medium">
         <div className="container">
@@ -27,18 +34,22 @@ class VenueSection extends React.Component {
             <div className="column is-5-desktop">
               <div className="image-wrapper">
                 <figure className="image">
-                  <img src={leftFrame} alt="Frame" />
+                  <img src={leftFrame} alt={leftAlt} />
                 </figure>
-                <p className="text has-text-centered">{leftText}</p>
+                <p className="text has-text-centered has-text-black">
+                  {leftText}
+                </p>
               </div>
             </div>
             <div className="column is-2" />
             <div className="column is-5-desktop">
               <div className="image-wrapper">
                 <figure className="image">
-                  <img src={rightFrame} alt="SecondFrame" />
+                  <img src={rightFrame} alt={rightAlt} />
                 </figure>
-                <p className="text">{rightText}</p>
+                <p className="text has-text-centered has-text-black">
+                  {rightText}
+                </p>
               </div>
             </div>
           </div>
