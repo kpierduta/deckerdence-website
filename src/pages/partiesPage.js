@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import PartiesHero from '../components/PartiesHero';
 import PageHeading from '../components/PageHeading';
 import StagesSection from '../components/StagesSection';
-import RightVenueSection from '../components/RightVenueSection';
+import VenueSection from '../components/VenueSection';
 
 export default class PartiesPage extends React.Component {
   render() {
@@ -21,7 +21,10 @@ export default class PartiesPage extends React.Component {
           many different zones for your party."
         />
         <StagesSection title="Stages" />
-        <RightVenueSection />
+        <VenueSection
+          leftFrame="/images/parties/frame@2x.png"
+          leftText="We remain on site to look after everything from start to finish."
+        />
       </Layout>
     );
   }

@@ -10,16 +10,16 @@ const Section = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   .image-wrapper {
     position: relative;
   }
 `;
 
-class RightVenueSection extends React.Component {
+class VenueSection extends React.Component {
   render() {
-    const {} = this.props;
+    const { leftFrame, leftText, rightFrame, rightText } = this.props;
     return (
       <Section className="hero section is-block is-relative  is-medium">
         <div className="container">
@@ -27,18 +27,18 @@ class RightVenueSection extends React.Component {
             <div className="column is-5-desktop">
               <div className="image-wrapper">
                 <figure className="image">
-                  <img src="/images/parties/frame@2x.png" alt="" />
+                  <img src={leftFrame} alt="Frame" />
                 </figure>
-                <p className="text">ddddfdfdkfdjf</p>
+                <p className="text has-text-centered">{leftText}</p>
               </div>
             </div>
             <div className="column is-2" />
             <div className="column is-5-desktop">
               <div className="image-wrapper">
                 <figure className="image">
-                  <img src="/images/parties/frame@2x.png" alt="" />
+                  <img src={rightFrame} alt="SecondFrame" />
                 </figure>
-                <p className="text">ddddfdfdkfdjf</p>
+                <p className="text">{rightText}</p>
               </div>
             </div>
           </div>
@@ -48,4 +48,4 @@ class RightVenueSection extends React.Component {
   }
 }
 
-export default RightVenueSection;
+export default VenueSection;

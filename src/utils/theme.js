@@ -67,10 +67,10 @@ const GlobalStyle = createGlobalStyle`
     color: ${theme.textColor};
   }
   .button.is-primary {
-   
+
   }
   .button.is-secondary {
-   
+
   }
   .button.is-primary{
     background: transparent;
@@ -96,6 +96,9 @@ const GlobalStyle = createGlobalStyle`
   }
   .has-text-warning {
     color: ${theme.mainBrandColor} !important;
+  }
+  .has-text-black {
+    color: ${theme.textColorLite} !important;
   }
   .button.is-normal {
     background: transparent !important;
