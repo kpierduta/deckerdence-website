@@ -30,8 +30,9 @@ class VenueSection extends React.Component {
     } = this.props;
     return (
       <Section
-        className="hero section is-block is-relative  is-medium"
-        FrameBgImage={FrameBgImage}>
+        className="hero section is-block is-relative  is-large"
+        FrameBgImage={FrameBgImage}
+      >
         <div className="container">
           <div className="columns is-vcentered is-desktop">
             <div className="column is-5-desktop">
@@ -50,7 +51,7 @@ class VenueSection extends React.Component {
                 <figure className="image">
                   <img src={rightFrame} alt={rightAlt} />
                 </figure>
-                <p className="text has-text-centered has-text-black">
+                <p className="text has-text-centered has-text-white">
                   {rightText}
                 </p>
               </ImageWrapper>
