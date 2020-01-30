@@ -12,9 +12,9 @@ const Section = styled.div`
     transform: translate(-50%, -50%);
     font-size: 1.6rem;
   }
-  .image-wrapper {
-    position: relative;
-  }
+`;
+const ImageWrapper = styled.div`
+  position: relative;
 `;
 
 class VenueSection extends React.Component {
@@ -31,30 +31,29 @@ class VenueSection extends React.Component {
     return (
       <Section
         className="hero section is-block is-relative  is-medium"
-        FrameBgImage={FrameBgImage}
-      >
+        FrameBgImage={FrameBgImage}>
         <div className="container">
           <div className="columns is-vcentered is-desktop">
             <div className="column is-5-desktop">
-              <div className="image-wrapper">
+              <ImageWrapper>
                 <figure className="image">
                   <img src={leftFrame} alt={leftAlt} />
                 </figure>
                 <p className="text has-text-centered has-text-black">
                   {leftText}
                 </p>
-              </div>
+              </ImageWrapper>
             </div>
             <div className="column is-2" />
             <div className="column is-5-desktop">
-              <div className="image-wrapper">
+              <ImageWrapper>
                 <figure className="image">
                   <img src={rightFrame} alt={rightAlt} />
                 </figure>
                 <p className="text has-text-centered has-text-black">
                   {rightText}
                 </p>
-              </div>
+              </ImageWrapper>
             </div>
           </div>
         </div>
