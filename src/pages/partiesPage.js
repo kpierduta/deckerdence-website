@@ -31,7 +31,7 @@ export default class PartiesPage extends React.Component {
         <DetailsCardSection />
         <VenueSection
           rightFrame="/images/parties/rightframes.png"
-          rightText="We remain on site to look after everything from start to finish."
+          rightText="Your guests will be amazed when they walk into the marquee and see a double decker bus inside. "
           rightAlt="main"
           FrameBgImage=" /images/parties/photo-black-and-white@2x.png"
         />

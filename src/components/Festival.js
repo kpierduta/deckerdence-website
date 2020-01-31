@@ -1,40 +1,43 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Heading from './elments/Heading';
+import FestivalIcon from './FestivalIcon';
 
 const Section = styled.div``;
-
-const Festival = () => {
-  return (
-    <Section className="section">
-      <div className="container">
-        <Heading title="OUR VENUE IS PERFECT FOR..." />
-        <div className="columns is-multiline is-variable is-5">
-          <div className="column">
-            <figure className="image">
-              <img src="/images/festival/exhibitions@2x.png" alt="" />
-            </figure>
+class Festival extends React.Component {
+  render() {
+    const {} = this.props;
+    return (
+      <Section className="section">
+        <div className="container">
+          <h1 className="title is-2 has-text-weight-normal has-text-centered">
+            OUR VENUE IS PERFCT FOR...
+          </h1>
+          <div className="columns is-multiline is-variable is-5">
+            <FestivalIcon
+              image="/images/festival/exhibitions@2x.png"
+              alternative="products"
+            />
+            <FestivalIcon
+              image="/images/festival/fairs@2x.png"
+              alternative="products"
+            />
+            <FestivalIcon
+              image="/images/festival/festivals@2x.png"
+              alternative="products"
+            />
+            <FestivalIcon
+              image="/images/festival/fetes@2x.png"
+              alternative="products"
+            />
           </div>
-          <div className="column">
-            <figure className="image">
-              <img src="/images/festival/fairs@2x.png" alt="" />
-            </figure>
-          </div>
-          <div className="column">
-            <figure className="image">
-              <img src="/images/festival/festivals@2x.png" alt="" />
-            </figure>
-          </div>
-          <div className="column">
-            <figure className="image">
-              <img src="/images/festival/fetes@2x.png" alt="" />
-            </figure>
-          </div>
+          <h1 className="title is-2 has-text-weight-normal has-text-centered">
+            ...AND CAN TRAVEL ANYWHERE IN THE UK
+          </h1>
         </div>
-      </div>
-    </Section>
-  );
-};
+      </Section>
+    );
+  }
+}
 
 export default Festival;
