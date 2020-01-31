@@ -6,12 +6,12 @@ import FestivalIcon from './FestivalIcon';
 const Section = styled.div``;
 class Festival extends React.Component {
   render() {
-    const {} = this.props;
+    const { title, subtitle } = this.props;
     return (
       <Section className="section">
         <div className="container">
           <h1 className="title is-2 has-text-weight-normal has-text-centered">
-            OUR VENUE IS PERFCT FOR...
+            {title}
           </h1>
           <div className="columns is-multiline is-variable is-5">
             <FestivalIcon
@@ -32,7 +32,7 @@ class Festival extends React.Component {
             />
           </div>
           <h1 className="title is-2 has-text-weight-normal has-text-centered">
-            ...AND CAN TRAVEL ANYWHERE IN THE UK
+            {subtitle}
           </h1>
         </div>
       </Section>

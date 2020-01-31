@@ -19,7 +19,10 @@ export default class EventPage extends React.Component {
         />
         <PageHeading title="We can provide everything you need for the ultimate event" />
         <StagesSection title="We can provide everything you need for the ultimate event" />
-        <Festival />
+        <Festival
+          title="  OUR VENUE IS PERFCT FOR..."
+          subtitle="...AND CAN TRAVEL ANYWHERE IN THE UK"
+        />
         <DetailsCardSection />
       </Layout>
     );
