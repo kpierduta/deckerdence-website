@@ -7,6 +7,7 @@ import PageHeading from '../components/PageHeading';
 import StagesSection from '../components/StagesSection';
 import VenueSection from '../components/VenueSection';
 import DetailsCardSection from '../components/DetailsCardSection';
+import Gallery from '../components/Gallery';
 
 export default class PartiesPage extends React.Component {
   render() {
@@ -35,6 +36,7 @@ export default class PartiesPage extends React.Component {
           rightAlt="main"
           FrameBgImage=" /images/parties/photo-black-and-white@2x.png"
         />
+        <Gallery />
       </Layout>
     );
   }
