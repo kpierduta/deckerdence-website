@@ -1,11 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Button from './elments/Button';
+
 const Section = styled.div`
   margin-top: 4rem;
 `;
 
 const images = [
+  '/images/gallery/goin.png',
+  '/images/gallery/goin.png',
   '/images/gallery/goin.png',
   '/images/gallery/goin.png',
   '/images/gallery/goin.png',
@@ -28,6 +32,7 @@ class Gallery extends React.Component {
             </div>
           ))}
         </div>
+        <Button />
       </Section>
     );
   }
