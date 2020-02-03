@@ -4,7 +4,9 @@ import { Link } from 'gatsby';
 
 const Linkstyled = styled(Link)`
   .image-button {
-    width: 15%;
+    width: 25%;
+  }
+  figure {
     margin: 0 auto;
   }
 `;
