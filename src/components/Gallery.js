@@ -17,27 +17,27 @@ class Gallery extends React.Component {
           </div>
           <div className="column is-4">
             <figure className="image is-3by2">
-              <img src="/images/gallery/goin.png" alt="gallery" />
+              <img src="/images/gallery/goin.png" alt="gallery-one" />
             </figure>
           </div>
           <div className="column is-4">
             <figure className="image is-3by2">
-              <img src="/images/gallery/goin.png" alt="gallery" />
+              <img src="/images/gallery/goin.png" alt="gallery-two" />
             </figure>
           </div>
           <div className="column is-4">
             <figure className="image is-3by2">
-              <img src="/images/gallery/goin.png" alt="gallery" />
+              <img src="/images/gallery/goin.png" alt="gallery-three" />
             </figure>
           </div>
           <div className="column is-4">
             <figure className="image is-3by2">
-              <img src="/images/gallery/goin.png" alt="gallery" />
+              <img src="/images/gallery/goin.png" alt="gallery-four" />
             </figure>
           </div>
           <div className="column is-4">
             <figure className="image is-3by2">
-              <img src="/images/gallery/goin.png" alt="gallery" />
+              <img src="/images/gallery/goin.png" alt="gallery-fifth" />
             </figure>
           </div>
         </div>
