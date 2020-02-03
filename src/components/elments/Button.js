@@ -5,11 +5,7 @@ import { Link } from 'gatsby';
 const Linkstyled = styled(Link)`
   .image-button {
     width: 15%;
-  }
-  img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto;
   }
 `;
 
