@@ -55,8 +55,13 @@ const HomeHero = () => {
           </div>
         </div>
         <MovingContainer>
-          <img id="left-moving-item" src="/images/dummy.jpg" alt="dummy" />
-          <img id="right-moving-item" src="/images/dummy.jpg" alt="dummy" />
+          <figure className="image is-square">
+            <img
+              id="left-moving-item"
+              src="/images/parties/layer-802@2x.png"
+              alt="Left-Rocket"
+            />
+          </figure>
         </MovingContainer>
       </div>
     </Section>
