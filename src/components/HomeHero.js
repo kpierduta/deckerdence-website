@@ -19,6 +19,22 @@ const MovingRightContainer = styled.div`
   right: 0;
 `;
 
+const FireworkContainer = styled.div`
+  position: absolute;
+  right: 80px;
+  .circular-image {
+    width: 35%;
+  }
+  @keyframes rotate360 {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  circular-image {
+    animation: 2s rotate360 infinite linear;
+  }
+`;
+
 const HomeHero = () => {
   useEffect(() => {
     move('#left-moving-item')
@@ -41,6 +57,14 @@ const HomeHero = () => {
         <figure className="image">
           <img src="/images/home/title-banner@2x.png" alt="" />
         </figure>
+        <FireworkContainer className="circle">
+          <img
+            className="circular-image"
+            id="loading"
+            src="/images/home/firework-5@2x.png"
+            alt="circle"
+          />
+        </FireworkContainer>
         <div className="columns  is-centered">
           <div className="column is-10 has-text-centered">
             <h1 className="title is-2 has-text-white has-text-weight-semibold	">
