@@ -10,23 +10,27 @@ const Section = styled.section`
   }
 `;
 
-const MovingContainer = styled.div`
+const MovingLeftContainer = styled.div`
   position: absolute;
   left: 0;
+`;
+const MovingRightContainer = styled.div`
+  position: absolute;
+  right: 0;
 `;
 
 const HomeHero = () => {
   useEffect(() => {
     move('#left-moving-item')
-      .translate(300, -700)
+      .translate(300, -450)
       .delay('3s')
       .duration('3s')
       .end();
-    // move('#right-moving-item')
-    //   .translate(-300, -700)
-    //   .delay('3s')
-    //   .duration('3s')
-    //   .end();
+    move('#right-moving-item')
+      .translate(-200, -450)
+      .delay('3s')
+      .duration('3s')
+      .end();
     // TO rotate
     // https://codepen.io/vitoralberto/pen/OPYyYB
   }, []);
@@ -53,16 +57,25 @@ const HomeHero = () => {
               01675 463555
             </h1>
           </div>
+          <div className="columns">
+            <MovingLeftContainer className="column">
+              <img
+                id="left-moving-item"
+                src="/images/parties/layer-802@2x.png"
+                alt="Left-Rocket"
+                width="40%"
+              />
+            </MovingLeftContainer>
+            <MovingRightContainer className="column">
+              <img
+                id="right-moving-item"
+                src="/images/parties/layer-797@2x.png"
+                alt="Left-Rocket"
+                width="40%"
+              />
+            </MovingRightContainer>
+          </div>
         </div>
-        <MovingContainer>
-          <figure className="image is-square">
-            <img
-              id="left-moving-item"
-              src="/images/parties/layer-802@2x.png"
-              alt="Left-Rocket"
-            />
-          </figure>
-        </MovingContainer>
       </div>
     </Section>
   );
