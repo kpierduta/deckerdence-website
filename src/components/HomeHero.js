@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import move from 'move-js';
+
+// const move = typeof window !== `undefined` ? require('move-js') : null;
 
 const Section = styled.section`
   background-image: url('/images/home/background.png');
@@ -36,20 +37,20 @@ const FireworkContainer = styled.div`
 `;
 
 const HomeHero = () => {
-  useEffect(() => {
-    move('#left-moving-item')
-      .translate(300, -450)
-      .delay('3s')
-      .duration('3s')
-      .end();
-    move('#right-moving-item')
-      .translate(-200, -450)
-      .delay('3s')
-      .duration('3s')
-      .end();
-    // TO rotate
-    // https://codepen.io/vitoralberto/pen/OPYyYB
-  }, []);
+  // useEffect(() => {
+  //   move('#left-moving-item')
+  //     .translate(300, -450)
+  //     .delay('3s')
+  //     .duration('3s')
+  //     .end();
+  //   move('#right-moving-item')
+  //     .translate(-200, -450)
+  //     .delay('3s')
+  //     .duration('3s')
+  //     .end();
+  //   // TO rotate
+  //   // https://codepen.io/vitoralberto/pen/OPYyYB
+  // }, []);
 
   return (
     <Section className="section">
