@@ -5,9 +5,11 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   background-image: url('/images/home/background.png');
-
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   .columns.is-centered {
-    margin-top: 31rem;
+    margin-top: 40rem;
   }
 `;
 

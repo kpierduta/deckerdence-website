@@ -13,7 +13,7 @@ const Section = styled.section`
     width: 19rem;
     position: absolute;
     top: 2.5625rem;
-    right: 2rem;
+    right: 6rem;
   }
   .content {
     padding: 3rem 6.5rem;
@@ -45,7 +45,7 @@ const HireLeft = props => (
               <h3 className="title is-5 price has-text-white">
                 hire from {props.price}
               </h3>
-              <button class="button is-danger is-large title is-5 has-text-white">
+              <button className="button is-danger is-large title is-5 has-text-white">
                 find out more
               </button>
             </div>

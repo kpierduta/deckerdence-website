@@ -2,21 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-const Linkstyled = styled(Link)`
-  .image-button {
-    width: 25%;
+const LinkStyled = styled(Link)`
+  img {
+    width: ${props => (props.hasWidth ? props.hasWidth : '100%')};
   }
   figure {
     margin: 0 auto;
   }
 `;
 
-const Button = props => (
-  <Linkstyled to="/">
+const Button = ({ image, alt, hasWidth }) => (
+  <LinkStyled to="/" hasWidth={hasWidth}>
     <figure className="image-button">
-      <img src="/images/view-more@2x.png" alt="" />
+      <img src={image} alt={alt} />
     </figure>
-  </Linkstyled>
+  </LinkStyled>
 );
 
 export default Button;

@@ -2,13 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  
-    background-image: url('${props => props.boxImage}');
-    background-size: cover;
-    background-repeat: no-repeat;
-    .text {
-        color: ${props => props.color} !important;
-    }
+  background-image: url('${props => props.boxImage}');
+  background-size: cover;
+  background-repeat: no-repeat;
+  .text {
+    color: ${props => props.color} !important;
+  }
 `;
 
 class BlogData extends React.Component {
@@ -25,7 +24,8 @@ class BlogData extends React.Component {
         <div className="has-text-centered">
           <button
             className="button is-normal has-text-weight-bold text"
-            type="button">
+            type="button"
+          >
             READ MORE
           </button>
         </div>
