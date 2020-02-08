@@ -27,16 +27,16 @@ export default class HirePage extends React.Component {
         />
         <HireOptionItem
           flex
-          image="/images/hire/bus.png"
-          option="Hire Option 1"
+          image="/images/hire/bus-house.png"
+          option="Hire Option 2"
           title="Vintage Bus Bar"
           description="You can hire our fabulous vintage bus bar
           to give your event a stand out bar."
           price="£500.00"
         />
         <HireOptionItem
-          image="/images/hire/bus.png"
-          option="Hire Option 1"
+          image="/images/hire/bar-bus.png"
+          option="Hire Option 3"
           title="Vintage Bus Bar"
           description="You can hire our fabulous vintage bus bar
           to give your event a stand out bar."
@@ -44,8 +44,8 @@ export default class HirePage extends React.Component {
         />
         <HireOptionItem
           flex
-          image="/images/hire/bus.png"
-          option="Hire Option 1"
+          image="/images/hire/bus-decoration.png"
+          option="Hire Option 4"
           title="Vintage Bus Bar"
           description="You can hire our fabulous vintage bus bar
           to give your event a stand out bar."

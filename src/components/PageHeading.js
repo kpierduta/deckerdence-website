@@ -15,10 +15,14 @@ const PageHeading = props => {
       <div className="container">
         <div className="columns is-centered">
           <div className="column has-text-centered">
-            <h1 className="title is-1 has-text-white is-spaced">{title}</h1>
-            <h1 className="subtitle is-3 has-text-white has-text-centered">
-              {subtitle}
-            </h1>
+            {title && (
+              <h1 className="title is-1 has-text-white is-spaced">{title}</h1>
+            )}
+            {subtitle && (
+              <h1 className="subtitle is-3 has-text-white has-text-centered">
+                {subtitle}
+              </h1>
+            )}
           </div>
         </div>
       </div>

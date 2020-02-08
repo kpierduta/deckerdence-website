@@ -6,6 +6,9 @@ const Section = styled.section`
   .columns {
     flex-direction: ${props => (props.flex ? 'row-reverse' : '')};
   }
+  .column {
+    align-self: center;
+  }
   .content {
     padding: 3rem 6.5rem;
   }

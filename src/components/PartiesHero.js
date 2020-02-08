@@ -23,13 +23,16 @@ const Section = styled.div`
     align-items: center;
     justify-content: center;
   }
+  h1 {
+    font-size: 4rem;
+  }
 `;
 
 class PartiesHero extends React.Component {
   render() {
     const { title, partybgImage } = this.props;
     return (
-      <Section className="section  is-medium" partybgImage={partybgImage}>
+      <Section className="section is-medium" partybgImage={partybgImage}>
         <div className="image-wrapper">
           <figure className="image is-128x128">
             <img src="/images/parties/disco-ball-copy@2x.png" alt="" />
@@ -41,7 +44,7 @@ class PartiesHero extends React.Component {
               <figure className="">
                 <img src="/images/parties/t2x.png" alt="" />
               </figure>
-              <h1 className="title is-1  is-size-4-mobile centered has-text-white">
+              <h1 className="title is-size-4-mobile centered has-text-white">
                 {title}
               </h1>
             </div>

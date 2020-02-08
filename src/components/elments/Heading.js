@@ -6,13 +6,13 @@ const Wrapper = styled.h1`
   letter-spacing: 0.2rem;
 `;
 
-const Heading = ({ title, size, color }) => (
+const Heading = ({ heading, size, color }) => (
   <Wrapper
     className={`title has-text-weight-semibold is-spaced has-text-centered ${size ||
       'is-1'}`}
     color={color}
   >
-    {title}
+    {heading}
   </Wrapper>
 );
 

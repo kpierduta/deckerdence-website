@@ -4,21 +4,21 @@ import styled from 'styled-components';
 
 const ImageWrapper = styled.div`
   justify-content: center;
+  .image.is-128x128 {
+    height: 14rem;
+    width: 14rem;
+  }
 `;
 class Stages extends React.Component {
   render() {
-    const { title, subtitle } = this.props;
+    const { title, subtitle, image, alt } = this.props;
     return (
       <section className="column is-4 is-multiline">
         <div className="card-content">
           <div className="card-image">
             <ImageWrapper className="media align">
               <figure className="image is-128x128">
-                <img
-                  className="is-rounded"
-                  src="/images/parties/icon@2x.png"
-                  alt=""
-                />
+                <img className="is-rounded" src={image} alt={alt} />
               </figure>
             </ImageWrapper>
           </div>

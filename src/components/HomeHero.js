@@ -8,20 +8,20 @@ const Section = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* flex: 30 !important; */
   .columns.is-centered {
-    /* margin-top: 40rem; */
-    align-items: flex-end;
+    margin-top: 40rem;
   }
 `;
 
 const MovingLeftContainer = styled.div`
   position: absolute;
   left: 0;
+  bottom: 9rem;
 `;
 const MovingRightContainer = styled.div`
   position: absolute;
   right: 0;
+  bottom: 9rem;
 `;
 
 const FireworkContainer = styled.div`
@@ -57,7 +57,7 @@ const HomeHero = () => {
   // }, []);
 
   return (
-    <Section className="section is-large">
+    <Section className="section">
       <div className="container">
         <figure className="image">
           <img src="/images/home/title-banner@2x.png" alt="" />
