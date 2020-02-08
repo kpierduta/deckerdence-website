@@ -3,8 +3,7 @@ import React from 'react';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import HireHero from '../components/HireHero';
-import HireRight from '../components/HireRight';
-import HireLeft from '../components/HireLeft';
+import HireOptionItem from '../components/HireOptionItem';
 
 export default class HirePage extends React.Component {
   render() {
@@ -18,6 +17,28 @@ export default class HirePage extends React.Component {
           4 different options. All these options are fully customisable so
           that you can create the perfect setup for your event."
         />
+        <HireOptionItem
+          flex
+          frame="/images/hire/frame-1.png"
+          image="/images/hire/photo.png"
+          option="Hire Option 1"
+          title="Vintage Bus Bar"
+          description="You can hire our fabulous vintage bus bar
+          to give your event a stand out bar."
+          price="£500.00"
+        />
+        <HireOptionItem
+          frame="/images/hire/frame-2.png"
+          image="/images/hire/bar.png"
+          option="Hire Option 2"
+          title="Vintage bus bar
+          with SIDE awning"
+          description="You can hire Deckerdence with an awning,
+          giving you shade in the sunshine or some cover
+          in unpredictable weather conditions."
+          price="£1000.00"
+        />
+        {/*
         <HireRight
           frame="/images/hire/frame-1.png"
           image="/images/hire/photo.png"
@@ -58,7 +79,7 @@ export default class HirePage extends React.Component {
           marquee structures can be attached
           for more space if needed."
           price="£5952.00"
-        />
+        /> */}
       </Layout>
     );
   }
