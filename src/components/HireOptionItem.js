@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  background-color: ${props => (props.flex ? '#DDDBDD' : '')};
+  background-color: ${props => (props.flex ? '#AAB3B6' : '')};
   .columns {
     flex-direction: ${props => (props.flex ? 'row-reverse' : '')};
   }

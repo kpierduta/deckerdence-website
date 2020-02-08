@@ -6,15 +6,13 @@ import PageHeading from '../components/PageHeading';
 import ContactUsData from '../components/ContactUsData';
 import Address from '../components/Address';
 
-export default class ContactPage extends React.Component {
-  render() {
-    return (
-      <Layout>
-        <Seo title="Home" description="Welcome to GatsbyJs v1" />
-        <PageHeading title="Contact Us" />
-        <ContactUsData />
-        <Address />
-      </Layout>
-    );
-  }
-}
+const ContactPage = () => (
+  <Layout>
+    <Seo title="Contact Page" />
+    <PageHeading title="Contact Us" />
+    <ContactUsData />
+    <Address />
+  </Layout>
+);
+
+export default ContactPage;

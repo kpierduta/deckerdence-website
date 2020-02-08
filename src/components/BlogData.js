@@ -6,7 +6,13 @@ const Wrapper = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   .text {
-    color: ${props => props.color} !important;
+    color: ${props =>
+      props.color
+        ? props.theme.textColorLite
+        : props.theme.backgroundColor} !important;
+  }
+  button {
+    border: 1px solid ${props => (props.color ? '#000' : '#fff')} !important;
   }
 `;
 
