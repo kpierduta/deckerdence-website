@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   background-image: url('/images/hire/background.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   .column {
     background-image: url('/images/hire/frame.png');
     background-repeat: no-repeat;
@@ -16,7 +18,7 @@ const Section = styled.section`
   }
 `;
 const HireHero = ({ title, subtitle, para }) => (
-  <Section className="hero is-primary is-medium">
+  <Section className="hero is-medium">
     <div className="hero-body">
       <div className="container">
         <div className="columns is-centered">

@@ -2,18 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  .frame {
-    width: 23rem;
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-  .image {
-    width: 19rem;
-    position: absolute;
-    top: 2.5625rem;
-    left: 1.75rem;
-  }
+  background-color: ${props => (props.flex ? '#DDDBDD' : '')};
   .columns {
     flex-direction: ${props => (props.flex ? 'row-reverse' : '')};
   }
@@ -26,16 +15,23 @@ const Section = styled.section`
   .price {
     margin-top: 2rem !important;
   }
+  h5,
+  h3,
+  .button {
+    color: ${props => (props.flex ? '#fff' : '')};
+  }
+  .button {
+    background: transparent;
+    border: 2px solid ${props => (props.flex ? '#fff' : '')};
+  }
 `;
 
 const HireOptionItem = ({
-  frame,
   image,
   option,
   title,
   description,
   price,
-  altBg,
   altImg,
   flex,
 }) => (
@@ -43,7 +39,6 @@ const HireOptionItem = ({
     <div className="container">
       <div className="columns">
         <div className="column">
-          <img className="frame" src={frame} alt={altBg} />
           <img className="image" src={image} alt={altImg} />
         </div>
         <div className="column is-8 has-text-centered">
@@ -56,11 +51,8 @@ const HireOptionItem = ({
           <h5 className="subtitle is-5 has-text-weight-medium">
             {description}
           </h5>
-          <h3 className="title is-5 price">hire from {price}</h3>
-          <button
-            type="button"
-            className="button is-primary is-large title is-5"
-          >
+          <h3 className="title is-5 price">from {price}</h3>
+          <button type="button" className="button is-large title is-5">
             Find out more
           </button>
         </div>

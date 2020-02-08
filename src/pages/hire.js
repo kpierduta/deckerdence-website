@@ -18,9 +18,7 @@ export default class HirePage extends React.Component {
           that you can create the perfect setup for your event."
         />
         <HireOptionItem
-          flex
-          frame="/images/hire/frame-1.png"
-          image="/images/hire/photo.png"
+          image="/images/hire/bus.png"
           option="Hire Option 1"
           title="Vintage Bus Bar"
           description="You can hire our fabulous vintage bus bar
@@ -28,15 +26,30 @@ export default class HirePage extends React.Component {
           price="£500.00"
         />
         <HireOptionItem
-          frame="/images/hire/frame-2.png"
-          image="/images/hire/bar.png"
-          option="Hire Option 2"
-          title="Vintage bus bar
-          with SIDE awning"
-          description="You can hire Deckerdence with an awning,
-          giving you shade in the sunshine or some cover
-          in unpredictable weather conditions."
-          price="£1000.00"
+          flex
+          image="/images/hire/bus.png"
+          option="Hire Option 1"
+          title="Vintage Bus Bar"
+          description="You can hire our fabulous vintage bus bar
+          to give your event a stand out bar."
+          price="£500.00"
+        />
+        <HireOptionItem
+          image="/images/hire/bus.png"
+          option="Hire Option 1"
+          title="Vintage Bus Bar"
+          description="You can hire our fabulous vintage bus bar
+          to give your event a stand out bar."
+          price="£500.00"
+        />
+        <HireOptionItem
+          flex
+          image="/images/hire/bus.png"
+          option="Hire Option 1"
+          title="Vintage Bus Bar"
+          description="You can hire our fabulous vintage bus bar
+          to give your event a stand out bar."
+          price="£500.00"
         />
         {/*
         <HireRight
