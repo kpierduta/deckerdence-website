@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
+import FooterOption from './FooterOptions';
+
 const Container = styled.section`
   margin-top: 1rem;
   img {
@@ -10,93 +12,68 @@ const Container = styled.section`
   .columns {
     margin-top: 2rem;
   }
-
   .is-spaced {
     margin-bottom: 2.5rem;
   }
-`;
-const Linkstyled = styled(Link)`
-  .subtitle {
-    padding-bottom: 5px;
-    border-bottom: 1.5px solid;
+  p {
+    margin-top: 2rem;
+    font-family: ${props => props.theme.primaryFontFamily};
   }
 `;
 
+const IconContainer = styled.div`
+  padding-bottom: 2rem;
+`;
+
 const Footer = () => (
-  <Container className="section">
+  <Container className="section is-medium">
     <div className="container">
-      <div className="has-text-centered">
+      <IconContainer className="has-text-centered">
         <Link to="/">
-          <img src="/images/icon/facebook.png" alt="" />
+          <img src="/images/icon/facebook.png" alt="facebook icon" />
         </Link>
         <Link to="/">
-          <img src="/images/icon/twitter.png" alt="" />
+          <img src="/images/icon/twitter.png" alt="twitter icon" />
         </Link>
         <Link to="/">
-          <img src="/images/icon/linked-in.png" alt="" />
+          <img src="/images/icon/linked-in.png" alt="linkedin icon" />
         </Link>
         <Link to="/">
-          <img src="/images/icon/instagram.png" alt="" />
+          <img src="/images/icon/instagram.png" alt="instagram icon" />
         </Link>
         <Link to="/">
-          <img src="/images/icon/pinterest.png" alt="" />
+          <img src="/images/icon/pinterest.png" alt="pinterest icon" />
         </Link>
-      </div>
+      </IconContainer>
       <div className="columns has-text-centered is-variable is-6">
         <div className="column">
-          <Link to="/">
-            <h3 className="title is-3 is-spaced">CONTACT</h3>
-          </Link>
-          <Linkstyled to="/blogPage">
-            <h4 className="subtitle is-5">Tel: 01675 463 555</h4>
-          </Linkstyled>
-          <Linkstyled to="/blogArticles">
-            <h4 className="subtitle is-5">Email: enquiries@deckerdence.com</h4>
-          </Linkstyled>
-          <Linkstyled to="/">
-            <h4 className="subtitle is-5">
-              Blyth Hall Farm, Blythe Road, Coleshill, Birmingham, B46 2AF
-            </h4>
-          </Linkstyled>
-          <Link to="/">
-            <h4 className="subtitle is-5">Viewings By Appointment Only</h4>
-          </Link>
+          <h3 className="is-size-3 is-spaced">CONTACT</h3>
+          <FooterOption option="Tel: 01675 463 555" link="/" />
+          <FooterOption option="Email: enquiries@deckerdence.com" link="/" />
+          <FooterOption
+            option="Blyth Hall Farm, Blythe Road, Coleshill, Birmingham, B46 2AF"
+            link="/"
+          />
+          <p className="is-size-6 is-italic	is-capitalized">
+            Viewings By Appointment Only
+          </p>
         </div>
         <div className="column">
-          <Link to="/">
-            <h3 className="title is-3 is-spaced">HIRE OPTIONS</h3>
-          </Link>
-          <Linkstyled to="/hirePage">
-            <h4 className="subtitle is-5">Vintage Bus Bar</h4>
-          </Linkstyled>
-          <Linkstyled to="/sideAwning">
-            <h4 className="subtitle is-5">Bus bar With Awning Hire</h4>
-          </Linkstyled>
-          <Linkstyled to="/hirePage">
-            <h4 className="subtitle is-5">Bus Bar Half Wraparound Marquee</h4>
-          </Linkstyled>
-          <Link to="/hirePage">
-            <h4 className="subtitle is-5">
-              Bus Bar with Full Wraparound Marquee
-            </h4>
-          </Link>
+          <h3 className="is-size-3 is-spaced">HIRE OPTIONS</h3>
+          <FooterOption option="Vintage Bus Bar" link="/" />
+          <FooterOption option="Bus bar With Awning Hire" link="/" />
+          <FooterOption option="Bus Bar Half Wraparound Marquee" link="/" />
+          <FooterOption
+            option="Bus Bar with Full Wraparound Marquee"
+            link="/"
+          />
         </div>
         <div className="column">
-          <Link to="/">
-            <h3 className="title is-3 is-spaced">THE GALLERY</h3>
-          </Link>
-          <Linkstyled to="/wedding">
-            <h4 className="subtitle is-5">Our Wedding Gallery</h4>
-          </Linkstyled>
-          <Linkstyled to="/">
-            <h4 className="subtitle is-5">Our Events Gallery</h4>
-          </Linkstyled>
-          <Linkstyled to="/">
-            <h4 className="subtitle is-5">Our Hospitality Gallery</h4>
-          </Linkstyled>
-          <Link to="/partiesPage">
-            <h4 className="subtitle is-5">Our Party Gallery</h4>
-          </Link>
+          <h3 className="is-size-3 is-spaced">THE GALLERY</h3>
+          <FooterOption option="Our Wedding Gallery" link="/" />
+          <FooterOption option="Our Events Gallery" link="/" />
+          <FooterOption option="Our Hospitality Gallery" link="/" />
+          <FooterOption option="Our Party Gallery" link="/" />
         </div>
       </div>
     </div>

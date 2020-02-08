@@ -8,8 +8,10 @@ const Section = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  /* flex: 30 !important; */
   .columns.is-centered {
-    margin-top: 40rem;
+    /* margin-top: 40rem; */
+    align-items: flex-end;
   }
 `;
 
@@ -55,7 +57,7 @@ const HomeHero = () => {
   // }, []);
 
   return (
-    <Section className="section">
+    <Section className="section is-large">
       <div className="container">
         <figure className="image">
           <img src="/images/home/title-banner@2x.png" alt="" />

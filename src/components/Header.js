@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 const Section = styled.section`
-  padding: 1rem 1.5rem;
   .navbar {
     background-color: transparent;
   }
@@ -23,10 +22,14 @@ const Section = styled.section`
     }
   }
   .navbar-item {
-    font-weight: 700;
     font-size: 1.25rem;
+    color: #000;
     :hover {
       color: ${props => props.theme.darkAccent};
+      background-color: transparent;
+    }
+    :focus {
+      background-color: transparent;
     }
   }
   .navbar-burger {
@@ -59,7 +62,7 @@ export default class Header extends React.Component {
 
     return (
       <Section className="section">
-        <div className="container">
+        <div>
           <nav
             className="navbar"
             role="navigation"
