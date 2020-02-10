@@ -9,7 +9,7 @@ import BlogTile from '../components/BlogTile';
 const BlogPage = () => (
   <Layout>
     <Seo title="Home" description="Welcome to GatsbyJs v1" />
-    <PageHeading title="BLog" />
+    <PageHeading title="BLOG" />
     <BlogTile />
   </Layout>
 );
