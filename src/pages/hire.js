@@ -1,1 +1,57 @@
-ebzC šöŒŸ‚.(€€è0Ô‚€À/šöŒŸ‚.unknownNSUserActivityTypeBrowsingWebzC ½’Ÿ‚.(€€è0Ô‚€À/½’Ÿ‚.unknownNSUserActivityTypeBrowsingWebzC ½’Ÿ‚.(€€è0Ô‚€À/½’Ÿ‚.unknownNSUserActivityTypeBrowsingWebzC ¥–Ÿ‚.(€€è0Ô‚€À/œ¥–Ÿ‚.unknownNSUserActivityTypeBrowsingWebzC ¥–Ÿ‚.(€€è0Ô‚€À/¥–Ÿ‚.unknownNSUserActivityTypeBrowsingWebzC ŞÑ–Ÿ‚.(€€è0Ô‚€À/ŞÑ–Ÿ‚.unknownNSUserActivityTypeBrowsingWebzC ßÑ–Ÿ‚.(€€è0Ô‚€À/ßÑ–Ÿ‚.unknownNSUserActivityTypeBrowsingWebzC úŞ–Ÿ‚.(€€è0Ô‚€À/ùŞ–Ÿ‚.unknownNSUserActivityTypeBrowsingWebzC úŞ–Ÿ‚.(€€è0Ô‚€À/úŞ–Ÿ‚.unknownNSUserActivityTypeBrowsingWebzC ŸÀ—Ÿ‚.(€€è0Ô‚€À/ŸÀ—Ÿ‚.unknownNSUserActivityTypeBrowsingWebzC  À—Ÿ‚.(€€è0Ô‚€À/ À—Ÿ‚.unknownNSUserActivityTypeBrowsingWebzC œŸ‚.(€€è0Ô‚€À/œŸ‚.unknownNSUserActivityTypeBrowsingWebzC œŸ‚.(€€è0Ô‚€À/œŸ‚.unknownNSUserActivityTypeBrowsingWebzC ª¥œŸ‚.(€€è0Ô‚€À/ª¥œŸ‚.unknownNSUserActivityTypeBrowsingWebzC «¥œŸ‚.(€€è0Ô‚€À/«¥œŸ‚.unknownNSUserActivityTypeBrowsingWebzC ÔªŸ‚.(€€è0Ô‚€À/ÔªŸ‚.unknownNSUserActivityTypeBrowsingWebzC ÕªŸ‚.(€€è0Ô‚€À/ÕªŸ‚.unknownNSUserActivityTypeBrowsingWebzC ÅµŸ‚.(€€è0Ô‚€À/ÅµŸ‚.unknownNSUserActivityTypeBrowsingWebzC ÅµŸ‚.(€€è0Ô‚€À/ÅµŸ‚.unknownNSUserActivityTypeBrowsingWebzC ˆ½Ÿ‚.(€€è0Ô‚€À/ˆ½Ÿ‚.unknownNSUserActivityTypeBrowsingWebzC ‰½Ÿ‚.(€€è0Ô‚€À/‰½Ÿ‚.unknownNSUserActivityTypeBrowsingWebzC éí¨Ÿ‚.(€€è0Ô‚€À/éí¨Ÿ‚.unknownNSUserActivityTypeBrowsingWebzC êí¨Ÿ‚.(€€è0Ô‚€À/êí¨Ÿ‚.unknownNSUserActivityTypeBrowsingWebzC ³ÉªŸ‚.(€€è0Ô‚€À/³ÉªŸ‚.unknownNSUserActivityTypeBrowsingWebzC ³ÉªŸ‚.(€€è0Ô‚€À/³ÉªŸ‚.unknownNSUserActivityTypeBrowsingWebzC ­ÜªŸ‚.(€€è0Ô‚€À/­Üª
+import React from 'react';
+
+import Seo from '../components/Seo';
+import Layout from '../components/Layout';
+import HireHero from '../components/HireHero';
+import HireOptionItem from '../components/HireOptionItem';
+
+export default class HirePage extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <Seo title="Home" description="Welcome to GatsbyJs v1" />
+        <HireHero
+          title="Unique Mobile Venue"
+          subtitle=" Find the perfect Deckerdence Hire option for your event"
+          para="  Deckerdence is a unique mobile venue that is avalible to hire in
+          4 different options. All these options are fully customisable so
+          that you can create the perfect setup for your event."
+        />
+        <HireOptionItem
+          image="/images/hire/bus.png"
+          option="Hire Option 1"
+          title="Vintage Bus Bar"
+          description="You can hire our fabulous vintage bus bar
+          to give your event a stand out bar."
+          price="Â£500.00"
+        />
+        <HireOptionItem
+          flex
+          image="/images/hire/bus-house.png"
+          option="Hire Option 2"
+          title="Vintage Bus Bar"
+          description="You can hire our fabulous vintage bus bar
+          to give your event a stand out bar."
+          price="Â£500.00"
+        />
+        <HireOptionItem
+          image="/images/hire/bar-bus.png"
+          option="Hire Option 3"
+          title="Vintage Bus Bar"
+          description="You can hire our fabulous vintage bus bar
+          to give your event a stand out bar."
+          price="Â£500.00"
+        />
+        <HireOptionItem
+          flex
+          image="/images/hire/bus-decoration.png"
+          option="Hire Option 4"
+          title="Vintage Bus Bar"
+          description="You can hire our fabulous vintage bus bar
+          to give your event a stand out bar."
+          price="Â£500.00"
+        />
+      </Layout>
+    );
+  }
+}
