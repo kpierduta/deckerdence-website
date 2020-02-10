@@ -17,22 +17,23 @@ const PartiesPage = () => (
       partybgImage="/images/parties/photo@2x.png"
     />
     <PageHeading
-      title="The bus provides an amazing focal point, and provides
+      subTitle="The bus provides an amazing focal point, and provides
           many different zones for your party."
     />
     <StagesSection />
     <VenueSection
-      leftFrame="/images/parties/frame@2x.png"
-      leftText="We remain on site to look after everything from start to finish."
-      leftAlt="main"
+      frame="/images/parties/frame@2x.png"
+      text="We remain on site to look after everything from start to finish."
+      alt="main"
       frameBgImage="/images/parties/photo-black-and-white@2x.png"
     />
     <DetailsCardSection />
     <VenueSection
       flex
-      leftFrame="/images/parties/rightframes.png"
-      leftText="Your guests will be amazed when they walk into the marquee and see a double decker bus inside. "
-      leftAlt="main"
+      color
+      frame="/images/parties/rightframes.png"
+      text="Your guests will be amazed when they walk into the marquee and see a double decker bus inside. "
+      alt="main"
       frameBgImage="/images/parties/photo-black-and-white@2x.png"
     />
     <Gallery />

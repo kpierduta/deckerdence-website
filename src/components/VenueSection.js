@@ -18,9 +18,12 @@ const Section = styled.div`
 `;
 const ImageWrapper = styled.div`
   position: relative;
+  p {
+    color: ${props => (props.color ? '#fff' : '#000')} !important;
+  }
 `;
 
-const VenueSection = ({ leftFrame, leftText, leftAlt, frameBgImage, flex }) => (
+const VenueSection = ({ frame, alt, text, frameBgImage, flex, color }) => (
   <Section
     className="hero section is-block is-relative  is-large"
     frameBgImage={frameBgImage}
@@ -29,11 +32,11 @@ const VenueSection = ({ leftFrame, leftText, leftAlt, frameBgImage, flex }) => (
     <div className="container">
       <div className="columns is-vcentered is-desktop">
         <div className="column is-5-desktop">
-          <ImageWrapper>
+          <ImageWrapper color={color}>
             <figure className="image">
-              <img src={leftFrame} alt={leftAlt} />
+              <img src={frame} alt={alt} />
             </figure>
-            <p className="text has-text-centered has-text-black">{leftText}</p>
+            <p className="text has-text-centered">{text}</p>
           </ImageWrapper>
         </div>
       </div>

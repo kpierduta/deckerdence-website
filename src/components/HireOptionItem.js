@@ -56,7 +56,7 @@ const HireOptionItem = ({
           </h5>
           <h3 className="title is-5 price">from {price}</h3>
           <button type="button" className="button is-large title is-5">
-            Find out more
+            FIND OUT MORE
           </button>
         </div>
       </div>

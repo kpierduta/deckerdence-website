@@ -13,9 +13,6 @@ const images = [
   '/images/gallery/goin.png',
   '/images/gallery/goin.png',
   '/images/gallery/goin.png',
-  '/images/gallery/goin.png',
-  '/images/gallery/goin.png',
-  '/images/gallery/goin.png',
 ];
 
 class Gallery extends React.Component {

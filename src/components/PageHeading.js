@@ -8,7 +8,7 @@ const Section = styled.div`
   background-repeat: no-repeat;
 `;
 const PageHeading = props => {
-  const { title, subtitle } = props;
+  const { title, subTitle } = props;
 
   return (
     <Section className="section hero is-normal">
@@ -18,9 +18,9 @@ const PageHeading = props => {
             {title && (
               <h1 className="title is-1 has-text-white is-spaced">{title}</h1>
             )}
-            {subtitle && (
+            {subTitle && (
               <h1 className="subtitle is-3 has-text-white has-text-centered">
-                {subtitle}
+                {subTitle}
               </h1>
             )}
           </div>
