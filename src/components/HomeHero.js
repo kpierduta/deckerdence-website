@@ -74,7 +74,7 @@ const HomeHero = () => {
             alt="circle"
           />
         </FireworkContainer>
-        <div className="columns  is-centered">
+        <div className="columns is-centered">
           <div className="column is-10 has-text-centered">
             <h1 className="title is-2 has-text-white has-text-weight-semibold	">
               Get in Touch!
