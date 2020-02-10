@@ -9,7 +9,7 @@ import GalleryImageItem from '../components/GalleryImageItem';
 const Container = styled.div`
   padding: 4rem;
   img {
-    height: 75px;
+    height: 45px;
     margin: 0rem 3rem;
   }
 `;
