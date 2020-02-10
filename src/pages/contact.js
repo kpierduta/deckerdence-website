@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import PageHeading from '../components/PageHeading';
 import ContactUsData from '../components/ContactUsData';
 import AddressMap from '../components/AddressMap';
+import ContactTestimonial from '../components/ContactTestimonial';
 
 const Contact = () => (
   <Layout>
@@ -12,6 +13,7 @@ const Contact = () => (
     <PageHeading title="Contact Us" />
     <ContactUsData />
     <AddressMap />
+    <ContactTestimonial />
   </Layout>
 );
 
