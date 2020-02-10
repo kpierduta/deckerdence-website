@@ -14,7 +14,7 @@ const PartiesPage = () => (
     <Seo title="Home" description="Welcome to GatsbyJs v1" />
     <PartiesHero
       title="Parties for all occasions"
-      partybgImage="/images/parties/photo@2x.png"
+      partyBgImage="/images/parties/photo@2x.png"
     />
     <PageHeading
       subTitle="The bus provides an amazing focal point, and provides

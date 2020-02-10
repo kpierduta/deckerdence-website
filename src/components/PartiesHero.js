@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  background-image: url(${props => props.partybgImage});
+  background-image: url(${props => props.partyBgImage});
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0rem 1.5rem 9rem 1.5rem !important;
@@ -30,9 +30,9 @@ const Section = styled.div`
 
 class PartiesHero extends React.Component {
   render() {
-    const { title, partybgImage } = this.props;
+    const { title, partyBgImage } = this.props;
     return (
-      <Section className="section is-medium" partybgImage={partybgImage}>
+      <Section className="section is-medium" partyBgImage={partyBgImage}>
         <div className="image-wrapper">
           <figure className="image is-128x128">
             <img src="/images/parties/disco-ball-copy@2x.png" alt="" />
