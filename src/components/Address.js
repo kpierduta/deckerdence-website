@@ -16,7 +16,7 @@ const Section = styled.div`
 `;
 
 const Address = () => (
-  <Section className="section">
+  <Section className="section is-hidden-mobile">
     <div className="container">
       <div className="columns is-centered">
         <div className="column is-10">

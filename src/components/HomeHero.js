@@ -8,6 +8,10 @@ const Section = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @media all and (max-width: 699px) and (min-width: 520px),
+    (min-width: 1151px) {
+    background-size: 100% 100%;
+  }
   .columns.is-centered {
     margin-top: 40rem;
   }
