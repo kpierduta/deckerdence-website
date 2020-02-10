@@ -1,11 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import BlogData from './BlogData';
 
+const Section = styled.section`
+  .column {
+    display: flex;
+    /* flex-wrap: wrap; */
+  }
+`;
+
 const BlogTile = () => (
-  <section className="section">
-    <div className="tile is-ancestor">
-      <div className="tile is-3 is-parent">
+  <Section className="section">
+    <div className="columns is-multiline">
+      <div className="column is-3">
         <BlogData
           color
           title="Top 5 reasons to choose deckerdence for your venue"
@@ -13,14 +21,14 @@ const BlogTile = () => (
           boxImage="/images/blog/fotoone.png"
         />
       </div>
-      <div className="tile is-parent is-3">
+      <div className="column is-3">
         <BlogData
           title="Top 5 reasons to choose deckerdence for your venue"
           subtitle="00/00/00"
           boxImage="/images/blog/fototwo.png"
         />
       </div>
-      <div className="tile is-parent is-6">
+      <div className="column is-6">
         <BlogData
           color
           title="Top 5 reasons to choose deckerdence for your venue"
@@ -28,16 +36,14 @@ const BlogTile = () => (
           boxImage="/images/blog/fotothree.png"
         />
       </div>
-    </div>
-    <div className="tile is-ancestor">
-      <div className="tile is-6 is-parent">
+      <div className="column is-6">
         <BlogData
           title="Top 5 reasons to choose deckerdence for your venue"
           subtitle="00/00/00"
           boxImage="/images/blog/fotofour.png"
         />
       </div>
-      <div className="tile is-parent is-3">
+      <div className="column is-3">
         <BlogData
           color
           title="Top 5 reasons to choose deckerdence for your venue"
@@ -45,7 +51,7 @@ const BlogTile = () => (
           boxImage="/images/blog/fotofifth.png"
         />
       </div>
-      <div className="tile is-parent is-3">
+      <div className="column is-3">
         <BlogData
           title="Top 5 reasons to choose deckerdence for your venue"
           subtitle="00/00/00"
@@ -53,7 +59,7 @@ const BlogTile = () => (
         />
       </div>
     </div>
-  </section>
+  </Section>
 );
 
 export default BlogTile;

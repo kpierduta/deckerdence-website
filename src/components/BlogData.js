@@ -5,6 +5,8 @@ const Wrapper = styled.div`
   background-image: url('${props => props.boxImage}');
   background-size: cover;
   background-repeat: no-repeat;
+  justify-content: space-around;
+  display: grid;
   .text {
     color: ${props =>
       props.color
@@ -13,6 +15,9 @@ const Wrapper = styled.div`
   }
   button {
     border: 1px solid ${props => (props.color ? '#000' : '#fff')} !important;
+  }
+  .has-text-centered {
+    align-self: end;
   }
 `;
 
