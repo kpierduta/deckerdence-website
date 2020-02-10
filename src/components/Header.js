@@ -101,10 +101,10 @@ export default class Header extends React.Component {
                 <Link to="/" className="navbar-item">
                   WEDDINGS
                 </Link>
-                <Link to="/partiesPage" className="navbar-item">
+                <Link to="/parties" className="navbar-item">
                   PARTIES
                 </Link>
-                <Link to="/eventPage" className="navbar-item">
+                <Link to="/event" className="navbar-item">
                   EVENTS
                 </Link>
                 <Link to="/" className="navbar-item">
@@ -113,7 +113,7 @@ export default class Header extends React.Component {
                 <Link to="/towBar" className="navbar-item">
                   TOW BAR
                 </Link>
-                <Link to="/contactPage" className="navbar-item">
+                <Link to="/contact" className="navbar-item">
                   CONTACT
                 </Link>
               </div>

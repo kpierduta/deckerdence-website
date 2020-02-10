@@ -13,18 +13,24 @@ const Section = styled.div`
   .is-10 {
     padding: 6.5rem 0rem;
   }
+  p {
+    margin-top: 2rem;
+  }
 `;
 
-const Address = () => (
+const AddressMap = () => (
   <Section className="section is-hidden-mobile">
     <div className="container">
       <div className="columns is-centered">
         <div className="column is-10">
-          <MyMapComponent isMarkerShown className="is-hidden-mobile" />
+          <MyMapComponent isMarkerShown />
         </div>
       </div>
     </div>
+    <p className="has-text-white has-text-centered is-size-3">
+      Visitors by appointment only
+    </p>
   </Section>
 );
 
-export default Address;
+export default AddressMap;
