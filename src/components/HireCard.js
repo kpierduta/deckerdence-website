@@ -1,7 +1,14 @@
 import React from 'react';
 
+import styled from 'styled-components';
+
+const CardSection = styled.div`
+  box-shadow: none;
+  background-color: transparent;
+`;
+
 const HireCard = ({ title, subtitle, description }) => (
-  <div className="card">
+  <CardSection className="card">
     <div className="card-content">
       <h1 className="title is-spaced has-text-centered is-3 is-uppercase">
         {title}
@@ -11,7 +18,7 @@ const HireCard = ({ title, subtitle, description }) => (
         {description}
       </h1>
     </div>
-  </div>
+  </CardSection>
 );
 
 export default HireCard;
