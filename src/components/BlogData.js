@@ -21,28 +21,23 @@ const Wrapper = styled.div`
   }
 `;
 
-class BlogData extends React.Component {
-  render() {
-    const { title, subtitle, boxImage, color } = this.props;
-    return (
-      <Wrapper className="tile is-child box" boxImage={boxImage} color={color}>
-        <p className="title has-text-weight-normal has-text-centered text">
-          {title}
-        </p>
-        <p className="subtitle is-4 has-text-centered has-text-weight-semibold text">
-          {subtitle}
-        </p>
-        <div className="has-text-centered">
-          <button
-            className="button is-normal has-text-weight-bold text"
-            type="button"
-          >
-            READ MORE
-          </button>
-        </div>
-      </Wrapper>
-    );
-  }
-}
+const BlogData = ({ title, subtitle, boxImage, color }) => (
+  <Wrapper className="tile is-child box" boxImage={boxImage} color={color}>
+    <p className="title has-text-weight-normal has-text-centered text">
+      {title}
+    </p>
+    <p className="subtitle is-4 has-text-centered has-text-weight-semibold text">
+      {subtitle}
+    </p>
+    <div className="has-text-centered">
+      <button
+        className="button is-normal has-text-weight-bold text"
+        type="button"
+      >
+        READ MORE
+      </button>
+    </div>
+  </Wrapper>
+);
 
 export default BlogData;

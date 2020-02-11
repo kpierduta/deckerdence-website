@@ -8,20 +8,15 @@ const Section = styled.div`
   }
 `;
 
-class BlogArticle extends React.Component {
-  render() {
-    const { title, subtitle } = this.props;
-    return (
-      <Section className="section">
-        <div className="container">
-          <h1 className="title is-2 is-spaced is-uppercase has-text-centered">
-            {title}
-          </h1>
-          <p className="subtitle is-4 has-text-centered">{subtitle}</p>
-        </div>
-      </Section>
-    );
-  }
-}
+const BlogArticle = ({ title, subtitle }) => (
+  <Section className="section">
+    <div className="container">
+      <h1 className="title is-2 is-spaced is-uppercase has-text-centered">
+        {title}
+      </h1>
+      <p className="subtitle is-4 has-text-centered">{subtitle}</p>
+    </div>
+  </Section>
+);
 
 export default BlogArticle;

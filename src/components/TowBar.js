@@ -20,41 +20,36 @@ const Section = styled.div`
   }
 `;
 
-class TowBar extends React.Component {
-  render() {
-    const { towbgImage } = this.props;
-    return (
-      <Section className="section is-block is-medium" towbgImage={towbgImage}>
-        <div className="columns is-centered is-desktop">
-          <div className="column is-8">
-            <div id="box-search">
-              <div className="thumbnail text-center">
-                <img src="/images/towbar/frame@2x.png" alt="" />
-                <div className="caption">
-                  <h1 className="title is-3 has-text-centered has-text-white is-size-4-mobile has-text-weight-normal">
-                    Event Hire
-                  </h1>
-                  <h1 className="subtitle is-3 has-text-centered has-text-white is-size-6-mobile">
-                    With Deckerdence or on its own
-                  </h1>
-                  <p className="subtitle is-5 has-text-centered has-text-white is-size-6-mobile">
-                    The Tow Bar can be hired full staffed and stocked or dry
-                    hire is also available. Dry hire options include delivery
-                    and collection to you location.
-                  </p>
-                  <div className="has-text-centered">
-                    <button className="button is-light is-medium" type="button">
-                      Enquire Today
-                    </button>
-                  </div>
-                </div>
+const TowBar = ({ towbgImage }) => (
+  <Section className="section is-block is-medium" towbgImage={towbgImage}>
+    <div className="columns is-centered is-desktop">
+      <div className="column is-8">
+        <div id="box-search">
+          <div className="thumbnail text-center">
+            <img src="/images/towbar/frame@2x.png" alt="" />
+            <div className="caption">
+              <h1 className="title is-3 has-text-centered has-text-white is-size-4-mobile has-text-weight-normal">
+                Event Hire
+              </h1>
+              <h1 className="subtitle is-3 has-text-centered has-text-white is-size-6-mobile">
+                With Deckerdence or on its own
+              </h1>
+              <p className="subtitle is-5 has-text-centered has-text-white is-size-6-mobile">
+                The Tow Bar can be hired full staffed and stocked or dry hire is
+                also available. Dry hire options include delivery and collection
+                to you location.
+              </p>
+              <div className="has-text-centered">
+                <button className="button is-light is-medium" type="button">
+                  Enquire Today
+                </button>
               </div>
             </div>
           </div>
         </div>
-      </Section>
-    );
-  }
-}
+      </div>
+    </div>
+  </Section>
+);
 
 export default TowBar;

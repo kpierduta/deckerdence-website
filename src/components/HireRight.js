@@ -25,30 +25,33 @@ const Section = styled.section`
   }
 `;
 
-const HireRight = props => (
+const HireRight = ({ frame, image, option, title, description, price }) => (
   <Section className="section">
     <div className="container">
       <div className="columns">
         <div className="column">
-          <img className="frame" src={props.frame} />
-          <img className="image" src={props.image} />
+          <img className="frame" src={frame} alt="" />
+          <img className="image" src={image} alt="" />
         </div>
         <div className="column is-8 has-text-centered">
           <section className="section content">
             <div className="container">
               <img src="/images/hire/red.png" alt="" />
               <div className="is-inline-block">
-                <h3 className="title is-3 has-text-warning ">{props.option}</h3>
+                <h3 className="title is-3 has-text-warning ">{option}</h3>
               </div>
-              <img src="/images/hire/red-2.png" />
+              <img src="/images/hire/red-2.png" alt="" />
               <h5 className="title is-2 is-spaced has-text-warning ">
-                {props.title}
+                {title}
               </h5>
               <h5 className="subtitle is-5 has-text-weight-medium">
-                {props.description}
+                {description}
               </h5>
-              <h3 className="title is-5 price">hire from {props.price}</h3>
-              <button class="button is-primary is-large title is-5">
+              <h3 className="title is-5 price">hire from {price}</h3>
+              <button
+                className="button is-primary is-large title is-5"
+                type="button"
+              >
                 Find out more
               </button>
             </div>

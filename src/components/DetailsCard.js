@@ -11,23 +11,18 @@ const Section = styled.div`
   }
 `;
 
-class DetailsCard extends React.Component {
-  render() {
-    const { para } = this.props;
-    return (
-      <Section className="section column is-6">
-        <div className="container">
-          <div className="card-content">
-            <div className="content">
-              <p className="subtitle is-4 has-text-weight-normal has-text-centered has-text-black">
-                {para}
-              </p>
-            </div>
-          </div>
+const DetailsCard = ({ para }) => (
+  <Section className="section column is-6">
+    <div className="container">
+      <div className="card-content">
+        <div className="content">
+          <p className="subtitle is-4 has-text-weight-normal has-text-centered has-text-black">
+            {para}
+          </p>
         </div>
-      </Section>
-    );
-  }
-}
+      </div>
+    </div>
+  </Section>
+);
 
 export default DetailsCard;

@@ -12,30 +12,26 @@ const Section = styled.div`
   }
 `;
 
-class ContactForm extends React.Component {
-  render() {
-    return (
-      <Section className="section is-block is-relative">
-        <div className="container">
-          <Diagram avatar="/images/hire/icon@2x.png" />
+const ContactForm = () => (
+  <Section className="section is-block is-relative">
+    <div className="container">
+      <Diagram avatar="/images/hire/icon@2x.png" />
+    </div>
+    <div className="columns is-centered">
+      <div className="column is-6">
+        <Input type="email" text="Email" />
+        <Input type="text" text="Phone Number" />
+        <p className="subtitle is-4 has-text-centered">
+          By submitting this form you agree to our contact T & C
+        </p>
+        <div className="has-text-centered">
+          <button type="button" className="button is-danger">
+            Download
+          </button>
         </div>
-        <div className="columns is-centered">
-          <div className="column is-6">
-            <Input type="email" text="Email" />
-            <Input type="text" text="Phone Number" />
-            <p className="subtitle is-4 has-text-centered">
-              By submitting this form you agree to our contact T & C
-            </p>
-            <div className="has-text-centered">
-              <button type="button" className="button is-danger">
-                Download
-              </button>
-            </div>
-          </div>
-        </div>
-      </Section>
-    );
-  }
-}
+      </div>
+    </div>
+  </Section>
+);
 
 export default ContactForm;

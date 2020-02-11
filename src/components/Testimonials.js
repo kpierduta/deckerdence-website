@@ -29,28 +29,21 @@ const ImageWrapper = styled.div`
   }
 `;
 
-class Testimonials extends React.Component {
-  render() {
-    const { bgImage, title } = this.props;
-    return (
-      <Section className="column is-4" bgImage={bgImage}>
-        <div className="card section hero is-medium">
-          <div className="card-content">
-            <h1 className="title is-2 has-text-white has-text-centered">
-              {title}
-            </h1>
-            <ImageWrapper className="media align">
-              <img
-                className=""
-                src="/images/gallery/decorative-line@2x.png"
-                alt=""
-              />
-            </ImageWrapper>
-          </div>
-        </div>
-      </Section>
-    );
-  }
-}
+const Testimonials = ({ bgImage, title }) => (
+  <Section className="column is-4" bgImage={bgImage}>
+    <div className="card section hero is-medium">
+      <div className="card-content">
+        <h1 className="title is-2 has-text-white has-text-centered">{title}</h1>
+        <ImageWrapper className="media align">
+          <img
+            className=""
+            src="/images/gallery/decorative-line@2x.png"
+            alt=""
+          />
+        </ImageWrapper>
+      </div>
+    </div>
+  </Section>
+);
 
 export default Testimonials;

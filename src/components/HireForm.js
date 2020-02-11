@@ -15,40 +15,35 @@ const Wrapper = styled.div`
   }
 `;
 
-class HireForm extends React.Component {
-  render() {
-    const { para, avatar, buttonName, subtitle } = this.props;
-    return (
-      <Wrapper>
-        <section className="section">
-          <div className="container">
-            <header className="Header has-text-centered">
-              <p className="subtitle is-4 para">{para}</p>
-            </header>
+const HireForm = ({ para, avatar, buttonName, subtitle }) => (
+  <Wrapper>
+    <section className="section">
+      <div className="container">
+        <header className="Header has-text-centered">
+          <p className="subtitle is-4 para">{para}</p>
+        </header>
+      </div>
+    </section>
+    <section className="section backgrounds">
+      <div className="container">
+        <div className="columns ">
+          <div className="column is-5-desktop">
+            <figure className="image is-3by2">
+              <img className="is-rounded" src={avatar} alt="" />
+            </figure>
           </div>
-        </section>
-        <section className="section backgrounds">
-          <div className="container">
-            <div className="columns ">
-              <div className="column is-5-desktop">
-                <figure className="image is-3by2">
-                  <img className="is-rounded" src={avatar} alt="" />
-                </figure>
-              </div>
-              <div className="column is-vcentered is-desktop section">
-                <Input type="email" text="Email" />
-                <Input type="email" text="Phone Number" />
-                <p className="subtitle is-4 has-text-white text">{subtitle}</p>
-                <button type="button" className="button is-danger">
-                  {buttonName}
-                </button>
-              </div>
-            </div>
+          <div className="column is-vcentered is-desktop section">
+            <Input type="email" text="Email" />
+            <Input type="email" text="Phone Number" />
+            <p className="subtitle is-4 has-text-white text">{subtitle}</p>
+            <button type="button" className="button is-danger">
+              {buttonName}
+            </button>
           </div>
-        </section>
-      </Wrapper>
-    );
-  }
-}
+        </div>
+      </div>
+    </section>
+  </Wrapper>
+);
 
 export default HireForm;

@@ -28,31 +28,26 @@ const Section = styled.div`
   }
 `;
 
-class PartiesHero extends React.Component {
-  render() {
-    const { title, partyBgImage } = this.props;
-    return (
-      <Section className="section is-medium" partyBgImage={partyBgImage}>
-        <div className="image-wrapper">
-          <figure className="image is-128x128">
-            <img src="/images/parties/disco-ball-copy@2x.png" alt="" />
+const PartiesHero = ({ title, partyBgImage }) => (
+  <Section className="section is-medium" partyBgImage={partyBgImage}>
+    <div className="image-wrapper">
+      <figure className="image is-128x128">
+        <img src="/images/parties/disco-ball-copy@2x.png" alt="" />
+      </figure>
+    </div>
+    <div className="columns is-centered is-desktop">
+      <div className="column is-7">
+        <div className="area">
+          <figure className="">
+            <img src="/images/parties/t2x.png" alt="" />
           </figure>
+          <h1 className="title is-size-4-mobile centered has-text-white">
+            {title}
+          </h1>
         </div>
-        <div className="columns is-centered is-desktop">
-          <div className="column is-7">
-            <div className="area">
-              <figure className="">
-                <img src="/images/parties/t2x.png" alt="" />
-              </figure>
-              <h1 className="title is-size-4-mobile centered has-text-white">
-                {title}
-              </h1>
-            </div>
-          </div>
-        </div>
-      </Section>
-    );
-  }
-}
+      </div>
+    </div>
+  </Section>
+);
 
 export default PartiesHero;

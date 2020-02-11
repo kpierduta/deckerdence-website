@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import HireCardSlider from './HireCardSlider';
 
 const Section = styled.section`
   background-image: url('/images/contacts/background.png');
@@ -14,6 +15,7 @@ const ContactTestimonial = () => (
         to stage their perfect event!
       </h3>
       <div />
+      <HireCardSlider />
     </div>
   </Section>
 );

@@ -26,34 +26,37 @@ const Section = styled.section`
   }
 `;
 
-const HireLeft = props => (
+const HireLeft = ({ option, title, description, price, frame, image }) => (
   <Section className="section">
     <div className="container">
       <div className="columns">
         <div className="column is-8 has-text-centered">
           <section className="section content">
             <div className="container">
-              <img src="/images/hire/decoration-1.png" />
+              <img src="/images/hire/decoration-1.png" alt="" />
               <div className="is-inline-block">
-                <h3 className="title is-3">{props.option}</h3>
+                <h3 className="title is-3">{option}</h3>
               </div>
-              <img src="/images/hire/decoration-2.png" />
-              <h5 className="title is-2 is-spaced">{props.title}</h5>
+              <img src="/images/hire/decoration-2.png" alt="" />
+              <h5 className="title is-2 is-spaced">{title}</h5>
               <h5 className="subtitle is-5 has-text-weight-medium has-text-white">
-                {props.description}
+                {description}
               </h5>
               <h3 className="title is-5 price has-text-white">
-                hire from {props.price}
+                hire from {price}
               </h3>
-              <button className="button is-danger is-large title is-5 has-text-white">
+              <button
+                className="button is-danger is-large title is-5 has-text-white"
+                type="button"
+              >
                 find out more
               </button>
             </div>
           </section>
         </div>
         <div className="column">
-          <img className="frame" src={props.frame} />
-          <img className="image" src={props.image} />
+          <img className="frame" src={frame} alt="" />
+          <img className="image" src={image} alt="" />
         </div>
       </div>
     </div>

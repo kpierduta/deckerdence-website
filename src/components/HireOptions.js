@@ -21,38 +21,34 @@ const Section = styled.div`
   }
 `;
 
-class HireOptions extends React.Component {
-  render() {
-    const {
-      hirebgImage,
-      mainTitle,
-      subTitle,
-      centerText,
-      textcolor,
-    } = this.props;
-    return (
-      <Section
-        className="section hero is-large"
-        hirebgImage={hirebgImage}
-        textcolor={textcolor}>
-        <div className="container">
-          <div className="columns is-vcentered is-desktop">
-            <div className="column has-text-centered ">
-              <h2 className="title is-spaced is-1 has-text-white is-size-6-mobile">
-                {mainTitle}
-              </h2>
-              <h2 className="text subtitle is-1 has-text-weight-bold has-text-white is-size-5-mobile">
-                {centerText}
-              </h2>
-              <h2 className="subtitle is-1 has-text-white is-size-6-mobile">
-                {subTitle}
-              </h2>
-            </div>
-          </div>
+const HireOptions = ({
+  hirebgImage,
+  mainTitle,
+  subTitle,
+  centerText,
+  textcolor,
+}) => (
+  <Section
+    className="section hero is-large"
+    hirebgImage={hirebgImage}
+    textcolor={textcolor}
+  >
+    <div className="container">
+      <div className="columns is-vcentered is-desktop">
+        <div className="column has-text-centered ">
+          <h2 className="title is-spaced is-1 has-text-white is-size-6-mobile">
+            {mainTitle}
+          </h2>
+          <h2 className="text subtitle is-1 has-text-weight-bold has-text-white is-size-5-mobile">
+            {centerText}
+          </h2>
+          <h2 className="subtitle is-1 has-text-white is-size-6-mobile">
+            {subTitle}
+          </h2>
         </div>
-      </Section>
-    );
-  }
-}
+      </div>
+    </div>
+  </Section>
+);
 
 export default HireOptions;

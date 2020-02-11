@@ -20,25 +20,25 @@ const OptionToIncludes = () => {
       <div className="container">
         <div className="columns is-multiline">
           <div className="column">
-            <h2 className="title is-3 is-capatalized has-text-weight-normal">
+            <h2 className="title is-3 is-capatalized has-text-weight-normal has-text-black">
               vintage bus bar
             </h2>
           </div>
           <div className="column">
             {' '}
-            <h2 className="title is-3 is-capatalized has-text-weight-normal">
+            <h2 className="title is-3 is-capatalized has-text-weight-normal has-text-black">
               traditional bar
             </h2>
           </div>
           <div className="column">
             {' '}
-            <h2 className="title is-3 is-capatalized has-text-weight-normal">
+            <h2 className="title is-3 is-capatalized has-text-weight-normal has-text-black">
               cocktail lounge
             </h2>
           </div>
           <div className="column">
             {' '}
-            <h2 className="title is-3 is-capatalized has-text-weight-normal">
+            <h2 className="title is-3 is-capatalized has-text-weight-normal has-text-black">
               side awning
             </h2>
           </div>
