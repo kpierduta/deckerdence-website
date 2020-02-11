@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Section = styled.div`
   .column {
-    background-image: url('/images/hire/background@2x.png');
+    background-image: url('/images/hire/bgframe.png');
     background-size: cover;
     margin: 0 0.5rem;
     min-height: 9rem;
