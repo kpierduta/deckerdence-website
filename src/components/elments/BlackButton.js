@@ -2,18 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-const Linkstyled = styled(Link)`
-  .image-button {
-    width: 45%;
+const LinkStyled = styled(Link)`
+  figure {
+    margin: 0 auto;
+    width: ${props => (props.hasWidth ? props.hasWidth : '100%')};
+    padding: 3rem 0rem;
   }
 `;
 
-const BlackButton = props => (
-  <Linkstyled to="/">
+const BlackButton = ({ image, alt, hasWidth }) => (
+  <LinkStyled to="/" hasWidth={hasWidth}>
     <figure className="image-button">
-      <img src="/images/view-more@3xx.png" alt="" />
+      <img src={image} alt={alt} />
     </figure>
-  </Linkstyled>
+  </LinkStyled>
 );
 
 export default BlackButton;

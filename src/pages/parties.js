@@ -8,6 +8,7 @@ import StagesSection from '../components/StagesSection';
 import VenueSection from '../components/VenueSection';
 import DetailsCardSection from '../components/DetailsCardSection';
 import Gallery from '../components/Gallery';
+import ContactForm from '../components/ContactForm';
 
 const PartiesPage = () => (
   <Layout>
@@ -37,6 +38,7 @@ const PartiesPage = () => (
       frameBgImage="/images/parties/photo-black-and-white@2x.png"
     />
     <Gallery />
+    <ContactForm />
   </Layout>
 );
 

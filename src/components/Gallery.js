@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Button from './elments/Button';
+import BlackButton from './elments/BlackButton';
 
 const Section = styled.div`
   margin-top: 4rem;
@@ -47,7 +47,11 @@ const Gallery = () => (
         </div>
       ))}
     </div>
-    <Button />
+    <BlackButton
+      image="/images/parties/view-more@2x.png"
+      alt="Learn More Button"
+      hasWidth="20%"
+    />
   </Section>
 );
 export default Gallery;

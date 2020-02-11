@@ -26,6 +26,8 @@ const Section = styled.section`
   .button {
     background: transparent;
     border: 2px solid ${props => (props.flex ? '#fff' : '')};
+    font-family: ${props => props.theme.secondaryFontFamily};
+    letter-spacing: 1px;
   }
 `;
 
@@ -55,7 +57,7 @@ const HireOptionItem = ({
             {description}
           </h5>
           <h3 className="title is-5 price">from {price}</h3>
-          <button type="button" className="button is-large title is-5">
+          <button type="button" className="button is-large  is-size-5">
             FIND OUT MORE
           </button>
         </div>
