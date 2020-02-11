@@ -1,10 +1,23 @@
 import React from 'react';
-
+import styled from 'styled-components';
 import ContactUsItem from './ContactUsItem';
+
+const Header = styled.div`
+  padding-bottom: 3rem;
+`;
 
 const ContactUsData = () => (
   <section className="section">
     <div className="container">
+      <Header>
+        <h1 className="title is-spaced is-2 has-text-weight-normal has-text-centered has-text-black">
+          What to expect when contacting Deckerdence
+        </h1>
+        <h1 className="subtitle is-4 has-text-weight-normal has-text-centered has-text-black ">
+          If you are interested in hiring Deckerdence or would like some further
+          information then please...
+        </h1>
+      </Header>
       <div className="columns">
         <ContactUsItem
           icon="/images/contacts/icon@2x.png"
