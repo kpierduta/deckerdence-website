@@ -60,20 +60,23 @@ const Footer = () => (
         </div>
         <div className="column">
           <h3 className="is-size-3 is-spaced">HIRE OPTIONS</h3>
-          <FooterOption option="Vintage Bus Bar" link="/" />
-          <FooterOption option="Bus bar With Awning Hire" link="/" />
-          <FooterOption option="Bus Bar Half Wraparound Marquee" link="/" />
+          <FooterOption option="Vintage Bus Bar" link="/hirePage" />
+          <FooterOption option="Bus bar With Awning Hire" link="/sideAwning" />
+          <FooterOption
+            option="Bus Bar Half Wraparound Marquee"
+            link="/hirePage"
+          />
           <FooterOption
             option="Bus Bar with Full Wraparound Marquee"
-            link="/"
+            link="/hirePage"
           />
         </div>
         <div className="column">
           <h3 className="is-size-3 is-spaced">THE GALLERY</h3>
-          <FooterOption option="Our Wedding Gallery" link="/" />
-          <FooterOption option="Our Events Gallery" link="/" />
-          <FooterOption option="Our Hospitality Gallery" link="/" />
-          <FooterOption option="Our Party Gallery" link="/" />
+          <FooterOption option="Our Wedding Gallery" link="/wedding" />
+          <FooterOption option="Our Events Gallery" link="/gallery" />
+          <FooterOption option="Our Hospitality Gallery" link="/gallery" />
+          <FooterOption option="Our Party Gallery" link="/gallery" />
         </div>
       </div>
     </div>
