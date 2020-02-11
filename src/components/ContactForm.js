@@ -26,7 +26,7 @@ const ContactForm = () => (
         </p>
         <div className="has-text-centered">
           <button type="button" className="button is-danger">
-            Download
+            DOWNLOAD
           </button>
         </div>
       </div>
