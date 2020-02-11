@@ -3,21 +3,27 @@ import styled from 'styled-components';
 
 const Section = styled.div`
   .input {
-    margin-top: 0.7rem;
+    border: 1px solid ${props => props.theme.borderColor};
+    display: block;
+    margin: 0 0 1.5rem;
+    background: transparent;
+
+    ::placeholder {
+      color: ${props => props.theme.borderColor} !important ;
+    }
   }
 `;
 
-class Input extends React.Component {
-  render() {
-    const { type, text } = this.props;
-    return (
-      <Section className="field">
-        <div className="control">
-          <input className="input is-medium" type={type} placeholder={text} />
-        </div>
-      </Section>
-    );
-  }
-}
+const Input = ({ type, text }) => (
+  <Section className="field">
+    <div className="control">
+      <input
+        className="input is-medium has-text-white "
+        type={type}
+        placeholder={text}
+      />
+    </div>
+  </Section>
+);
 
 export default Input;

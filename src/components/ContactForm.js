@@ -4,8 +4,8 @@ import Diagram from './Diagram';
 import Input from './elments/Input';
 
 const Section = styled.div`
-  background-image: url('/images/hire/basic@2x.png');
-  background-size: cover;
+  background-image: url('/images/hire/contactForm.png');
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   .subtitle {
     color: ${props => props.theme.lightShades} !important;
