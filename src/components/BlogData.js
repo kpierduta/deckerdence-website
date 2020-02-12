@@ -7,7 +7,9 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
   justify-content: space-around;
   display: grid;
+  padding: 1rem 3rem;
   .text {
+    line-height: 1.3;
     color: ${props =>
       props.color
         ? props.theme.textColorLite
@@ -23,15 +25,15 @@ const Wrapper = styled.div`
 
 const BlogData = ({ title, subtitle, boxImage, color }) => (
   <Wrapper className="tile is-child box" boxImage={boxImage} color={color}>
-    <p className="title has-text-weight-normal has-text-centered text">
+    <p className="title is-5 has-text-weight-semibold has-text-centered text">
       {title}
     </p>
-    <p className="subtitle is-4 has-text-centered has-text-weight-semibold text">
+    <p className="subtitle is-5 has-text-centered has-text-weight-semibold text">
       {subtitle}
     </p>
     <div className="has-text-centered">
       <button
-        className="button is-normal has-text-weight-bold text"
+        className="button is-normal has-text-weight-semibold text"
         type="button"
       >
         READ MORE
