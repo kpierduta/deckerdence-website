@@ -85,7 +85,7 @@ class ContactTestimonial extends React.Component {
                     Deckerdence experience last year for our 25th Wedding Anniversary
                     was amazing but the new team led by yourself and Mark, excelled even
                     that.”"
-                    description="Emily 00/00/01"
+                    description="Jo & Eddy 00/00/01"
                   />
                 </Wrapper>
                 <Wrapper>

@@ -15,7 +15,7 @@ const HireCard = ({ title, subtitle, description }) => (
         {title}
       </h1>
       <p className="subtitle has-text-centered has-text-white">{subtitle}</p>
-      <h1 className="subtitle is-3 has-text-centered is-spaced has-text-weight-bold  has-text-white">
+      <h1 className="subtitle is-3 has-text-centered is-spaced has-text-weight-bold  has-text-white-ter">
         {description}
       </h1>
     </div>
