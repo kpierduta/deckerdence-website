@@ -9,20 +9,16 @@ const Section = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('/images/contacts/background.png');
-  .main {
-    background-image: url('/images/contacts/pattern@2x.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  .container h1:last-child {
+    padding: 0 0 4rem;
   }
-
-  /* .slick-slider {
-    background-image: url('/images/contacts/sliderframe.png');
-    background-size: cover;
+  .background {
+    background-image: url('/images/contacts/slider-bg.png');
+    background-size: 65% 99%;
     background-repeat: no-repeat;
-  } */
-
+    background-position: center;
+  }
   .slick-prev:before {
-    /* background-color: blue !important; */
     width: 28px;
     height: 50px;
     background-size: cover;
@@ -32,11 +28,9 @@ const Section = styled.div`
     left: -7px;
     background-image: url('./images/contacts/arrow-left@2x.png');
   }
-
     opacity: 1 !important;
   }
   .slick-next:before {
-    /* background-color: blue !important; */
     width: 28px;
     height: 50px;
     background-size: cover;
@@ -59,14 +53,16 @@ class ContactTestimonial extends React.Component {
     };
     return (
       <Section className="section is-medium">
-        <h1 className="title is-3 is-spaced  has-text-centered has-text-white has-text-weight-normal">
-          Testimonials
-        </h1>
-        <h1 className="subtitle has-text-centered has-text-white">
-          Here are some testimonials from our clients that have used Deckerdence
-          to stage their perfect event!
-        </h1>
-        <div className="main">
+        <div className="container">
+          <h1 className="title is-3 is-spaced  has-text-centered has-text-white has-text-weight-normal">
+            Testimonials
+          </h1>
+          <h1 className="subtitle has-text-centered has-text-white">
+            Here are some testimonials from our clients that have used
+            Deckerdence to stage their perfect event!
+          </h1>
+        </div>
+        <div className="container background">
           <div className="columns is-centered">
             <div className="column is-8">
               <Slider {...settings}>

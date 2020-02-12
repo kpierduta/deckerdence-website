@@ -7,7 +7,7 @@ const Section = styled.div`
   background-color: ${props => props.theme.textColorLite};
   .columns {
     background-image: url('/images/contacts/frame@2x.png');
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
   }
   .is-10 {
