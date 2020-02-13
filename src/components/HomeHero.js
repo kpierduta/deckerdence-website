@@ -18,14 +18,28 @@ const Section = styled.section`
 `;
 
 const MovingLeftContainer = styled.div`
-  position: absolute;
-  left: 0;
-  bottom: 9rem;
+  img {
+    height: 9rem;
+    width: 5rem;
+    position: absolute;
+    bottom: 9rem;
+    left: 0;
+    @media screen and (max-width: 768px) {
+      left: -2.5rem;
+    }
+  }
 `;
 const MovingRightContainer = styled.div`
-  position: absolute;
-  right: 0;
-  bottom: 9rem;
+  img {
+    height: 9rem;
+    width: 5rem;
+    position: absolute;
+    right: 0;
+    bottom: 9rem;
+    @media screen and (max-width: 768px) {
+      right: -1.5rem;
+    }
+  }
 `;
 
 const FireworkContainer = styled.div`
