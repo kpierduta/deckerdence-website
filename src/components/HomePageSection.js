@@ -17,15 +17,16 @@ const Section = styled.section`
     background-repeat: no-repeat;
     margin-top: 4rem;
     margin-bottom: 4rem;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     display: grid;
     align-content: center;
-    padding: 1rem 4rem;
+    padding: 1rem 7rem;
     @media screen and (max-width: 768px) {
       margin-top: 0;
       margin-bottom: 0;
       padding: 1rem 2rem;
+      background-size: cover;
     }
   }
   .subtitle.is-5 {
@@ -50,7 +51,7 @@ const HomePageSection = ({
       <div className="columns">
         <div className="column bg-image is-6">
           {title && (
-            <h1 className="title is-2 has-text-white has-text-weight-semibold	is-spaced">
+            <h1 className="title is-2 has-text-white has-text-weight-normal	is-spaced">
               {title}
             </h1>
           )}

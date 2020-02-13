@@ -8,11 +8,16 @@ const Section = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  @media all and (max-width: 768px) and (min-width: 520px) {
+
+  @media screen and (max-width: 768px) {
     background-size: 100% 100%;
+    height: 24rem;
   }
   .columns.is-centered {
     margin-top: 40rem;
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
+    }
   }
 `;
 
@@ -24,11 +29,14 @@ const MovingLeftContainer = styled.div`
     bottom: 12rem;
     left: 0;
     @media screen and (max-width: 768px) {
+      height: 6rem;
+      width: 3rem;
       left: -2.5rem;
-      bottom: 9rem;
+      bottom: -10rem;
     }
   }
 `;
+
 const MovingRightContainer = styled.div`
   img {
     height: 9rem;
@@ -37,8 +45,10 @@ const MovingRightContainer = styled.div`
     right: 0;
     bottom: 12rem;
     @media screen and (max-width: 768px) {
+      height: 6rem;
+      width: 3rem;
       right: -1.5rem;
-      bottom: 9rem;
+      bottom: -10rem;
     }
   }
 `;
@@ -56,6 +66,17 @@ const FireworkContainer = styled.div`
   }
   circular-image {
     animation: 2s rotate360 infinite linear;
+  }
+`;
+
+const Content = styled.div`
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    bottom: -13.5rem;
+    left: 2rem;
+  }
+  .title:not(:last-child) {
+    margin-bottom: 0.5rem;
   }
 `;
 
@@ -89,12 +110,12 @@ const HomeHero = () => {
             alt="circle"
           />
         </FireworkContainer>
-        <div className="columns is-centered">
+        <Content className="columns is-centered">
           <div className="column is-10 has-text-centered">
-            <h1 className="title is-2 is-size-3-mobile has-text-white has-text-weight-semibold">
+            <h1 className="title is-2 is-size-7-mobile has-text-white has-text-weight-semibold">
               Get in Touch!
             </h1>
-            <h1 className="title is-3 is-size-5-mobile has-text-white has-text-weight-semibold">
+            <h1 className="title is-3 is-size-7-mobile has-text-white has-text-weight-semibold">
               <span className="has-text-grey-lighter has-text-weight-light ">
                 Email:
               </span>
@@ -105,24 +126,24 @@ const HomeHero = () => {
               01675 463555
             </h1>
           </div>
-          <div className="columns">
-            <MovingLeftContainer className="column">
-              <img
-                id="left-moving-item"
-                src="/images/parties/layer-802@2x.png"
-                alt="Left-Rocket"
-                width="40%"
-              />
-            </MovingLeftContainer>
-            <MovingRightContainer className="column">
-              <img
-                id="right-moving-item"
-                src="/images/parties/layer-797@2x.png"
-                alt="Left-Rocket"
-                width="40%"
-              />
-            </MovingRightContainer>
-          </div>
+        </Content>
+        <div className="columns">
+          <MovingLeftContainer className="column">
+            <img
+              id="left-moving-item"
+              src="/images/parties/layer-802@2x.png"
+              alt="Left-Rocket"
+              width="40%"
+            />
+          </MovingLeftContainer>
+          <MovingRightContainer className="column">
+            <img
+              id="right-moving-item"
+              src="/images/parties/layer-797@2x.png"
+              alt="Left-Rocket"
+              width="40%"
+            />
+          </MovingRightContainer>
         </div>
       </div>
     </Section>
