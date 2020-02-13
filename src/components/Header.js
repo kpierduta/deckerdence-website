@@ -38,6 +38,9 @@ const Section = styled.section`
     opacity: 0.6;
     border-radius: 4px;
   }
+  .navbar-item :hover {
+    color: ${props => props.theme.mainBrandColor};
+  }
 `;
 
 export default class Header extends React.Component {
