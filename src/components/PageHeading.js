@@ -16,10 +16,12 @@ const PageHeading = props => {
         <div className="columns is-centered">
           <div className="column has-text-centered">
             {title && (
-              <h1 className="title is-1 has-text-white is-spaced">{title}</h1>
+              <h1 className="title is-1 is-size-3-mobile has-text-white is-spaced">
+                {title}
+              </h1>
             )}
             {subTitle && (
-              <h1 className="subtitle is-3 has-text-white has-text-centered">
+              <h1 className="subtitle is-3 is-size-5-mobile has-text-white has-text-centered">
                 {subTitle}
               </h1>
             )}

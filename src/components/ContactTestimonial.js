@@ -17,6 +17,9 @@ const Section = styled.div`
     background-size: 65% 99%;
     background-repeat: no-repeat;
     background-position: center;
+    @media screen and (max-width: 768px) {
+      background-size: 100% 100%;
+    }
   }
   .slick-prev:before {
     width: 28px;

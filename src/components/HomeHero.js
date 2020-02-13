@@ -8,8 +8,7 @@ const Section = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  @media all and (max-width: 699px) and (min-width: 520px),
-    (min-width: 1151px) {
+  @media all and (max-width: 768px) and (min-width: 520px) {
     background-size: 100% 100%;
   }
   .columns.is-centered {
@@ -22,10 +21,11 @@ const MovingLeftContainer = styled.div`
     height: 9rem;
     width: 5rem;
     position: absolute;
-    bottom: 9rem;
+    bottom: 12rem;
     left: 0;
     @media screen and (max-width: 768px) {
       left: -2.5rem;
+      bottom: 9rem;
     }
   }
 `;
@@ -35,9 +35,10 @@ const MovingRightContainer = styled.div`
     width: 5rem;
     position: absolute;
     right: 0;
-    bottom: 9rem;
+    bottom: 12rem;
     @media screen and (max-width: 768px) {
       right: -1.5rem;
+      bottom: 9rem;
     }
   }
 `;
