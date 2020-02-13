@@ -3,7 +3,11 @@ import styled from 'styled-components';
 
 import FestivalIcon from './FestivalIcon';
 
-const Section = styled.div``;
+const Section = styled.div`
+  h1 {
+    padding: 2rem 0;
+  }
+`;
 
 const Festival = ({ title, subtitle }) => (
   <Section className="section">

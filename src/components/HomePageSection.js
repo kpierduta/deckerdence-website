@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from './elments/Button';
+import Button from './elements/Button';
 
 const Section = styled.section`
   background-image: url(${props => props.bgImg});
@@ -37,22 +37,35 @@ const Section = styled.section`
   }
 `;
 
-const HomePageSection = ({ title, description, flex, bgImg, bannerImg }) => (
+const HomePageSection = ({
+  title,
+  description,
+  flex,
+  bgImg,
+  button,
+  bannerImg,
+}) => (
   <Section flex={flex} bgImg={bgImg} bannerImg={bannerImg}>
     <div className="container">
       <div className="columns">
         <div className="column bg-image is-6">
-          <h1 className="title is-2 has-text-white has-text-weight-semibold	is-spaced">
-            {title}
-          </h1>
-          <h2 className="subtitle is-5 has-text-white has-text-weight-normal">
-            {description}
-          </h2>
-          <Button
-            image="/images/learn-more@2x.png"
-            alt="Learn More Button"
-            hasWidth="50%"
-          />
+          {title && (
+            <h1 className="title is-2 has-text-white has-text-weight-semibold	is-spaced">
+              {title}
+            </h1>
+          )}
+          {description && (
+            <h2 className="subtitle is-5 has-text-white has-text-weight-normal">
+              {description}
+            </h2>
+          )}
+          {button && (
+            <Button
+              image="/images/learn-more@2x.png"
+              alt="Learn More Button"
+              hasWidth="50%"
+            />
+          )}
         </div>
       </div>
     </div>

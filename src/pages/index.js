@@ -10,6 +10,7 @@ const Index = () => (
     <Seo title="Home" description="Welcome to GatsbyJs v1" />
     <HomeHero />
     <HomePageSection
+      button
       title="WEDDINGS"
       description="Say yes to the perfect wedding venue.
       Have your special day at our event space in the Warwickshire countryside or take our
@@ -22,6 +23,7 @@ const Index = () => (
     />
     <HomePageSection
       flex
+      button
       title="PARTIES"
       description="Throw the best party in town.
       No matter what the occasion, our vintage bus provides an incredible
@@ -32,6 +34,7 @@ const Index = () => (
       bannerImg="/images/events/box-2.png"
     />
     <HomePageSection
+      button
       title="EVENTS"
       description="Make your event stand out from the crowd.
       With a classical bar and luxurious cocktail lounge, our vintage bus provides a stunning
@@ -41,6 +44,7 @@ const Index = () => (
       bannerImg="/images/events/box-3.png"
     />
     <HomePageSection
+      button
       flex
       title="Hospitality"
       description="Deliver an event with a difference.

@@ -1,14 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Stages from './Stages';
+import Heading from './elements/Heading';
 
-import Heading from './elments/Heading';
+const Section = styled.section`
+  .heading {
+    margin: 3rem 0;
+  }
+`;
 
 const StagesSection = () => (
-  <section className="section">
+  <Section className="section">
     <div className="container">
-      <Heading heading="THREE SIMPLE STAGES" />
-      <div className="columns is-multiline">
+      <div className="heading">
+        <Heading heading="THREE SIMPLE STAGES" size="is-size-3-mobile" />
+      </div>
+      <div className="columns">
         <Stages
           title="1. Choose your location"
           subtitle="We can bring our unique venue to a location of your choosing, or
@@ -33,7 +41,7 @@ const StagesSection = () => (
         />
       </div>
     </div>
-  </section>
+  </Section>
 );
 
 export default StagesSection;

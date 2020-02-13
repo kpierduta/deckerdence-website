@@ -7,6 +7,8 @@ import PageHeading from '../components/PageHeading';
 import StagesSection from '../components/StagesSection';
 import Festival from '../components/Festival';
 import DetailsCardSection from '../components/DetailsCardSection';
+import HomePageSection from '../components/HomePageSection';
+import EventImages from '../components/EventImages';
 
 export default class EventPage extends React.Component {
   render() {
@@ -19,11 +21,29 @@ export default class EventPage extends React.Component {
         />
         <PageHeading title="We can provide everything you need for the ultimate event" />
         <StagesSection title="We can provide everything you need for the ultimate event" />
+        <HomePageSection
+          flex
+          title="Deckerdence is a unique venue that will make your event stand out from the crowd! "
+          bgImg="/images/events/middle-bg.png"
+          bannerImg="/images/events/frame-1.png"
+        />
         <Festival
           title="  OUR VENUE IS PERFCT FOR..."
           subtitle="...AND CAN TRAVEL ANYWHERE IN THE UK"
         />
+        <HomePageSection
+          title="Deckerdence is a unique venue that will make your event stand out from the crowd! "
+          bgImg="/images/events/bottom-bg-2.png"
+          bannerImg="/images/events/banner-light.png"
+        />
         <DetailsCardSection />
+        <HomePageSection
+          flex
+          title="Deckerdence is a unique venue that will make your event stand out from the crowd! "
+          bgImg="/images/events/middle-bg.png"
+          bannerImg="/images/events/frame-1.png"
+        />
+        <EventImages />
       </Layout>
     );
   }
