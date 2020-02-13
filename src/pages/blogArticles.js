@@ -3,7 +3,7 @@ import React from 'react';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import HireOptions from '../components/HireOptions';
-import OptionToIncludes from '../components/OptionToIncludes';
+import BlogCategories from '../components/BlogCategories';
 import BlogArticleData from '../components/BlogArticleData';
 import CalendarSlider from '../components/CalendarSlider';
 
@@ -19,7 +19,7 @@ export default class BlogArticles extends React.Component {
           subTitle="WEDDING VENUE"
           textColor={props => props.theme.darkShades}
         />
-        <OptionToIncludes />
+        <BlogCategories />
         <BlogArticleData />
         <CalendarSlider />
       </Layout>

@@ -3,7 +3,7 @@ import React from 'react';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import HireOptions from '../components/HireOptions';
-import OptionToIncludes from '../components/OptionToIncludes';
+import BlogCategories from '../components/BlogCategories';
 import HireForm from '../components/HireForm';
 import BarInfo from '../components/BarInfo';
 import Diagram from '../components/Diagram';
@@ -15,12 +15,12 @@ export default class SideAwning extends React.Component {
       <Layout>
         <Seo title="Home" description="Welcome to GatsbyJs v1" />
         <HireOptions
-          hirebgImage="/images/hire/header-photo@2x.png"
+          hireBgImage="/images/hire/header-photo@2x.png"
           mainTitle="Option 2"
           centerText="Vintage Bus Bar decardance"
           subTitle="with Side Awning"
         />
-        <OptionToIncludes />
+        <BlogCategories />
         <HireForm
           para="Deckerdence Bus Bar with the 1/2 wrap-around marquee is a great option for entertaining. Perfect for pitchside hospitality, or a racecourse or polo match. Our team will come along and carry out a site visit to your location, and then we will work with you to ensure you have everything perfect for your event. We have a range of items that furnish Deckerdence perfectly."
           avatar="/images/hire/icon@2x.png"
