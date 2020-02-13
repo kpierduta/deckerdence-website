@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-const CardSection = styled.div`
+const Section = styled.div`
   box-shadow: none;
   background-color: transparent;
   padding-top: 5rem;
@@ -12,7 +12,7 @@ const CardSection = styled.div`
 `;
 
 const HireCard = ({ title, subtitle, description }) => (
-  <CardSection className="card">
+  <Section className="card">
     <div className="card-content">
       <h1 className="title is-3 is-size-4-mobile is-spaced has-text-white has-text-centered  is-uppercase">
         {title}
@@ -24,7 +24,7 @@ const HireCard = ({ title, subtitle, description }) => (
         {description}
       </h1>
     </div>
-  </CardSection>
+  </Section>
 );
 
 export default HireCard;

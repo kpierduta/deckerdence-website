@@ -13,11 +13,11 @@ export default class BlogArticles extends React.Component {
       <Layout>
         <Seo title="Home" description="Welcome to GatsbyJs v1" />
         <HireOptions
-          hirebgImage="/images/blog/article.png"
-          mainTitle="05/01/2020"
-          centerText="Top 5 reasons"
-          subTitle="Wedding venue"
-          textcolor={props => props.theme.darkShades}
+          hireBgImage="/images/blog/article.png"
+          title="05/01/2020"
+          middleText="TOP 5 REASONS TO CHOOSE DECKERDENCE FOR YOUR VENUE"
+          subTitle="WEDDING VENUE"
+          textColor={props => props.theme.darkShades}
         />
         <OptionToIncludes />
         <BlogArticleData />

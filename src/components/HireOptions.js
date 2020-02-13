@@ -3,46 +3,42 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  background-image: url(${props => props.hirebgImage});
-  background-size: contain;
+  background-image: url(${props => props.hireBgImage});
+  background-size: cover;
   background-repeat: no-repeat;
   @media screen and (max-width: 768px) {
     background-size: cover;
   }
-  .text {
-    font-size: 6rem;
-    padding: 0rem 9rem;
-    @media screen and (max-width: 768px) {
-      padding: 0rem 0rem;
-    }
-  }
   .has-text-white {
-    color: ${props => props.textcolor} !important ;
+    color: ${props => props.textColor} !important ;
+  }
+  h1 {
+    padding: 2rem 0 0 0;
   }
 `;
 
 const HireOptions = ({
-  hirebgImage,
-  mainTitle,
+  hireBgImage,
+  title,
   subTitle,
-  centerText,
-  textcolor,
+  middleText,
+  textColor,
 }) => (
   <Section
-    className="section hero is-large"
-    hirebgImage={hirebgImage}
-    textcolor={textcolor}
+    className="section is-large"
+    hireBgImage={hireBgImage}
+    textColor={textColor}
   >
     <div className="container">
-      <div className="columns is-vcentered is-desktop">
-        <div className="column has-text-centered ">
-          <h2 className="title is-spaced is-1 has-text-white is-size-6-mobile">
-            {mainTitle}
+      <div className="columns">
+        <div className="column has-text-centered">
+          <h2 className="is-spaced is-size-3 has-text-white is-size-6-mobile">
+            {title}
           </h2>
-          <h2 className="text subtitle is-1 has-text-weight-bold has-text-white is-size-5-mobile">
-            {centerText}
-          </h2>
-          <h2 className="subtitle is-1 has-text-white is-size-6-mobile">
+          <h1 className="subtitle is-1 has-text-weight-bold has-text-white is-size-5-mobile">
+            {middleText}
+          </h1>
+          <h2 className="subtitle is-size-3 has-text-white is-size-6-mobile">
             {subTitle}
           </h2>
         </div>
