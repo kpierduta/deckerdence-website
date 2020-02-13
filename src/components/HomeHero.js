@@ -76,10 +76,10 @@ const HomeHero = () => {
         </FireworkContainer>
         <div className="columns is-centered">
           <div className="column is-10 has-text-centered">
-            <h1 className="title is-2 has-text-white has-text-weight-semibold	">
+            <h1 className="title is-2 is-size-3-mobile has-text-white has-text-weight-semibold">
               Get in Touch!
             </h1>
-            <h1 className="title is-3 has-text-white has-text-weight-semibold	">
+            <h1 className="title is-3 is-size-5-mobile has-text-white has-text-weight-semibold">
               <span className="has-text-grey-lighter has-text-weight-light ">
                 Email:
               </span>
