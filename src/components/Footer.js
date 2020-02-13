@@ -8,6 +8,9 @@ const Container = styled.section`
   margin-top: 1rem;
   img {
     margin-right: 1.5rem;
+    @media screen and (max-width: 768px) {
+      margin-right: 1rem;
+    }
   }
   .columns {
     margin-top: 2rem;
