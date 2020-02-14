@@ -1,6 +1,6 @@
 import React from 'react';
 import Testimonials from './Testimonials';
-import BlackButton from './elments/BlackButton';
+import BlackButton from './elements/BlackButton';
 
 const TestimonialsData = () => (
   <div className="columns is-multiline">

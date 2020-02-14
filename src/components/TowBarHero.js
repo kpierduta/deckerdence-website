@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ButtonGlobal from './elments/ButtonGlobal';
+import ButtonGlobal from './elements/ButtonGlobal';
 
 const Section = styled.div`
   background-image: url(${props => props.towBgImage});

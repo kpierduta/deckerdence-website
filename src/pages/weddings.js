@@ -10,27 +10,28 @@ import DetailsCardSection from '../components/DetailsCardSection';
 import Gallery from '../components/Gallery';
 import ContactForm from '../components/ContactForm';
 
-const PartiesPage = () => (
+const Weedings = () => (
   <Layout>
     <Seo title="Parties" />
     <PartiesHero
-      title="Parties for all occasions"
+      title="Unique Wedding Venue"
       partyBgImage="/images/parties/photo@2x.png"
     />
     <PageHeading
-      subTitle="The bus provides an amazing focal point, and provides
-          many different zones for your party."
+      subTitle="Deckerdence is a unique venue idea for Weddings,
+      making your day special and truly unique to you. "
     />
     <StagesSection />
     <VenueSection
+      flex
       frame="/images/parties/frame@2x.png"
-      text="We remain on site to look after everything from start to finish."
+      text="The Wrap around marquee attaches to our our classic vintage bar bus to create
+      a unique mobile venue."
       alt="main"
       frameBgImage="/images/parties/photo-black-and-white@2x.png"
     />
     <DetailsCardSection />
     <VenueSection
-      flex
       color
       frame="/images/parties/rightframes.png"
       text="Your guests will be amazed when they walk into the marquee and see a double decker bus inside. "
@@ -42,4 +43,4 @@ const PartiesPage = () => (
   </Layout>
 );
 
-export default PartiesPage;
+export default Weedings;

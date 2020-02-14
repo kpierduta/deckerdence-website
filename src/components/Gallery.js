@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import BlackButton from './elments/BlackButton';
+import BlackButton from './elements/BlackButton';
 
 const Section = styled.div`
   margin-top: 4rem;

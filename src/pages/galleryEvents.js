@@ -14,7 +14,7 @@ const Container = styled.div`
   }
 `;
 
-const Gallery = () => (
+const GalleryEvents = () => (
   <Layout>
     <Seo title="Home" description="Welcome to GatsbyJs v1" />
     <PageHeading title="GALLERY" />
@@ -33,4 +33,4 @@ const Gallery = () => (
   </Layout>
 );
 
-export default Gallery;
+export default GalleryEvents;

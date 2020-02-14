@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Diagram from './Diagram';
-import Input from './elments/Input';
+import Input from './elements/Input';
 
 const Section = styled.div`
   background-image: url('/images/hire/contactForm.png');
