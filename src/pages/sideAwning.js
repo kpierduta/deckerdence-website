@@ -14,8 +14,8 @@ const SideAwning = () => (
     <Seo title="Home" description="Welcome to GatsbyJs v1" />
     <HireOptions
       hireBgImage="/images/hire/header-photo@2x.png"
-      mainTitle="Option 2"
-      centerText="Vintage Bus Bar decardance"
+      title="Option 2"
+      middleText="Vintage Bus Bar decardance"
       subTitle="with Side Awning"
     />
     <BlogCategories />

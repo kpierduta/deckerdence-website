@@ -1,8 +1,8 @@
-# Kickoff GatsbyJs
+# Deckerdence
 
-A starting point using ReactJs, bundled with awesome GatsbyJs v2.
+A starting point using Deckerdence, bundled with awesome GatsbyJs v2.
 
-[Demo](https://kickoff-gatsbyjs.netlify.com/)
+[Demo](https://deckerdence.netlify.com/)
 
 ## Stack
 
@@ -26,7 +26,7 @@ yarn install
 
 ## Development
 
-To start development server
+To start the development server
 
 ```
 yarn start

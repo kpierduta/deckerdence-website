@@ -7,7 +7,7 @@ import HomePageSection from '../components/HomePageSection';
 
 const Index = () => (
   <Layout>
-    <Seo title="Home" description="Welcome to GatsbyJs v1" />
+    <Seo title="Home" description="Deckerdence Unique Mobile Venue" />
     <HomeHero />
     <HomePageSection
       button

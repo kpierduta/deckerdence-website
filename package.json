@@ -1,17 +1,17 @@
 {
-  "name": "kickoff-gatsbyjs",
-  "description": "A react starting point using GatsbyJS",
+  "name": "Deckerdence",
+  "description": "Deckerdence A Unique Mobile Venue",
   "version": "2.0.1",
-  "author": "Parminder Klair",
+  "author": "Zeiq.co",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/perminder-klair/kickoff-gatsbyjs.git"
+    "url": "git+https://github.com/zeiq-co/deckerdence"
   },
   "bugs": {
-    "url": "https://github.com/perminder-klair/kickoff-gatsbyjs/issues"
+    "url": "https://github.com/zeiq-co/deckerdence/issues"
   },
-  "homepage": "https://github.com/perminder-klair/kickoff-gatsbyjs#readme",
+  "homepage": "https://github.com/zeiq-co/deckerdence#readme",
   "scripts": {
     "start": "npm run develop",
     "develop": "gatsby develop",

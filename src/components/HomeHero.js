@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-
-// const move = typeof window !== `undefined` ? require('move-js') : null;
 
 const Section = styled.section`
   background-image: url('/images/home/background.png');
@@ -83,74 +81,57 @@ const Content = styled.div`
   }
 `;
 
-const HomeHero = () => {
-  // useEffect(() => {
-  //   move('#left-moving-item')
-  //     .translate(300, -450)
-  //     .delay('3s')
-  //     .duration('3s')
-  //     .end();
-  //   move('#right-moving-item')
-  //     .translate(-200, -450)
-  //     .delay('3s')
-  //     .duration('3s')
-  //     .end();
-  //   // TO rotate
-  //   // https://codepen.io/vitoralberto/pen/OPYyYB
-  // }, []);
-
-  return (
-    <Section className="section">
-      <div className="container">
-        <figure className="image">
-          <img src="/images/home/title-banner@2x.png" alt="" />
-        </figure>
-        <FireworkContainer className="circle">
-          <img
-            className="circular-image"
-            id="loading"
-            src="/images/home/firework-5@2x.png"
-            alt="circle"
-          />
-        </FireworkContainer>
-        <Content className="columns is-centered">
-          <div className="column is-10 has-text-centered">
-            <h1 className="title is-2 is-size-7-mobile has-text-white has-text-weight-semibold">
-              Get in Touch!
-            </h1>
-            <h1 className="title is-3 is-size-7-mobile has-text-white has-text-weight-semibold">
-              <span className="has-text-grey-lighter has-text-weight-light ">
-                Email:
-              </span>
-              enquiries@deckerdence.com{' '}
-              <span className="has-text-grey-lighter has-text-weight-light">
-                OR Call:
-              </span>
-              01675 463555
-            </h1>
-          </div>
-        </Content>
-        <div className="columns">
-          <MovingLeftContainer className="column">
-            <img
-              id="left-moving-item"
-              src="/images/parties/layer-802@2x.png"
-              alt="Left-Rocket"
-              width="40%"
-            />
-          </MovingLeftContainer>
-          <MovingRightContainer className="column">
-            <img
-              id="right-moving-item"
-              src="/images/parties/layer-797@2x.png"
-              alt="Left-Rocket"
-              width="40%"
-            />
-          </MovingRightContainer>
+const HomeHero = () => (
+  <Section className="section">
+    <div className="container">
+      <figure className="image">
+        <img src="/images/home/title-banner@2x.png" alt="" />
+      </figure>
+      <FireworkContainer className="circle">
+        <img
+          className="circular-image"
+          id="loading"
+          src="/images/home/firework-5@2x.png"
+          alt="circle"
+        />
+      </FireworkContainer>
+      <Content className="columns is-centered">
+        <div className="column is-10 has-text-centered">
+          <h1 className="title is-2 is-size-7-mobile has-text-white has-text-weight-semibold">
+            Get in Touch!
+          </h1>
+          <h1 className="title is-3 is-size-7-mobile has-text-white has-text-weight-semibold">
+            <span className="has-text-grey-lighter has-text-weight-light ">
+              Email:
+            </span>
+            enquiries@deckerdence.com{' '}
+            <span className="has-text-grey-lighter has-text-weight-light">
+              OR Call:
+            </span>
+            01675 463555
+          </h1>
         </div>
+      </Content>
+      <div className="columns">
+        <MovingLeftContainer className="column">
+          <img
+            id="left-moving-item"
+            src="/images/parties/layer-802@2x.png"
+            alt="Left-Rocket"
+            width="40%"
+          />
+        </MovingLeftContainer>
+        <MovingRightContainer className="column">
+          <img
+            id="right-moving-item"
+            src="/images/parties/layer-797@2x.png"
+            alt="Left-Rocket"
+            width="40%"
+          />
+        </MovingRightContainer>
       </div>
-    </Section>
-  );
-};
+    </div>
+  </Section>
+);
 
 export default HomeHero;
