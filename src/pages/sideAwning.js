@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import HireOptions from '../components/HireOptions';
 import BlogCategories from '../components/BlogCategories';
 import HireForm from '../components/HireForm';
-import BarInfo from '../components/BarInfo';
+import BarTile from '../components/BarTile';
 import Diagram from '../components/Diagram';
 import ContactForm from '../components/ContactForm';
 
@@ -28,7 +28,29 @@ const SideAwning = () => (
       subtitle="By submitting this form you agree to our contact conditions."
       mainSubtitle="mainSubtitle"
     />
-    <BarInfo />
+    <section className="section">
+      <div className="container">
+        <div className="columns is-multiline is-variable is-4">
+          <BarTile
+            title="Marquee information"
+            subtitle="The awning marquee structure measures 8m x 6m and is fitted
+              directly from the bus covering the window of the bar where the
+              serving hatch is. As the awning fits directly to the bus
+              between decks, the upstairs view is not spoiled. Suspendisse
+              varius ligula in molestie lacinia. Maecenas varius eget ligula
+              a sagittis. Pellentesque interdum, nisl nec interdum"
+          />
+          <BarTile
+            title="Upstairs Lounge"
+            subtitle="Our beautiful upstairs lounge gives you the perfect setting to enjoy drinks with your guests complimented with a panoramic view of your chosen location."
+          />
+          <BarTile
+            title="Upstairs Lounge"
+            subtitle="Our beautiful upstairs lounge gives you the perfect setting to enjoy drinks with your guests complimented with a panoramic view of your chosen location."
+          />
+        </div>
+      </div>
+    </section>
     <Diagram avatar="/images/hire/diagram@2x.png" />
     <ContactForm />
   </Layout>
