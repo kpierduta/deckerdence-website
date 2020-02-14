@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
@@ -7,8 +8,13 @@ import PageHeading from '../components/PageHeading';
 import StagesSection from '../components/StagesSection';
 import VenueSection from '../components/VenueSection';
 import DetailsCardSection from '../components/DetailsCardSection';
-import Gallery from '../components/Gallery';
+import GalleryItem from '../components/GalleryItem';
 import ContactForm from '../components/ContactForm';
+import BlackButton from '../components/elements/BlackButton';
+
+const GalleryWrapper = styled.div`
+  margin-top: 4rem;
+`;
 
 const Weddings = () => (
   <Layout>
@@ -38,7 +44,20 @@ const Weddings = () => (
       alt="main"
       frameBgImage="/images/parties/photo-black-and-white@2x.png"
     />
-    <Gallery />
+
+    <GalleryWrapper className="columns is-variable is-3 is-multiline">
+      <GalleryItem />
+      <GalleryItem />
+      <GalleryItem />
+      <GalleryItem />
+      <GalleryItem />
+      <GalleryItem />
+    </GalleryWrapper>
+    <BlackButton
+      image="/images/parties/view-more@2x.png"
+      alt="Learn More Button"
+      hasWidth="20%"
+    />
     <ContactForm />
   </Layout>
 );

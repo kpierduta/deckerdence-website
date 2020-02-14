@@ -7,7 +7,7 @@ import PageHeading from '../components/PageHeading';
 import StagesSection from '../components/StagesSection';
 import VenueSection from '../components/VenueSection';
 import DetailsCardSection from '../components/DetailsCardSection';
-import Gallery from '../components/Gallery';
+import GalleryItem from '../components/GalleryItem';
 import ContactForm from '../components/ContactForm';
 import Festival from '../components/Festival';
 
@@ -50,7 +50,7 @@ const Hospitality = () => (
       alt="main"
       frameBgImage="/images/parties/photo-black-and-white@2x.png"
     />
-    <Gallery />
+    <GalleryItem />
     <ContactForm />
   </Layout>
 );
