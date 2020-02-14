@@ -8,7 +8,6 @@ const Section = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
   @media screen and (max-width: 768px) {
     background-size: 100% 100%;
     height: 24rem;
@@ -19,36 +18,40 @@ const Section = styled.section`
       margin-top: 0;
     }
   }
+  figure {
+    width: 60%;
+    margin: 0 auto;
+  }
 `;
 
-const MovingLeftContainer = styled.div`
+const Container = styled.div`
   img {
     height: 9rem;
     width: 5rem;
     position: absolute;
-    bottom: 12rem;
-    left: 0;
+    bottom: 8rem;
     @media screen and (max-width: 768px) {
       height: 6rem;
       width: 3rem;
-      left: -2.5rem;
-      bottom: -10rem;
+      bottom: -11rem;
     }
   }
 `;
 
-const MovingRightContainer = styled.div`
+const MovingLeftContainer = styled(Container)`
   img {
-    height: 9rem;
-    width: 5rem;
-    position: absolute;
-    right: 0;
-    bottom: 12rem;
+    left: 0;
     @media screen and (max-width: 768px) {
-      height: 6rem;
-      width: 3rem;
-      right: -1.5rem;
-      bottom: -10rem;
+      left: -1.5rem;
+    }
+  }
+`;
+
+const MovingRightContainer = styled(Container)`
+  img {
+    right: 0;
+    @media screen and (max-width: 768px) {
+      right: -0.5rem;
     }
   }
 `;
@@ -72,7 +75,7 @@ const FireworkContainer = styled.div`
 const Content = styled.div`
   @media screen and (max-width: 768px) {
     position: absolute;
-    bottom: -13.5rem;
+    bottom: -15.5rem;
     left: 2rem;
   }
   .title:not(:last-child) {
