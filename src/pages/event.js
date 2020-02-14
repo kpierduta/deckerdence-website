@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
@@ -8,8 +9,14 @@ import StagesSection from '../components/StagesSection';
 import Festival from '../components/Festival';
 import DetailsCardSection from '../components/DetailsCardSection';
 import HomePageSection from '../components/HomePageSection';
-import EventImages from '../components/EventImages';
+import Button from '../components/elements/Button';
 
+const Section = styled.div`
+  margin-top: 5rem;
+  .button-styled {
+    margin: 2rem 0;
+  }
+`;
 export default class EventPage extends React.Component {
   render() {
     return (
@@ -43,7 +50,35 @@ export default class EventPage extends React.Component {
           bgImg="/images/events/middle-bg.png"
           bannerImg="/images/events/frame-1.png"
         />
-        <EventImages />
+        <Section>
+          <div className="columns is-multiline">
+            <div className="column is-4">
+              <img src="/images/events/middle-bg.png" alt="" />
+            </div>
+            <div className="column is-4">
+              <img src="/images/events/middle-bg.png" alt="" />
+            </div>
+            <div className="column is-4">
+              <img src="/images/events/middle-bg.png" alt="" />
+            </div>
+            <div className="column is-4">
+              <img src="/images/events/middle-bg.png" alt="" />
+            </div>
+            <div className="column is-4">
+              <img src="/images/events/middle-bg.png" alt="" />
+            </div>
+            <div className="column is-4">
+              <img src="/images/events/middle-bg.png" alt="" />
+            </div>
+          </div>
+          <div className="has-text-centered button-styled">
+            <Button
+              image="/images/view-more-black.png"
+              alt="Learn More Button"
+              hasWidth="20%"
+            />
+          </div>
+        </Section>
       </Layout>
     );
   }

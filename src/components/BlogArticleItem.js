@@ -8,7 +8,7 @@ const Section = styled.div`
   }
 `;
 
-const BlogArticle = ({ title, subtitle }) => (
+const BlogArticleItem = ({ title, subtitle }) => (
   <Section className="section">
     <div className="container">
       <h1 className="title is-2 is-spaced is-uppercase has-text-centered">
@@ -19,4 +19,4 @@ const BlogArticle = ({ title, subtitle }) => (
   </Section>
 );
 
-export default BlogArticle;
+export default BlogArticleItem;

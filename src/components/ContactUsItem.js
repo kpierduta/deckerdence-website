@@ -23,7 +23,7 @@ const ImageWrapper = styled.div`
   justify-content: center;
 `;
 
-const ContactUs = ({ title, icon, para }) => (
+const ContactUsItem = ({ title, icon, para }) => (
   <Section className="column">
     <div className="bg-image">
       <h1 className="title is-3 is-size-4-mobile has-text-weight-normal is-spaced has-text-centered has-text-white">
@@ -43,4 +43,4 @@ const ContactUs = ({ title, icon, para }) => (
   </Section>
 );
 
-export default ContactUs;
+export default ContactUsItem;

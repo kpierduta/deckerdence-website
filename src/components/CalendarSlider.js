@@ -34,7 +34,7 @@ export default class CalendarSlider extends Component {
         <div className="columns is-centered">
           <div className="column is-10">
             <div>
-              <h1 className="title is-1 has-text-centered"> ARCHIVE </h1>
+              <h1 className="title is-1 has-text-centered">ARCHIVE </h1>
               <Slider {...settings}>
                 <div>
                   <img src="/images/blog/1@2x.png" alt="" />
