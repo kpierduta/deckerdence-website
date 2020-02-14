@@ -37,8 +37,12 @@ const GalleryParties = () => (
         bgImage="/images/gallery/photo-1@2x.png"
         title="cocktails on the upper deck"
       />
-      <BlackButton />
     </div>
+    <BlackButton
+      image="/images/parties/view-more@2x.png"
+      alt="Learn More Button"
+      hasWidth="20%"
+    />
   </Layout>
 );
 
