@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BarTile = ({ title, subtitle }) => (
+const TileItem = ({ title, subtitle }) => (
   <div className="column is-6">
     <div className="box">
       <p className="title has-text-weight-normal">{title}</p>
@@ -9,4 +9,4 @@ const BarTile = ({ title, subtitle }) => (
   </div>
 );
 
-export default BarTile;
+export default TileItem;

@@ -4,7 +4,7 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import BlogCategories from '../components/BlogCategories';
 import HireForm from '../components/HireForm';
-import BarTile from '../components/BarTile';
+import TileItem from '../components/TileItem';
 import Diagram from '../components/Diagram';
 import ContactForm from '../components/ContactForm';
 import HireCardSlider from '../components/HireCardSlider';
@@ -25,22 +25,22 @@ const HirePage = () => (
     <section className="section">
       <div className="container">
         <div className="columns is-multiline is-variable is-4">
-          <BarTile
+          <TileItem
             title="Marquee information"
             subtitle="The half wrap around marquee measures 25m x 9m and the marquee structure is fitted directly from the bus, between the
                 2 decks, to not spoil the upstairs views."
           />
-          <BarTile
+          <TileItem
             title="Marquee information"
             subtitle="The half wrap around marquee measures 25m x 9m and the marquee structure is fitted directly from the bus, between the
                 2 decks, to not spoil the upstairs views."
           />
-          <BarTile
+          <TileItem
             title="Marquee information"
             subtitle="The half wrap around marquee measures 25m x 9m and the marquee structure is fitted directly from the bus, between the
                 2 decks, to not spoil the upstairs views."
           />
-          <BarTile
+          <TileItem
             title="Marquee information"
             subtitle="The half wrap around marquee measures 25m x 9m and the marquee structure is fitted directly from the bus, between the
                 2 decks, to not spoil the upstairs views."

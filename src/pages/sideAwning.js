@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import HireOptions from '../components/HireOptions';
 import BlogCategories from '../components/BlogCategories';
 import HireForm from '../components/HireForm';
-import BarTile from '../components/BarTile';
+import TileItem from '../components/TileItem';
 import Diagram from '../components/Diagram';
 import ContactForm from '../components/ContactForm';
 
@@ -15,7 +15,7 @@ const SideAwning = () => (
     <HireOptions
       hireBgImage="/images/hire/header-photo@2x.png"
       title="Option 2"
-      middleText="Vintage Bus Bar decardance"
+      middleText="Vintage Bus Bar deckerdence"
       subTitle="with Side Awning"
     />
     <BlogCategories />
@@ -31,7 +31,7 @@ const SideAwning = () => (
     <section className="section">
       <div className="container">
         <div className="columns is-multiline is-variable is-4">
-          <BarTile
+          <TileItem
             title="Marquee information"
             subtitle="The awning marquee structure measures 8m x 6m and is fitted
               directly from the bus covering the window of the bar where the
@@ -40,11 +40,11 @@ const SideAwning = () => (
               varius ligula in molestie lacinia. Maecenas varius eget ligula
               a sagittis. Pellentesque interdum, nisl nec interdum"
           />
-          <BarTile
+          <TileItem
             title="Upstairs Lounge"
             subtitle="Our beautiful upstairs lounge gives you the perfect setting to enjoy drinks with your guests complimented with a panoramic view of your chosen location."
           />
-          <BarTile
+          <TileItem
             title="Upstairs Lounge"
             subtitle="Our beautiful upstairs lounge gives you the perfect setting to enjoy drinks with your guests complimented with a panoramic view of your chosen location."
           />
