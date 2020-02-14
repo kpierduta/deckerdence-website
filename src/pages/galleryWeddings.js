@@ -7,11 +7,11 @@ import PageTitle from '../components/elements/PageTitle';
 import Testimonials from '../components/Testimonials';
 import BlackButton from '../components/elements/BlackButton';
 
-const GalleryEvents = () => (
+const GalleryWeddings = () => (
   <Layout>
     <Seo title="Home" description="Welcome to GatsbyJs v1" />
-    <PageHeading title="GALLERY" />
-    <PageTitle title="EVENTS" />
+    <PageHeading title="Gallery" />
+    <PageTitle title="Weddings" />
     <div className="columns is-multiline">
       <Testimonials
         bgImage="/images/gallery/photo-1@2x.png"
@@ -42,4 +42,4 @@ const GalleryEvents = () => (
   </Layout>
 );
 
-export default GalleryEvents;
+export default GalleryWeddings;

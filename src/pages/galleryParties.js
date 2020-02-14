@@ -4,14 +4,14 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import PageHeading from '../components/PageHeading';
 import PageTitle from '../components/elements/PageTitle';
-import Testimonials from '../components/Testimonials';
 import BlackButton from '../components/elements/BlackButton';
+import Testimonials from '../components/Testimonials';
 
-const GalleryEvents = () => (
+const GalleryParties = () => (
   <Layout>
-    <Seo title="Home" description="Welcome to GatsbyJs v1" />
+    <Seo title="Home" />
     <PageHeading title="GALLERY" />
-    <PageTitle title="EVENTS" />
+    <PageTitle title="Parties" />
     <div className="columns is-multiline">
       <Testimonials
         bgImage="/images/gallery/photo-1@2x.png"
@@ -42,4 +42,4 @@ const GalleryEvents = () => (
   </Layout>
 );
 
-export default GalleryEvents;
+export default GalleryParties;
