@@ -6,6 +6,9 @@ import HireForm from '../components/HireForm';
 import TileItem from '../components/TileItem';
 import BlogCategoryItem from '../components/BlogCategoryItem';
 import HireCardSlider from '../components/HireCardSlider';
+import Diagram from '../components/Diagram';
+import VenueSection from '../components/VenueSection';
+import ContactForm from '../components/ContactForm';
 import Seo from '../components/Seo';
 
 const HireBusBarOption = () => (
@@ -32,6 +35,7 @@ const HireBusBarOption = () => (
       subtitle="By submitting this form you agree to our contact conditions."
       mainSubtitle="mainSubtitle"
     />
+    <HireCardSlider />
     <section className="section">
       <div className="container">
         <div className="columns is-multiline is-variable is-4">
@@ -55,7 +59,28 @@ const HireBusBarOption = () => (
         </div>
       </div>
     </section>
-    <HireCardSlider />
+    <Diagram avatar="/images/hire/bus-diagram.png" />
+    <VenueSection
+      color
+      frame="/images/parties/frame@2x.png"
+      text="Cocktail Lounge Upstairs in Vintage bus bar "
+      alt="main"
+      frameBgImage="/images/hire/hire-bg-one.png"
+    />
+    <VenueSection
+      flex
+      frame="/images/parties/frame@2x.png"
+      text="Plan every Detail with expert support"
+      alt="main"
+      frameBgImage="/images/hire/hire-bg-second.png"
+    />
+    <VenueSection
+      color
+      frame="/images/parties/rightframes.png"
+      text="Create Your Theme Fully Customisable"
+      frameBgImage="/images/parties/photo-black-and-white@2x.png"
+    />
+    <ContactForm />
   </Layout>
 );
 

@@ -9,18 +9,20 @@ const Section = styled.div`
   @media screen and (max-width: 768px) {
     padding-top: 7rem;
   }
+  .title,
+  .subtitle {
+    color: ${props => (props.textBlack ? '#0A0A0A' : '#ffff')} !important;
+  }
 `;
 
-const HireCard = ({ title, subtitle, description, bgColor }) => (
-  <Section className="card" bgColor={bgColor}>
+const HireCard = ({ title, subtitle, description, bgColor, textBlack }) => (
+  <Section className="card" bgColor={bgColor} textBlack={textBlack}>
     <div className="card-content">
-      <h1 className="title is-3 is-size-4-mobile is-spaced has-text-white has-text-centered  is-uppercase">
+      <h1 className="title is-3 is-size-4-mobile is-spaced  has-text-centered is-uppercase">
         {title}
       </h1>
-      <p className="subtitle  is-size-6-mobile has-text-centered has-text-white">
-        {subtitle}
-      </p>
-      <h1 className="subtitle is-3 is-size-4-mobile has-text-centered is-spaced has-text-weight-bold  has-text-white-ter">
+      <p className="subtitle  is-size-6-mobile has-text-centered">{subtitle}</p>
+      <h1 className="subtitle is-3 is-size-4-mobile has-text-centered is-spaced has-text-weight-bold">
         {description}
       </h1>
     </div>

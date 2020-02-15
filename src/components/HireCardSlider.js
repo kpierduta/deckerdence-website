@@ -22,7 +22,7 @@ const Section = styled.div`
     position: absolute;
     top: -11px;
     left: -7px;
-    background-image: url('./images/contacts/arrow-left@2x.png');
+    background-image: url('./images/hire/slider-left-arrow.png');
   }
     opacity: 1 !important;
   }
@@ -34,7 +34,7 @@ const Section = styled.div`
     position: absolute;
     top: -11px;
     left: 0px;
-    background-image: url('./images/contacts/arrow-right@2x.png');
+    background-image: url('./images/hire/slider-right-arrow.png');
   }
 `;
 
@@ -64,6 +64,7 @@ class ContactTestimonial extends React.Component {
               <Slider {...settings}>
                 <Wrapper>
                   <HireCard
+                    textBlack
                     title="Clare, I just wanted to thank all o"
                     subtitle="“Clare, I just wanted to thank all of the Deckerdence team for
                     providing such a fantastic venue for Emily’s 21st party. Our
@@ -75,6 +76,7 @@ class ContactTestimonial extends React.Component {
                 </Wrapper>
                 <Wrapper>
                   <HireCard
+                    textBlack
                     title="Clare, I just wanted to thank all o"
                     subtitle="“Clare, I just wanted to thank all of the Deckerdence team for
                     providing such a fantastic venue for Emily’s 21st party. Our
@@ -86,6 +88,7 @@ class ContactTestimonial extends React.Component {
                 </Wrapper>
                 <Wrapper>
                   <HireCard
+                    textBlack
                     title="Clare, I just wanted to thank all o"
                     subtitle="“Clare, I just wanted to thank all of the Deckerdence team for
                     providing such a fantastic venue for Emily’s 21st party. Our
