@@ -6,6 +6,7 @@ const Section = styled.div`
   background-image: url('/images/gallery/toppage.png');
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: -2px;
 `;
 const PageHeading = props => {
   const { title, subTitle } = props;

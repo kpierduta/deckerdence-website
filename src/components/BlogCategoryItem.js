@@ -33,7 +33,7 @@ const BlogCategoryItem = ({ category, sideImage }) => {
           </Link>
         </Column>
         {sideImage && (
-          <SideImage className="column is-2">
+          <SideImage className="column is-2 is-hidden-mobile">
             <img src="/images/hire/arrow-vertical.png" alt="vertical-arrow" />
           </SideImage>
         )}

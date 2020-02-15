@@ -6,14 +6,23 @@ const Section = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
   @media screen and (max-width: 768px) {
     background-size: 100% 100%;
     height: 24rem;
   }
+  @media only screen and (max-width: 2900px) and (min-width: 1700px) {
+    background-size: 100% 100%;
+    height: 74rem;
+  }
+
   .columns.is-centered {
     margin-top: 40rem;
     @media screen and (max-width: 768px) {
       margin-top: 0;
+    }
+    @media only screen and (max-width: 2900px) and (min-width: 1700px) {
+      height: 12rem;
     }
   }
   figure {
@@ -78,6 +87,11 @@ const Content = styled.div`
   }
   .title:not(:last-child) {
     margin-bottom: 0.5rem;
+  }
+  .column {
+    @media only screen and (max-width: 2900px) and (min-width: 1700px) {
+      margin-top: 7.5rem;
+    }
   }
 `;
 

@@ -17,7 +17,6 @@ const HireBusBarOption = () => (
     <HireHero />
     <section className="section">
       <div className="container">
-        <h1 className="has-text-centered is-size-1">Categories</h1>
         <div className="columns is-multiline">
           <BlogCategoryItem category="Vintage Bus Bar" sideImage />
           <BlogCategoryItem category="Fully Customisable" sideImage />
