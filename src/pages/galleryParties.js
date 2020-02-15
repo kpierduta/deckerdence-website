@@ -9,7 +9,7 @@ import Testimonials from '../components/Testimonials';
 
 const GalleryParties = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="Gallery Parties" />
     <PageHeading title="GALLERY" />
     <PageTitle title="Parties" />
     <div className="columns is-multiline">

@@ -19,7 +19,7 @@ const Section = styled.div`
 
 const SideAwning = () => (
   <Layout>
-    <Seo title="Home" description="Welcome to GatsbyJs v1" />
+    <Seo title="Side Awning" />
     <HireOptions
       hireBgImage="/images/hire/header-photo@2x.png"
       title="Option 2"

@@ -10,7 +10,7 @@ import DetailsCardSection from '../components/DetailsCardSection';
 import GalleryItem from '../components/GalleryItem';
 import ContactForm from '../components/ContactForm';
 
-const PartiesPage = () => (
+const Parties = () => (
   <Layout>
     <Seo title="Parties" />
     <PartiesHero
@@ -42,4 +42,4 @@ const PartiesPage = () => (
   </Layout>
 );
 
-export default PartiesPage;
+export default Parties;

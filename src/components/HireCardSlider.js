@@ -3,13 +3,42 @@ import styled from 'styled-components';
 import Slider from 'react-slick';
 import HireCard from './HireCard';
 
-const Section = styled.div`
-  background-image: url(/images/hire/decar.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+const Wrapper = styled.div`
+  background-color: #fff;
 `;
 
-class HireCardSlider extends React.Component {
+const Section = styled.div`
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('/images/hire/net-bg.png');
+  .container h1:last-child {
+    padding: 0 0 4rem;
+  }
+  .slick-prev:before {
+    width: 28px;
+    height: 50px;
+    background-size: cover;
+    content: '' !important;
+    position: absolute;
+    top: -11px;
+    left: -7px;
+    background-image: url('./images/contacts/arrow-left@2x.png');
+  }
+    opacity: 1 !important;
+  }
+  .slick-next:before {
+    width: 28px;
+    height: 50px;
+    background-size: cover;
+    content: '' !important;
+    position: absolute;
+    top: -11px;
+    left: 0px;
+    background-image: url('./images/contacts/arrow-right@2x.png');
+  }
+`;
+
+class ContactTestimonial extends React.Component {
   render() {
     const settings = {
       dots: false,
@@ -21,10 +50,19 @@ class HireCardSlider extends React.Component {
     return (
       <Section className="section is-medium">
         <div className="container">
+          {/* <h1 className="title is-3 is-spaced  has-text-centered has-text-white has-text-weight-normal">
+            Testimonials
+          </h1>
+          <h1 className="subtitle has-text-centered has-text-white">
+            Here are some testimonials from our clients that have used
+            Deckerdence to stage their perfect event!
+          </h1> */}
+        </div>
+        <div className="container background">
           <div className="columns is-centered">
             <div className="column is-8">
               <Slider {...settings}>
-                <div>
+                <Wrapper>
                   <HireCard
                     title="Clare, I just wanted to thank all o"
                     subtitle="“Clare, I just wanted to thank all of the Deckerdence team for
@@ -34,8 +72,8 @@ class HireCardSlider extends React.Component {
                     that.”"
                     description="Emily 00/00/00"
                   />
-                </div>
-                <div>
+                </Wrapper>
+                <Wrapper>
                   <HireCard
                     title="Clare, I just wanted to thank all o"
                     subtitle="“Clare, I just wanted to thank all of the Deckerdence team for
@@ -43,10 +81,10 @@ class HireCardSlider extends React.Component {
                     Deckerdence experience last year for our 25th Wedding Anniversary
                     was amazing but the new team led by yourself and Mark, excelled even
                     that.”"
-                    description="Emily 00/00/01"
+                    description="Jo & Eddy 00/00/01"
                   />
-                </div>
-                <div>
+                </Wrapper>
+                <Wrapper>
                   <HireCard
                     title="Clare, I just wanted to thank all o"
                     subtitle="“Clare, I just wanted to thank all of the Deckerdence team for
@@ -56,7 +94,7 @@ class HireCardSlider extends React.Component {
                     that.”"
                     description="Emily 00/00/02"
                   />
-                </div>
+                </Wrapper>
               </Slider>
             </div>
           </div>
@@ -66,4 +104,4 @@ class HireCardSlider extends React.Component {
   }
 }
 
-export default HireCardSlider;
+export default ContactTestimonial;

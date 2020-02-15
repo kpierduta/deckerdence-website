@@ -18,7 +18,7 @@ const GalleryWrapper = styled.div`
 
 const Weddings = () => (
   <Layout>
-    <Seo title="Parties" />
+    <Seo title="Weddings" />
     <PartiesHero
       title="Unique Wedding Venue"
       partyBgImage="/images/parties/photo@2x.png"

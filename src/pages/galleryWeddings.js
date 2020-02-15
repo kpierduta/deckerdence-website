@@ -9,7 +9,7 @@ import BlackButton from '../components/elements/BlackButton';
 
 const GalleryWeddings = () => (
   <Layout>
-    <Seo title="Home" description="Welcome to GatsbyJs v1" />
+    <Seo title="Gallery Weddings" />
     <PageHeading title="Gallery" />
     <PageTitle title="Weddings" />
     <div className="columns is-multiline">

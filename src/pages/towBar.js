@@ -32,7 +32,7 @@ const Section = styled.div`
 
 const TowBarPage = () => (
   <Layout>
-    <Seo title="Home" description="Welcome to GatsbyJs v1" />
+    <Seo title="Tow Bar" />
     <PageHeading
       title="The Tow Bar"
       subTitle="Our converted trailer bar makes a great addition to any event. The To Bar is ideal for serving welcome drinks as your guests arrive."

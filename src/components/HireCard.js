@@ -4,15 +4,15 @@ import styled from 'styled-components';
 
 const Section = styled.div`
   box-shadow: none;
-  background-color: transparent;
+  background-color: ${props => (props.bgColor ? props.bgColor : 'transparent')};
   padding-top: 5rem;
   @media screen and (max-width: 768px) {
     padding-top: 7rem;
   }
 `;
 
-const HireCard = ({ title, subtitle, description }) => (
-  <Section className="card">
+const HireCard = ({ title, subtitle, description, bgColor }) => (
+  <Section className="card" bgColor={bgColor}>
     <div className="card-content">
       <h1 className="title is-3 is-size-4-mobile is-spaced has-text-white has-text-centered  is-uppercase">
         {title}

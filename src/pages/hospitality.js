@@ -13,7 +13,7 @@ import Festival from '../components/Festival';
 
 const Hospitality = () => (
   <Layout>
-    <Seo title="Parties" />
+    <Seo title="Hospitality" />
     <PartiesHero
       title="Hospitality"
       partyBgImage="/images/parties/photo@2x.png"
