@@ -46,12 +46,42 @@ const Weddings = () => (
     />
 
     <GalleryWrapper className="columns is-variable is-3 is-multiline">
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
-      <GalleryItem />
+      <GalleryItem
+        imageColoured="/images/events/one-black.png"
+        imageBw="/images/events/one-colored.png"
+        altColour="colored image one"
+        altBw="black image one"
+      />
+      <GalleryItem
+        imageColoured="/images/events/second-colored.png"
+        imageBw="/images/events/second-black.png"
+        altColour="colored image second"
+        altBw="black image second"
+      />
+      <GalleryItem
+        imageColoured="/images/events/third-black.png"
+        imageBw="/images/events/third-colored.png"
+        altColour="colored image third"
+        altBw="black image third"
+      />
+      <GalleryItem
+        imageColoured="/images/events/fourth-black.png"
+        imageBw="/images/events/fourth-colored.png"
+        altColour="colored image fourth"
+        altBw="black image fourth"
+      />
+      <GalleryItem
+        imageColoured="/images/events/fifth-black.png"
+        imageBw="/images/events/fifth-colored.png"
+        altColour="colored image fifth"
+        altBw="black image fifth"
+      />
+      <GalleryItem
+        imageColoured="/images/events/sixth-black.png"
+        imageBw="/images/events/sixth-colored.png"
+        altColour="colored image sixth"
+        altBw="black image sixth"
+      />
     </GalleryWrapper>
     <BlackButton
       image="/images/parties/view-more@2x.png"
