@@ -9,6 +9,16 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: '8zqv9o3f',
+        dataset: 'production',
+        // a token with read permissions is required
+        // if you have a private dataset
+        token: process.env.MY_SANITY_TOKEN,
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {
