@@ -15,27 +15,39 @@ const GalleryParties = () => (
     <div className="columns is-multiline">
       <Testimonials
         bgImage="/images/gallery/photo-1@2x.png"
-        title="Lanterns and chandeliers"
+        title="The Perfect VenuE"
       />
       <Testimonials
         bgImage="/images/gallery/photo-1@2x.png"
-        title="colourful decor"
+        title="Deckerdence at night"
       />
       <Testimonials
         bgImage="/images/gallery/photo-1@2x.png"
-        title="unique party Venue"
+        title="Our venue is mobile"
       />
       <Testimonials
         bgImage="/images/gallery/photo-1@2x.png"
-        title="Maz’s bespoke party setup"
+        title="Enjoy a drink"
       />
       <Testimonials
         bgImage="/images/gallery/photo-1@2x.png"
-        title="party styling"
+        title="summer event"
+      />
+      <Testimonials
+        bgImage="/images/gallery/photo-1@2x.png"
+        title="TopDeck Cocktail Bar"
+      />
+      <Testimonials
+        bgImage="/images/gallery/photo-1@2x.png"
+        title="A flexible venue"
       />
       <Testimonials
         bgImage="/images/gallery/photo-1@2x.png"
         title="cocktails on the upper deck"
+      />
+      <Testimonials
+        bgImage="/images/gallery/photo-1@2x.png"
+        title="Side awning - perfect for summer events"
       />
     </div>
     <BlackButton
