@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import HireHero from '../components/HireHero';
 import HireForm from '../components/HireForm';
@@ -9,7 +10,6 @@ import HireCardSlider from '../components/HireCardSlider';
 import Diagram from '../components/Diagram';
 import VenueSection from '../components/VenueSection';
 import ContactForm from '../components/ContactForm';
-import Seo from '../components/Seo';
 
 const HireBusBarOption = () => (
   <Layout>
