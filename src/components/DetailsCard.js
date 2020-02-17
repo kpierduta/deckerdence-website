@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Section = styled.div`
   .card-content {
     background-image: url(/images/events/frame@2x.png);
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     min-height: 58rem;
     padding-top: 8rem;
