@@ -14,7 +14,11 @@ import Seo from '../components/Seo';
 const HireBusBarOption = () => (
   <Layout>
     <Seo title="Deckerdence Hire Page" />
-    <HireHero />
+    <HireHero
+      Option="Option 3"
+      title="Deckerdence Vintage Bus Bar"
+      description="BESPOKE DRINKS OPTIONS AVAILABLE"
+    />
     <section className="section">
       <div className="container">
         <div className="columns is-multiline">

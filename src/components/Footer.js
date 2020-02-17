@@ -71,7 +71,7 @@ const Footer = () => (
           />
           <FooterOption
             option="Bus Bar with Full Wraparound Marquee"
-            link="/hirePage"
+            link="/hireBusBarOption"
           />
         </div>
         <div className="column">

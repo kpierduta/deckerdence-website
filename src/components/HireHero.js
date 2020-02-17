@@ -13,7 +13,7 @@ const Section = styled.div`
   }
 `;
 
-const HireHero = () => (
+const HireHero = ({ Option, description, title }) => (
   <Section className="section is-large">
     <div className="columns is-centered is-mobile">
       <div className="column is-narrow">
@@ -22,7 +22,7 @@ const HireHero = () => (
         </figure>
       </div>
       <div className="column is-narrow">
-        <h1 className="is-size-1 has-text-white">Option 3</h1>
+        <h1 className="is-size-1 has-text-white">{Option}</h1>
       </div>
       <div className="column is-narrow">
         <figure className="image is-64x64">
@@ -31,10 +31,10 @@ const HireHero = () => (
       </div>
     </div>
     <h1 className="title is-spaced is-size-1 has-text-white has-text-centered">
-      Deckerdence Vintage Bus Bar
+      {title}
     </h1>
     <h2 className="has-text-white has-text-centered is-size-3">
-      with Half Wraparound Marquee
+      {description}
     </h2>
   </Section>
 );

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
+import HireHero from '../components/HireHero';
 import BlogCategoryItem from '../components/BlogCategoryItem';
 import HireForm from '../components/HireForm';
 import TileItem from '../components/TileItem';
@@ -20,6 +21,11 @@ const Section = styled.div`
 const HirePage = () => (
   <Layout>
     <Seo title="Deckerdence Hire Page" />
+    <HireHero
+      Option="Option 1"
+      title="Deckerdence Vintage Bus Bar"
+      description="BESPOKE DRINKS OPTIONS AVAILABLE"
+    />
     <Section className="section">
       <div className="container">
         <h1 className="has-text-centered is-size-1">Categories</h1>

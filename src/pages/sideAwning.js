@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
-import HireOptions from '../components/HireOptions';
+import HireHero from '../components/HireHero';
 import BlogCategoryItem from '../components/BlogCategoryItem';
 import HireForm from '../components/HireForm';
 import TileItem from '../components/TileItem';
@@ -20,11 +20,10 @@ const Section = styled.div`
 const SideAwning = () => (
   <Layout>
     <Seo title="Side Awning" />
-    <HireOptions
-      hireBgImage="/images/hire/header-photo@2x.png"
-      title="Option 2"
-      middleText="Vintage Bus Bar deckerdence"
-      subTitle="with Side Awning"
+    <HireHero
+      Option="Option 2"
+      title="Deckerdence Vintage Bus Bar"
+      description="BESPOKE DRINKS OPTIONS AVAILABLE"
     />
     <Section className="section">
       <div className="container">
