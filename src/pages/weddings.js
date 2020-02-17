@@ -40,9 +40,9 @@ const Weddings = () => (
     <VenueSection
       color
       frame="/images/parties/rightframes.png"
-      text="Your guests will be amazed when they walk into the marquee and see a double decker bus inside. "
+      text="We can tailor the set up of Deckerdence to accommodate your chosen style."
       alt="main"
-      frameBgImage="/images/parties/photo-black-and-white@2x.png"
+      frameBgImage="/images/parties/style-bg.png"
     />
 
     <GalleryWrapper className="columns is-variable is-3 is-multiline">

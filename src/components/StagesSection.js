@@ -19,25 +19,19 @@ const StagesSection = () => (
       <div className="columns">
         <Stages
           title="1. Choose your location"
-          subtitle="We can bring our unique venue to a location of your choosing, or
-              you can host your party at our fully-equipped event space in the
-              Coleshill"
+          subtitle="We can bring our unique venue to a location of your choosing, or you can host your wedding at our fully-equipped event space in Coleshill"
           image="/images/parties/icon@2x.png"
           alt="dddddd" // change this as per your image
         />
         <Stages
-          title="1. Choose your location"
-          subtitle="We can bring our unique venue to a location of your choosing, or
-              you can host your party at our fully-equipped event space in
-              Coleshill"
-          image="/images/parties/icon@2x.png"
+          title="2. Your dedicated event manager"
+          subtitle="We will match you with an experienced event manager, who will be on-hand for every step of your wedding planning."
+          image="/images/parties/second-stage.png"
         />
         <Stages
-          title="1. Choose your location"
-          subtitle="We can bring our unique venue to a location of your choosing, or
-              you can host your party at our fully-equipped event space in
-              Coleshill"
-          image="/images/parties/icon@2x.png"
+          title="3. Making it happen"
+          subtitle="With over 20 years in the wedding industry and knowledge of some of the best suppliers across the country, we will deliver the ultimate wedding for you."
+          image="/images/parties/third-stage.png"
         />
       </div>
     </div>
