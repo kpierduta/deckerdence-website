@@ -55,9 +55,9 @@ const Contact = () => (
             para="01675 463555"
           />
           <ContactUsItem
-            icon="/images/contacts/icon3.png"
+            icon="/images/contacts/mail-icon.png"
             title="Email us"
-            para="  enquiries@deckerdence.com"
+            para="enquiries@deckerdence.com"
           />
         </div>
       </div>
