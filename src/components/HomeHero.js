@@ -17,14 +17,12 @@ const Section = styled.section`
   }
 
   .columns.is-centered {
-    margin-top: 28rem;
+    margin-top: 30rem;
     @media screen and (max-width: 768px) {
       margin-top: 0;
     }
     @media only screen and (max-width: 2900px) and (min-width: 1700px) {
       margin-top: 19rem;
-
-      /* height: 1rem; */
     }
   }
   figure {
@@ -35,7 +33,6 @@ const Section = styled.section`
 
 const Container = styled.div`
   img {
-    /* height: 9rem; */
     width: 5rem;
     position: absolute;
     bottom: 8rem;
