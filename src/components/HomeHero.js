@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  background-image: url('/images/home/background.png');
+  background-image: url('/images/home/background-new.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -12,8 +12,9 @@ const Section = styled.section`
     height: 24rem;
   }
   @media only screen and (max-width: 2900px) and (min-width: 1700px) {
-    background-size: 100% 100%;
-    height: 50rem;
+    background-size: cover;
+    width: 100%;
+    height: 1330px;
   }
 
   .columns.is-centered {
@@ -22,7 +23,7 @@ const Section = styled.section`
       margin-top: 0;
     }
     @media only screen and (max-width: 2900px) and (min-width: 1700px) {
-      margin-top: 19rem;
+      margin-top: 48rem;
     }
   }
   figure {
