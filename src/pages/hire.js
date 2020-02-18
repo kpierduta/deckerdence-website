@@ -37,7 +37,7 @@ const Hire = () => (
                 Find the perfect Deckerdence Hire option for your event
               </h1>
               <img src="/images/hire/decorative-line.png" alt="" />
-              <h1 className="subtitle is-3 has-text-white">
+              <h1 className="subtitle is-5 has-text-white">
                 Deckerdence is a unique mobile venue that is available to hire
                 in 4 different options. All these options are fully customizable
                 so that you can create the perfect setup for your event.

@@ -5,7 +5,7 @@ const Section = styled.section`
   background-image: url('/images/home/background.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
   position: relative;
   @media screen and (max-width: 768px) {
     background-size: 100% 100%;
@@ -13,16 +13,18 @@ const Section = styled.section`
   }
   @media only screen and (max-width: 2900px) and (min-width: 1700px) {
     background-size: 100% 100%;
-    height: 74rem;
+    height: 50rem;
   }
 
   .columns.is-centered {
-    margin-top: 40rem;
+    margin-top: 28rem;
     @media screen and (max-width: 768px) {
       margin-top: 0;
     }
     @media only screen and (max-width: 2900px) and (min-width: 1700px) {
-      height: 12rem;
+      margin-top: 19rem;
+
+      /* height: 1rem; */
     }
   }
   figure {
@@ -33,7 +35,7 @@ const Section = styled.section`
 
 const Container = styled.div`
   img {
-    height: 9rem;
+    /* height: 9rem; */
     width: 5rem;
     position: absolute;
     bottom: 8rem;
