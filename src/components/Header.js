@@ -76,7 +76,7 @@ export default class Header extends React.Component {
           >
             <div className="navbar-brand">
               <Link className="navbar-item" to="/">
-                <img src="/images/logo@3x.png" alt="site logo" />
+                <img src="/images/logo.jpg" alt="Deckerdence Logo" />
               </Link>
               <a
                 href="#"

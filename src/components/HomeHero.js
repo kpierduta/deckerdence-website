@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  background-image: url('/images/home/background-new.jpg');
+  background-image: url('/images/home/home-bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -36,7 +36,7 @@ const Container = styled.div`
   img {
     width: 5rem;
     position: absolute;
-    bottom: 8rem;
+    bottom: 15rem;
     @media screen and (max-width: 768px) {
       height: 6rem;
       width: 3rem;

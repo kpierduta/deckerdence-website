@@ -31,7 +31,7 @@ const ContactUsItem = ({ title, icon, para }) => (
       </h1>
       <ImageWrapper className="media align">
         <figure className="image is-96x96">
-          <img className="" src={icon} alt="" />
+          <img src={icon} alt="" />
         </figure>
       </ImageWrapper>
       <div className="content">
