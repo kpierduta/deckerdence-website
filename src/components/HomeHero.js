@@ -95,7 +95,7 @@ const Content = styled.div`
   }
 `;
 
-const HomeHero = () => (
+const HomeHero = ({ items }) => (
   <Section className="section">
     <div className="container">
       <figure className="image">
@@ -122,7 +122,7 @@ const HomeHero = () => (
             <span className="has-text-grey-lighter has-text-weight-light">
               OR Call:
             </span>
-            01675 463555
+            {items.telephone}
           </h1>
         </div>
       </Content>
