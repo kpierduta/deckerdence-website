@@ -35,11 +35,11 @@ const Index = ({ data }) => {
         button
         title="WEDDINGS"
         description="Say yes to the perfect wedding venue.
-      Have your special day at our event space in the Warwickshire countryside or take our
-      vintage mobile venue to a location of your choosing. Whether you
-      want to go traditional with silver service or festival-style
-      with the best street food vendors, we can create your dream
-      wedding."
+        Have your special day at our event space in the Warwickshire countryside or take our
+        vintage mobile venue to a location of your choosing. Whether you
+        want to go traditional with silver service or festival-style
+        with the best street food vendors, we can create your dream
+        wedding."
         bgImg="/images/events/photo@3x.png"
         bannerImg="/images/events/box-1.png"
       />
@@ -48,10 +48,10 @@ const Index = ({ data }) => {
         button
         title="PARTIES"
         description="Throw the best party in town.
-      No matter what the occasion, our vintage bus provides an incredible
-      focal point for your party. Serving up traditional drinks and cocktails,
-      with an old English drawing room inspired lounge on-board, we can deliver
-      the vintage party for you."
+        No matter what the occasion, our vintage bus provides an incredible
+        focal point for your party. Serving up traditional drinks and cocktails,
+        with an old English drawing room inspired lounge on-board, we can deliver
+        the vintage party for you."
         bgImg="/images/events/party@3x.png"
         bannerImg="/images/events/box-2.png"
       />
@@ -60,7 +60,7 @@ const Index = ({ data }) => {
         title="EVENTS"
         description="Make your event stand out from the crowd.
       With a classical bar and luxurious cocktail lounge, our vintage bus provides a stunning
-      feature for your event. Perfect for festivals, fêtes, fairs and exhibitions, our unique
+      feature for your event. Perfect for festivals, fates, fairs and exhibitions, our unique
       mobile venue can travel anywhere in the UK."
         bgImg="/images/events/event@3x.png"
         bannerImg="/images/events/box-3.png"
