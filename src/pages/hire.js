@@ -61,14 +61,11 @@ const HirePage = ({ data }) => {
                   {hire.hireOptionSmallText}
                 </h1>
                 <h1 className="title is-1 has-text-white has-text-weight-semibold	">
-                  Find the perfect Deckerdence Hire option for your event
+                  {hire.hireOptionLargeText}
                 </h1>
                 <img src="/images/hire/decorative-line.png" alt="" />
                 <h1 className="subtitle is-5 has-text-white">
-                  Deckerdence is a unique mobile venue that is available to hire
-                  in 4 different options. All these options are fully
-                  customizable so that you can create the perfect setup for your
-                  event.
+                  {hire.hireOptionDescription}
                 </h1>
               </div>
             </div>
