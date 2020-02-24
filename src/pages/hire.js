@@ -101,7 +101,7 @@ const HirePage = ({ data }) => {
         flex
         image="/images/hire/bus-decoration.png"
         option="Hire Option 4"
-        title="Deckerdence full Marquee venue "
+        title="Deckerdence full Marquee venue"
         description="You can hire Deckerdence with the full
       wrap around marquee & additional
       marquee structures can be attached
