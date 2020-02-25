@@ -29,22 +29,38 @@ const Section = styled.section`
     font-family: ${props => props.theme.secondaryFontFamily};
     letter-spacing: 1px;
   }
+  .is-square {
+    width: 100%;
+    height: 100%;
+  }
+  .is-square .img-top {
+    display: none;
+    position: absolute;
+    z-index: 99;
+  }
+  .is-square:hover .img-top {
+    display: inline;
+  }
 `;
 
 const HireOptionItem = ({
-  image,
   option,
   title,
   description,
   price,
-  altImg,
   flex,
+  onMouseOver,
+  imageBw,
+  imageColoured,
 }) => (
   <Section className="section" flex={flex}>
     <div className="container">
       <div className="columns">
         <div className="column">
-          <img className="image" src={image} alt={altImg} />
+          <figure className="image is-square">
+            <img src={imageColoured} onFocus={onMouseOver} alt="coloredImage" />
+            <img src={imageBw} className="img-top" alt="blackImage" />
+          </figure>
         </div>
         <div className="column is-8 has-text-centered">
           <img src="/images/hire/red.png" alt="" />
