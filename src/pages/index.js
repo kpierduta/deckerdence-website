@@ -21,7 +21,7 @@ export const homeQuery = graphql`
       }
       email
       telephone
-      features {
+      homeFeatures {
         items {
           hasRight
           title
@@ -49,7 +49,7 @@ const Index = ({ data }) => {
     <Layout>
       <Seo title="Home" description="Deckerdence Unique Mobile Venue" />
       <HomeHero items={settings} />
-      {settings.features.items.map(items => (
+      {settings.homeFeatures.items.map(items => (
         <HomePageSection
           flex={items.hasRight}
           button
