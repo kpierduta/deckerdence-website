@@ -5,7 +5,7 @@ module.exports = {
   author: 'Zeiq.co',
   description: 'Deckerdence A Unique Mobile Venue',
   siteUrl: 'http://deckerdence.netlify.com',
-  logo: '/images/logo-1024.png',
+  logo: '/images/logo.jpg',
 
   telephone: '+1-123-123-123',
   email: 'john@doe.com',

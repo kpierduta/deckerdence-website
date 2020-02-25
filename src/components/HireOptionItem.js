@@ -43,36 +43,39 @@ const Section = styled.section`
   }
 `;
 
-const HireOptionItem = ({
-  option,
-  title,
-  description,
-  price,
-  flex,
-  onMouseOver,
-  imageBw,
-  imageColoured,
-}) => (
-  <Section className="section" flex={flex}>
+const HireOptionItem = ({ item, onMouseOver }) => (
+  <Section className="section" flex={item.columnReverse}>
     <div className="container">
       <div className="columns">
         <div className="column">
           <figure className="image is-square">
-            <img src={imageColoured} onFocus={onMouseOver} alt="coloredImage" />
-            <img src={imageBw} className="img-top" alt="blackImage" />
+            <img
+              src={item.hireOptionColoredImage.asset.url}
+              onFocus={onMouseOver}
+              alt="coloredImage"
+            />
+            <img
+              src={item.hireOptionBlackImage.asset.url}
+              className="img-top"
+              alt="blackImage"
+            />
           </figure>
         </div>
         <div className="column is-8 has-text-centered">
           <img src="/images/hire/red.png" alt="" />
           <div className="is-inline-block">
-            <h3 className="title is-3 has-text-warning ">{option}</h3>
+            <h3 className="title is-3 has-text-warning ">
+              {item.hireOptionTitle}
+            </h3>
           </div>
           <img src="/images/hire/red-2.png" alt="" />
-          <h5 className="title is-2 is-spaced has-text-warning ">{title}</h5>
-          <h5 className="subtitle is-5 has-text-weight-medium">
-            {description}
+          <h5 className="title is-2 is-spaced has-text-warning ">
+            {item.hireOptionSubtitle}
           </h5>
-          <h3 className="title is-5 price">Hire from {price}</h3>
+          <h5 className="subtitle is-5 has-text-weight-medium">
+            {item.hireOptionDescription}
+          </h5>
+          <h3 className="title is-5 price">Hire from {item.hireOptionPrice}</h3>
           <button type="button" className="button is-large  is-size-5">
             FIND OUT MORE
           </button>

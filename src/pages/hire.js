@@ -40,11 +40,34 @@ export const hireQuery = graphql`
         }
       }
     }
+    allSanityVehicleHirePage(sort: { fields: order }) {
+      edges {
+        node {
+          order
+          columnReverse
+          hireOptionTitle
+          hireOptionSubtitle
+          hireOptionDescription
+          hireOptionPrice
+          hireOptionBlackImage {
+            asset {
+              url
+            }
+          }
+          hireOptionColoredImage {
+            asset {
+              url
+            }
+          }
+        }
+      }
+    }
   }
 `;
 
 const HirePage = ({ data }) => {
   const hire = data.sanitySiteSettings;
+  const hireOptions = data.allSanityVehicleHirePage.edges;
   return (
     <Layout>
       <Seo title="Hire" description="Get Hire Deckerdence" />
@@ -72,46 +95,9 @@ const HirePage = ({ data }) => {
           </div>
         </div>
       </Section>
-      <HireOptionItem
-        imageColoured="/images/hire/bus.png"
-        imageBw="/images/hire/bus-house.png"
-        option="Hire Option 1"
-        title="Vintage Bus Bar"
-        description="You can hire our fabulous vintage bus bar
-        to give your event a stand out bar."
-        price="£500.00"
-      />
-      <HireOptionItem
-        flex
-        imageColoured="/images/hire/bus.png"
-        imageBw="/images/hire/bus-house.png"
-        option="Hire Option 2"
-        title="Vintage bus bar with SIDE awning"
-        description="You can hire Deckerdence with an awning,
-      giving you shade in the sunshine or some cover
-      in unpredictable weather conditions."
-        price="£1000.00"
-      />
-      <HireOptionItem
-        imageColoured="/images/hire/bus.png"
-        imageBw="/images/hire/bus-house.png"
-        option="Hire Option 3"
-        title="Vintage Bus Bar with ½ Marquee"
-        description="You can hire our fabulous vintage Deckerdence Bus Bar with 1/2 marquee for your occasion to create a memorable experience. Set up is required prior to your event."
-        price="£5000.00"
-      />
-      <HireOptionItem
-        flex
-        imageColoured="/images/hire/bus.png"
-        imageBw="/images/hire/bus-house.png"
-        option="Hire Option 4"
-        title="Deckerdence full Marquee venue"
-        description="You can hire Deckerdence with the full
-        wrap around marquee & additional
-        marquee structures can be attached
-        for more space if needed."
-        price="£5952.00"
-      />
+      {hireOptions.map(items => (
+        <HireOptionItem item={items.node} />
+      ))}
     </Layout>
   );
 };
