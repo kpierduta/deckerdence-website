@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
@@ -25,12 +24,9 @@ const BlogCategoryItem = ({ category, sideImage }) => {
     <div className="column has-text-centered">
       <div className="columns">
         <Column className="column">
-          <Link
-            to="/"
-            className="title is-3 is-capatalized has-text-weight-normal has-text-black"
-          >
+          <div className="title is-3 is-capatalized has-text-weight-normal has-text-black">
             {category}
-          </Link>
+          </div>
         </Column>
         {sideImage && (
           <SideImage className="column is-2 is-hidden-mobile">
