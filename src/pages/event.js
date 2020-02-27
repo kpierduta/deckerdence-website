@@ -25,7 +25,7 @@ const Event = () => (
       ball="/images/parties/disco-ball-copy@2x.png"
     />
     <PageHeading title="We can provide everything you need for the ultimate event" />
-    <StagesSection title="We can provide everything you need for the ultimate event" />
+    <StagesSection />
     <HomePageSection
       flex
       title="Deckerdence is a unique venue that will make your event stand out from the crowd! "
@@ -33,7 +33,7 @@ const Event = () => (
       bannerImg="/images/events/frame-1.png"
     />
     <Festival
-      title="  OUR VENUE IS PERFCT FOR..."
+      title="OUR VENUE IS PERFECT FOR..."
       subtitle="...AND CAN TRAVEL ANYWHERE IN THE UK"
     />
     <HomePageSection

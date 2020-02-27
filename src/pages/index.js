@@ -26,7 +26,6 @@ export const homeQuery = graphql`
           hasRight
           title
           description
-          featureButton
           featuresBackgroundImage {
             asset {
               url

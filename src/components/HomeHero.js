@@ -115,7 +115,7 @@ const HomeHero = ({ items }) => (
             Get in Touch!
           </h1>
           <h1 className="title is-3 is-size-7-mobile has-text-white has-text-weight-semibold">
-            <span className="has-text-grey-lighter has-text-weight-light ">
+            <span className="has-text-grey-lighter has-text-weight-light">
               Email:
             </span>
             enquiries@deckerdence.com{' '}
