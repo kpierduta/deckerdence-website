@@ -22,6 +22,7 @@ const Event = () => (
     <PartiesHero
       title="Parties for all occasions"
       partyBgImage="/images/parties/photo@2x.png"
+      ball="/images/parties/disco-ball-copy@2x.png"
     />
     <PageHeading title="We can provide everything you need for the ultimate event" />
     <StagesSection title="We can provide everything you need for the ultimate event" />

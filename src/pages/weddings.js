@@ -22,6 +22,7 @@ const Weddings = () => (
     <PartiesHero
       title="Unique Wedding Venue"
       partyBgImage="/images/parties/photo@2x.png"
+      ball="/images/parties/disco-ball-copy@2x.png"
     />
     <PageHeading
       subTitle="Deckerdence is a unique venue idea for Weddings,

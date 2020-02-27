@@ -22,6 +22,7 @@ const Parties = () => (
     <PartiesHero
       title="Parties for all occasions"
       partyBgImage="/images/parties/photo@2x.png"
+      ball="/images/parties/disco-ball-copy@2x.png"
     />
     <PageHeading
       subTitle="The bus provides an amazing focal point, and provides

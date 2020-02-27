@@ -17,6 +17,7 @@ const Hospitality = () => (
     <PartiesHero
       title="Hospitality"
       partyBgImage="/images/parties/photo@2x.png"
+      ball="/images/parties/disco-ball-copy@2x.png"
     />
     <PageHeading
       subTitle="Stand out from the crowd and give your clients a day
