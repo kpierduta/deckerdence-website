@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const Section = styled.section`
@@ -76,9 +77,13 @@ const HireOptionItem = ({ item, onMouseOver }) => (
             {item.hireOptionDescription}
           </h5>
           <h3 className="title is-5 price">Hire from {item.hireOptionPrice}</h3>
-          <button type="button" className="button is-large  is-size-5">
+          <Link
+            to={`/hire/${item.slug.current}`}
+            type="button"
+            className="button is-large  is-size-5"
+          >
             FIND OUT MORE
-          </button>
+          </Link>
         </div>
       </div>
     </div>

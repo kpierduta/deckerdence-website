@@ -44,6 +44,9 @@ export const hireQuery = graphql`
       edges {
         node {
           order
+          slug {
+            current
+          }
           columnReverse
           hireOptionTitle
           hireOptionSubtitle

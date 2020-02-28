@@ -26,12 +26,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
   const result = await graphql(`
     query {
-      allMdx {
+      allSanityVehicleHirePage {
         edges {
           node {
-            id
-            fields {
-              slug
+            slug {
+              current
             }
           }
         }
@@ -42,18 +41,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
   }
   // Create blog post pages.
-  const posts = result.data.allMdx.edges;
-  // We'll call `createPage` for each result
-  posts.forEach(({ node }, index) => {
+  result.data.allSanityVehicleHirePage.edges.forEach(({ node }) => {
     createPage({
-      // This is the slug we created before
-      // (or `node.frontmatter.slug`)
-      path: node.fields.slug,
+      path: `/hire/${node.slug.current}`,
       // This component will wrap our MDX content
-      component: path.resolve(`./src/components/NewsLayout.js`),
+      component: path.resolve(`./src/templates/hireOptionPage.js`),
       // We can use the values in this context in
       // our page layout component
-      context: { id: node.id },
+      context: {
+        slug: node.slug.current,
+      },
     });
   });
 };
