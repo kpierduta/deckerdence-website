@@ -30,12 +30,6 @@ export default class HTML extends React.Component {
           />
           <link
             rel="stylesheet"
-            media="screen"
-            href="https://fontlibrary.org/face/bebas"
-            type="text/css"
-          />
-          <link
-            rel="stylesheet"
             type="text/css"
             charset="UTF-8"
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"

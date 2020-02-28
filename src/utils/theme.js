@@ -38,12 +38,17 @@ export const theme = {
   textColorLite: '#2c2c2a',
   menuTintColor: darkAccent,
   primaryFontFamily: "'Arial Narrow,Arial',sans-serif",
-  secondaryFontFamily: "'BebasNeueRegular', sans-serif",
+  secondaryFontFamily: "'BebasNeue-Regular', sans-serif",
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
 };
 
 const GlobalStyle = createGlobalStyle`
   ${reset};
+
+  @font-face {
+  font-family: BebasNeue-Regular ;
+  src: url("../fonts/BebasNeue-Regular.otf") format("opentype");
+}
 
   body {
     font-family: ${theme.secondaryFontFamily};
