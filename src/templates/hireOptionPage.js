@@ -32,6 +32,7 @@ export const hireOptionPage = graphql`
           category
         }
       }
+      hireFormTitle
     }
   }
 `;
@@ -60,7 +61,7 @@ const HireOptionPage = ({ data }) => {
         </div>
       </section>
       <HireForm
-        para="Deckerdence Bus Bar with the 1/2 wrap-around marquee is a great option for entertaining. Perfect for pitchside hospitality, or a racecourse or polo match. Our team will come along and carry out a site visit to your location, and then we will work with you to ensure you have everything perfect for your event. We have a range of items that furnish Deckerdence perfectly."
+        para={hire.hireFormTitle}
         avatar="/images/hire/icon@2x.png"
         email="Email"
         phone="Phone Number"
@@ -68,7 +69,9 @@ const HireOptionPage = ({ data }) => {
         subtitle="By submitting this form you agree to our contact conditions."
         mainSubtitle="mainSubtitle"
       />
+
       <HireCardSlider />
+
       <section className="section">
         <div className="container">
           <div className="columns is-multiline is-variable is-4">

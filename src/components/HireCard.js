@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Section = styled.div`
   box-shadow: none;
-  background-color: ${props => (props.bgColor ? props.bgColor : 'transparent')};
+  background-color: transparent;
   padding-top: 5rem;
   @media screen and (max-width: 768px) {
     padding-top: 7rem;

@@ -49,15 +49,6 @@ class ContactTestimonial extends React.Component {
     };
     return (
       <Section className="section is-medium">
-        <div className="container">
-          {/* <h1 className="title is-3 is-spaced  has-text-centered has-text-white has-text-weight-normal">
-            Testimonials
-          </h1>
-          <h1 className="subtitle has-text-centered has-text-white">
-            Here are some testimonials from our clients that have used
-            Deckerdence to stage their perfect event!
-          </h1> */}
-        </div>
         <div className="container background">
           <div className="columns is-centered">
             <div className="column is-8">

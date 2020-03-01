@@ -29,7 +29,7 @@ const Section = styled.div`
     position: absolute;
     top: -11px;
     left: -7px;
-    background-image: url('./images/contacts/arrow-left@2x.png');
+    background-image: url('/images/contacts/arrow-left@2x.png');
   }
     opacity: 1 !important;
   }
@@ -41,7 +41,7 @@ const Section = styled.div`
     position: absolute;
     top: -11px;
     left: 0px;
-    background-image: url('./images/contacts/arrow-right@2x.png');
+    background-image: url('/images/contacts/arrow-right@2x.png');
   }
 `;
 
