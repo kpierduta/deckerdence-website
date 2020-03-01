@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  background-image: url('/images/home/home-bg.jpg');
+  background-image: url(${props => props.bgimage});
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -96,10 +96,13 @@ const Content = styled.div`
 `;
 
 const HomeHero = ({ items }) => (
-  <Section className="section">
+  <Section
+    className="section"
+    bgimage={items.homeHeroBackgroundImage.asset.url}
+  >
     <div className="container">
       <figure className="image">
-        <img src="/images/home/title-banner@2x.png" alt="" />
+        <img src={items.homeHeroBannerImage.asset.url} alt="" />
       </figure>
       <FireworkContainer className="circle">
         <img
@@ -118,7 +121,7 @@ const HomeHero = ({ items }) => (
             <span className="has-text-grey-lighter has-text-weight-light">
               Email:
             </span>
-            enquiries@deckerdence.com{' '}
+            {items.email}{' '}
             <span className="has-text-grey-lighter has-text-weight-light">
               OR Call:
             </span>

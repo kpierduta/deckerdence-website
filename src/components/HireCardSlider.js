@@ -15,26 +15,26 @@ const Section = styled.div`
     padding: 0 0 4rem;
   }
   .slick-prev:before {
-    width: 28px;
-    height: 50px;
-    background-size: cover;
+    width: 28px !important;
+    height: 50px !important;
+    background-size: cover !important;
     content: '' !important;
-    position: absolute;
-    top: -11px;
-    left: -7px;
-    background-image: url('./images/hire/slider-left-arrow.png');
+    position: absolute !important;
+    top: -11px !important;
+    left: -7px !important;
+    background-image: url('/images/hire/slider-left-arrow.png');
   }
     opacity: 1 !important;
   }
   .slick-next:before {
-    width: 28px;
-    height: 50px;
+    width: 28px !important;
+    height: 50px !important;
     background-size: cover;
     content: '' !important;
-    position: absolute;
-    top: -11px;
-    left: 0px;
-    background-image: url('./images/hire/slider-right-arrow.png');
+    position: absolute !important;
+    top: -11px !important;
+    left: 0px !important;
+    background-image: url('/images/hire/slider-right-arrow.png');
   }
 `;
 

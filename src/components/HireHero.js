@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  background-image: url('/images/hire/option-1.png');
+  background-image: url(${props => props.bgImage});
   background-size: 100% 100%;
   .column {
     align-self: center;
@@ -13,8 +13,8 @@ const Section = styled.div`
   }
 `;
 
-const HireHero = ({ Option, description, title }) => (
-  <Section className="section is-large">
+const HireHero = ({ Option, subtitle, title, bgImage }) => (
+  <Section className="section is-large" bgImage={bgImage}>
     <div className="columns is-centered is-mobile">
       <div className="column is-narrow">
         <figure className="image is-64x64">
@@ -33,9 +33,7 @@ const HireHero = ({ Option, description, title }) => (
     <h1 className="title is-spaced is-size-1 has-text-white has-text-centered">
       {title}
     </h1>
-    <h2 className="has-text-white has-text-centered is-size-3">
-      {description}
-    </h2>
+    <h2 className="has-text-white has-text-centered is-size-3">{subtitle}</h2>
   </Section>
 );
 

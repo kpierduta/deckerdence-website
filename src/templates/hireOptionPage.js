@@ -18,7 +18,14 @@ export const hireOptionPage = graphql`
       slug {
         current
       }
-      hireOptionTitle
+      hireHeroBackgroundImage {
+        asset {
+          url
+        }
+      }
+      hireHeroOption
+      hireHeroTitle
+      hireHeroSubtitle
     }
   }
 `;
@@ -29,9 +36,10 @@ const HireOptionPage = ({ data }) => {
     <Layout>
       <Seo title="Deckerdence Hire Page" />
       <HireHero
-        Option={hire.hireOptionTitle}
-        title="Deckerdence Vintage Bus Bar"
-        description="BESPOKE DRINKS OPTIONS AVAILABLE"
+        Option={hire.hireHeroOption}
+        title={hire.hireHeroTitle}
+        subtitle={hire.hireHeroSubtitle}
+        bgImage={hire.hireHeroBackgroundImage.asset.url}
       />
       <section className="section">
         <div className="container">
