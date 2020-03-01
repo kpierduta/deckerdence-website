@@ -33,6 +33,12 @@ export const hireOptionPage = graphql`
         }
       }
       hireFormTitle
+      information {
+        item {
+          title
+          subtitle
+        }
+      }
     }
   }
 `;
@@ -75,23 +81,9 @@ const HireOptionPage = ({ data }) => {
       <section className="section">
         <div className="container">
           <div className="columns is-multiline is-variable is-4">
-            <TileItem
-              title="Marquee information"
-              subtitle="The half wrap around marquee measures 25m x 9m and the marquee structure is fitted directly from the bus, between the
-            2 decks, to not spoil the upstairs views."
-            />
-            <TileItem
-              title="Vintage Lounge"
-              subtitle="Our vintage lounge consists of a 3 seat sofa,a 2 seat sofa, Chesterfield armchair and wingback chair positioned around a fire place with an electric working fire"
-            />
-            <TileItem
-              title="Hire includes"
-              subtitle="Your hire includes: marquee flooring,chandelier lighting, an external generator that provides the power for your event (if required) and fuel for 12 hours running time."
-            />
-            <TileItem
-              title="Compliment your hire"
-              subtitle="We have a range of options that you can add to compliment your hire. One such item is our chequered black and white dance floor measures 5m x 5m and is lit up by our disco and effect lighting"
-            />
+            {hire.information.item.map(items => (
+              <TileItem title={items.title} subtitle={items.subtitle} />
+            ))}
           </div>
         </div>
       </section>
