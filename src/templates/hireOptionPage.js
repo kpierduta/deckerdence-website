@@ -26,6 +26,12 @@ export const hireOptionPage = graphql`
       hireHeroOption
       hireHeroTitle
       hireHeroSubtitle
+      vehicleFeatures {
+        options {
+          sideImage
+          category
+        }
+      }
     }
   }
 `;
@@ -44,10 +50,12 @@ const HireOptionPage = ({ data }) => {
       <section className="section">
         <div className="container">
           <div className="columns is-multiline">
-            <BlogCategoryItem category="Vintage Bus Bar" sideImage />
-            <BlogCategoryItem category="Fully Customisable" sideImage />
-            <BlogCategoryItem category="Cocktail Lounge" sideImage />
-            <BlogCategoryItem category="Half Wraparound Marquee" />
+            {hire.vehicleFeatures.options.map(options => (
+              <BlogCategoryItem
+                category={options.category}
+                sideImage={options.sideImage}
+              />
+            ))}
           </div>
         </div>
       </section>
