@@ -99,9 +99,7 @@ const HireOptionPage = ({ data }) => {
         subtitle="By submitting this form you agree to our contact conditions."
         mainSubtitle="mainSubtitle"
       />
-
       <HireCardSlider />
-
       <section className="section">
         <div className="container">
           <div className="columns is-multiline is-variable is-4">
@@ -122,7 +120,6 @@ const HireOptionPage = ({ data }) => {
           frame={item.featuresFrameImage.asset.url}
         />
       ))}
-
       <ContactForm />
     </Layout>
   );
