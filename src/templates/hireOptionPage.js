@@ -39,6 +39,30 @@ export const hireOptionPage = graphql`
           subtitle
         }
       }
+      hireOptionDiagram {
+        asset {
+          url
+        }
+      }
+      vehicleFeature {
+        items {
+          hasFrameRight
+          hasTextWhite
+          title
+          bgImageAlt
+          featuresBackgroundImage {
+            asset {
+              url
+            }
+          }
+          bgImageAlt
+          featuresFrameImage {
+            asset {
+              url
+            }
+          }
+        }
+      }
     }
   }
 `;
@@ -87,27 +111,18 @@ const HireOptionPage = ({ data }) => {
           </div>
         </div>
       </section>
-      <Diagram avatar="/images/hire/bus-diagram.png" />
-      <VenueSection
-        color
-        frame="/images/parties/frame@2x.png"
-        text="Cocktail Lounge Upstairs in Vintage bus bar "
-        alt="main"
-        frameBgImage="/images/hire/hire-bg-one.png"
-      />
-      <VenueSection
-        flex
-        frame="/images/parties/frame@2x.png"
-        text="Plan every Detail with expert support"
-        alt="main"
-        frameBgImage="/images/hire/hire-bg-second.png"
-      />
-      <VenueSection
-        color
-        frame="/images/parties/rightframes.png"
-        text="Create Your Theme Fully Customisable"
-        frameBgImage="/images/parties/photo-black-and-white@2x.png"
-      />
+      <Diagram avatar={hire.hireOptionDiagram.asset.url} />
+      {hire.vehicleFeature.items.map(item => (
+        <VenueSection
+          flex={item.hasFrameRight}
+          color={item.hasTextWhite}
+          text={item.title}
+          frameBgImage={item.featuresBackgroundImage.asset.url}
+          alt={item.bgImageAlt}
+          frame={item.featuresFrameImage.asset.url}
+        />
+      ))}
+
       <ContactForm />
     </Layout>
   );
