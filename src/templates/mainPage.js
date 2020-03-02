@@ -24,13 +24,32 @@ export const MainPageQuery = graphql`
           url
         }
       }
-      heroFrameImage {
-        asset {
-          url
+      boldTitle
+      normalSubtitle
+      simpleStages {
+        mainHeading
+        item {
+          title
+          subTitle
+          avatar {
+            asset {
+              url
+            }
+          }
         }
       }
-      pageTitle
-      pageSubtitle
+      simpleStages {
+        mainHeading
+        item {
+          title
+          subTitle
+          avatar {
+            asset {
+              url
+            }
+          }
+        }
+      }
     }
   }
 `;
@@ -44,11 +63,8 @@ const MainPage = ({ data }) => {
         title={page.heroTitle}
         partyBgImage={page.heroBackgroundImage.asset.url}
       />
-      <PageHeading
-        subTitle="Stand out from the crowd and give your clients a day
-         they will talk about for years."
-      />
-      <StagesSection />
+      <PageHeading subTitle={page.normalSubtitle} />
+      <StagesSection data={page} />
       <VenueSection
         flex
         frame="/images/parties/frame@2x.png"

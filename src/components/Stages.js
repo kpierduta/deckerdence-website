@@ -15,13 +15,13 @@ const ImageWrapper = styled.div`
   }
 `;
 
-const Stages = ({ title, subtitle, image, alt }) => (
+const Stages = ({ title, subtitle, image }) => (
   <Section className="column">
     <div className="card-content">
       <div className="card-image">
         <ImageWrapper className="media align">
           <figure className="image is-128x128">
-            <img className="is-rounded" src={image} alt={alt} />
+            <img className="is-rounded" src={image} alt="IconImage" />
           </figure>
         </ImageWrapper>
       </div>
