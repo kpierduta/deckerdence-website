@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  background-image: url('/images/gallery/toppage.png');
+  background-image: url('/images/gallery/banner.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -2px;

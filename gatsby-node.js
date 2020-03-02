@@ -35,6 +35,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
+      allSanityMainPage {
+        edges {
+          node {
+            slug {
+              current
+            }
+          }
+        }
+      }
     }
   `);
   if (result.errors) {
@@ -44,10 +53,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   result.data.allSanityVehicleHirePage.edges.forEach(({ node }) => {
     createPage({
       path: `/hire/${node.slug.current}`,
-      // This component will wrap our MDX content
       component: path.resolve(`./src/templates/hireOptionPage.js`),
-      // We can use the values in this context in
-      // our page layout component
+      context: {
+        slug: node.slug.current,
+      },
+    });
+  });
+  result.data.allSanityMainPage.edges.forEach(({ node }) => {
+    createPage({
+      path: node.slug.current,
+      component: path.resolve(`./src/templates/mainPage.js`),
       context: {
         slug: node.slug.current,
       },

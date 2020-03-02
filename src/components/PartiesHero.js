@@ -28,11 +28,11 @@ const Section = styled.div`
   }
 `;
 
-const PartiesHero = ({ title, partyBgImage, ball }) => (
+const PartiesHero = ({ title, partyBgImage }) => (
   <Section className="section is-medium" partyBgImage={partyBgImage}>
     <div className="image-wrapper">
       <figure className="image is-128x128">
-        <img src={ball} alt="" />
+        <img src="/images/parties/disco-ball-copy@2x.png" alt="" />
       </figure>
     </div>
     <div className="columns is-centered is-desktop">
