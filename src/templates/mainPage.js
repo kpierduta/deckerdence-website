@@ -134,7 +134,7 @@ const MainPage = ({ data }) => {
   const page = data.sanityMainPage;
   return (
     <Layout>
-      <Seo title="Hospitality" />
+      <Seo title="Hospitality" description="" keywords="" />
       <PartiesHero
         title={page.heroTitle}
         partyBgImage={page.heroBackgroundImage.asset.url}

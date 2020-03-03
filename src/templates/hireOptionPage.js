@@ -71,7 +71,7 @@ const HireOptionPage = ({ data }) => {
   const hire = data.sanityVehicleHirePage;
   return (
     <Layout>
-      <Seo title="Deckerdence Hire Page" />
+      <Seo title="Deckerdence Hire Page" description="" keywords="" />
       <HireHero
         Option={hire.hireHeroOption}
         title={hire.hireHeroTitle}

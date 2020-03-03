@@ -24,7 +24,7 @@ const Section = styled.div`
     justify-content: center;
   }
   h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 `;
 
