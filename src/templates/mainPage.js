@@ -50,6 +50,62 @@ export const MainPageQuery = graphql`
           }
         }
       }
+      firstSectionHasFrameRight
+      firstSectionHasTextWhite
+      firstSectionTitle
+      firstSectionBackgroundImage {
+        asset {
+          url
+        }
+      }
+      firstSectionBgImageAlt
+      firstSectionFrameImage {
+        asset {
+          url
+        }
+      }
+      festival {
+        mainHeading
+        subtitle
+        item {
+          avatar {
+            asset {
+              url
+            }
+          }
+        }
+      }
+      secondSectionHasFrameRight
+      secondSectionHasTextWhite
+      secondSectionTitle
+      secondSectionBackgroundImage {
+        asset {
+          url
+        }
+      }
+      secondSectionBgImageAlt
+      secondSectionFrameImage {
+        asset {
+          url
+        }
+      }
+      detailsMainHeading
+      firstCardDescription
+      secondCardDescription
+      thirdSectionHasFrameRight
+      thirdSectionHasTextWhite
+      thirdSectionTitle
+      thirdSectionBackgroundImage {
+        asset {
+          url
+        }
+      }
+      thirdSectionBgImageAlt
+      thirdSectionFrameImage {
+        asset {
+          url
+        }
+      }
     }
   }
 `;
@@ -66,31 +122,30 @@ const MainPage = ({ data }) => {
       <PageHeading subTitle={page.normalSubtitle} />
       <StagesSection data={page} />
       <VenueSection
-        flex
-        frame="/images/parties/frame@2x.png"
-        text="Deckerdence is a superb and unusual venue for your special event."
-        alt="main"
-        frameBgImage="/images/parties/photo-black-and-white@2x.png"
+        flex={page.firstSectionHasFrameRight}
+        color={page.firstSectionHasTextWhite}
+        frame={page.firstSectionFrameImage.asset.url}
+        text={page.firstSectionTitle}
+        alt={page.firstSectionBgImageAlt}
+        frameBgImage={page.firstSectionBackgroundImage.asset.url}
       />
-      <Festival
-        title="Our VENUE IS Perfect for..."
-        subtitle="...AND can travel anywhere in the UK"
-      />
+      <Festival data={page} />
       <VenueSection
-        flex
-        color
-        frame="/images/parties/rightframes.png"
-        text="Your guests will be amazed when they walk into the marquee and see a double decker bus inside. "
-        alt="main"
-        frameBgImage="/images/parties/photo-black-and-white@2x.png"
+        flex={page.secondSectionHasFrameRight}
+        color={page.secondSectionHasTextWhite}
+        frame={page.secondSectionFrameImage.asset.url}
+        text={page.secondSectionTitle}
+        alt={page.secondSectionBgImageAlt}
+        frameBgImage={page.secondSectionBackgroundImage.asset.url}
       />
-      <DetailsCardSection />
+      <DetailsCardSection data={page} />
       <VenueSection
-        color
-        frame="/images/parties/rightframes.png"
-        text="The lower deck of our stunning vintage bus is a traditional bar"
-        alt="main"
-        frameBgImage="/images/parties/photo-black-and-white@2x.png"
+        color={page.thirdSectionHasTextWhite}
+        flex={page.thirdSectionHasFrameRight}
+        frame={page.thirdSectionFrameImage.asset.url}
+        text={page.thirdSectionTitle}
+        alt={page.thirdSectionBgImageAlt}
+        frameBgImage={page.thirdSectionBackgroundImage.asset.url}
       />
       <GalleryItem />
       <ContactForm />
