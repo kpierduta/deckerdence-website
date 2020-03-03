@@ -26,6 +26,9 @@ const Section = styled.section`
 export const hireQuery = graphql`
   query hire {
     sanitySiteSettings {
+      hireOptionSeoTitle
+      hireOptionSeoKeywords
+      hireOptionSeoMetaDescription
       hireOptionSmallText
       hireOptionLargeText
       hireOptionDescription
@@ -73,7 +76,11 @@ const HirePage = ({ data }) => {
   const hireOptions = data.allSanityVehicleHirePage.edges;
   return (
     <Layout>
-      <Seo title="" description="" keywords="" />
+      <Seo
+        title={hire.hireOptionSeoTitle}
+        description={hire.hireOptionSeoMetaDescription}
+        keywords={hire.hireOptionSeoKeywords}
+      />
       <Section
         className="hero is-medium"
         bgimage={hire.hireOptionBackgroundImage.asset.url}

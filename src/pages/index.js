@@ -9,6 +9,9 @@ import HomePageSection from '../components/HomePageSection';
 export const homeQuery = graphql`
   query homepage {
     sanitySiteSettings {
+      homeSeoTitle
+      homeSeoKeywords
+      homeSeoMetaDescription
       homeHeroBackgroundImage {
         asset {
           url
@@ -46,7 +49,11 @@ const Index = ({ data }) => {
   const settings = data.sanitySiteSettings;
   return (
     <Layout>
-      <Seo title="Home" description="Deckerdence Unique Mobile Venue" />
+      <Seo
+        title={settings.homeSeoTitle}
+        description={settings.homeSeoMetaDescription}
+        keywords={settings.homeSeoKeywords}
+      />
       <HomeHero items={settings} />
       {settings.homeFeatures.items.map(items => (
         <HomePageSection

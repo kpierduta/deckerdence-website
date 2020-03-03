@@ -33,6 +33,14 @@ export const hireOptionPage = graphql`
         }
       }
       hireFormTitle
+      sliderFeatures {
+        sliderItem {
+          hasTextBlack
+          title
+          description
+          subtitle
+        }
+      }
       information {
         item {
           title
@@ -99,7 +107,7 @@ const HireOptionPage = ({ data }) => {
         subtitle="By submitting this form you agree to our contact conditions."
         mainSubtitle="mainSubtitle"
       />
-      <HireCardSlider />
+      <HireCardSlider data={hire} />
       <section className="section">
         <div className="container">
           <div className="columns is-multiline is-variable is-4">
