@@ -24,6 +24,9 @@ export const MainPageQuery = graphql`
       slug {
         current
       }
+      seoTitle
+      seoKeywords
+      seoMetaDescription
       heroTitle
       heroBackgroundImage {
         asset {
@@ -134,7 +137,11 @@ const MainPage = ({ data }) => {
   const page = data.sanityMainPage;
   return (
     <Layout>
-      <Seo title="Hospitality" description="" keywords="" />
+      <Seo
+        title={page.seoTitle}
+        description={page.seoMetaDescription}
+        keywords={page.seoKeywords}
+      />
       <PartiesHero
         title={page.heroTitle}
         partyBgImage={page.heroBackgroundImage.asset.url}
