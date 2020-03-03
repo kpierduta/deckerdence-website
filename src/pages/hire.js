@@ -73,7 +73,7 @@ const HirePage = ({ data }) => {
   const hireOptions = data.allSanityVehicleHirePage.edges;
   return (
     <Layout>
-      <Seo title="Hire" description="Get Hire Deckerdence" />
+      <Seo title="" description="" keywords="" />
       <Section
         className="hero is-medium"
         bgimage={hire.hireOptionBackgroundImage.asset.url}
