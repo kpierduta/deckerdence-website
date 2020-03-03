@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
@@ -11,6 +12,11 @@ import DetailsCardSection from '../components/DetailsCardSection';
 import GalleryItem from '../components/GalleryItem';
 import ContactForm from '../components/ContactForm';
 import Festival from '../components/Festival';
+import BlackButton from '../components/elements/BlackButton';
+
+const GalleryWrapper = styled.div`
+  margin-top: 4rem;
+`;
 
 export const MainPageQuery = graphql`
   query mainPageData($slug: String) {
@@ -106,6 +112,20 @@ export const MainPageQuery = graphql`
           url
         }
       }
+      gallery {
+        galleryItems {
+          blackAndWhiteImage {
+            asset {
+              url
+            }
+          }
+          coloredImage {
+            asset {
+              url
+            }
+          }
+        }
+      }
     }
   }
 `;
@@ -147,7 +167,19 @@ const MainPage = ({ data }) => {
         alt={page.thirdSectionBgImageAlt}
         frameBgImage={page.thirdSectionBackgroundImage.asset.url}
       />
-      <GalleryItem />
+      <GalleryWrapper className="columns is-variable is-3 is-multiline">
+        {page.gallery.galleryItems.map(items => (
+          <GalleryItem
+            imageColoured={items.blackAndWhiteImage.asset.url}
+            imageBw={items.coloredImage.asset.url}
+          />
+        ))}
+      </GalleryWrapper>
+      <BlackButton
+        image="/images/view-more-black.png"
+        alt="Learn More Button"
+        hasWidth="20%"
+      />
       <ContactForm />
     </Layout>
   );

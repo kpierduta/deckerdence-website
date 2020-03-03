@@ -16,17 +16,11 @@ const Section = styled.div`
   }
 `;
 
-const GalleryItem = ({
-  onMouseOver,
-  imageBw,
-  imageColoured,
-  altColour,
-  altBw,
-}) => (
+const GalleryItem = ({ onMouseOver, imageBw, imageColoured }) => (
   <Section className="column is-4">
     <figure className="image is-5by4">
-      <img src={imageColoured} onFocus={onMouseOver} alt={altColour} />
-      <img src={imageBw} className="img-top" alt={altBw} />
+      <img src={imageColoured} onFocus={onMouseOver} alt="" />
+      <img src={imageBw} className="img-top" alt="" />
     </figure>
   </Section>
 );
