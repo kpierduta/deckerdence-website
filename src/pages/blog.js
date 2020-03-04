@@ -22,6 +22,7 @@ export const blogQuery = graphql`
       blogs {
         items {
           isSizeHalf
+          hasTextBlack
           title
           subtitle
           image {
@@ -40,11 +41,11 @@ const BlogPage = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title="Blog"
-        description="Deckerdence Blog"
-        keywords="Deckerdence Blog"
+        title={page.blogSeoTitle}
+        description={page.blogSeoMetaDescription}
+        keywords={page.blogSeoKeywords}
       />
-      <PageHeading title="BLOG" />
+      <PageHeading title={page.blogBarMainTitle} />
       <Section className="section">
         <div className="columns is-multiline">
           {page.blogs.items.map(items => (
@@ -54,7 +55,7 @@ const BlogPage = ({ data }) => {
               }
             >
               <BlogData
-                color
+                color={items.hasTextBlack}
                 title={items.title}
                 subtitle={items.subtitle}
                 boxImage={items.image.asset.url}
