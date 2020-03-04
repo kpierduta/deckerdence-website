@@ -23,6 +23,9 @@ export const hireOptionPage = graphql`
           url
         }
       }
+      seoTitle
+      seoKeywords
+      seoMetaDescription
       hireHeroOption
       hireHeroTitle
       hireHeroSubtitle
@@ -79,7 +82,11 @@ const HireOptionPage = ({ data }) => {
   const hire = data.sanityVehicleHirePage;
   return (
     <Layout>
-      <Seo title="Deckerdence Hire Page" description="" keywords="" />
+      <Seo
+        title={hire.seoTitle}
+        description={hire.seoMetaDescription}
+        keywords={hire.seoKeywords}
+      />
       <HireHero
         Option={hire.hireHeroOption}
         title={hire.hireHeroTitle}
