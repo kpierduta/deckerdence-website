@@ -104,10 +104,10 @@ const TowBarPage = ({ data, onMouseOver }) => {
         <div className="container">
           <div className="columns is-centered">
             <div className="column is-8">
-              <h1 className="title is-3 has-text-centered has-text-white is-size-4-mobile has-text-weight-normal">
+              <h1 className="title is-3 is-size-6-mobile has-text-centered has-text-white is-size-4-mobile has-text-weight-normal">
                 {page.towBarFrameTitle}
               </h1>
-              <h1 className="subtitle is-3 is-uppercase has-text-weight-bold has-text-centered has-text-white is-size-4-mobile">
+              <h1 className="subtitle is-3 is-size-6-mobile is-uppercase has-text-weight-bold has-text-centered has-text-white is-size-4-mobile">
                 {page.towBarFrameSubtitle}
               </h1>
               <p className="subtitle is-5 has-text-centered has-text-white is-size-6-mobile">

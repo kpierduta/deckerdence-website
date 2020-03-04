@@ -13,7 +13,7 @@ const Button = styled.button`
 
 const ButtonGlobal = ({ title }) => (
   <Button className="button is-outlined is-large is-radiusless" type="button">
-    <span className="is-uppercase has-text-weight-bold has-text-white">
+    <span className="is-uppercase has-text-weight-bold has-text-white is-size-6-mobile">
       {title}
     </span>
   </Button>
