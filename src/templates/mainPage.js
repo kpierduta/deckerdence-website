@@ -33,7 +33,6 @@ export const MainPageQuery = graphql`
           url
         }
       }
-      boldTitle
       normalSubtitle
       simpleStages {
         mainHeading
