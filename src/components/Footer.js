@@ -79,10 +79,13 @@ const Footer = () => (
         </div>
         <div className="column">
           <h3 className="is-size-3 is-spaced">THE GALLERY</h3>
-          <FooterOption option="Our Wedding Gallery" link="/galleryWeddings" />
-          <FooterOption option="Our Events Gallery" link="/galleryParties" />
-          <FooterOption option="Our Hospitality Gallery" link="/gallery" />
-          <FooterOption option="Our Party Gallery" link="/gallery" />
+          <FooterOption option="Our Wedding Gallery" link="/gallery/Weddings" />
+          <FooterOption option="Our Events Gallery" link="/gallery/Events" />
+          <FooterOption
+            option="Our Hospitality Gallery"
+            link="/gallery/Hospitality"
+          />
+          <FooterOption option="Our Party Gallery" link="/gallery/Parties" />
         </div>
       </div>
     </div>
