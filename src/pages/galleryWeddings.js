@@ -14,27 +14,27 @@ const GalleryWeddings = () => (
     <PageTitle title="Weddings" />
     <div className="columns is-multiline">
       <Testimonials
-        bgImage="/images/gallery/photo-1@2x.png"
+        Image="/images/gallery/photo-1@2x.png"
         title="Lanterns and chandeliers"
       />
       <Testimonials
-        bgImage="/images/gallery/photo-1@2x.png"
+        Image="/images/gallery/photo-1@2x.png"
         title="colourful decor"
       />
       <Testimonials
-        bgImage="/images/gallery/photo-1@2x.png"
+        Image="/images/gallery/photo-1@2x.png"
         title="unique party Venue"
       />
       <Testimonials
-        bgImage="/images/gallery/photo-1@2x.png"
+        Image="/images/gallery/photo-1@2x.png"
         title="Maz’s bespoke party setup"
       />
       <Testimonials
-        bgImage="/images/gallery/photo-1@2x.png"
+        Image="/images/gallery/photo-1@2x.png"
         title="party styling"
       />
       <Testimonials
-        bgImage="/images/gallery/photo-1@2x.png"
+        Image="/images/gallery/photo-1@2x.png"
         title="cocktails on the upper deck"
       />
     </div>
