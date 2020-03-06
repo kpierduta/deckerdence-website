@@ -3,24 +3,20 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  .hvrbox,
-  .hvrbox * {
-    box-sizing: border-box;
-  }
-  .hvrbox {
+  .hoverBox {
     position: relative;
     display: inline-block;
     overflow: hidden;
     max-width: 100%;
     height: auto;
   }
-  .hvrbox img {
+  .hoverBox img {
     max-width: 100%;
   }
-  .hvrbox .hvrbox-layer_bottom {
+  .hoverBox .hoverBox-layer_bottom {
     display: block;
   }
-  .hvrbox .hvrbox-layer_top {
+  .hoverBox .hoverBox-layer_top {
     opacity: 0;
     position: absolute;
     top: 0;
@@ -34,10 +30,10 @@ const Section = styled.div`
     padding: 15px;
     transition: all 0.4s ease-in-out 0s;
   }
-  .hvrbox:hover .hvrbox-layer_top {
+  .hoverBox:hover .hoverBox-layer_top {
     opacity: 1;
   }
-  .hvrbox .hvrbox-text {
+  .hoverBox .hoverBox-text {
     text-align: center;
     display: inline-block;
     position: absolute;
@@ -48,17 +44,17 @@ const Section = styled.div`
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
-  .hvrbox.active .hvrbox-text_mobile {
+  .hoverBox.active .hoverBox-text {
     display: block;
   }
 `;
 
 const Testimonials = ({ Image, title }) => (
   <Section className="column is-4">
-    <div className="hvrbox">
-      <img src={Image} alt="images" className="hvrbox-layer_bottom" />
-      <div className="hvrbox-layer_top">
-        <div className="hvrbox-text">
+    <div className="hoverBox">
+      <img src={Image} alt="images" className="hoverBox-layer_bottom" />
+      <div className="hoverBox-layer_top">
+        <div className="hoverBox-text">
           <h1 className="title is-2 has-text-white has-text-centered is-size-4-touch">
             {title}
           </h1>
