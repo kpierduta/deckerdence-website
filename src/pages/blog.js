@@ -18,7 +18,7 @@ export const blogQuery = graphql`
       blogSeoTitle
       blogSeoKeywords
       blogSeoMetaDescription
-      blogBarMainTitle
+      blogMainTitle
       blogs {
         items {
           isSizeHalf
@@ -45,7 +45,7 @@ const BlogPage = ({ data }) => {
         description={page.blogSeoMetaDescription}
         keywords={page.blogSeoKeywords}
       />
-      <PageHeading title={page.blogBarMainTitle} />
+      <PageHeading title={page.blogMainTitle} />
       <Section className="section">
         <div className="columns is-multiline">
           {page.blogs.items.map(items => (
