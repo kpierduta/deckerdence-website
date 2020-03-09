@@ -39,7 +39,7 @@ const Section = styled.div`
   }
 `;
 
-const ContactTestimonial = ({ data }) => {
+const HireCardSlider = ({ data }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -71,4 +71,4 @@ const ContactTestimonial = ({ data }) => {
   );
 };
 
-export default ContactTestimonial;
+export default HireCardSlider;

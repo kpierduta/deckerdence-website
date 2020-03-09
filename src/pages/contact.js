@@ -38,6 +38,17 @@ export const contactUsQuery = graphql`
         }
       }
       thirdContactUsItemSubtitle
+      thirdContactUsItemSubtitle
+      contactUsSlider {
+        mainHeading
+        subtitle
+        sliderItem {
+          hasTextBlack
+          title
+          subtitle
+          description
+        }
+      }
     }
   }
 `;
@@ -112,7 +123,7 @@ const Contact = ({ data }) => {
           Visitors by appointment only
         </p>
       </Section>
-      <ContactTestimonial />
+      <ContactTestimonial data={settings} />
     </Layout>
   );
 };
