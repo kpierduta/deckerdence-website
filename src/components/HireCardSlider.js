@@ -25,8 +25,7 @@ const Section = styled.div`
     left: -7px !important;
     background-image: url('/images/hire/slider-left-arrow.png');
   }
-    opacity: 1 !important;
-  }
+  opacity: 1 !important;
   .slick-next:before {
     width: 28px !important;
     height: 50px !important;

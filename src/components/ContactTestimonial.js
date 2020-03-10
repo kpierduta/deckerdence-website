@@ -31,8 +31,8 @@ const Section = styled.div`
     left: -7px;
     background-image: url('/images/contacts/arrow-left@2x.png');
   }
-    opacity: 1 !important;
-  }
+  opacity: 1 !important;
+
   .slick-next:before {
     width: 28px;
     height: 50px;
