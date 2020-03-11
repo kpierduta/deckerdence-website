@@ -57,10 +57,10 @@ const ContactTestimonial = ({ data }) => {
     <Section className="section is-medium">
       <div className="container">
         <h1 className="title is-3 is-spaced  has-text-centered has-text-white has-text-weight-normal">
-          {data.mainHeading}
+          {data.contactUsSlider.mainHeading}
         </h1>
         <h1 className="subtitle has-text-centered has-text-white">
-          {data.subtitle}
+          {data.contactUsSlider.subtitle}
         </h1>
       </div>
       <div className="container background">

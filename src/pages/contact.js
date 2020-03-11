@@ -74,7 +74,6 @@ const Header = styled.div`
 
 const Contact = ({ data }) => {
   const settings = data.sanitySiteSettings;
-  console.log(settings, 'settings');
   return (
     <Layout>
       <Seo
