@@ -24,7 +24,7 @@ export const blogQuery = graphql`
           isSizeHalf
           hasTextBlack
           title
-          subtitle
+          releaseDate(formatString: "DD-MM-YYYY")
           image {
             asset {
               url
@@ -57,7 +57,7 @@ const BlogPage = ({ data }) => {
               <BlogData
                 color={items.hasTextBlack}
                 title={items.title}
-                subtitle={items.subtitle}
+                subtitle={items.releaseDate}
                 boxImage={items.image.asset.url}
               />
             </div>

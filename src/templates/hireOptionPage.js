@@ -41,7 +41,8 @@ export const hireOptionPage = graphql`
           hasTextBlack
           title
           description
-          subtitle
+          name
+          sliderDate(formatString: "DD-MM-YYYY")
         }
       }
       information {

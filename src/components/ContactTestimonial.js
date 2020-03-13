@@ -73,7 +73,8 @@ const ContactTestimonial = ({ data }) => {
                     color={items.hasTextBlack}
                     title={items.title}
                     subtitle={items.description}
-                    description={items.subtitle}
+                    description={items.name}
+                    date={items.sliderDate}
                   />
                 </Wrapper>
               ))}

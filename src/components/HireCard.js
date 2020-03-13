@@ -15,7 +15,14 @@ const Section = styled.div`
   }
 `;
 
-const HireCard = ({ title, subtitle, description, bgColor, textBlack }) => (
+const HireCard = ({
+  title,
+  subtitle,
+  description,
+  bgColor,
+  textBlack,
+  date,
+}) => (
   <Section className="card" bgColor={bgColor} textBlack={textBlack}>
     <div className="card-content">
       <h1 className="title is-3 is-size-4-mobile is-spaced  has-text-centered is-uppercase">
@@ -24,6 +31,7 @@ const HireCard = ({ title, subtitle, description, bgColor, textBlack }) => (
       <p className="subtitle  is-size-6-mobile has-text-centered">{subtitle}</p>
       <h1 className="subtitle is-3 is-size-4-mobile has-text-centered is-spaced has-text-weight-bold">
         {description}
+        <span> {date}</span>
       </h1>
     </div>
   </Section>

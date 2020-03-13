@@ -45,7 +45,8 @@ export const contactUsQuery = graphql`
         sliderItem {
           hasTextBlack
           title
-          subtitle
+          name
+          sliderDate(formatString: "DD-MM-YYYY")
           description
         }
       }
