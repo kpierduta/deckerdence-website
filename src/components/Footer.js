@@ -1,8 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import { Link, StaticQuery, graphql } from 'gatsby';
 
 import FooterOption from './FooterOptions';
+
+export const footerQuery = graphql`
+  query footer {
+    allSanityVehicleHirePage(sort: { fields: order }) {
+      edges {
+        node {
+          slug {
+            current
+          }
+          footerTitle
+        }
+      }
+    }
+  }
+`;
 
 const Container = styled.section`
   margin-top: 1rem;
@@ -48,46 +63,61 @@ const Footer = () => (
           <img src="/images/icon/pinterest.png" alt="pinterest icon" />
         </Link>
       </IconContainer>
-      <div className="columns has-text-centered is-variable is-6">
-        <div className="column">
-          <h3 className="is-size-3 is-spaced">CONTACT</h3>
-          <FooterOption option="Tel: 01675 463 555" link="/" />
-          <FooterOption option="Email: enquiries@deckerdence.com" link="/" />
-          <FooterOption
-            option="Blyth Hall Farm, Blythe Road, Coleshill, Birmingham, B46 2AF"
-            link="/"
-          />
-          <p className="is-size-6 is-italic	is-capitalized">
-            Viewings By Appointment Only
-          </p>
-        </div>
-        <div className="column">
-          <h3 className="is-size-3 is-spaced">HIRE OPTIONS</h3>
-          <FooterOption option="Vintage Bus Bar" link="/hire/hire-option-1" />
-          <FooterOption
-            option="Bus bar With Awning Hire"
-            link="/hire/hire-option-2"
-          />
-          <FooterOption
-            option="Bus Bar Half Wraparound Marquee"
-            link="/hire/hire-option-3"
-          />
-          <FooterOption
-            option="Bus Bar with Full Wraparound Marquee"
-            link="/hire/hire-option-4"
-          />
-        </div>
-        <div className="column">
-          <h3 className="is-size-3 is-spaced">THE GALLERY</h3>
-          <FooterOption option="Our Wedding Gallery" link="/gallery/Weddings" />
-          <FooterOption option="Our Events Gallery" link="/gallery/Events" />
-          <FooterOption
-            option="Our Hospitality Gallery"
-            link="/gallery/Hospitality"
-          />
-          <FooterOption option="Our Party Gallery" link="/gallery/Parties" />
-        </div>
-      </div>
+      <StaticQuery
+        query={footerQuery}
+        render={data => {
+          const { allSanityVehicleHirePage: hire } = data;
+          return (
+            <>
+              <div className="columns has-text-centered is-variable is-6">
+                <div className="column">
+                  <h3 className="is-size-3 is-spaced">CONTACT</h3>
+                  <FooterOption option="Tel: 01675 463 555" link="/" />
+                  <FooterOption
+                    option="Email: enquiries@deckerdence.com"
+                    link="/"
+                  />
+                  <FooterOption
+                    option="Blyth Hall Farm, Blythe Road, Coleshill, Birmingham, B46 2AF"
+                    link="/"
+                  />
+                  <p className="is-size-6 is-italic	is-capitalized">
+                    Viewings By Appointment Only
+                  </p>
+                </div>
+                <div className="column">
+                  <h3 className="is-size-3 is-spaced">HIRE OPTIONS</h3>
+                  {hire.edges.map(items => (
+                    <FooterOption
+                      option={items.node.footerTitle}
+                      link={`hire/${items.node.slug.current}`}
+                    />
+                  ))}
+                </div>
+                <div className="column">
+                  <h3 className="is-size-3 is-spaced">THE GALLERY</h3>
+                  <FooterOption
+                    option="Our Wedding Gallery"
+                    link="/gallery/Weddings"
+                  />
+                  <FooterOption
+                    option="Our Events Gallery"
+                    link="/gallery/Events"
+                  />
+                  <FooterOption
+                    option="Our Hospitality Gallery"
+                    link="/gallery/Hospitality"
+                  />
+                  <FooterOption
+                    option="Our Party Gallery"
+                    link="/gallery/Parties"
+                  />
+                </div>
+              </div>
+            </>
+          );
+        }}
+      />
     </div>
   </Container>
 );

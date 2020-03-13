@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Slider from 'react-slick';
-import HireCard from './HireCard';
 
-const Wrapper = styled.div``;
+import HireCard from './HireCard';
 
 const Section = styled.div`
   background-size: cover;
@@ -42,6 +41,12 @@ const Section = styled.div`
     top: -11px;
     left: 0px;
     background-image: url('/images/contacts/arrow-right@2x.png');
+  }
+`;
+
+const Wrapper = styled.div`
+  :focus {
+    outline: none !important;
   }
 `;
 
