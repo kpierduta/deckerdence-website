@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -23,7 +24,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const BlogData = ({ title, date, boxImage, color }) => (
+const BlogData = ({ title, date, boxImage, color, link }) => (
   <Wrapper className="tile is-child box" boxImage={boxImage} color={color}>
     <p className="title is-5 has-text-weight-semibold has-text-centered text">
       {title}
@@ -32,12 +33,13 @@ const BlogData = ({ title, date, boxImage, color }) => (
       {date}
     </p>
     <div className="has-text-centered">
-      <button
+      <Link
+        to={link}
         className="button is-normal has-text-weight-semibold text"
         type="button"
       >
         READ MORE
-      </button>
+      </Link>
     </div>
   </Wrapper>
 );

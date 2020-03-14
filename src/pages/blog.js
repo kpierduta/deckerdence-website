@@ -68,6 +68,7 @@ const BlogPage = ({ data }) => {
                 title={items.node.title}
                 date={items.node.releaseDate}
                 boxImage={items.node.image.asset.url}
+                link={`/blog/${items.node.slug.current}`}
               />
             </div>
           ))}
