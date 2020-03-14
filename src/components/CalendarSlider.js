@@ -17,15 +17,23 @@ const Section = styled.div`
   }
 `;
 
+const Wrapper = styled.div`
+  :focus {
+    outline: none !important;
+  }
+`;
+
 export default class CalendarSlider extends Component {
   render() {
     const settings = {
+      dots: false,
+      infinite: true,
+      slidesToScroll: 1,
       className: 'center',
       centerMode: true,
-      infinite: true,
       centerPadding: '30px',
       slidesToShow: 3,
-      speed: 500,
+      speed: 400,
       rows: 1,
       slidesPerRow: 2,
     };
@@ -36,30 +44,30 @@ export default class CalendarSlider extends Component {
             <div>
               <h1 className="title is-1 has-text-centered">ARCHIVE </h1>
               <Slider {...settings}>
-                <div>
+                <Wrapper>
                   <img src="/images/blog/1@2x.png" alt="" />
-                </div>
-                <div>
+                </Wrapper>
+                <Wrapper>
                   <img src="/images/blog/1@2x.png" alt="" />
-                </div>
-                <div>
+                </Wrapper>
+                <Wrapper>
                   <img src="/images/blog/1@2x.png" alt="" />
-                </div>
-                <div>
+                </Wrapper>
+                <Wrapper>
                   <img src="/images/blog/1@2x.png" alt="" />
-                </div>
-                <div>
-                  <img src="/images/blog/3@2x.png" alt="" />
-                </div>
-                <div>
-                  <img src="/images/blog/3@2x.png" alt="" />
-                </div>
-                <div>
-                  <img src="/images/blog/3@2x.png" alt="" />
-                </div>
-                <div>
-                  <img src="/images/blog/3@2x.png" alt="" />
-                </div>
+                </Wrapper>
+                <Wrapper>
+                  <img src="/images/blog/1@2x.png" alt="" />
+                </Wrapper>
+                <Wrapper>
+                  <img src="/images/blog/1@2x.png" alt="" />
+                </Wrapper>
+                <Wrapper>
+                  <img src="/images/blog/1@2x.png" alt="" />
+                </Wrapper>
+                <Wrapper>
+                  <img src="/images/blog/1@2x.png" alt="" />
+                </Wrapper>
               </Slider>
             </div>
           </div>

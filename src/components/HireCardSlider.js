@@ -6,6 +6,9 @@ import HireCard from './HireCard';
 
 const Wrapper = styled.div`
   background-color: #fff;
+  :focus {
+    outline: none !important;
+  }
 `;
 
 const Section = styled.div`
