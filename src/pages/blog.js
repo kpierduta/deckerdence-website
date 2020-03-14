@@ -19,11 +19,17 @@ export const blogQuery = graphql`
       blogSeoKeywords
       blogSeoMetaDescription
       blogMainTitle
-      blogs {
-        items {
+    }
+    allSanityBlogPage(sort: { fields: order }) {
+      edges {
+        node {
+          order
           isSizeHalf
           hasTextBlack
           title
+          slug {
+            current
+          }
           releaseDate(formatString: "DD-MM-YYYY")
           image {
             asset {
@@ -38,6 +44,7 @@ export const blogQuery = graphql`
 
 const BlogPage = ({ data }) => {
   const page = data.sanitySiteSettings;
+  const blog = data.allSanityBlogPage.edges;
   return (
     <Layout>
       <Seo
@@ -48,17 +55,19 @@ const BlogPage = ({ data }) => {
       <PageHeading title={page.blogMainTitle} />
       <Section className="section">
         <div className="columns is-multiline">
-          {page.blogs.items.map(items => (
+          {blog.map(items => (
             <div
               className={
-                items.isSizeHalf ? 'column is-6 is-flex' : 'column is-3 is-flex'
+                items.node.isSizeHalf
+                  ? 'column is-6 is-flex'
+                  : 'column is-3 is-flex'
               }
             >
               <BlogData
-                color={items.hasTextBlack}
-                title={items.title}
-                subtitle={items.releaseDate}
-                boxImage={items.image.asset.url}
+                color={items.node.hasTextBlack}
+                title={items.node.title}
+                date={items.node.releaseDate}
+                boxImage={items.node.image.asset.url}
               />
             </div>
           ))}

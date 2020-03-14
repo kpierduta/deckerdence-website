@@ -23,13 +23,13 @@ const Wrapper = styled.div`
   }
 `;
 
-const BlogData = ({ title, subtitle, boxImage, color }) => (
+const BlogData = ({ title, date, boxImage, color }) => (
   <Wrapper className="tile is-child box" boxImage={boxImage} color={color}>
     <p className="title is-5 has-text-weight-semibold has-text-centered text">
       {title}
     </p>
     <p className="subtitle is-5 has-text-centered has-text-weight-semibold text">
-      {subtitle}
+      {date}
     </p>
     <div className="has-text-centered">
       <button
