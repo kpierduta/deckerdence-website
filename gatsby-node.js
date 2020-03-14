@@ -53,6 +53,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
+      allSanityBlogPage {
+        edges {
+          node {
+            slug {
+              current
+            }
+          }
+        }
+      }
     }
   `);
   if (result.errors) {
@@ -81,6 +90,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path: `/gallery/${node.slug.current}`,
       component: path.resolve(`./src/templates/galleryPage.js`),
+      context: {
+        slug: node.slug.current,
+      },
+    });
+  });
+  result.data.allSanityBlogPage.edges.forEach(({ node }) => {
+    createPage({
+      path: `/blog/${node.slug.current}`,
+      component: path.resolve(`./src/templates/blogArticle.js`),
       context: {
         slug: node.slug.current,
       },
