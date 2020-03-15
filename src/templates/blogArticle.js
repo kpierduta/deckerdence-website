@@ -15,6 +15,9 @@ export const blogArticleQuery = graphql`
       slug {
         current
       }
+      blogArticleSeoTitle
+      blogArticleSeoKeywords
+      blogArticleSeoMetaDescription
       blogArticleTitle(formatString: "DD-MM-YYYY")
       blogArticleMiddleText
       blogArticleSubtitle
@@ -49,7 +52,11 @@ const BlogArticle = ({ data }) => {
   const page = data.sanityBlogPage;
   return (
     <Layout>
-      <Seo title="Blog Article" />
+      <Seo
+        title={page.blogArticleSeoTitle}
+        keywords={page.blogArticleSeoKeywords}
+        description={page.blogArticleSeoMetaDescription}
+      />
       <HireOptions
         title={page.blogArticleTitle}
         middleText={page.blogArticleMiddleText}
