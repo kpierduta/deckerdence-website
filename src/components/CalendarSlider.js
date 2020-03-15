@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 
 import styled from 'styled-components';
@@ -22,57 +22,37 @@ const Wrapper = styled.div`
     outline: none !important;
   }
 `;
-
-export default class CalendarSlider extends Component {
-  render() {
-    const settings = {
-      dots: false,
-      infinite: true,
-      slidesToScroll: 1,
-      className: 'center',
-      centerMode: true,
-      centerPadding: '30px',
-      slidesToShow: 3,
-      speed: 400,
-      rows: 1,
-      slidesPerRow: 2,
-    };
-    return (
-      <Section className="section is-normal">
-        <div className="columns is-centered">
-          <div className="column is-10">
-            <div>
-              <h1 className="title is-1 has-text-centered">ARCHIVE </h1>
-              <Slider {...settings}>
+const CalendarSlider = ({ data }) => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToScroll: 1,
+    className: 'center',
+    centerMode: true,
+    centerPadding: '30px',
+    slidesToShow: 3,
+    speed: 400,
+    rows: 1,
+    slidesPerRow: 2,
+  };
+  return (
+    <Section className="section is-normal">
+      <div className="columns is-centered">
+        <div className="column is-10">
+          <div>
+            <h1 className="title is-1 has-text-centered">ARCHIVE </h1>
+            <Slider {...settings}>
+              {data.blogArticleSliderItems.map(options => (
                 <Wrapper>
-                  <img src="/images/blog/1@2x.png" alt="" />
+                  <img src={options.asset.url} alt="" />
                 </Wrapper>
-                <Wrapper>
-                  <img src="/images/blog/1@2x.png" alt="" />
-                </Wrapper>
-                <Wrapper>
-                  <img src="/images/blog/1@2x.png" alt="" />
-                </Wrapper>
-                <Wrapper>
-                  <img src="/images/blog/1@2x.png" alt="" />
-                </Wrapper>
-                <Wrapper>
-                  <img src="/images/blog/1@2x.png" alt="" />
-                </Wrapper>
-                <Wrapper>
-                  <img src="/images/blog/1@2x.png" alt="" />
-                </Wrapper>
-                <Wrapper>
-                  <img src="/images/blog/1@2x.png" alt="" />
-                </Wrapper>
-                <Wrapper>
-                  <img src="/images/blog/1@2x.png" alt="" />
-                </Wrapper>
-              </Slider>
-            </div>
+              ))}
+            </Slider>
           </div>
         </div>
-      </Section>
-    );
-  }
-}
+      </div>
+    </Section>
+  );
+};
+
+export default CalendarSlider;
