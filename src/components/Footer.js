@@ -16,6 +16,16 @@ export const footerQuery = graphql`
         }
       }
     }
+    allSanityGalleryPage(sort: { fields: order }) {
+      edges {
+        node {
+          slug {
+            current
+          }
+          footerTitle
+        }
+      }
+    }
   }
 `;
 
@@ -66,7 +76,11 @@ const Footer = () => (
       <StaticQuery
         query={footerQuery}
         render={data => {
-          const { allSanityVehicleHirePage: hire } = data;
+          const {
+            allSanityVehicleHirePage: hire,
+            allSanityGalleryPage: gallery,
+          } = data;
+
           return (
             <>
               <div className="columns has-text-centered is-variable is-6">
@@ -96,22 +110,12 @@ const Footer = () => (
                 </div>
                 <div className="column">
                   <h3 className="is-size-3 is-spaced">THE GALLERY</h3>
-                  <FooterOption
-                    option="Our Wedding Gallery"
-                    link="/gallery/Weddings"
-                  />
-                  <FooterOption
-                    option="Our Events Gallery"
-                    link="/gallery/Events"
-                  />
-                  <FooterOption
-                    option="Our Hospitality Gallery"
-                    link="/gallery/Hospitality"
-                  />
-                  <FooterOption
-                    option="Our Party Gallery"
-                    link="/gallery/Parties"
-                  />
+                  {gallery.edges.map(items => (
+                    <FooterOption
+                      option={items.node.footerTitle}
+                      link={`gallery/${items.node.slug.current}`}
+                    />
+                  ))}
                 </div>
               </div>
             </>
