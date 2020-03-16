@@ -30,25 +30,27 @@ const ImageWrapper = styled.div`
   justify-content: center;
 `;
 
-const ContactUsItem = ({ title, icon, para }) => (
+const ContactUsItem = ({ title, icon, para, href }) => (
   <Section className="column">
-    <div className="card">
-      <div className="card-content">
-        <div className="content has-text-centered">
-          <h1 className="title is-4 is-size-4-mobile has-text-weight-normal has-text-centered has-text-white">
-            {title}
-          </h1>
-          <ImageWrapper className="media align">
-            <figure className="image is-96x96">
-              <img src={icon} alt="" />
-            </figure>
-          </ImageWrapper>
-          <p className="subtitle is-6 is-size-5-mobile has-text-weight-normal has-text-centered has-text-white">
-            {para}
-          </p>
+    <a href={href}>
+      <div className="card">
+        <div className="card-content">
+          <div className="content has-text-centered">
+            <h1 className="title is-4 is-size-4-mobile has-text-weight-normal has-text-centered has-text-white">
+              {title}
+            </h1>
+            <ImageWrapper className="media align">
+              <figure className="image is-96x96">
+                <img src={icon} alt="" />
+              </figure>
+            </ImageWrapper>
+            <p className="subtitle is-6 is-size-5-mobile has-text-weight-normal has-text-centered has-text-white">
+              {para}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </a>
   </Section>
 );
 

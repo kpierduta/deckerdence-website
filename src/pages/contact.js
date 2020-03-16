@@ -99,15 +99,19 @@ const Contact = ({ data }) => {
               icon={settings.firstContactUsItemIcon.asset.url}
               para={settings.firstContactUsItemSubtitle}
             />
+
             <ContactUsItem
               title={settings.secondContactUsItemTitle}
               icon={settings.secondContactUsItemIcon.asset.url}
               para={settings.secondContactUsItemSubtitle}
+              href={`tel:${settings.secondContactUsItemSubtitle}`}
             />
+
             <ContactUsItem
               title={settings.thirdContactUsItemTitle}
               icon={settings.thirdContactUsItemIcon.asset.url}
               para={settings.thirdContactUsItemSubtitle}
+              href={`mailto:${settings.thirdContactUsItemSubtitle}`}
             />
           </div>
         </div>

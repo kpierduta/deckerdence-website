@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import styled from 'styled-components';
 import ButtonGlobal from '../components/elements/ButtonGlobal';
@@ -114,7 +114,9 @@ const TowBarPage = ({ data, onMouseOver }) => {
                 {page.towBarFrameDescription}
               </p>
               <div className="has-text-centered button-wrapper">
-                <ButtonGlobal title="Enquire Today" />
+                <Link to="/contact">
+                  <ButtonGlobal title="Enquire Today" />
+                </Link>
               </div>
             </div>
           </div>
