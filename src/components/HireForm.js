@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import Input from './elements/Input';
 
 const Wrapper = styled.div`
-  .backgrounds {
-    background-color: #811112;
+  .background {
+    background-color: ${props => props.theme.mainBrandColor}!important;
   }
   .pera {
     margin-top: 2rem;
@@ -24,7 +24,7 @@ const HireForm = ({ para, avatar }) => (
         </header>
       </div>
     </section>
-    <section className="section backgrounds">
+    <section className="section background">
       <div className="container">
         <div className="columns ">
           <div className="column is-5-desktop">
