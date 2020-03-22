@@ -40,8 +40,10 @@ const Columns = styled.div`
       width: 100%;
       height: 100%;
     }
+
     .is-5by4 .img-top {
       display: none;
+
       position: absolute;
       z-index: 99;
     }

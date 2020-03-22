@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const HireForm = ({ para, avatar, buttonName, subtitle }) => (
+const HireForm = ({ para, avatar }) => (
   <Wrapper>
     <section className="section">
       <div className="container">
@@ -32,13 +32,8 @@ const HireForm = ({ para, avatar, buttonName, subtitle }) => (
               <img className="is-rounded" src={avatar} alt="" />
             </figure>
           </div>
-          <div className="column is-vcentered is-desktop section">
-            <Input type="email" text="Email" />
-            <Input type="email" text="Phone Number" />
-            <p className="subtitle is-4 has-text-white text">{subtitle}</p>
-            <button type="button" className="button is-danger">
-              {buttonName}
-            </button>
+          <div className="column is-vcentered is-desktop">
+            <Input />
           </div>
         </div>
       </div>
