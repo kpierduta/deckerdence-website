@@ -106,7 +106,6 @@ const Contact = ({ data }) => {
               para={settings.secondContactUsItemSubtitle}
               href={`tel:${settings.secondContactUsItemSubtitle}`}
             />
-
             <ContactUsItem
               title={settings.thirdContactUsItemTitle}
               icon={settings.thirdContactUsItemIcon.asset.url}

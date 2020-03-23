@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import GlobalStyle, { theme } from '../utils/theme';
 import config from '../utils/config';
+import CookiesPopUp from './CookiesPopUp';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -24,6 +25,7 @@ const IndexLayout = ({ children, hideHeader }) => (
       {!hideHeader && <Header />}
       <Container>{children}</Container>
       <Footer />
+      <CookiesPopUp />
     </>
   </ThemeProvider>
 );
