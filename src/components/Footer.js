@@ -86,14 +86,14 @@ const Footer = () => (
               <div className="columns has-text-centered is-variable is-6">
                 <div className="column">
                   <h3 className="is-size-3 is-spaced">CONTACT</h3>
-                  <FooterOption option="Tel: 01675 463 555" link="/" />
+                  <FooterOption option="Tel: 01675 463 555" link="/contact" />
                   <FooterOption
                     option="Email: enquiries@deckerdence.com"
-                    link="/"
+                    link="/contact"
                   />
                   <FooterOption
                     option="Blyth Hall Farm, Blythe Road, Coleshill, Birmingham, B46 2AF"
-                    link="/"
+                    link="/contact"
                   />
                   <p className="is-size-6 is-italic	is-capitalized">
                     Viewings By Appointment Only
