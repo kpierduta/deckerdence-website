@@ -25,15 +25,12 @@ const Section = styled.div`
     opacity: 1;
   }
   .text {
-    color: white;
-    font-size: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
   }
 `;
 
@@ -45,7 +42,7 @@ const Testimonials = ({ Image, title }) => (
       </figure>
       <div className="overlay">
         <div className="text">
-          <h1 className="title is-2 has-text-white has-text-centered is-size-4-touch">
+          <h1 className="is-size-2 has-text-white has-text-centered is-size-4-touch">
             {title}
           </h1>
         </div>
