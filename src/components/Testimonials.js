@@ -19,7 +19,7 @@ const Section = styled.div`
     width: 100%;
     opacity: 0;
     transition: 0.5s ease;
-    background-color: #008cba;
+    background: rgba(0, 0, 0, 0.6);
   }
   .main:hover .overlay {
     opacity: 1;
