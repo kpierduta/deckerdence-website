@@ -10,7 +10,7 @@ import StagesSection from '../components/StagesSection';
 import VenueSection from '../components/VenueSection';
 import DetailsCardSection from '../components/DetailsCardSection';
 import GalleryItem from '../components/GalleryItem';
-import ContactForm from '../components/ContactForm';
+import Contact from '../components/Contact';
 import Festival from '../components/Festival';
 import BlackButton from '../components/elements/BlackButton';
 
@@ -186,7 +186,7 @@ const MainPage = ({ data }) => {
         alt="Learn More Button"
         hasWidth="20%"
       />
-      <ContactForm />
+      <Contact />
     </Layout>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Input from './elements/Input';
+import ContactForm from './ContactForm';
 
 const Wrapper = styled.div`
   .background {
@@ -33,7 +33,7 @@ const HireForm = ({ para, avatar }) => (
             </figure>
           </div>
           <div className="column is-vcentered is-desktop">
-            <Input />
+            <ContactForm />
           </div>
         </div>
       </div>

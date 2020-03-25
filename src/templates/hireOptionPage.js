@@ -10,7 +10,7 @@ import BlogCategoryItem from '../components/BlogCategoryItem';
 import HireCardSlider from '../components/HireCardSlider';
 import Diagram from '../components/Diagram';
 import VenueSection from '../components/VenueSection';
-import ContactForm from '../components/ContactForm';
+import Contact from '../components/Contact';
 
 export const hireOptionPage = graphql`
   query hireOption($slug: String) {
@@ -136,7 +136,7 @@ const HireOptionPage = ({ data }) => {
           frame={item.featuresFrameImage.asset.url}
         />
       ))}
-      <ContactForm />
+      <Contact />
     </Layout>
   );
 };
