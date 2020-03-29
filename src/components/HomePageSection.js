@@ -49,24 +49,26 @@ const HomePageSection = ({
   <Section flex={flex} bgImg={bgImg} bannerImg={bannerImg}>
     <div className="container">
       <div className="columns">
-        <div className="column bg-image is-6">
-          {title && (
-            <h1 className="title is-2 has-text-white has-text-weight-normal	is-spaced">
-              {title}
-            </h1>
-          )}
-          {description && (
-            <h2 className="subtitle is-5 has-text-white has-text-weight-normal">
-              {description}
-            </h2>
-          )}
-          {button && (
-            <Button
-              image="/images/learn-more@2x.png"
-              alt="Learn More Button"
-              hasWidth="50%"
-            />
-          )}
+        <div className="column is-6">
+          <div className="bg-image">
+            {title && (
+              <h1 className="title is-2 has-text-white has-text-weight-normal	is-spaced">
+                {title}
+              </h1>
+            )}
+            {description && (
+              <h2 className="subtitle is-5 has-text-white has-text-weight-normal">
+                {description}
+              </h2>
+            )}
+            {button && (
+              <Button
+                image="/images/learn-more@2x.png"
+                alt="Learn More Button"
+                hasWidth="50%"
+              />
+            )}
+          </div>
         </div>
       </div>
     </div>
