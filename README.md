@@ -21,7 +21,9 @@ To change site config `./utils/config.js`
 Run:
 
 ```
+
 yarn install
+
 ```
 
 ## Development
