@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
@@ -12,10 +13,18 @@ import DetailsCardSection from '../components/DetailsCardSection';
 import GalleryItem from '../components/GalleryItem';
 import Contact from '../components/Contact';
 import Festival from '../components/Festival';
-import BlackButton from '../components/elements/BlackButton';
 
 const GalleryWrapper = styled.div`
   margin-top: 4rem;
+`;
+
+const Button = styled.button`
+  width: 100%;
+  figure {
+    margin: 0 auto;
+    width: 20%;
+    padding: 3rem 0rem;
+  }
 `;
 
 export const MainPageQuery = graphql`
@@ -134,6 +143,8 @@ export const MainPageQuery = graphql`
 
 const MainPage = ({ data }) => {
   const page = data.sanityMainPage;
+  const [length, setLength] = useState(6);
+  const galleryImages = page.gallery.galleryItems.slice(0, length);
   return (
     <Layout>
       <Seo
@@ -174,18 +185,23 @@ const MainPage = ({ data }) => {
         frameBgImage={page.thirdSectionBackgroundImage.asset.url}
       />
       <GalleryWrapper className="columns is-variable is-3 is-multiline">
-        {page.gallery.galleryItems.map(items => (
+        {galleryImages.map(items => (
           <GalleryItem
             imageColoured={items.blackAndWhiteImage.asset.url}
             imageBw={items.coloredImage.asset.url}
           />
         ))}
       </GalleryWrapper>
-      <BlackButton
-        image="/images/view-more-black.png"
-        alt="Learn More Button"
-        hasWidth="20%"
-      />
+      {page.gallery.galleryItems.length !== galleryImages.length ? (
+        <Button
+          type="button"
+          onClick={() => setLength(page.gallery.galleryItems.length)}
+        >
+          <figure className="image-button">
+            <img src="/images/view-more-black.png" alt="" />
+          </figure>
+        </Button>
+      ) : null}
       <Contact />
     </Layout>
   );

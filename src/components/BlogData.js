@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   background-image: url('${props => props.boxImage}');
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   justify-content: space-around;
   display: grid;
