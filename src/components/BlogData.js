@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
+  min-height:14rem;
   background-image: url('${props => props.boxImage}');
   background-size: 100% 100%;
   background-repeat: no-repeat;
