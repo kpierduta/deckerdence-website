@@ -22,7 +22,7 @@ const Section = styled.section`
     display: grid;
     align-content: center;
     padding: 1rem 7rem;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       margin-top: 0;
       margin-bottom: 0;
       padding: 1rem 2rem;
