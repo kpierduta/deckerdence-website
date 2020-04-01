@@ -28,7 +28,7 @@ export const theme = {
   backgroundColor: '#FFFFFF',
   backgroundInputColor: lightShades,
   backgroundInputColorDark: darkShades,
-  fontSize: 16,
+  fontSize: 17,
   fontSizeSmall: 14,
   fontSizeExtraSmall: 12,
   fontSizeMedium: 18,
@@ -112,6 +112,9 @@ const GlobalStyle = createGlobalStyle`
     background: transparent !important;
     border-radius: 0px !important;
     border-color:  ${theme.darkShades};
+  }
+  .columns {
+    margin-right:0rem !important;
   }
 `;
 

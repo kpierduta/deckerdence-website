@@ -29,6 +29,7 @@ const Section = styled.section`
       background-size: cover;
     }
   }
+
   .subtitle.is-5 {
     font-family: ${props => props.theme.primaryFontFamily};
     line-height: 1.6;
@@ -49,7 +50,7 @@ const HomePageSection = ({
   <Section flex={flex} bgImg={bgImg} bannerImg={bannerImg}>
     <div className="container">
       <div className="columns">
-        <div className="column is-6">
+        <div className="column is-7">
           <div className="bg-image">
             {title && (
               <h1 className="title is-3 has-text-white has-text-weight-normal	is-spaced">
