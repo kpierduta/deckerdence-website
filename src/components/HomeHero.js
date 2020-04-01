@@ -106,15 +106,16 @@ const HomeHero = ({ items }) => {
         </figure>
         <Content className="columns is-centered">
           <div className="column is-8 has-text-centered">
-            <h1 className="title is-2 is-size-7-mobile has-text-white has-text-weight-semibold">
+            <h1 className="title is-3 is-size-7-mobile has-text-white has-text-weight-semibold">
               Get in Touch!
             </h1>
-            <h1 className="title is-3 is-size-7-mobile has-text-white has-text-weight-semibold">
+            <h1 className="title is-4 is-size-7-mobile has-text-white has-text-weight-semibold">
               <span className="has-text-grey-lighter has-text-weight-light">
                 Email:
               </span>
               {items.email}
               <span className="has-text-grey-lighter has-text-weight-light">
+                {' '}
                 OR Call:
               </span>
               {items.telephone}

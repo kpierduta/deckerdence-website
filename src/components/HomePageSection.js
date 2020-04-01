@@ -12,7 +12,7 @@ const Section = styled.section`
     }
   }
   .bg-image {
-    height: 46rem;
+    height: 35rem;
     background-image: url(${props => props.bannerImg});
     background-repeat: no-repeat;
     margin-top: 4rem;
@@ -52,14 +52,14 @@ const HomePageSection = ({
         <div className="column is-6">
           <div className="bg-image">
             {title && (
-              <h1 className="title is-2 has-text-white has-text-weight-normal	is-spaced">
+              <h1 className="title is-3 has-text-white has-text-weight-normal	is-spaced">
                 {title}
               </h1>
             )}
             {description && (
-              <h2 className="subtitle is-5 has-text-white has-text-weight-normal">
+              <p className="subtitle is-6 has-text-white has-text-weight-normal">
                 {description}
-              </h2>
+              </p>
             )}
             {button && (
               <Button

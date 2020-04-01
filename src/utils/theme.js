@@ -51,13 +51,21 @@ const GlobalStyle = createGlobalStyle`
 }
 
   body {
+    letter-spacing: 0.03rem !important;
     font-family: ${theme.secondaryFontFamily};
     color: ${theme.textColor};
     font-size: 17px;
   }
   .title {
     font-family: ${theme.secondaryFontFamily};
-    letter-spacing: 1px;
+    line-height: 2.25rem !important;
+    letter-spacing: 2px !important;
+  }
+  .title.is-1 {
+    letter-spacing: 0.3rem !important;
+  }
+  p {
+    line-height: 1.5rem !important;
   }
   .subtitle{
     font-family: ${props => props.theme.primaryFontFamily};
@@ -65,17 +73,12 @@ const GlobalStyle = createGlobalStyle`
   .button {
     font-family: ${theme.primaryFontFamily};
   }
-  p {
-    line-height: 1.5rem;
-  }
   p, .title, .box {
     color: ${theme.textColor};
   }
   .button.is-primary {
-
   }
   .button.is-secondary {
-
   }
   .button.is-primary{
     background: transparent;
