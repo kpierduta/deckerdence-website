@@ -29,8 +29,8 @@ export const theme = {
   backgroundInputColor: lightShades,
   backgroundInputColorDark: darkShades,
   fontSize: 17,
-  fontSizeSmall: 14,
   fontSizeExtraSmall: 12,
+  fontSizeSmall: 14,
   fontSizeMedium: 18,
   fontSizeLarge: 22,
   textColor: darkShades, // '#0A0B11',
@@ -61,8 +61,19 @@ const GlobalStyle = createGlobalStyle`
     line-height: 2.25rem !important;
     letter-spacing: 2px !important;
   }
-  .title.is-1 {
+  .title.is-4 {
     letter-spacing: 0.3rem !important;
+    font-size: ${theme.fontSizeLarge}!important;
+  }
+  .is-size-4{
+    font-size: ${theme.fontSizeLarge}!important;
+  }
+  .is-size-5{
+    font-size: ${theme.fontSizeMedium}!important;
+  }
+
+  .is-size-6 {
+    font-size: ${theme.fontSizeSmall} !important;
   }
   p {
     line-height: 1.5rem !important;
