@@ -71,7 +71,6 @@ const GlobalStyle = createGlobalStyle`
   .is-size-5{
     font-size: ${theme.fontSizeMedium}!important;
   }
-
   .is-size-6 {
     font-size: ${theme.fontSizeSmall} !important;
   }
