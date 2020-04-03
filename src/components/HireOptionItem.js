@@ -10,12 +10,10 @@ const Section = styled.section`
   .column {
     align-self: center;
   }
-  .content {
-    padding: 3rem 6.5rem;
+  .title.is-4 {
+    padding: 0px 5px 0px 5px;
   }
-  .is-inline-block {
-    margin: 0rem 1.5rem 2rem 1.5rem;
-  }
+
   .price {
     margin-top: 2rem !important;
   }
@@ -63,13 +61,17 @@ const HireOptionItem = ({ item, onMouseOver }) => (
           </figure>
         </div>
         <div className="column is-8 has-text-centered">
-          <img src="/images/hire/red.png" alt="" />
-          <div className="is-inline-block">
+          <div className="is-inline-flex">
+            <figure className="image is-24x24">
+              <img src="/images/hire/red.png" alt="" />
+            </figure>
             <h3 className="title is-4 has-text-warning ">
               {item.hireOptionTitle}
             </h3>
+            <figure className="image is-24x24">
+              <img src="/images/hire/red-2.png" alt="" />
+            </figure>
           </div>
-          <img src="/images/hire/red-2.png" alt="" />
           <h5 className="title is-3 is-spaced has-text-warning ">
             {item.hireOptionSubtitle}
           </h5>
