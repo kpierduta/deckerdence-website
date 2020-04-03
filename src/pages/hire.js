@@ -87,14 +87,14 @@ const HirePage = ({ data }) => {
           <div className="container">
             <div className="columns is-centered">
               <div className="column is-9 has-text-centered">
-                <h1 className="title is-5 has-text-white has-text-weight-normal">
+                <h1 className="title is-4 has-text-white has-text-weight-normal">
                   {hire.hireOptionSmallText}
                 </h1>
-                <h1 className="title is-size-6 has-text-white has-text-weight-semibold is-size-5-touch	">
+                <h1 className="title is-3 has-text-white has-text-weight-semibold">
                   {hire.hireOptionLargeText}
                 </h1>
                 <img src="/images/hire/decorative-line.png" alt="" />
-                <h1 className="subtitle is-size-6 has-text-white">
+                <h1 className="subtitle is-5 has-text-white">
                   {hire.hireOptionDescription}
                 </h1>
               </div>

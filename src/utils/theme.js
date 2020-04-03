@@ -64,22 +64,32 @@ const GlobalStyle = createGlobalStyle`
     font-size: 22px !important;
   }
   .title.is-5{
-    font-size: 18px !important;
+    font-size: 17px !important;
   }
   .title.is-6 {
     font-size: 14px !important;
   }
+
   .subtitle{
     font-family: ${props => props.theme.primaryFontFamily};
+  }
+  .subtitle.is-4 {
+    font-size: 22px !important;
+  }
+  .subtitle.is-5{
+    font-size: 17px !important;
+  }
+  .subtitle.is-6 {
+    font-size: 14px !important;
   }
   p {
     line-height: 1.5rem !important;
   }
-  .button {
-    font-family: ${theme.primaryFontFamily};
-  }
   p, .title, .box {
     color: ${theme.textColor};
+  }
+  .button {
+    font-family: ${theme.primaryFontFamily};
   }
   .button.is-danger{
     color: white;

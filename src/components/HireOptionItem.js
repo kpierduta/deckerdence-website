@@ -65,12 +65,12 @@ const HireOptionItem = ({ item, onMouseOver }) => (
         <div className="column is-8 has-text-centered">
           <img src="/images/hire/red.png" alt="" />
           <div className="is-inline-block">
-            <h3 className="title is-3 has-text-warning ">
+            <h3 className="title is-4 has-text-warning ">
               {item.hireOptionTitle}
             </h3>
           </div>
           <img src="/images/hire/red-2.png" alt="" />
-          <h5 className="title is-2 is-spaced has-text-warning ">
+          <h5 className="title is-3 is-spaced has-text-warning ">
             {item.hireOptionSubtitle}
           </h5>
           <h5 className="subtitle is-5 has-text-weight-medium">
