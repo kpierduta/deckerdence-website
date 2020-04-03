@@ -21,8 +21,7 @@ export const theme = {
   // Use as the text color for dark-on-light designs,
   // or as the background for inverted designs.
   darkShades,
-  dangerColor: '#f44336',
-
+  dangerColor: '#811112',
   primaryColor: mainBrandColor,
   borderColor: '#f7f7f7',
   backgroundColor: '#FFFFFF',
@@ -62,8 +61,8 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 2px !important;
   }
   .title.is-4 {
-    letter-spacing: 0.3rem !important;
-    font-size: ${theme.fontSizeLarge}!important;
+    letter-spacing: 2px !important;
+    font-size: 22px !important;
   }
   .is-size-4{
     font-size: ${theme.fontSizeLarge}!important;
