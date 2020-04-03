@@ -61,48 +61,25 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 2px !important;
   }
   .title.is-4 {
-    letter-spacing: 2px !important;
     font-size: 22px !important;
   }
-  .is-size-4{
-    font-size: ${theme.fontSizeLarge}!important;
+  .title.is-5{
+    font-size: 18px !important;
   }
-  .is-size-5{
-    font-size: ${theme.fontSizeMedium}!important;
-  }
-  .is-size-6 {
-    font-size: ${theme.fontSizeSmall} !important;
-  }
-  p {
-    line-height: 1.5rem !important;
+  .title.is-6 {
+    font-size: 14px !important;
   }
   .subtitle{
     font-family: ${props => props.theme.primaryFontFamily};
+  }
+  p {
+    line-height: 1.5rem !important;
   }
   .button {
     font-family: ${theme.primaryFontFamily};
   }
   p, .title, .box {
     color: ${theme.textColor};
-  }
-  .button.is-primary {
-  }
-  .button.is-secondary {
-  }
-  .button.is-primary{
-    background: transparent;
-    font-family: ${theme.secondaryFontFamily} !important;
-    border-color:#363636;
-    border-width: 2.5px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    color: black;
-    :hover{
-      color: black;
-      background: transparent;
-      border-width: 4px;
-      border-color:#363636;
-    }
   }
   .button.is-danger{
     color: white;
@@ -111,16 +88,16 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 3px;
     background: #a34442 !important;
   }
+  .button.is-normal {
+    background: transparent !important;
+    border-radius: 0px !important;
+    border-color:  ${theme.darkShades};
+  }
   .has-text-warning {
     color: ${theme.mainBrandColor} !important;
   }
   .has-text-black {
     color: ${theme.textColorLite} !important;
-  }
-  .button.is-normal {
-    background: transparent !important;
-    border-radius: 0px !important;
-    border-color:  ${theme.darkShades};
   }
   .columns {
     margin-right:0rem !important;

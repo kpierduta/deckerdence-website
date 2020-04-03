@@ -90,7 +90,7 @@ const HirePage = ({ data }) => {
                 <h1 className="title is-5 has-text-white has-text-weight-normal">
                   {hire.hireOptionSmallText}
                 </h1>
-                <h1 className="title is-4 has-text-white has-text-weight-semibold is-size-5-touch	">
+                <h1 className="title is-size-6 has-text-white has-text-weight-semibold is-size-5-touch	">
                   {hire.hireOptionLargeText}
                 </h1>
                 <img src="/images/hire/decorative-line.png" alt="" />
