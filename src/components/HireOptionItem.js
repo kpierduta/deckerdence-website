@@ -63,11 +63,25 @@ const HireOptionItem = ({ item, onMouseOver }) => (
         <div className="column is-5 has-text-centered">
           <div className="is-inline-flex">
             <figure className="image is-24x24">
-              <img src="/images/hire/red.png" alt="" />
+              <img
+                src={
+                  item.columnReverse
+                    ? '/images/hire/black-one.png'
+                    : '/images/hire/red.png'
+                }
+                alt=""
+              />
             </figure>
             <h1 className="title is-4">{item.hireOptionTitle}</h1>
             <figure className="image is-24x24">
-              <img src="/images/hire/red-2.png" alt="" />
+              <img
+                src={
+                  item.columnReverse
+                    ? '/images/hire/black-two.png'
+                    : '/images/hire/red-2.png'
+                }
+                alt=""
+              />
             </figure>
           </div>
           <h2 className="title is-3 is-spaced">{item.hireOptionSubtitle}</h2>
