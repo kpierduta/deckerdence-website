@@ -17,10 +17,9 @@ const Section = styled.section`
   .price {
     margin-top: 2rem !important;
   }
-  h5,
-  h3,
-  .button {
-    color: ${props => (props.flex ? '#fff' : '')};
+  h1,
+  h2 {
+    color: ${props => (props.flex ? '#2c2c2a' : '#811112')};
   }
   .button {
     background: transparent;
@@ -66,24 +65,20 @@ const HireOptionItem = ({ item, onMouseOver }) => (
             <figure className="image is-24x24">
               <img src="/images/hire/red.png" alt="" />
             </figure>
-            <h3 className="title is-4 has-text-warning ">
-              {item.hireOptionTitle}
-            </h3>
+            <h1 className="title is-4">{item.hireOptionTitle}</h1>
             <figure className="image is-24x24">
               <img src="/images/hire/red-2.png" alt="" />
             </figure>
           </div>
-          <h5 className="title is-3 is-spaced has-text-warning ">
-            {item.hireOptionSubtitle}
-          </h5>
+          <h2 className="title is-3 is-spaced">{item.hireOptionSubtitle}</h2>
           <p className="subtitle is-5 has-text-weight-medium">
             {item.hireOptionDescription}
           </p>
-          <h3 className="title is-5 price">Hire from {item.hireOptionPrice}</h3>
+          <h3 className="title is-5 price">Hire from{item.hireOptionPrice}</h3>
           <Link
             to={`/hire/${item.slug.current}`}
             type="button"
-            className="button is-large  is-size-5"
+            className="button is-large is-size-5"
           >
             FIND OUT MORE
           </Link>

@@ -4,7 +4,7 @@ import reset from 'styled-reset-advanced';
 const mainBrandColor = '#811112';
 const lightShades = 'rgba(255, 255, 255, 0.7)';
 const darkAccent = '#3173DC';
-const darkShades = '#0A0A0A';
+const darkShades = '#2c2c2a';
 
 export const theme = {
   // It can be liberally applied to your layout as its main identity.
@@ -32,7 +32,7 @@ export const theme = {
   fontSizeSmall: 14,
   fontSizeMedium: 18,
   fontSizeLarge: 22,
-  textColor: darkShades, // '#0A0B11',
+  textColor: darkShades, // '#2c2c2a',
   textColorInverse: lightShades,
   textColorLite: '#2c2c2a',
   menuTintColor: darkAccent,
