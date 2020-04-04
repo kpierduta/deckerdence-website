@@ -20,6 +20,7 @@ const GalleryWrapper = styled.div`
 
 const Button = styled.button`
   width: 100%;
+  cursor: pointer;
   figure {
     margin: 0 auto;
     width: 20%;
@@ -143,7 +144,7 @@ export const MainPageQuery = graphql`
 
 const MainPage = ({ data }) => {
   const page = data.sanityMainPage;
-  const [length, setLength] = useState(6);
+  const [length, setLength] = useState(5);
   const galleryImages = page.gallery.galleryItems.slice(0, length);
   return (
     <Layout>

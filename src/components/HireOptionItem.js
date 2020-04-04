@@ -27,7 +27,7 @@ const Section = styled.section`
   }
   .button {
     background: transparent;
-    border: 2px solid ${props => (props.flex ? '#ffffff' : '')};
+    border: 2px solid ${props => (props.flex ? '#ffffff' : '#2c2c2a')};
     font-family: ${props => props.theme.secondaryFontFamily};
     letter-spacing: 1px;
   }
