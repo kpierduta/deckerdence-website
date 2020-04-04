@@ -13,7 +13,6 @@ const Section = styled.section`
   .title.is-4 {
     padding: 0px 5px 0px 5px;
   }
-
   .price {
     margin-top: 2rem !important;
   }
@@ -21,9 +20,14 @@ const Section = styled.section`
   h2 {
     color: ${props => (props.flex ? '#2c2c2a' : '#811112')};
   }
+  p,
+  h3,
+  .button {
+    color: ${props => (props.flex ? '#ffffff' : '#2c2c2a')};
+  }
   .button {
     background: transparent;
-    border: 2px solid ${props => (props.flex ? '#fff' : '')};
+    border: 2px solid ${props => (props.flex ? '#ffffff' : '')};
     font-family: ${props => props.theme.secondaryFontFamily};
     letter-spacing: 1px;
   }
