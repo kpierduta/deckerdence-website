@@ -40,9 +40,6 @@ const Container = styled.section`
   .columns {
     margin-top: 2rem;
   }
-  .is-spaced {
-    margin-bottom: 2.5rem;
-  }
   p {
     margin-top: 2rem;
     font-family: ${props => props.theme.primaryFontFamily};
@@ -85,7 +82,7 @@ const Footer = () => (
             <>
               <div className="columns has-text-centered is-variable is-6">
                 <div className="column">
-                  <h3 className="is-size-3 is-spaced">CONTACT</h3>
+                  <h3 className="title is-5">CONTACT</h3>
                   <FooterOption option="Tel: 01675 463 555" link="/contact" />
                   <FooterOption
                     option="Email: enquiries@deckerdence.com"
@@ -95,12 +92,12 @@ const Footer = () => (
                     option="Blyth Hall Farm, Blythe Road, Coleshill, Birmingham, B46 2AF"
                     link="/contact"
                   />
-                  <p className="is-size-6 is-italic	is-capitalized">
+                  <p className="is-size-7 is-italic	is-capitalized">
                     Viewings By Appointment Only
                   </p>
                 </div>
                 <div className="column">
-                  <h3 className="is-size-3 is-spaced">HIRE OPTIONS</h3>
+                  <h3 className="title is-5">HIRE OPTIONS</h3>
                   {hire.edges.map(items => (
                     <FooterOption
                       option={items.node.footerTitle}
@@ -109,7 +106,7 @@ const Footer = () => (
                   ))}
                 </div>
                 <div className="column">
-                  <h3 className="is-size-3 is-spaced">THE GALLERY</h3>
+                  <h3 className="title is-5">THE GALLERY</h3>
                   {gallery.edges.map(items => (
                     <FooterOption
                       option={items.node.footerTitle}
