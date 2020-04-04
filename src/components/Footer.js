@@ -47,11 +47,11 @@ const Container = styled.section`
 `;
 
 const IconContainer = styled.div`
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 `;
 
 const Footer = () => (
-  <Container className="section is-medium">
+  <Container className="section is-normal">
     <div className="container">
       <IconContainer className="has-text-centered">
         <Link to="/">

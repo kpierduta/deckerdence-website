@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 const LinkStyled = styled(Link)`
   h4 {
-    padding: 1.2rem 0;
+    padding: 1rem 0;
     border-bottom: 1px solid #000;
   }
 `;
