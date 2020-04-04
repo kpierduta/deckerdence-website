@@ -23,9 +23,6 @@ const Section = styled.div`
     align-items: center;
     justify-content: center;
   }
-  h1 {
-    font-size: 3.5rem;
-  }
 `;
 
 const PartiesHero = ({ title, partyBgImage }) => (
@@ -35,13 +32,13 @@ const PartiesHero = ({ title, partyBgImage }) => (
         <img src="/images/parties/disco-ball-copy@2x.png" alt="" />
       </figure>
     </div>
-    <div className="columns is-centered is-desktop">
+    <div className="columns is-centered">
       <div className="column is-7">
         <div className="area">
           <figure className="">
             <img src="/images/parties/t2x.png" alt="frame" />
           </figure>
-          <h1 className="title is-size-4-mobile centered has-text-white">
+          <h1 className="title is-3 is-size-5-touch has-text-white centered">
             {title}
           </h1>
         </div>
