@@ -15,7 +15,7 @@ const Section = styled.section`
     background-repeat: no-repeat;
     background-position: cover;
     background-size: 100% 100%;
-    padding: 5rem;
+    padding: 5rem 2rem 4rem 2rem;
     justify-content: space-between;
   }
 `;

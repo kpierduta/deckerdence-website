@@ -46,7 +46,7 @@ const HireOptionItem = ({ item, onMouseOver }) => (
   <Section className="section" flex={item.columnReverse}>
     <div className="container">
       <div className="columns">
-        <div className="column">
+        <div className="column is-4 is-desktop">
           <figure className="image is-square">
             <img
               src={item.hireOptionColoredImage.asset.url}
@@ -60,7 +60,8 @@ const HireOptionItem = ({ item, onMouseOver }) => (
             />
           </figure>
         </div>
-        <div className="column is-8 has-text-centered">
+        <div className="column is-3" />
+        <div className="column is-5 has-text-centered">
           <div className="is-inline-flex">
             <figure className="image is-24x24">
               <img src="/images/hire/red.png" alt="" />
@@ -75,9 +76,9 @@ const HireOptionItem = ({ item, onMouseOver }) => (
           <h5 className="title is-3 is-spaced has-text-warning ">
             {item.hireOptionSubtitle}
           </h5>
-          <h5 className="subtitle is-5 has-text-weight-medium">
+          <p className="subtitle is-5 has-text-weight-medium">
             {item.hireOptionDescription}
-          </h5>
+          </p>
           <h3 className="title is-5 price">Hire from {item.hireOptionPrice}</h3>
           <Link
             to={`/hire/${item.slug.current}`}
