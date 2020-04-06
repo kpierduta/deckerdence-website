@@ -97,7 +97,7 @@ const GlobalStyle = createGlobalStyle`
     color: white;
     font-size: 1.5em;
     padding: 0em 1em;
-    border-radius: 3px;
+    border-radius: 1px;
     background: #a34442 !important;
   }
   .button.is-normal {
