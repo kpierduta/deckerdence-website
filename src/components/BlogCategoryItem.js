@@ -7,7 +7,7 @@ const Column = styled.div`
   background-image: url('/images/hire/bgframe.png');
   background-size: cover;
   margin: 0 0.5rem;
-  min-height: 9rem;
+  min-height: 8rem;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@ const BlogCategoryItem = ({ category, sideImage }) => {
     <div className="column has-text-centered">
       <div className="columns">
         <Column className="column">
-          <div className="title is-3 is-capatalized has-text-weight-normal has-text-black">
+          <div className="title is-5 is-capatalized has-text-weight-normal has-text-black">
             {category}
           </div>
         </Column>

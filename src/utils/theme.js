@@ -82,12 +82,14 @@ const GlobalStyle = createGlobalStyle`
   .subtitle.is-6 {
     font-size: 14px !important;
   }
+
   p {
     line-height: 1.5rem !important;
   }
   p, .title, .box {
     color: ${theme.textColor};
   }
+
   .button {
     font-family: ${theme.primaryFontFamily};
   }
@@ -103,18 +105,21 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 0px !important;
     border-color:  ${theme.darkShades};
   }
+
   .has-text-warning {
     color: ${theme.mainBrandColor} !important;
   }
   .has-text-black {
     color: ${theme.textColorLite} !important;
   }
+
   .is-family-secondary {
     font-family: ${theme.secondaryFontFamily} !important;
   }
   .is-family-primary {
     font-family: ${props => props.theme.primaryFontFamily} !important;
   }
+
   .columns {
     margin-right:0rem !important;
   }

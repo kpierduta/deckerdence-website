@@ -7,21 +7,19 @@ const Wrapper = styled.div`
   .background {
     background-color: ${props => props.theme.mainBrandColor}!important;
   }
-  .pera {
-    margin-top: 2rem;
-  }
-  .text {
-    color: ${props => props.theme.lightShades} !important;
-  }
 `;
 
 const HireForm = ({ para, avatar }) => (
   <Wrapper>
     <section className="section">
-      <div className="container">
-        <header className="Header has-text-centered">
-          <p className="subtitle is-4 para">{para}</p>
-        </header>
+      <div className="container is-medium">
+        <div className="columns is-centered is-desktop">
+          <div className="column is-10">
+            <header className="Header has-text-centered">
+              <p className="subtitle is-5 para has-text-black">{para}</p>
+            </header>
+          </div>
+        </div>
       </div>
     </section>
     <section className="section background">

@@ -6,12 +6,13 @@ const Section = styled.div`
     color: ${props => props.theme.lightShades} !important;
   }
   .input {
+    border-radius: 0;
     border: 1px solid ${props => props.theme.borderColor};
     display: block;
     margin: 0 0 1.5rem;
     background: transparent;
     ::placeholder {
-      color: ${props => props.theme.borderColor} !important ;
+      color: ${props => props.theme.lightShades} !important ;
     }
   }
 `;
@@ -59,10 +60,10 @@ class ContactForm extends React.Component {
             <div className="control">
               <input
                 name="email"
-                className="input is-medium has-text-white"
+                className="input is-medium is-family-secondary subtitle is-5 "
                 value={email}
                 type="email"
-                placeholder="Your email"
+                placeholder="EMAIL"
                 onChange={this.handleChange}
               />
             </div>
@@ -71,19 +72,20 @@ class ContactForm extends React.Component {
             <div className="control">
               <input
                 name="phone"
-                className="input is-medium has-text-white"
+                className="input is-medium is-family-secondary subtitle is-5"
                 type="tel"
                 value={phone}
-                placeholder="Your phone number"
+                placeholder="YOUR NUMBER"
                 onChange={this.handleChange}
               />
             </div>
           </div>
-          <p className="subtitle is-4 has-text-centered is-size-6-touch">
-            By submitting this form you agree to our contact T & C
+          <p className="subtitle is-5 has-text-centered-touch">
+            By submitting this form you agree to our contact terms and
+            conditions.
           </p>
-          <div className="has-text-centered">
-            <button type="submit" className="button is-danger">
+          <div className="has-text-centered-touch">
+            <button type="submit" className="button is-danger subtitle is-5 ">
               <span className="is-size-5-touch">DOWNLOAD</span>
             </button>
           </div>
