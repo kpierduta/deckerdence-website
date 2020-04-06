@@ -85,7 +85,7 @@ class ContactForm extends React.Component {
             conditions.
           </p>
           <div className="has-text-centered-touch">
-            <button type="submit" className="button is-danger subtitle is-5 ">
+            <button type="submit" className="button is-danger title is-5 ">
               <span className="is-size-5-touch">DOWNLOAD</span>
             </button>
           </div>
