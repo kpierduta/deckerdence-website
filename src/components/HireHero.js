@@ -7,33 +7,31 @@ const Section = styled.div`
   .column {
     align-self: center;
   }
-
-  h1 {
-    font-size: 4.125rem !important;
-  }
 `;
 
 const HireHero = ({ Option, subtitle, title, bgImage }) => (
   <Section className="section is-large" bgImage={bgImage}>
     <div className="columns is-centered is-mobile">
       <div className="column is-narrow">
-        <figure className="image is-64x64">
+        <figure className="image is-32x32">
           <img src="/images/left-flower.png" alt="" />
         </figure>
       </div>
       <div className="column is-narrow">
-        <h1 className="is-size-1 has-text-white">{Option}</h1>
+        <h1 className="title is-3 has-text-white">{Option}</h1>
       </div>
       <div className="column is-narrow">
-        <figure className="image is-64x64">
+        <figure className="image is-32x32">
           <img src="/images/right-flower.png" alt="" />
         </figure>
       </div>
     </div>
-    <h1 className="title is-spaced is-size-1 has-text-white has-text-centered">
+    <h1 className="title is-1 is-size-3-touch is-spaced has-text-white has-text-centered">
       {title}
     </h1>
-    <h2 className="has-text-white has-text-centered is-size-3">{subtitle}</h2>
+    <h1 className="subtitle is-3 is-size-4-touch has-text-white has-text-centered is-family-secondary">
+      {subtitle}
+    </h1>
   </Section>
 );
 

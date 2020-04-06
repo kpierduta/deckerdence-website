@@ -109,6 +109,12 @@ const GlobalStyle = createGlobalStyle`
   .has-text-black {
     color: ${theme.textColorLite} !important;
   }
+  .is-family-secondary {
+    font-family: ${theme.secondaryFontFamily} !important;
+  }
+  .is-family-primary {
+    font-family: ${props => props.theme.primaryFontFamily} !important;
+  }
   .columns {
     margin-right:0rem !important;
   }
