@@ -60,7 +60,7 @@ class ContactForm extends React.Component {
             <div className="control">
               <input
                 name="email"
-                className="input is-medium is-family-secondary subtitle is-5 "
+                className="input is-medium is-family-secondary subtitle is-5 is-uppercase"
                 value={email}
                 type="email"
                 placeholder="EMAIL"
@@ -72,10 +72,10 @@ class ContactForm extends React.Component {
             <div className="control">
               <input
                 name="phone"
-                className="input is-medium is-family-secondary subtitle is-5"
+                className="input is-medium is-family-secondary subtitle is-5 is-uppercase"
                 type="tel"
                 value={phone}
-                placeholder="YOUR NUMBER"
+                placeholder="Phone Number "
                 onChange={this.handleChange}
               />
             </div>
@@ -86,7 +86,7 @@ class ContactForm extends React.Component {
           </p>
           <div className="has-text-centered-touch">
             <button type="submit" className="button is-danger title is-5 ">
-              <span className="is-size-5-touch">DOWNLOAD</span>
+              <span className="is-size-5-touch is-uppercase">Download</span>
             </button>
           </div>
         </form>
