@@ -11,7 +11,7 @@ const Section = styled.div`
   }
   .title,
   .subtitle {
-    color: ${props => (props.textBlack ? '#0A0A0A' : '#ffff')} !important;
+    color: ${props => (props.textBlack ? '#2c2c2a' : '#ffff')} !important;
   }
 `;
 
@@ -25,13 +25,14 @@ const HireCard = ({
 }) => (
   <Section className="card" bgColor={bgColor} textBlack={textBlack}>
     <div className="card-content">
-      <h1 className="title is-3 is-size-4-mobile is-spaced  has-text-centered is-uppercase">
+      <h1 className="title is-4  is-spaced  has-text-centered is-uppercase">
         {title}
       </h1>
-      <p className="subtitle  is-size-6-mobile has-text-centered">{subtitle}</p>
-      <h1 className="subtitle is-3 is-size-4-mobile has-text-centered is-spaced has-text-weight-bold">
-        {description}
-        <span> {date}</span>
+      <p className="subtitle is-5  is-size-6-mobile has-text-centered">
+        {subtitle}
+      </p>
+      <h1 className="subtitle is-5 has-text-centered has-text-weight-bold">
+        {description} <span className="has-text-weight-normal">{date}</span>
       </h1>
     </div>
   </Section>

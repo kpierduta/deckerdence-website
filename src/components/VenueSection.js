@@ -10,7 +10,6 @@ const Section = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.6rem;
   }
   .columns {
     justify-content: ${props => (props.flex ? 'flex-end' : 'flex-start')};
@@ -36,7 +35,7 @@ const VenueSection = ({ frame, alt, text, frameBgImage, flex, color }) => (
             <figure className="image">
               <img src={frame} alt={alt} />
             </figure>
-            <p className="text has-text-centered">{text}</p>
+            <p className="title is-4 text has-text-centered">{text}</p>
           </ImageWrapper>
         </div>
       </div>
