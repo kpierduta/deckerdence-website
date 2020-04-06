@@ -43,7 +43,7 @@ const Testimonials = ({ Image, title }) => (
       </figure>
       <div className="overlay">
         <div className="text">
-          <h1 className="is-size-3 has-text-white has-text-centered is-size-4-touch">
+          <h1 className="title is-4 has-text-white has-text-centered">
             {title}
           </h1>
         </div>
