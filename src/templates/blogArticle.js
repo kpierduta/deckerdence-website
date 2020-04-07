@@ -66,7 +66,7 @@ const BlogArticle = ({ data }) => {
       />
       <Section className="section">
         <div className="container">
-          <h1 className="has-text-centered is-size-1">
+          <h1 className="title is-4 has-text-centered">
             {page.blogArticleCategoriesHeading}
           </h1>
           <div className="columns is-multiline">

@@ -40,7 +40,7 @@ const CalendarSlider = ({ data }) => {
       <div className="columns is-centered">
         <div className="column is-10">
           <div>
-            <h1 className="title is-1 has-text-centered">ARCHIVE </h1>
+            <h1 className="title is-4 has-text-centered">ARCHIVE</h1>
             <Slider {...settings}>
               {data.blogArticleSliderItems.map(options => (
                 <Wrapper>
