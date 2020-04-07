@@ -9,7 +9,7 @@ const Section = styled.div`
   background-repeat: no-repeat;
   background-image: url('/images/contacts/background.png');
   .container h1:last-child {
-    padding: 0 0 4rem;
+    padding: 0 0 3rem;
   }
   .background {
     background-image: url('/images/contacts/slider-bg.png');
@@ -61,12 +61,16 @@ const ContactTestimonial = ({ data }) => {
   return (
     <Section className="section is-medium">
       <div className="container">
-        <h1 className="title is-3 is-spaced  has-text-centered has-text-white has-text-weight-normal">
-          {data.contactUsSlider.mainHeading}
-        </h1>
-        <h1 className="subtitle has-text-centered has-text-white">
-          {data.contactUsSlider.subtitle}
-        </h1>
+        <div className="columns is-centered">
+          <div className="column is-7">
+            <h1 className="title is-4 is-spaced  has-text-centered has-text-white">
+              {data.contactUsSlider.mainHeading}
+            </h1>
+            <h1 className="subtitle is-5 has-text-centered has-text-white">
+              {data.contactUsSlider.subtitle}
+            </h1>
+          </div>
+        </div>
       </div>
       <div className="container background">
         <div className="columns is-centered">

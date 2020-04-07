@@ -36,7 +36,7 @@ const ContactUsItem = ({ title, icon, para, href }) => (
       <div className="card">
         <div className="card-content">
           <div className="content has-text-centered">
-            <h1 className="title is-4 is-size-4-mobile has-text-weight-normal has-text-centered has-text-white">
+            <h1 className="title is-5 has-text-weight-normal has-text-centered has-text-white">
               {title}
             </h1>
             <ImageWrapper className="media align">
@@ -44,7 +44,7 @@ const ContactUsItem = ({ title, icon, para, href }) => (
                 <img src={icon} alt="" />
               </figure>
             </ImageWrapper>
-            <p className="subtitle is-6 is-size-5-mobile has-text-weight-normal has-text-centered has-text-white">
+            <p className="subtitle is-5 has-text-centered has-text-white">
               {para}
             </p>
           </div>

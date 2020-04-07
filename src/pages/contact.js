@@ -86,10 +86,10 @@ const Contact = ({ data }) => {
       <section className="section">
         <div className="container">
           <Header>
-            <h1 className="title is-spaced is-2 is-size-3-mobile has-text-weight-normal has-text-centered has-text-black">
+            <h1 className="title is-4 is-spaced has-text-centered has-text-black">
               {settings.contactUsTitle}
             </h1>
-            <h1 className="subtitle is-4  is-size-5-mobile has-text-weight-normal has-text-centered has-text-black ">
+            <h1 className="subtitle is-5 has-text-centered has-text-black ">
               {settings.contactUsSubtitle}
             </h1>
           </Header>
