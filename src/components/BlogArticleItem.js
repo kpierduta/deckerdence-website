@@ -11,10 +11,10 @@ const Section = styled.div`
 const BlogArticleItem = ({ title, subtitle }) => (
   <Section className="section">
     <div className="container">
-      <h1 className="title is-2 is-spaced is-uppercase has-text-centered">
+      <h1 className="title is-4 is-spaced is-uppercase has-text-centered">
         {title}
       </h1>
-      <p className="subtitle is-4 has-text-centered">{subtitle}</p>
+      <p className="subtitle is-5 has-text-centered">{subtitle}</p>
     </div>
   </Section>
 );

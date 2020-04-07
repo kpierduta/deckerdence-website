@@ -44,7 +44,7 @@ const BlogsWrapper = styled.div`
 const Section = styled.div`
   background-color: #e2e3e4;
   h1 {
-    padding-bottom: 2.5rem;
+    padding-bottom: 2rem;
   }
 `;
 
