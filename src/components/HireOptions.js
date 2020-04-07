@@ -9,11 +9,11 @@ const Section = styled.div`
   @media screen and (max-width: 768px) {
     background-size: cover;
   }
-  .has-text-white {
+  /* .has-text-white {
     color: ${props => props.textColor} !important ;
-  }
-  h1 {
-    padding: 2rem 0 0 0;
+  } */
+  h2 {
+    padding: 2rem 0rem 2rem 0rem;
   }
 `;
 
@@ -32,15 +32,15 @@ const HireOptions = ({
     <div className="container">
       <div className="columns">
         <div className="column has-text-centered">
-          <h2 className="is-spaced is-size-3 has-text-white is-size-6-mobile">
+          <h1 className="title is-3 has-text-black has-text-weight-normal">
             {title}
-          </h2>
-          <h1 className="subtitle is-1 has-text-weight-bold has-text-white is-size-5-mobile">
-            {middleText}
           </h1>
-          <h2 className="subtitle is-size-3 has-text-white is-size-6-mobile">
-            {subTitle}
+          <h2 className="title is-1 has-text-black is-size-4-touch">
+            {middleText}
           </h2>
+          <h1 className="subtitle is-3 has-text-weight-bold has-text-black is-size-5-touch">
+            {subTitle}
+          </h1>
         </div>
       </div>
     </div>
