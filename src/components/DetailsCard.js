@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  .card-content {
+  .main {
     background-image: url(/images/events/frame@2x.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    min-height: 58rem;
+    min-height: 45rem;
     padding-top: 8rem;
   }
 `;
@@ -14,11 +14,13 @@ const Section = styled.div`
 const DetailsCard = ({ para }) => (
   <Section className="section column is-6">
     <div className="container">
-      <div className="card-content">
-        <div className="content">
-          <p className="subtitle is-4 has-text-weight-normal has-text-centered has-text-black">
-            {para}
-          </p>
+      <div className="main">
+        <div className="card-content">
+          <div className="content">
+            <p className="subtitle is-5 has-text-centered has-text-black">
+              {para}
+            </p>
+          </div>
         </div>
       </div>
     </div>

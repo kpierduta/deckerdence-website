@@ -32,10 +32,10 @@ const VenueSection = ({ frame, alt, text, frameBgImage, flex, color }) => (
       <div className="columns is-vcentered is-desktop">
         <div className="column is-5-desktop">
           <ImageWrapper color={color}>
-            <figure className="image">
+            <figure className="image is-2by1">
               <img src={frame} alt={alt} />
             </figure>
-            <p className="title is-4 text has-text-centered">{text}</p>
+            <p className="title is-5 text has-text-centered">{text}</p>
           </ImageWrapper>
         </div>
       </div>

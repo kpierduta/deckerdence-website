@@ -25,10 +25,8 @@ const Stages = ({ title, subtitle, image }) => (
           </figure>
         </ImageWrapper>
       </div>
-      <p className="title is-size-3 is-size-4-mobile has-text-weight-normal is-spaced has-text-centered">
-        {title}
-      </p>
-      <p className="subtitle is-4 is-size-5-mobile has-text-weight-normal has-text-centered">
+      <h2 className="title is-4 is-spaced has-text-centered">{title}</h2>
+      <p className="subtitle is-5 has-text-weight-normal has-text-centered">
         {subtitle}
       </p>
     </div>

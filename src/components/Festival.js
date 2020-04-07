@@ -1,18 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import FestivalIcon from './FestivalIcon';
 
-const Section = styled.div`
-  h1 {
-    padding: 2rem 0;
-  }
-`;
-
 const Festival = ({ data }) => (
-  <Section className="section">
+  <section className="section">
     <div className="container">
-      <h1 className="title is-2 has-text-weight-normal has-text-centered">
+      <h1 className="title is-4 has-text-centered">
         {data.festival.mainHeading}
       </h1>
       <div className="columns is-multiline is-variable is-5">
@@ -23,11 +16,9 @@ const Festival = ({ data }) => (
           />
         ))}
       </div>
-      <h1 className="title is-2 has-text-weight-normal has-text-centered">
-        {data.festival.subtitle}
-      </h1>
+      <h1 className="title is-4 has-text-centered">{data.festival.subtitle}</h1>
     </div>
-  </Section>
+  </section>
 );
 
 export default Festival;

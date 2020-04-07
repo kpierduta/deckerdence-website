@@ -20,7 +20,7 @@ const PageHeading = props => {
               <h1 className="title is-3 has-text-white is-spaced">{title}</h1>
             )}
             {subTitle && (
-              <h1 className="subtitle is-4 has-text-white has-text-centered">
+              <h1 className="subtitle is-4 has-text-white has-text-centered is-family-secondary">
                 {subTitle}
               </h1>
             )}
