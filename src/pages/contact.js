@@ -85,13 +85,15 @@ const Contact = ({ data }) => {
       <PageHeading title={settings.contactUsMainHeading} />
       <section className="section">
         <div className="container">
-          <Header>
-            <h1 className="title is-4 is-spaced has-text-centered has-text-black">
-              {settings.contactUsTitle}
-            </h1>
-            <h1 className="subtitle is-5 has-text-centered has-text-black ">
-              {settings.contactUsSubtitle}
-            </h1>
+          <Header className="columns is-centered">
+            <div className="column is-7">
+              <h1 className="title is-4 is-spaced has-text-centered has-text-black">
+                {settings.contactUsTitle}
+              </h1>
+              <h1 className="subtitle is-5 has-text-centered has-text-black ">
+                {settings.contactUsSubtitle}
+              </h1>
+            </div>
           </Header>
           <div className="columns">
             <ContactUsItem
