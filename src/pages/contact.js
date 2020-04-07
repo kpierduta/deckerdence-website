@@ -99,7 +99,6 @@ const Contact = ({ data }) => {
               icon={settings.firstContactUsItemIcon.asset.url}
               para={settings.firstContactUsItemSubtitle}
             />
-
             <ContactUsItem
               title={settings.secondContactUsItemTitle}
               icon={settings.secondContactUsItemIcon.asset.url}
@@ -123,7 +122,7 @@ const Contact = ({ data }) => {
             </div>
           </div>
         </div>
-        <p className="has-text-white has-text-centered is-size-3">
+        <p className="subtitle is-5 has-text-white has-text-centered">
           Visitors by appointment only
         </p>
       </Section>
