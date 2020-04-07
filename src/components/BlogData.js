@@ -11,13 +11,12 @@ const Wrapper = styled.div`
   display: grid;
   padding: 1rem 3rem;
   .text {
-    line-height: 1.3;
     color: ${props =>
       props.color
         ? props.theme.textColorLite
         : props.theme.backgroundColor} !important;
   }
-  button {
+  .button {
     border: 1px solid ${props => (props.color ? '#000' : '#fff')} !important;
   }
   .has-text-centered {
@@ -36,7 +35,7 @@ const BlogData = ({ title, date, boxImage, color, link }) => (
     <div className="has-text-centered">
       <Link
         to={link}
-        className="button is-normal has-text-weight-semibold text"
+        className="button is-normal title is-5 has-text-weight-normal is-family-secondary text"
         type="button"
       >
         READ MORE
