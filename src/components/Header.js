@@ -25,7 +25,7 @@ const Section = styled.section`
     }
   }
   .navbar-item {
-    font-size: 1.25rem;
+    font-size: 17px;
     color: #000;
     :hover {
       color: ${props => props.theme.darkAccent};
