@@ -58,7 +58,7 @@ const HomePageSection = ({
               </h1>
             )}
             {description && (
-              <p className="subtitle is-6 has-text-white has-text-weight-normal">
+              <p className="subtitle is-5 has-text-white has-text-weight-normal">
                 {description}
               </p>
             )}
