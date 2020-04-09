@@ -40,7 +40,6 @@ export default class HTML extends React.Component {
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
           />
           <script src="/js/scripts.js" />
-          <script src="/js/move.min.js" />
           {/* Add custom css or scripts here */}
 
           {this.props.headComponents}

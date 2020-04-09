@@ -11,7 +11,7 @@ const LinkStyled = styled(Link)`
 
 const FooterOption = ({ option, link }) => (
   <LinkStyled to={link}>
-    <h4 className="subtitle is-6">{option}</h4>
+    <h4 className="subtitle is-5">{option}</h4>
   </LinkStyled>
 );
 
