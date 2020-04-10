@@ -99,6 +99,7 @@ const HireOptionPage = ({ data }) => {
           <div className="columns is-multiline">
             {hire.vehicleFeatures.options.map(options => (
               <BlogCategoryItem
+                // key={options.id}
                 category={options.category}
                 sideImage={options.sideImage}
               />
