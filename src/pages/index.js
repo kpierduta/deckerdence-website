@@ -24,6 +24,7 @@ export const homeQuery = graphql`
       }
       email
       telephone
+      _id
       homeFeatures {
         items {
           hasRight
@@ -57,6 +58,7 @@ const Index = ({ data }) => {
       <HomeHero items={settings} />
       {settings.homeFeatures.items.map(items => (
         <HomePageSection
+          key={items.id}
           flex={items.hasRight}
           button
           title={items.title}
