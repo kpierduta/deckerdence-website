@@ -24,9 +24,9 @@ export const homeQuery = graphql`
       }
       email
       telephone
-      _id
       homeFeatures {
         items {
+          _key
           hasRight
           title
           description
@@ -48,6 +48,7 @@ export const homeQuery = graphql`
 
 const Index = ({ data }) => {
   const settings = data.sanitySiteSettings;
+
   return (
     <Layout>
       <Seo
@@ -58,7 +59,7 @@ const Index = ({ data }) => {
       <HomeHero items={settings} />
       {settings.homeFeatures.items.map(items => (
         <HomePageSection
-          key={items.id}
+          key={items._key}
           flex={items.hasRight}
           button
           title={items.title}
