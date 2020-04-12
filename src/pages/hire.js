@@ -47,6 +47,7 @@ export const hireQuery = graphql`
           slug {
             current
           }
+          _id
           columnReverse
           hireOptionTitle
           hireOptionSubtitle
@@ -103,7 +104,7 @@ const HirePage = ({ data }) => {
         </div>
       </Section>
       {hireOptions.map(items => (
-        <HireOptionItem item={items.node} />
+        <HireOptionItem item={items.node} key={items._id} />
       ))}
     </Layout>
   );

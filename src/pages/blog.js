@@ -23,6 +23,7 @@ export const blogQuery = graphql`
     allSanityBlogPage(sort: { fields: order }) {
       edges {
         node {
+          _id
           order
           isSizeHalf
           hasTextBlack
@@ -64,6 +65,7 @@ const BlogPage = ({ data }) => {
               }
             >
               <BlogData
+                key={items.node._id}
                 color={items.node.hasTextBlack}
                 title={items.node.title}
                 date={items.node.releaseDate}

@@ -126,6 +126,7 @@ export const MainPageQuery = graphql`
       }
       gallery {
         galleryItems {
+          _key
           blackAndWhiteImage {
             asset {
               url
@@ -188,6 +189,7 @@ const MainPage = ({ data }) => {
       <GalleryWrapper className="columns is-variable is-3 is-multiline">
         {galleryImages.map(items => (
           <GalleryItem
+            key={items._key}
             imageColoured={items.blackAndWhiteImage.asset.url}
             imageBw={items.coloredImage.asset.url}
           />

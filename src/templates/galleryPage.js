@@ -21,6 +21,7 @@ export const GalleryPage = graphql`
       galleryTitle
       galleryImages {
         galleryImage {
+          _key
           title
           image {
             asset {
@@ -46,13 +47,17 @@ const galleryPage = ({ data }) => {
       <PageTitle title={page.galleryTitle} />
       <div className="columns is-multiline">
         {page.galleryImages.galleryImage.map(items => (
-          <Testimonials Image={items.image.asset.url} title={items.title} />
+          <Testimonials
+            Image={items.image.asset.url}
+            title={items.title}
+            key={items._key}
+          />
         ))}
       </div>
       <BlackButton
         image="/images/parties/view-more@2x.png"
         alt="Learn More Button"
-        hasWidth="20%"
+        haswidth="20%"
       />
     </Layout>
   );

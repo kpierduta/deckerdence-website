@@ -4,15 +4,15 @@ import { Link } from 'gatsby';
 
 const LinkStyled = styled(Link)`
   img {
-    width: ${props => (props.hasWidth ? props.hasWidth : '100%')};
+    width: ${props => (props.haswidth ? props.haswidth : '100%')};
   }
   figure {
     margin: 0 auto;
   }
 `;
 
-const Button = ({ image, alt, hasWidth }) => (
-  <LinkStyled to="/" hasWidth={hasWidth}>
+const Button = ({ image, alt, haswidth }) => (
+  <LinkStyled to="/" haswidth={haswidth}>
     <figure className="image-button">
       <img src={image} alt={alt} />
     </figure>

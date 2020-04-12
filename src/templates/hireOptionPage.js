@@ -31,6 +31,7 @@ export const hireOptionPage = graphql`
       hireHeroSubtitle
       vehicleFeatures {
         options {
+          _key
           sideImage
           category
         }
@@ -47,6 +48,7 @@ export const hireOptionPage = graphql`
       }
       information {
         item {
+          _key
           title
           subtitle
         }
@@ -58,6 +60,7 @@ export const hireOptionPage = graphql`
       }
       vehicleFeature {
         items {
+          _key
           hasFrameRight
           hasTextWhite
           title
@@ -99,7 +102,7 @@ const HireOptionPage = ({ data }) => {
           <div className="columns is-multiline">
             {hire.vehicleFeatures.options.map(options => (
               <BlogCategoryItem
-                // key={options.id}
+                key={options._key}
                 category={options.category}
                 sideImage={options.sideImage}
               />
@@ -121,7 +124,11 @@ const HireOptionPage = ({ data }) => {
         <div className="container">
           <div className="columns is-multiline is-variable is-4">
             {hire.information.item.map(items => (
-              <TileItem title={items.title} subtitle={items.subtitle} />
+              <TileItem
+                title={items.title}
+                subtitle={items.subtitle}
+                key={items._key}
+              />
             ))}
           </div>
         </div>
@@ -129,6 +136,7 @@ const HireOptionPage = ({ data }) => {
       <Diagram avatar={hire.hireOptionDiagram.asset.url} />
       {hire.vehicleFeature.items.map(item => (
         <VenueSection
+          key={items._key}
           flex={item.hasFrameRight}
           color={item.hasTextWhite}
           text={item.title}

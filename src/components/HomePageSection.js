@@ -66,7 +66,7 @@ const HomePageSection = ({
               <Button
                 image="/images/learn-more@2x.png"
                 alt="Learn More Button"
-                hasWidth="50%"
+                haswidth="50%"
               />
             )}
           </div>

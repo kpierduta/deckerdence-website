@@ -12,6 +12,7 @@ export const footerQuery = graphql`
           slug {
             current
           }
+          _id
           footerTitle
         }
       }
@@ -22,6 +23,7 @@ export const footerQuery = graphql`
           slug {
             current
           }
+          _id
           footerTitle
         }
       }
@@ -100,6 +102,7 @@ const Footer = () => (
                   <h3 className="title is-5">HIRE OPTIONS</h3>
                   {hire.edges.map(items => (
                     <FooterOption
+                      key={items.node._id}
                       option={items.node.footerTitle}
                       link={`hire/${items.node.slug.current}`}
                     />
@@ -109,6 +112,7 @@ const Footer = () => (
                   <h3 className="title is-5">THE GALLERY</h3>
                   {gallery.edges.map(items => (
                     <FooterOption
+                      key={items.node._id}
                       option={items.node.footerTitle}
                       link={`gallery/${items.node.slug.current}`}
                     />
