@@ -136,7 +136,7 @@ const HireOptionPage = ({ data }) => {
       <Diagram avatar={hire.hireOptionDiagram.asset.url} />
       {hire.vehicleFeature.items.map(item => (
         <VenueSection
-          key={items._key}
+          key={item._key}
           flex={item.hasFrameRight}
           color={item.hasTextWhite}
           text={item.title}
