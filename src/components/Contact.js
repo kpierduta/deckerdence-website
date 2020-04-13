@@ -15,7 +15,7 @@ const Contact = () => (
       <Diagram avatar="/images/hire/icon@2x.png" />
     </div>
     <div className="columns is-centered">
-      <div className="column is-6">
+      <div className="column is-6 has-text-centered">
         <ContactForm />
       </div>
     </div>

@@ -84,7 +84,7 @@ class ContactForm extends React.Component {
             By submitting this form you agree to our contact terms and
             conditions.
           </p>
-          <div className="has-text-centered-touch">
+          <div>
             <button type="submit" className="button is-danger title is-5 ">
               <span className="is-size-5-touch is-uppercase">Download</span>
             </button>

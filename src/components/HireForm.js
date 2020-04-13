@@ -30,7 +30,7 @@ const HireForm = ({ para, avatar }) => (
               <img className="is-rounded" src={avatar} alt="" />
             </figure>
           </div>
-          <div className="column is-vcentered is-desktop">
+          <div className="column is-vcentered is-desktop has-text-centered-touch">
             <ContactForm />
           </div>
         </div>
