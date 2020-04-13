@@ -31,7 +31,10 @@ const HireForm = ({ para, avatar }) => (
             </figure>
           </div>
           <div className="column is-vcentered is-desktop has-text-centered-touch">
-            <ContactForm />
+            <ContactForm
+              pera="By submitting this form you agree to our contact terms and
+              conditions."
+            />
           </div>
         </div>
       </div>

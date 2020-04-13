@@ -16,7 +16,7 @@ const Contact = () => (
     </div>
     <div className="columns is-centered">
       <div className="column is-6 has-text-centered">
-        <ContactForm />
+        <ContactForm pera="asssssssssssssc" />
       </div>
     </div>
   </Section>

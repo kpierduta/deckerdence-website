@@ -53,6 +53,7 @@ class ContactForm extends React.Component {
 
   render() {
     const { email, phone } = this.state;
+    const { pera } = this.props;
     return (
       <Section className="section">
         <form data-netlify="true" name="contact" onSubmit={this.handleSubmit}>
@@ -80,10 +81,7 @@ class ContactForm extends React.Component {
               />
             </div>
           </div>
-          <p className="subtitle is-5 has-text-centered-touch">
-            By submitting this form you agree to our contact terms and
-            conditions.
-          </p>
+          <p className="subtitle is-5 has-text-centered-touch">{pera}</p>
           <div>
             <button type="submit" className="button is-danger title is-5 ">
               <span className="is-size-5-touch is-uppercase">Download</span>
