@@ -1,11 +1,7 @@
 import React from 'react';
 
-import styled from 'styled-components';
-
-const Section = styled.div``;
-
 const Diagram = ({ avatar, largeImage }) => (
-  <Section className="section">
+  <section className="section">
     <div className="container">
       <div className="columns is-centered">
         <div className="column is-6">
@@ -15,7 +11,7 @@ const Diagram = ({ avatar, largeImage }) => (
         </div>
       </div>
     </div>
-  </Section>
+  </section>
 );
 
 export default Diagram;

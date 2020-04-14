@@ -11,6 +11,8 @@ const Section = styled.div`
     display: block;
     margin: 0 0 1.5rem;
     background: transparent;
+    outline: 1px dotted ${props => props.theme.borderColor};
+    outline-offset: 5px;
     ::placeholder {
       color: ${props => props.theme.lightShades} !important ;
     }
