@@ -22,6 +22,7 @@ const StagesSection = ({ data }) => (
       <div className="columns">
         {data.simpleStages.item.map(items => (
           <Stages
+            key={items._key}
             title={items.title}
             subtitle={items.subTitle}
             image={items.avatar.asset.url}

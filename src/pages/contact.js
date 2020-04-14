@@ -43,6 +43,7 @@ export const contactUsQuery = graphql`
         mainHeading
         subtitle
         sliderItem {
+          _key
           hasTextBlack
           title
           name

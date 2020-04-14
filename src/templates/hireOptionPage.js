@@ -119,7 +119,9 @@ const HireOptionPage = ({ data }) => {
         subtitle="By submitting this form you agree to our contact conditions."
         mainSubtitle="mainSubtitle"
       />
+
       <HireCardSlider data={hire} />
+
       <section className="section">
         <div className="container">
           <div className="columns is-multiline is-variable is-4">
@@ -133,7 +135,9 @@ const HireOptionPage = ({ data }) => {
           </div>
         </div>
       </section>
+
       <Diagram avatar={hire.hireOptionDiagram.asset.url} />
+
       {hire.vehicleFeature.items.map(item => (
         <VenueSection
           key={item._key}

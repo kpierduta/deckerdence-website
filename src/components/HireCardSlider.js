@@ -4,13 +4,6 @@ import styled from 'styled-components';
 import Slider from 'react-slick';
 import HireCard from './HireCard';
 
-const Wrapper = styled.div`
-  background-color: #fff;
-  :focus {
-    outline: none !important;
-  }
-`;
-
 const Section = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,6 +32,12 @@ const Section = styled.div`
     left: 0px !important;
     background-image: url('/images/hire/slider-right-arrow.png');
   }
+  .wrapper {
+    background-color: #fff;
+    :focus {
+      outline: none !important;
+    }
+  }
 `;
 
 const HireCardSlider = ({ data }) => {
@@ -49,6 +48,7 @@ const HireCardSlider = ({ data }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
     <Section className="section is-medium">
       <div className="container background">
@@ -56,15 +56,16 @@ const HireCardSlider = ({ data }) => {
           <div className="column is-8">
             <Slider {...settings}>
               {data.sliderFeatures.sliderItem.map(items => (
-                <Wrapper>
+                <div className="wrapper">
                   <HireCard
+                    key={items._key}
                     textBlack
                     title={items.title}
                     subtitle={items.description}
                     description={items.name}
                     date={items.sliderDate}
                   />
-                </Wrapper>
+                </div>
               ))}
             </Slider>
           </div>

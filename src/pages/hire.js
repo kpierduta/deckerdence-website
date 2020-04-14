@@ -104,7 +104,7 @@ const HirePage = ({ data }) => {
         </div>
       </Section>
       {hireOptions.map(items => (
-        <HireOptionItem item={items.node} key={items._id} />
+        <HireOptionItem item={items.node} key={items.node._id} />
       ))}
     </Layout>
   );

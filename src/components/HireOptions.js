@@ -9,9 +9,6 @@ const Section = styled.div`
   @media screen and (max-width: 768px) {
     background-size: cover;
   }
-  /* .has-text-white {
-    color: ${props => props.textColor} !important ;
-  } */
   h2 {
     padding: 2rem 0rem 2rem 0rem;
   }

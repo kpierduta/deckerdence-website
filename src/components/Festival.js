@@ -11,6 +11,7 @@ const Festival = ({ data }) => (
       <div className="columns is-multiline is-variable is-5">
         {data.festival.item.map(items => (
           <FestivalIcon
+            key={items._key}
             image={items.avatar.asset.url}
             alternative="festivals"
           />

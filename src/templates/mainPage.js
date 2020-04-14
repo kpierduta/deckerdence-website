@@ -47,6 +47,7 @@ export const MainPageQuery = graphql`
       simpleStages {
         mainHeading
         item {
+          _key
           title
           subTitle
           avatar {
@@ -56,18 +57,7 @@ export const MainPageQuery = graphql`
           }
         }
       }
-      simpleStages {
-        mainHeading
-        item {
-          title
-          subTitle
-          avatar {
-            asset {
-              url
-            }
-          }
-        }
-      }
+
       firstSectionHasFrameRight
       firstSectionHasTextWhite
       firstSectionTitle
@@ -86,6 +76,7 @@ export const MainPageQuery = graphql`
         mainHeading
         subtitle
         item {
+          _key
           avatar {
             asset {
               url
@@ -162,7 +153,7 @@ const MainPage = ({ data }) => {
       <StagesSection data={page} />
       <VenueSection
         flex={page.firstSectionHasFrameRight}
-        color={page.firstSectionHasTextWhite}
+        textColor={page.firstSectionHasTextWhite}
         frame={page.firstSectionFrameImage.asset.url}
         text={page.firstSectionTitle}
         alt={page.firstSectionBgImageAlt}
@@ -171,7 +162,7 @@ const MainPage = ({ data }) => {
       <Festival data={page} />
       <VenueSection
         flex={page.secondSectionHasFrameRight}
-        color={page.secondSectionHasTextWhite}
+        textColor={page.secondSectionHasTextWhite}
         frame={page.secondSectionFrameImage.asset.url}
         text={page.secondSectionTitle}
         alt={page.secondSectionBgImageAlt}
@@ -179,7 +170,7 @@ const MainPage = ({ data }) => {
       />
       <DetailsCardSection data={page} />
       <VenueSection
-        color={page.thirdSectionHasTextWhite}
+        textColor={page.thirdSectionHasTextWhite}
         flex={page.thirdSectionHasFrameRight}
         frame={page.thirdSectionFrameImage.asset.url}
         text={page.thirdSectionTitle}

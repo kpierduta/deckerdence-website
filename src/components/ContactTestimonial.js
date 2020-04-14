@@ -42,11 +42,10 @@ const Section = styled.div`
     left: 0px;
     background-image: url('/images/contacts/arrow-right@2x.png');
   }
-`;
-
-const Wrapper = styled.div`
-  :focus {
-    outline: none !important;
+  .wrapper {
+    :focus {
+      outline: none !important;
+    }
   }
 `;
 
@@ -77,15 +76,16 @@ const ContactTestimonial = ({ data }) => {
           <div className="column is-8">
             <Slider {...settings}>
               {data.contactUsSlider.sliderItem.map(items => (
-                <Wrapper>
+                <div className="wrapper">
                   <HireCard
+                    key={items._key}
                     color={items.hasTextBlack}
                     title={items.title}
                     subtitle={items.description}
                     description={items.name}
                     date={items.sliderDate}
                   />
-                </Wrapper>
+                </div>
               ))}
             </Slider>
           </div>

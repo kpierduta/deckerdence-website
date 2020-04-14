@@ -22,7 +22,7 @@ const ImageWrapper = styled.div`
   }
 `;
 
-const VenueSection = ({ frame, alt, text, frameBgImage, flex, color }) => (
+const VenueSection = ({ frame, alt, text, frameBgImage, flex, textColor }) => (
   <Section
     className="hero section is-block is-relative  is-large"
     frameBgImage={frameBgImage}
@@ -31,7 +31,7 @@ const VenueSection = ({ frame, alt, text, frameBgImage, flex, color }) => (
     <div className="container">
       <div className="columns is-vcentered is-desktop">
         <div className="column is-5-desktop">
-          <ImageWrapper color={color}>
+          <ImageWrapper textColor={textColor}>
             <figure className="image is-2by1">
               <img src={frame} alt={alt} />
             </figure>
