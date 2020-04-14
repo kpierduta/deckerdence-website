@@ -58,7 +58,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   });
   result.data.allSanityMainPage.edges.forEach(({ node }) => {
     createPage({
-      path: node.slug.current,
+      path: `/vintage-bus-bar-hire/${node.slug.current}`,
       component: path.resolve(`./src/templates/mainPage.js`),
       context: {
         slug: node.slug.current,
