@@ -11,7 +11,7 @@ const Section = styled.section`
   .navbar-brand {
     margin-right: 20px;
     .navbar-item img {
-      max-height: 5.75rem;
+      max-height: 8rem;
       @media screen and (max-width: 768px) {
         max-height: 3.75rem;
       }

@@ -56,6 +56,9 @@ export const towBarQuery = graphql`
       towBarSeoTitle
       towBarSeoKeywords
       towBarSeoMetaDescription
+      towBarSlug {
+        current
+      }
       towBarMainTitle
       towBarMainSubtitle
       towBarFrameTitle
