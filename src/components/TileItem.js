@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   .box {
     border-radius: 0;
+    width: 100%;
   }
 `;
 

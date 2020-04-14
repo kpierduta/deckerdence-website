@@ -136,7 +136,7 @@ export const MainPageQuery = graphql`
 
 const MainPage = ({ data }) => {
   const page = data.sanityMainPage;
-  const [length, setLength] = useState(5);
+  const [length, setLength] = useState(6);
   const galleryImages = page.gallery.galleryItems.slice(0, length);
   return (
     <Layout>
