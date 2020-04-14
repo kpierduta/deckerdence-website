@@ -136,7 +136,7 @@ const HireOptionPage = ({ data }) => {
         </div>
       </section>
 
-      <Diagram avatar={hire.hireOptionDiagram.asset.url} />
+      <Diagram largeImage avatar={hire.hireOptionDiagram.asset.url} />
 
       {hire.vehicleFeature.items.map(item => (
         <VenueSection
