@@ -92,7 +92,11 @@ const HireOptionItem = ({ item, onMouseOver }) => (
           <p className="subtitle is-5 has-text-weight-medium">
             {item.hireOptionDescription}
           </p>
-          <h3 className="title is-5 price">Hire from{item.hireOptionPrice}</h3>
+
+          <h3 className="title is-5 price">
+            {'  '}Hire from{'  '}
+            {item.hireOptionPrice}
+          </h3>
           <Link
             to={`/hire/${item.slug.current}`}
             type="button"
