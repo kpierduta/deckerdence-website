@@ -17,6 +17,7 @@ const Contact = () => (
     <div className="columns is-centered">
       <div className="column is-6 has-text-centered">
         <ContactForm
+          dottedBorder
           pera="By submitting this form you agree to our contact terms and
           conditions."
         />

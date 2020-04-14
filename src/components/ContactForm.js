@@ -11,8 +11,8 @@ const Section = styled.div`
     display: block;
     margin: 0 0 1.5rem;
     background: transparent;
-    outline: 1px dotted ${props => props.theme.borderColor};
-    outline-offset: 5px;
+    outline: ${props => (props.dottedBorder ? 'null' : '1px dotted #f7f7f7')};
+    outline-offset: ${props => (props.dottedBorder ? 'null' : '5px')};
     ::placeholder {
       color: ${props => props.theme.lightShades} !important ;
     }
@@ -54,9 +54,9 @@ class ContactForm extends React.Component {
 
   render() {
     const { email, phone } = this.state;
-    const { pera } = this.props;
+    const { pera, dottedBorder } = this.props;
     return (
-      <Section className="section">
+      <Section className="section" dottedBorder={dottedBorder}>
         <form data-netlify="true" name="contact" onSubmit={this.handleSubmit}>
           <div className="field">
             <div className="control">
