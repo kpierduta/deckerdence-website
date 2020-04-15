@@ -38,7 +38,7 @@ const PartiesHero = ({ title, partyBgImage }) => (
           <figure className="">
             <img src="/images/parties/t2x.png" alt="frame" />
           </figure>
-          <h1 className="title is-3 is-size-5-touch has-text-white centered">
+          <h1 className="title is-2 is-size-5-touch has-text-white centered">
             {title}
           </h1>
         </div>
