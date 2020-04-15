@@ -116,19 +116,11 @@ export const MainPageQuery = graphql`
         }
       }
       gallery {
-        galleryItems {
-          _key
-          blackAndWhiteImage {
-            asset {
-              url
-            }
-          }
-          coloredImage {
-            asset {
-              url
-            }
-          }
+        _key
+        asset {
+          url
         }
+        alt
       }
     }
   }
@@ -136,8 +128,8 @@ export const MainPageQuery = graphql`
 
 const MainPage = ({ data }) => {
   const page = data.sanityMainPage;
-  const [length, setLength] = useState(6);
-  const galleryImages = page.gallery.galleryItems.slice(0, length);
+  // const [length, setLength] = useState(6);
+  // const galleryImages = page.gallery.galleryItems.slice(0, length);
   return (
     <Layout>
       <Seo
@@ -178,24 +170,20 @@ const MainPage = ({ data }) => {
         frameBgImage={page.thirdSectionBackgroundImage.asset.url}
       />
       <GalleryWrapper className="columns is-variable is-3 is-multiline">
-        {galleryImages.map(items => (
+        {page.gallery.map(items => (
           <GalleryItem
+            coloredImage={items.asset.url}
             key={items._key}
-            imageColoured={items.blackAndWhiteImage.asset.url}
-            imageBw={items.coloredImage.asset.url}
+            alt={items.alt}
           />
         ))}
       </GalleryWrapper>
-      {page.gallery.galleryItems.length !== galleryImages.length ? (
-        <Button
-          type="button"
-          onClick={() => setLength(page.gallery.galleryItems.length)}
-        >
-          <figure className="image-button">
-            <img src="/images/view-more-black.png" alt="" />
-          </figure>
-        </Button>
-      ) : null}
+      <Button type="button">
+        <figure className="image-button">
+          <img src="/images/view-more-black.png" alt="" />
+        </figure>
+      </Button>
+
       <Contact />
     </Layout>
   );

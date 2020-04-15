@@ -2,25 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  .is-5by4 {
-    width: 100%;
-    height: 100%;
+  img {
+    filter: gray;
+    filter: grayscale(1);
+    transition: all 0.8s ease-in-out;
   }
-  .is-5by4 .img-top {
-    display: none;
-    position: absolute;
-    z-index: 99;
-  }
-  .is-5by4:hover .img-top {
-    display: inline;
+
+  img:hover {
+    filter: none;
+    filter: grayscale(0);
   }
 `;
 
-const GalleryItem = ({ onMouseOver, imageBw, imageColoured }) => (
+const GalleryItem = ({ coloredImage, alt }) => (
   <Section className="column is-4">
     <figure className="image is-5by4">
-      <img src={imageColoured} onFocus={onMouseOver} alt="" />
-      <img src={imageBw} className="img-top" alt="" />
+      <img src={coloredImage} alt={alt} />
     </figure>
   </Section>
 );

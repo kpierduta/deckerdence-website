@@ -33,20 +33,16 @@ const Columns = styled.div`
   margin-top: 1rem;
   .column {
     margin-top: -1rem;
-    .is-5by4 {
-      width: 100%;
-      height: 100%;
-    }
+  }
+  img {
+    filter: gray;
+    filter: grayscale(1);
+    transition: all 0.8s ease-in-out;
+  }
 
-    .is-5by4 .img-top {
-      display: none;
-
-      position: absolute;
-      z-index: 99;
-    }
-    .is-5by4:hover .img-top {
-      display: inline;
-    }
+  img:hover {
+    filter: none;
+    filter: grayscale(0);
   }
 `;
 
@@ -70,23 +66,15 @@ export const towBarQuery = graphql`
         }
       }
       towBarGallery {
-        galleryItems {
-          blackAndWhiteImage {
-            asset {
-              url
-            }
-          }
-          coloredImage {
-            asset {
-              url
-            }
-          }
+        alt
+        asset {
+          url
         }
       }
     }
   }
 `;
-const TowBarPage = ({ data, onMouseOver }) => {
+const TowBarPage = ({ data }) => {
   const page = data.sanitySiteSettings;
   return (
     <Layout>
@@ -127,19 +115,10 @@ const TowBarPage = ({ data, onMouseOver }) => {
         </div>
       </Section>
       <Columns className="columns is-multiline is-variable is-1">
-        {page.towBarGallery.galleryItems.map(items => (
+        {page.towBarGallery.map(items => (
           <div className="column is-6">
             <figure className="image is-5by4">
-              <img
-                src={items.blackAndWhiteImage.asset.url}
-                onFocus={onMouseOver}
-                alt="coloredImage"
-              />
-              <img
-                src={items.coloredImage.asset.url}
-                className="img-top"
-                alt="blackImage"
-              />
+              <img src={items.asset.url} alt={items.alt} />
             </figure>
           </div>
         ))}
