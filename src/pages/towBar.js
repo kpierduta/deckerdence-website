@@ -19,7 +19,6 @@ const Section = styled.div`
     justify-content: center;
     display: grid;
     padding: 3rem 12rem;
-    /* margin-top: 0.5rem !important; */
     @media screen and (max-width: 768px) {
       padding: 0rem 3rem;
     }
