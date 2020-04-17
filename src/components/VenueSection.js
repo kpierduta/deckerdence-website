@@ -18,7 +18,7 @@ const Section = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
   p {
-    color: ${props => (props.color ? '#2c2c2a' : '#fff')} !important;
+    color: ${props => (props.color ? '#fff' : '#2c2c2a')} !important;
   }
 `;
 
@@ -31,7 +31,7 @@ const VenueSection = ({ frame, alt, text, frameBgImage, flex, textColor }) => (
     <div className="container">
       <div className="columns is-vcentered is-desktop">
         <div className="column is-5-desktop">
-          <ImageWrapper textColor={textColor}>
+          <ImageWrapper color={textColor}>
             <figure className="image is-2by1">
               <img src={frame} alt={alt} />
             </figure>
