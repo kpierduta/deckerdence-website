@@ -22,11 +22,15 @@ const HireCard = ({
   bgColor,
   textBlack,
   date,
+  position,
 }) => (
   <Section className="card" bgColor={bgColor} textBlack={textBlack}>
     <div className="card-content">
-      <h1 className="title is-4  is-spaced  has-text-centered is-uppercase">
+      <h1 className="title is-4 is-spaced  has-text-centered is-uppercase">
         {title}
+      </h1>
+      <h1 className="subtitle is-6 has-text-white has-text-centered">
+        {position}
       </h1>
       <p className="subtitle is-5  is-size-6-mobile has-text-centered">
         {subtitle}
