@@ -18,7 +18,7 @@ const Section = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
   p {
-    color: ${props => (props.color ? '#fff' : '#000')} !important;
+    color: ${props => (props.color ? '#2c2c2a' : '#fff')} !important;
   }
 `;
 
