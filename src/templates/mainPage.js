@@ -182,7 +182,6 @@ const MainPage = ({ data }) => {
           <img src="/images/view-more-black.png" alt="" />
         </figure>
       </Button>
-
       <Contact />
     </Layout>
   );

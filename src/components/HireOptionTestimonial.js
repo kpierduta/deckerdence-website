@@ -14,6 +14,10 @@ const Section = styled.section`
     width: 100%;
     height: 100%;
   }
+  .title,
+  .subtitle {
+    color: ${props => (props.flex ? '#ffff' : '#2c2c2a')} !important;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -35,7 +39,6 @@ const Wrapper = styled.div`
 
 const HireOptionTestimonial = ({
   flex,
-  textColor,
   image,
   title,
   position,
@@ -56,7 +59,7 @@ const HireOptionTestimonial = ({
         <Wrapper className="column is-7 has-text-centered">
           <div className="container">
             <HireCard
-              textBlack={textColor}
+              textBlack={flex}
               title={title}
               position={position}
               subtitle={pera}
