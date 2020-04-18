@@ -55,8 +55,8 @@ const HireOptionTestimonial = ({
             <img src={image} alt={alt} />
           </figure>
         </div>
-        <div className="column is-1" />
-        <Wrapper className="column is-7 has-text-centered" flex={flex}>
+        <div className="column is-2 is-desktop" />
+        <Wrapper className="column is-6 has-text-centered" flex={flex}>
           <div className="container">
             <HireCard
               textBlack={flex}
