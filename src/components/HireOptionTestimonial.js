@@ -23,10 +23,10 @@ const Section = styled.section`
 const Wrapper = styled.div`
   background: ${props =>
     `url(${
-      props.background
-        ? 'images/contacts/slider-bg.png'
-        : '/images/contacts/slider-bg.png'
-    }) `};
+      props.flex
+        ? '/images/contacts/slider-bg.png'
+        : '/images/contacts/blackFrame.png'
+    })`};
 
   background-size: 100% 90%;
   background-repeat: no-repeat;
@@ -56,7 +56,7 @@ const HireOptionTestimonial = ({
           </figure>
         </div>
         <div className="column is-1" />
-        <Wrapper className="column is-7 has-text-centered">
+        <Wrapper className="column is-7 has-text-centered" flex={flex}>
           <div className="container">
             <HireCard
               textBlack={flex}
