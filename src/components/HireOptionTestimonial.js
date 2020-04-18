@@ -27,11 +27,9 @@ const Wrapper = styled.div`
         ? '/images/contacts/slider-bg.png'
         : '/images/contacts/blackFrame.png'
     })`};
-
   background-size: 100% 90%;
   background-repeat: no-repeat;
   background-position: center;
-
   .container h1:last-child {
     padding: 0 0 3rem;
   }
