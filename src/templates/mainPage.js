@@ -170,16 +170,12 @@ const MainPage = ({ data }) => {
       />
       <GalleryWrapper className="columns is-variable is-3 is-multiline">
         {page.gallery.map(items => (
-          <GalleryItem
-            coloredImage={items.asset.url}
-            key={items._key}
-            alt={items.alt}
-          />
+          <GalleryItem src={items.asset.url} key={items._key} alt={items.alt} />
         ))}
       </GalleryWrapper>
       <Button type="button">
         <figure className="image-button">
-          <img src="/images/view-more-black.png" alt="" />
+          <img src="/images/view-more-black.png" alt="button" />
         </figure>
       </Button>
       <Contact />

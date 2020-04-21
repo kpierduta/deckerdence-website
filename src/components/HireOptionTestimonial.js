@@ -50,7 +50,7 @@ const HireOptionTestimonial = ({
       <div className="columns">
         <div className="column is-4">
           <figure className="image is-square">
-            <img src={image} alt={alt} />
+            <img src={image} className="is-rounded" alt={alt} />
           </figure>
         </div>
         <div className="column is-2 is-desktop" />

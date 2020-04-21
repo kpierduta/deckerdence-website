@@ -1,4 +1,5 @@
 import React from 'react';
+import ModalImage from 'react-modal-image';
 import styled from 'styled-components';
 
 const Section = styled.div`
@@ -12,13 +13,25 @@ const Section = styled.div`
     filter: none;
     filter: grayscale(0);
   }
+  .modal_small_image {
+    width: 100% !important;
+    height: 370px !important;
+  }
+  /* .__react_modal_image__medium_img {
+    max-width: 98%;
+    max-height: 98%;
+  } */
 `;
 
-const GalleryItem = ({ coloredImage, alt }) => (
+const GalleryItem = ({ src, alt }) => (
   <Section className="column is-4">
-    <figure className="image is-5by4">
-      <img src={coloredImage} alt={alt} />
-    </figure>
+    <ModalImage
+      large={src}
+      alt={alt}
+      small={src}
+      className="modal_small_image"
+      hideDownload
+    />
   </Section>
 );
 
