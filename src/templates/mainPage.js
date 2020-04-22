@@ -56,7 +56,6 @@ export const MainPageQuery = graphql`
           }
         }
       }
-
       firstSectionHasFrameRight
       firstSectionHasTextWhite
       firstSectionTitle

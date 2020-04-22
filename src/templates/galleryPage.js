@@ -23,6 +23,7 @@ export const GalleryPage = graphql`
         galleryImage {
           _key
           title
+          alternative
           image {
             asset {
               url
@@ -48,9 +49,10 @@ const galleryPage = ({ data }) => {
       <div className="columns is-multiline">
         {page.galleryImages.galleryImage.map(items => (
           <Testimonials
+            key={items._key}
             src={items.image.asset.url}
             title={items.title}
-            key={items._key}
+            alt={items.alternative}
           />
         ))}
       </div>

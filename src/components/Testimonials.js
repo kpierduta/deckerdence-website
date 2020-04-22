@@ -33,12 +33,12 @@ const Section = styled.div`
   }
 `;
 
-const Testimonials = ({ src, title }) => {
+const Testimonials = ({ src, title, alt }) => {
   const [active, setActive] = useState(false);
   return (
     <Section className="column is-4">
       <div className="main" onClick={() => setActive(true)}>
-        <img src={src} alt="" />
+        <img src={src} alt={alt} />
         <div className="overlay">
           <div className="text">
             <h1 className="title is-4 has-text-white has-text-centered">
@@ -50,8 +50,8 @@ const Testimonials = ({ src, title }) => {
       <div className={active ? 'modal is-active' : 'modal is-close'}>
         <div className="modal-background" />
         <div className="modal-content">
-          <p className="image is-5by4">
-            <img src={src} alt="alt" />
+          <p className="image is-5by4 ">
+            <img src={src} alt={alt} />
           </p>
         </div>
         <button
