@@ -38,7 +38,9 @@ const Testimonials = ({ src, title, alt }) => {
   return (
     <Section className="column is-4">
       <div className="main" onClick={() => setActive(true)}>
-        <img src={src} alt={alt} />
+        <figure className="image is-5by4">
+          <img src={src} alt={alt} />
+        </figure>
         <div className="overlay">
           <div className="text">
             <h1 className="title is-4 has-text-white has-text-centered">
