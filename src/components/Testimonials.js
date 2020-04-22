@@ -55,6 +55,19 @@ const Testimonials = ({ src, title }) => (
         </div>
       </div>
     </div>
+    <div className="modal is-active">
+      <div className="modal-background" />
+      <div className="modal-content">
+        <p className="image is-4by3">
+          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
+        </p>
+      </div>
+      <button
+        type="button"
+        className="modal-close is-large"
+        aria-label="close"
+      />
+    </div>
   </Section>
 );
 
