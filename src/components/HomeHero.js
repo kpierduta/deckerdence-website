@@ -7,7 +7,14 @@ const Section = styled.section`
   background-position: center;
   background-size: 100% 100%;
   position: relative;
-  @media screen and (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
+    span,
+    h1 {
+      font-size: 14px !important;
+      margin: 0;
+    }
+  }
+  @media screen and (max-width: 767px) {
     background-size: 100% 100%;
     height: 24rem;
   }
@@ -17,7 +24,7 @@ const Section = styled.section`
     height: 1330px;
   }
   .columns.is-centered {
-    margin-top: 30rem;
+    margin-top: 23rem;
     @media screen and (max-width: 768px) {
       margin-top: 0;
     }
@@ -26,20 +33,20 @@ const Section = styled.section`
     }
   }
   figure {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
   }
 
   .axis:hover .move-ne {
-    transform: translate(200px, -150px);
+    transform: translate(150px, -90px);
     @media (max-width: 767px) {
-      transform: translate(30px, -150px);
+      transform: translate(30px, -40px);
     }
   }
   .axis:hover .move-two {
-    transform: translate(-200px, -150px);
+    transform: translate(-150px, -90px);
     @media (max-width: 767px) {
-      transform: translate(-30px, -150px);
+      transform: translate(-30px, -50px);
     }
   }
   .object {
@@ -51,7 +58,7 @@ const Container = styled.div`
   img {
     width: 5rem;
     position: absolute;
-    bottom: 12rem;
+    bottom: 9rem;
     @media only screen and (max-width: 2500px) and (min-width: 1700px) {
       bottom: 16rem;
     }
@@ -112,19 +119,20 @@ const HomeHero = ({ items }) => {
         </figure>
         <Content className="columns is-centered">
           <div className="column is-8 has-text-centered">
-            <h1 className="title is-3 is-size-7-mobile has-text-white has-text-weight-semibold">
+            <h1 className="title is-3 has-text-white has-text-weight-semibold">
               Get in Touch!
             </h1>
-            <h1 className="title is-4 is-size-7-mobile has-text-white has-text-weight-semibold">
+            <h1 className="title is-4 has-text-white has-text-weight-semibold">
               <span className="has-text-grey-lighter has-text-weight-light">
                 Email:
               </span>
-              {items.email}
+              <span className="">{items.email}</span>
+
               <span className="has-text-grey-lighter has-text-weight-light">
                 {' '}
                 OR Call:
               </span>
-              {items.telephone}
+              <span className="">{items.telephone}</span>
             </h1>
           </div>
         </Content>
