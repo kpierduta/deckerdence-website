@@ -31,10 +31,6 @@ const Section = styled.div`
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
-  .modal_small_image {
-    width: 100% !important;
-    height: 370px !important;
-  }
 `;
 
 const Testimonials = ({ src, title }) => {
@@ -54,8 +50,8 @@ const Testimonials = ({ src, title }) => {
       <div className={active ? 'modal is-active' : 'modal is-close'}>
         <div className="modal-background" />
         <div className="modal-content">
-          <p className="image is-4by3">
-            <img src={src} alt="" />
+          <p className="image is-5by4">
+            <img src={src} alt="alt" />
           </p>
         </div>
         <button
