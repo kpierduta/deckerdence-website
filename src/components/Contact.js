@@ -7,6 +7,9 @@ const Section = styled.div`
   background-image: url('/images/hire/hireFormBg.png');
   background-size: 100% 100% !important;
   background-repeat: no-repeat !important;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-image: url('/images/hire/divider-2@2x.jpg') 50 round;
 `;
 
 const Contact = () => (
