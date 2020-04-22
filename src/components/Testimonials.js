@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styled from 'styled-components';
 
@@ -37,31 +37,37 @@ const Section = styled.div`
   }
 `;
 
-const Testimonials = ({ src, title }) => (
-  <Section className="column is-4">
-    <div className="main">
-      <div className="overlay">
-        <div className="text">
-          <h1 className="title is-4 has-text-white has-text-centered">
-            {title}
-          </h1>
+const Testimonials = ({ src, title }) => {
+  const [active, setActive] = useState(false);
+  return (
+    <Section className="column is-4">
+      <div className="main" onClick={() => setActive(true)}>
+        <img src={src} alt="" />
+        <div className="overlay">
+          <div className="text">
+            <h1 className="title is-4 has-text-white has-text-centered">
+              {title}
+            </h1>
+          </div>
         </div>
       </div>
-    </div>
-    <div className="modal is-active">
-      <div className="modal-background" />
-      <div className="modal-content">
-        <p className="image is-4by3">
-          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
-        </p>
+      <div className={active ? 'modal is-active' : 'modal is-close'}>
+        <div className="modal-background" />
+        <div className="modal-content">
+          <p className="image is-4by3">
+            <img src={src} alt="" />
+          </p>
+        </div>
+        <button
+          type="button"
+          className="modal-close is-large"
+          onClick={() => {
+            setActive(false);
+          }}
+        />
       </div>
-      <button
-        type="button"
-        className="modal-close is-large"
-        aria-label="close"
-      />
-    </div>
-  </Section>
-);
+    </Section>
+  );
+};
 
 export default Testimonials;
