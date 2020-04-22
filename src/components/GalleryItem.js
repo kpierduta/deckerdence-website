@@ -17,10 +17,6 @@ const Section = styled.div`
     width: 100% !important;
     height: 370px !important;
   }
-  /* .__react_modal_image__medium_img {
-    max-width: 98%;
-    max-height: 98%;
-  } */
 `;
 
 const GalleryItem = ({ src, alt }) => (

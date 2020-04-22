@@ -1,14 +1,12 @@
 import React from 'react';
-
+import ModalImage from 'react-modal-image';
 import styled from 'styled-components';
 
 const Section = styled.div`
   .main {
     position: relative;
   }
-  .image {
-    display: block;
-  }
+
   .overlay {
     position: absolute;
     top: 0;
@@ -33,14 +31,22 @@ const Section = styled.div`
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+  .modal_small_image {
+    width: 100% !important;
+    height: 370px !important;
+  }
 `;
 
-const Testimonials = ({ Image, title }) => (
+const Testimonials = ({ src, title }) => (
   <Section className="column is-4">
     <div className="main">
-      <figure className="image is-square">
-        <img src={Image} alt="Avatar" className="image" />
-      </figure>
+      <ModalImage
+        large={src}
+        alt="main"
+        small={src}
+        className="modal_small_image"
+        hideDownload
+      />
       <div className="overlay">
         <div className="text">
           <h1 className="title is-4 has-text-white has-text-centered">

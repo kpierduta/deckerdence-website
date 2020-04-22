@@ -48,7 +48,7 @@ const galleryPage = ({ data }) => {
       <div className="columns is-multiline">
         {page.galleryImages.galleryImage.map(items => (
           <Testimonials
-            Image={items.image.asset.url}
+            src={items.image.asset.url}
             title={items.title}
             key={items._key}
           />
