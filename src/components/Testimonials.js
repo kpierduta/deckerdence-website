@@ -1,5 +1,5 @@
 import React from 'react';
-import ModalImage from 'react-modal-image';
+
 import styled from 'styled-components';
 
 const Section = styled.div`
@@ -40,13 +40,6 @@ const Section = styled.div`
 const Testimonials = ({ src, title }) => (
   <Section className="column is-4">
     <div className="main">
-      <ModalImage
-        large={src}
-        alt="main"
-        small={src}
-        className="modal_small_image"
-        hideDownload
-      />
       <div className="overlay">
         <div className="text">
           <h1 className="title is-4 has-text-white has-text-centered">
