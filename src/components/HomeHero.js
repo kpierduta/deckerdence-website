@@ -117,27 +117,8 @@ const HomeHero = ({ items }) => {
         <figure className="image">
           <img src={items.homeHeroBannerImage.asset.url} alt="" />
         </figure>
-        <Content className="columns is-centered">
-          <div className="column is-8 has-text-centered">
-            <h1 className="title is-3 has-text-white has-text-weight-semibold">
-              Get in Touch!
-            </h1>
-            <h1 className="title is-4 has-text-white has-text-weight-semibold">
-              <span className="has-text-grey-lighter has-text-weight-light">
-                Email:
-              </span>
-              <span className="">{items.email}</span>
-
-              <span className="has-text-grey-lighter has-text-weight-light">
-                {' '}
-                OR Call:
-              </span>
-              <span className="">{items.telephone}</span>
-            </h1>
-          </div>
-        </Content>
         <div className="columns axis">
-          <MovingLeftContainer className="column rocket  object plane move-ne">
+          <MovingLeftContainer className="column rocket object plane move-ne">
             <img
               className="object plane move-ne"
               src="/images/parties/layer-802@2x.png"
@@ -152,6 +133,24 @@ const HomeHero = ({ items }) => {
             />
           </MovingRightContainer>
         </div>
+        <Content className="columns is-centered">
+          <div className="column is-8 has-text-centered">
+            <h1 className="title is-3 has-text-white has-text-weight-semibold">
+              Get in Touch!
+            </h1>
+            <h1 className="title is-4 has-text-white has-text-weight-semibold">
+              <span className="has-text-grey-lighter has-text-weight-light">
+                Email:
+              </span>
+              <span className="">{items.email}</span>
+              <span className="has-text-grey-lighter has-text-weight-light">
+                {' '}
+                OR Call:
+              </span>
+              <span className="">{items.telephone}</span>
+            </h1>
+          </div>
+        </Content>
       </div>
     </Section>
   );
