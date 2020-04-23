@@ -30,6 +30,7 @@ const Section = styled.div`
 
 const Columns = styled.div`
   margin-top: 1rem;
+  margin-block-end: auto !important;
   .column {
     margin-top: -1rem;
   }
@@ -46,28 +47,33 @@ const Columns = styled.div`
 `;
 
 export const towBarQuery = graphql`
-  query towBar {
+  query {
     sanitySiteSettings {
       towBarSeoTitle
       towBarSeoKeywords
       towBarSeoMetaDescription
-      towBarSlug {
-        current
-      }
       towBarMainTitle
       towBarMainSubtitle
-      towBarFrameTitle
-      towBarFrameSubtitle
-      towBarFrameDescription
-      towBarBackgroundImage {
-        asset {
-          url
-        }
-      }
-      towBarGallery {
-        alt
-        asset {
-          url
+      towBarPage {
+        towBarContent {
+          towBarSlug {
+            current
+          }
+          towBarTitle
+          towBarSubtitle
+          _key
+          towBarDescription
+          towBarBackgroundImage {
+            asset {
+              url
+            }
+          }
+          towBarGallery {
+            asset {
+              url
+            }
+            alt
+          }
         }
       }
     }
@@ -86,42 +92,46 @@ const TowBarPage = ({ data }) => {
         title={page.towBarMainTitle}
         subTitle={page.towBarMainSubtitle}
       />
-      <Section
-        className="section is-large"
-        bgImage={page.towBarBackgroundImage.asset.url}
-      >
-        <div className="container">
-          <div className="columns is-centered">
-            <div className="column is-9-desktop  ">
-              <div className="wrapper">
-                <h1 className="subtitle is-5 has-text-centered has-text-white">
-                  {page.towBarFrameTitle}
-                </h1>
-                <h1 className="title is-4 is-size-6-touch is-uppercase has-text-centered has-text-white">
-                  {page.towBarFrameSubtitle}
-                </h1>
-                <p className="subtitle is-6 has-text-centered has-text-white">
-                  {page.towBarFrameDescription}
-                </p>
-                <div className="has-text-centered button-wrapper">
-                  <Link to="/contact">
-                    <ButtonGlobal title="Enquire Today" />
-                  </Link>
+      {page.towBarPage.towBarContent.map(items => (
+        <div>
+          <Section
+            className="section is-large"
+            bgImage={items.towBarBackgroundImage.asset.url}
+          >
+            <div className="container">
+              <div className="columns is-centered">
+                <div className="column is-9-desktop  ">
+                  <div className="wrapper">
+                    <h1 className="subtitle is-5 has-text-centered has-text-white">
+                      {items.towBarTitle}
+                    </h1>
+                    <h1 className="title is-4 is-size-6-touch is-uppercase has-text-centered has-text-white">
+                      {items.towBarSubtitle}
+                    </h1>
+                    <p className="subtitle is-6 has-text-centered has-text-white">
+                      {items.towBarDescription}
+                    </p>
+                    <div className="has-text-centered button-wrapper">
+                      <Link to={items.towBarSlug.current}>
+                        <ButtonGlobal title="Enquire Today" />
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </Section>
+          <Columns className="columns is-multiline is-variable is-1">
+            {items.towBarGallery.map(item => (
+              <div className="column is-6">
+                <figure className="image is-5by4">
+                  <img src={item.asset.url} alt={item.alt} />
+                </figure>
+              </div>
+            ))}
+          </Columns>
         </div>
-      </Section>
-      <Columns className="columns is-multiline is-variable is-1">
-        {page.towBarGallery.map(items => (
-          <div className="column is-6">
-            <figure className="image is-5by4">
-              <img src={items.asset.url} alt={items.alt} />
-            </figure>
-          </div>
-        ))}
-      </Columns>
+      ))}
     </Layout>
   );
 };
