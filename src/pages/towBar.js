@@ -9,7 +9,7 @@ import PageHeading from '../components/PageHeading';
 
 const Section = styled.div`
   background-image: url(${props => props.bgImage});
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   .column {
     background-image: url(/images/towbar/frame@2x.png);
@@ -95,7 +95,7 @@ const TowBarPage = ({ data }) => {
       {page.towBarPage.towBarContent.map(items => (
         <div>
           <Section
-            className="section is-large"
+            className="section hero is-fullheight-withnavbar"
             bgImage={items.towBarBackgroundImage.asset.url}
           >
             <div className="container">
