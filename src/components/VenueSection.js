@@ -35,7 +35,9 @@ const VenueSection = ({ frame, alt, text, frameBgImage, flex, color }) => (
             <figure className="image is-2by1">
               <img src={frame} alt={alt} />
             </figure>
-            <p className="title is-4 text has-text-centered">{text}</p>
+            <p className="title is-4 text has-text-centered has-text-weight-normal">
+              {text}
+            </p>
           </ImageWrapper>
         </div>
       </div>

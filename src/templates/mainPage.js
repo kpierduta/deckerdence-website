@@ -143,7 +143,7 @@ const MainPage = ({ data }) => {
       <StagesSection data={page} />
       <VenueSection
         flex={page.firstSectionHasFrameRight}
-        textColor={page.firstSectionHasTextWhite}
+        color={page.firstSectionHasTextWhite}
         frame={page.firstSectionFrameImage.asset.url}
         text={page.firstSectionTitle}
         alt={page.firstSectionBgImageAlt}
@@ -152,7 +152,7 @@ const MainPage = ({ data }) => {
       <Festival data={page} />
       <VenueSection
         flex={page.secondSectionHasFrameRight}
-        textColor={page.secondSectionHasTextWhite}
+        color={page.secondSectionHasTextWhite}
         frame={page.secondSectionFrameImage.asset.url}
         text={page.secondSectionTitle}
         alt={page.secondSectionBgImageAlt}
@@ -160,7 +160,7 @@ const MainPage = ({ data }) => {
       />
       <DetailsCardSection data={page} />
       <VenueSection
-        textColor={page.thirdSectionHasTextWhite}
+        color={page.thirdSectionHasTextWhite}
         flex={page.thirdSectionHasFrameRight}
         frame={page.thirdSectionFrameImage.asset.url}
         text={page.thirdSectionTitle}

@@ -136,7 +136,7 @@ const HomeHero = ({ items }) => {
         <Content className="columns is-centered">
           <div className="column is-8 has-text-centered">
             <h1 className="title is-3 has-text-white has-text-weight-semibold">
-              Get in Touch!
+              FIND OUT MORE
             </h1>
             <h1 className="title is-4 has-text-white has-text-weight-semibold">
               <span className="has-text-grey-lighter has-text-weight-light">

@@ -15,13 +15,13 @@ const Section = styled.section`
     height: 35rem;
     background-image: url(${props => props.bannerImg});
     background-repeat: no-repeat;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    background-size: 100% 100%;
-    background-position: center;
-    display: grid;
-    align-content: center;
-    padding: 1rem 7rem;
+    margin-top: 4rem !important;
+    margin-bottom: 4rem !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    display: grid !important;
+    align-content: center !important;
+    padding: 1rem 7rem !important;
     @media screen and (max-width: 600px) {
       margin-top: 0;
       margin-bottom: 0;
