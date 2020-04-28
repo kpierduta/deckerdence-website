@@ -33,7 +33,7 @@ const VenueSection = ({ frame, text, frameBgImage, flex, color }) => (
   >
     <div className="container">
       <div className="columns is-vcentered">
-        <div className="column is-6 hero is-medium">
+        <div className="column is-5 hero is-medium">
           <div className="hero-body">
             <p className="title is-4 is-size-6-mobile text has-text-centered has-text-weight-semibold">
               {text}
