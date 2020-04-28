@@ -145,7 +145,7 @@ const HireOptionPage = ({ data }) => {
           color={item.hasTextWhite}
           text={item.title}
           frameBgImage={item.featuresBackgroundImage.asset.url}
-          alt={item.bgImageAlt}
+          // alt={item.bgImageAlt}
           frame={item.featuresFrameImage.asset.url}
         />
       ))}

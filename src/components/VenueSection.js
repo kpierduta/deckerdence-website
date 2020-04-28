@@ -4,41 +4,41 @@ import styled from 'styled-components';
 const Section = styled.div`
   background-image: url(${props => props.frameBgImage});
   background-repeat: no-repeat;
-  background-size: cover;
-  .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  background-size: 100% 100%;
   .columns {
     justify-content: ${props => (props.flex ? 'flex-end' : 'flex-start')};
   }
-`;
-const ImageWrapper = styled.div`
-  position: relative;
+  .hero {
+    background-image: url(${props => props.frame});
+    background-size: 100% 100%;
+  }
+  .hero.is-medium .hero-body {
+    padding-bottom: 6rem !important;
+    padding-top: 6rem !important;
+    padding-right: 4rem !important;
+    padding-left: 4rem !important;
+  }
   p {
     color: ${props => (props.color ? '#fff' : '#2c2c2a')} !important;
   }
 `;
 
-const VenueSection = ({ frame, alt, text, frameBgImage, flex, color }) => (
+const VenueSection = ({ frame, text, frameBgImage, flex, color }) => (
   <Section
-    className="hero section is-block is-relative  is-large"
+    className="section is-medium"
     frameBgImage={frameBgImage}
     flex={flex}
+    color={color}
+    frame={frame}
   >
     <div className="container">
-      <div className="columns is-vcentered is-desktop">
-        <div className="column is-5-desktop">
-          <ImageWrapper color={color}>
-            <figure className="image is-2by1">
-              <img src={frame} alt={alt} />
-            </figure>
-            <p className="title is-4 text has-text-centered has-text-weight-normal">
+      <div className="columns is-vcentered">
+        <div className="column is-6 hero is-medium">
+          <div className="hero-body">
+            <p className="title is-4 is-size-6-mobile text has-text-centered has-text-weight-semibold">
               {text}
             </p>
-          </ImageWrapper>
+          </div>
         </div>
       </div>
     </div>

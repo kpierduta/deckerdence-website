@@ -6,7 +6,7 @@ const Section = styled.div`
   img {
     filter: gray;
     filter: grayscale(1);
-    transition: all 0.8s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 
   img:hover {

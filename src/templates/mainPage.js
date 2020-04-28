@@ -146,7 +146,7 @@ const MainPage = ({ data }) => {
         color={page.firstSectionHasTextWhite}
         frame={page.firstSectionFrameImage.asset.url}
         text={page.firstSectionTitle}
-        alt={page.firstSectionBgImageAlt}
+        // alt={page.firstSectionBgImageAlt}
         frameBgImage={page.firstSectionBackgroundImage.asset.url}
       />
       <Festival data={page} />
