@@ -57,6 +57,7 @@ export const hireOptionPage = graphql`
         mainHeading
         subtitle
         item {
+          _key
           title
           avatar {
             asset {
