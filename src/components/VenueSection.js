@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
+  @media screen and (min-width: 1024px) {
+    padding: 11rem 1.5rem !important;
+  }
   background-image: url(${props => props.frameBgImage});
   background-repeat: no-repeat;
   background-size: 100% 100%;

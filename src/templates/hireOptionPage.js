@@ -4,13 +4,11 @@ import { graphql } from 'gatsby';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import HireHero from '../components/HireHero';
-import HireForm from '../components/HireForm';
 import TileItem from '../components/TileItem';
 import BlogCategoryItem from '../components/BlogCategoryItem';
-import HireCardSlider from '../components/HireCardSlider';
-import Diagram from '../components/Diagram';
 import VenueSection from '../components/VenueSection';
 import Contact from '../components/Contact';
+import FestivalIcon from '../components/FestivalIcon';
 
 export const hireOptionPage = graphql`
   query hireOption($slug: String) {
@@ -18,14 +16,14 @@ export const hireOptionPage = graphql`
       slug {
         current
       }
+      seoTitle
+      seoKeywords
+      seoMetaDescription
       hireHeroBackgroundImage {
         asset {
           url
         }
       }
-      seoTitle
-      seoKeywords
-      seoMetaDescription
       hireHeroOption
       hireHeroTitle
       hireHeroSubtitle
@@ -37,40 +35,65 @@ export const hireOptionPage = graphql`
         }
       }
       hireFormTitle
-      sliderFeatures {
-        sliderItem {
-          hasTextBlack
-          title
-          description
-          name
-          sliderDate(formatString: "DD-MM-YYYY")
-        }
-      }
-      information {
-        item {
-          _key
-          title
-          subtitle
-        }
-      }
-      hireOptionDiagram {
-        asset {
-          url
-        }
-      }
-      vehicleFeature {
+      firstVehicleFeature {
         items {
           _key
           hasFrameRight
           hasTextWhite
           title
-          bgImageAlt
           featuresBackgroundImage {
             asset {
               url
             }
           }
-          bgImageAlt
+          featuresFrameImage {
+            asset {
+              url
+            }
+          }
+        }
+      }
+      festival {
+        mainHeading
+        subtitle
+        item {
+          title
+          avatar {
+            asset {
+              url
+            }
+          }
+        }
+      }
+      secondVehicleFeature {
+        items {
+          _key
+          hasFrameRight
+          hasTextWhite
+          title
+          featuresBackgroundImage {
+            asset {
+              url
+            }
+          }
+          featuresFrameImage {
+            asset {
+              url
+            }
+          }
+        }
+      }
+      thirdVehicleFeature {
+        items {
+          _key
+          hasFrameRight
+          hasTextWhite
+          title
+          featuresBackgroundImage {
+            asset {
+              url
+            }
+          }
           featuresFrameImage {
             asset {
               url
@@ -110,42 +133,73 @@ const HireOptionPage = ({ data }) => {
           </div>
         </div>
       </section>
-      <HireForm
-        para={hire.hireFormTitle}
-        avatar="/images/hire/icon@2x.png"
-        email="Email"
-        phone="Phone Number"
-        buttonName="DOWNLOAD"
-        subtitle="By submitting this form you agree to our contact conditions."
-        mainSubtitle="mainSubtitle"
-      />
-
-      <HireCardSlider data={hire} />
-
       <section className="section">
-        <div className="container">
-          <div className="columns is-multiline is-variable is-4">
-            {hire.information.item.map(items => (
-              <TileItem
-                title={items.title}
-                subtitle={items.subtitle}
-                key={items._key}
-              />
-            ))}
+        <div className="container is-medium">
+          <div className="columns is-centered is-desktop">
+            <div className="column is-10">
+              <header className="Header has-text-centered">
+                <p className="subtitle is-5 para has-text-black">
+                  {hire.hireFormTitle}
+                </p>
+              </header>
+            </div>
           </div>
         </div>
       </section>
-
-      <Diagram largeImage avatar={hire.hireOptionDiagram.asset.url} />
-
-      {hire.vehicleFeature.items.map(item => (
+      {hire.firstVehicleFeature.items.map(item => (
         <VenueSection
           key={item._key}
           flex={item.hasFrameRight}
           color={item.hasTextWhite}
           text={item.title}
           frameBgImage={item.featuresBackgroundImage.asset.url}
-          // alt={item.bgImageAlt}
+          frame={item.featuresFrameImage.asset.url}
+        />
+      ))}
+      <section className="section">
+        <div className="container">
+          <h1 className="title is-4 has-text-centered is-uppercase">
+            {hire.festival.mainHeading}
+          </h1>
+          <div className="columns is-multiline is-variable is-5">
+            {hire.festival.item.map(items => (
+              <FestivalIcon
+                key={items._key}
+                image={items.avatar.asset.url}
+                alternative="festivals"
+              />
+            ))}
+          </div>
+          <h1 className="title is-4 has-text-centered is-uppercase">
+            {hire.festival.subtitle}
+          </h1>
+        </div>
+      </section>
+      {/* {hire.information.item.map(items => (
+        <TileItem
+          title={items.title}
+          subtitle={items.subtitle}
+          key={items._key}
+        />
+      ))} */}
+      {hire.secondVehicleFeature.items.map(item => (
+        <VenueSection
+          key={item._key}
+          flex={item.hasFrameRight}
+          color={item.hasTextWhite}
+          text={item.title}
+          frameBgImage={item.featuresBackgroundImage.asset.url}
+          frame={item.featuresFrameImage.asset.url}
+        />
+      ))}
+      <TileItem />
+      {hire.thirdVehicleFeature.items.map(item => (
+        <VenueSection
+          key={item._key}
+          flex={item.hasFrameRight}
+          color={item.hasTextWhite}
+          text={item.title}
+          frameBgImage={item.featuresBackgroundImage.asset.url}
           frame={item.featuresFrameImage.asset.url}
         />
       ))}

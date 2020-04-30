@@ -54,7 +54,7 @@ const HireCardSlider = ({ data }) => {
       <div className="container background">
         <div className="columns is-centered">
           <div className="column is-8">
-            <Slider {...settings}>
+            {/* <Slider {...settings}>
               {data.sliderFeatures.sliderItem.map(items => (
                 <div className="wrapper">
                   <HireCard
@@ -67,7 +67,7 @@ const HireCardSlider = ({ data }) => {
                   />
                 </div>
               ))}
-            </Slider>
+            </Slider> */}
           </div>
         </div>
       </div>

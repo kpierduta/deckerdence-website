@@ -9,19 +9,8 @@ const Wrapper = styled.div`
   }
 `;
 
-const HireForm = ({ para, avatar }) => (
+const HireForm = ({ avatar }) => (
   <Wrapper>
-    <section className="section">
-      <div className="container is-medium">
-        <div className="columns is-centered is-desktop">
-          <div className="column is-10">
-            <header className="Header has-text-centered">
-              <p className="subtitle is-5 para has-text-black">{para}</p>
-            </header>
-          </div>
-        </div>
-      </div>
-    </section>
     <section className="section background">
       <div className="container">
         <div className="columns ">

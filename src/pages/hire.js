@@ -20,11 +20,6 @@ export const hireQuery = graphql`
           url
         }
       }
-      hireOptionFrameImage {
-        asset {
-          url
-        }
-      }
     }
     allSanityVehicleHirePage(sort: { fields: order }) {
       edges {
@@ -67,7 +62,7 @@ const HirePage = ({ data }) => {
       />
       <HireOptionHero
         bgImage={hire.hireOptionBackgroundImage.asset.url}
-        frame={hire.hireOptionFrameImage.asset.url}
+        frame="/images/hire/optionFrame.png"
         smallText={hire.hireOptionSmallText}
         largeText={hire.hireOptionLargeText}
         description={hire.hireOptionDescription}

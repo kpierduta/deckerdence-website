@@ -5,6 +5,7 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import HomeHero from '../components/HomeHero';
 import HomePageSection from '../components/HomePageSection';
+import StagesSection from '../components/StagesSection';
 
 export const homeQuery = graphql`
   query homepage {
@@ -42,6 +43,19 @@ export const homeQuery = graphql`
           }
         }
       }
+      simpleStages {
+        mainHeading
+        item {
+          _key
+          title
+          subTitle
+          avatar {
+            asset {
+              url
+            }
+          }
+        }
+      }
     }
   }
 `;
@@ -68,6 +82,7 @@ const Index = ({ data }) => {
           bannerImg={items.featuresFrameImage.asset.url}
         />
       ))}
+      <StagesSection data={settings} />
     </Layout>
   );
 };

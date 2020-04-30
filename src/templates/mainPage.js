@@ -1,17 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import styled from 'styled-components';
 
+import styled from 'styled-components';
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import PartiesHero from '../components/PartiesHero';
 import PageHeading from '../components/PageHeading';
-import StagesSection from '../components/StagesSection';
 import VenueSection from '../components/VenueSection';
 import DetailsCardSection from '../components/DetailsCardSection';
 import GalleryItem from '../components/GalleryItem';
 import Contact from '../components/Contact';
-import Festival from '../components/Festival';
 
 const GalleryWrapper = styled.div`
   margin-top: 4rem;
@@ -43,74 +41,25 @@ export const MainPageQuery = graphql`
         }
       }
       normalSubtitle
-      simpleStages {
-        mainHeading
-        item {
-          _key
-          title
-          subTitle
-          avatar {
-            asset {
-              url
-            }
-          }
-        }
-      }
-      firstSectionHasFrameRight
-      firstSectionHasTextWhite
-      firstSectionTitle
-      firstSectionBackgroundImage {
-        asset {
-          url
-        }
-      }
-      firstSectionBgImageAlt
-      firstSectionFrameImage {
-        asset {
-          url
-        }
-      }
-      festival {
-        mainHeading
-        subtitle
-        item {
-          _key
-          avatar {
-            asset {
-              url
-            }
-          }
-        }
-      }
-      secondSectionHasFrameRight
-      secondSectionHasTextWhite
-      secondSectionTitle
-      secondSectionBackgroundImage {
-        asset {
-          url
-        }
-      }
-      secondSectionBgImageAlt
-      secondSectionFrameImage {
-        asset {
-          url
-        }
-      }
       detailsMainHeading
       firstCardDescription
       secondCardDescription
-      thirdSectionHasFrameRight
-      thirdSectionHasTextWhite
-      thirdSectionTitle
-      thirdSectionBackgroundImage {
-        asset {
-          url
-        }
-      }
-      thirdSectionBgImageAlt
-      thirdSectionFrameImage {
-        asset {
-          url
+      Features {
+        items {
+          _key
+          hasFrameRight
+          hasTextWhite
+          title
+          featuresBackgroundImage {
+            asset {
+              url
+            }
+          }
+          featuresFrameImage {
+            asset {
+              url
+            }
+          }
         }
       }
       gallery {
@@ -140,33 +89,19 @@ const MainPage = ({ data }) => {
         partyBgImage={page.heroBackgroundImage.asset.url}
       />
       <PageHeading subTitle={page.normalSubtitle} />
-      <StagesSection data={page} />
-      <VenueSection
-        flex={page.firstSectionHasFrameRight}
-        color={page.firstSectionHasTextWhite}
-        frame={page.firstSectionFrameImage.asset.url}
-        text={page.firstSectionTitle}
-        // alt={page.firstSectionBgImageAlt}
-        frameBgImage={page.firstSectionBackgroundImage.asset.url}
-      />
-      <Festival data={page} />
-      <VenueSection
-        flex={page.secondSectionHasFrameRight}
-        color={page.secondSectionHasTextWhite}
-        frame={page.secondSectionFrameImage.asset.url}
-        text={page.secondSectionTitle}
-        alt={page.secondSectionBgImageAlt}
-        frameBgImage={page.secondSectionBackgroundImage.asset.url}
-      />
       <DetailsCardSection data={page} />
-      <VenueSection
-        color={page.thirdSectionHasTextWhite}
-        flex={page.thirdSectionHasFrameRight}
-        frame={page.thirdSectionFrameImage.asset.url}
-        text={page.thirdSectionTitle}
-        alt={page.thirdSectionBgImageAlt}
-        frameBgImage={page.thirdSectionBackgroundImage.asset.url}
-      />
+      {page.Features.items.map(item => (
+        <VenueSection
+          key={item._key}
+          color={item.hasTextWhite}
+          flex={item.hasFrameRight}
+          text={item.title}
+          alt={item.thirdSectionBgImageAlt}
+          frameBgImage={item.featuresBackgroundImage.asset.url}
+          frame={item.featuresFrameImage.asset.url}
+        />
+      ))}
+
       <GalleryWrapper className="columns is-variable is-3 is-multiline">
         {page.gallery.map(items => (
           <GalleryItem src={items.asset.url} key={items._key} alt={items.alt} />
