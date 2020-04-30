@@ -9,35 +9,35 @@ import HireOptionTestimonial from '../components/HireOptionTestimonial';
 export const testimonialPageQuery = graphql`
   query myTestimonial {
     sanitySiteSettings {
-    testimonialsPage {
-      seoTitle
-      seoKeywords
-      seoMetaDescription
-      slug {
-        current
-      }
-      mainHeading
-      middleText
-      subtitle
-      backgroundImage {
-        asset {
-          url
+      testimonialsPage {
+        seoTitle
+        seoKeywords
+        seoMetaDescription
+        slug {
+          current
         }
-      }
-      information {
-        asset{
-          url
+        mainHeading
+        middleText
+        subtitle
+        backgroundImage {
+          asset {
+            url
+          }
         }
-        _key
-        alt
-        columnReverse
-        title
-        description
-        name
-        date
+        information {
+          asset {
+            url
+          }
+          _key
+          alt
+          columnReverse
+          title
+          description
+          name
+          date
+        }
       }
     }
-  }
   }
 `;
 
@@ -50,7 +50,7 @@ const TestimonialPage = ({ data }) => {
         description={options.testimonialsPage.seoKeywords}
         keywords={options.testimonialsPage.seoMetaDescription}
       />
-     <HireOptionHero
+      <HireOptionHero
         frame="/images/hire/optionFrame.png"
         bgImage={options.testimonialsPage.backgroundImage.asset.url}
         smallText={options.testimonialsPage.mainHeading}
