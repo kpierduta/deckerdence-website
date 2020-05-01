@@ -34,7 +34,7 @@ export const testimonialPageQuery = graphql`
           title
           description
           name
-          date
+          date(formatString: "DD-MM-YYYY")
         }
       }
     }
@@ -66,6 +66,8 @@ const TestimonialPage = ({ data }) => {
           position={item.subtitle}
           pera={item.description}
           alt={item.alt}
+          name={item.name}
+          date={item.date}
         />
       ))}
     </Layout>

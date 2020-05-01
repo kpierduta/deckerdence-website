@@ -6,13 +6,18 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import PartiesHero from '../components/PartiesHero';
 import PageHeading from '../components/PageHeading';
-import VenueSection from '../components/VenueSection';
+import HireOptionTestimonial from '../components/HireOptionTestimonial';
 import DetailsCardSection from '../components/DetailsCardSection';
+import VenueSection from '../components/VenueSection';
 import GalleryItem from '../components/GalleryItem';
 import Contact from '../components/Contact';
 
 const GalleryWrapper = styled.div`
   margin-top: 4rem;
+`;
+
+const Section = styled.div`
+  margin-right: -0.75rem !important;
 `;
 
 const Button = styled.button`
@@ -41,6 +46,27 @@ export const MainPageQuery = graphql`
         }
       }
       normalSubtitle
+      information {
+        _key
+        columnReverse
+        alt
+        title
+        subtitle
+        description
+        name
+        date(formatString: "DD-MM-YYYY")
+        asset {
+          url
+        }
+      }
+      arcade {
+        _key
+        alt
+        imageIsHalf
+        asset {
+          url
+        }
+      }
       detailsMainHeading
       firstCardDescription
       secondCardDescription
@@ -89,6 +115,32 @@ const MainPage = ({ data }) => {
         partyBgImage={page.heroBackgroundImage.asset.url}
       />
       <PageHeading subTitle={page.normalSubtitle} />
+      {page.information.map(item => (
+        <HireOptionTestimonial
+          key={item._key}
+          image={item.asset.url}
+          flex={item.columnReverse}
+          title={item.title}
+          position={item.subtitle}
+          pera={item.description}
+          alt={item.alt}
+          name={item.name}
+          date={item.date}
+        />
+      ))}
+
+      <Section className="columns is-multiline">
+        {page.arcade.map(item => (
+          <div className={item.imageIsHalf ? 'column is-6' : 'column is-12'}>
+            <figure
+              className={item.imageIsHalf ? 'image is-5by3' : 'image is-2by1'}
+            >
+              <img src={item.asset.url} alt={item.alt} />
+            </figure>
+          </div>
+        ))}
+      </Section>
+
       <DetailsCardSection data={page} />
       {page.Features.items.map(item => (
         <VenueSection

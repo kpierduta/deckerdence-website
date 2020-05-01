@@ -62,6 +62,8 @@ const AboutPage = ({ data }) => {
           position={option.subtitle}
           pera={option.description}
           alt={option.alt}
+          name={option.name}
+          date={option.date}
         />
       ))}
     </Layout>
