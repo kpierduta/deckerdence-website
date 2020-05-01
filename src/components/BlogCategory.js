@@ -14,6 +14,7 @@ const Wrapper = styled.div`
     justify-content: center;
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 `;
 
