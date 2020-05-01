@@ -119,9 +119,10 @@ const GlobalStyle = createGlobalStyle`
   .is-family-primary {
     font-family: ${props => props.theme.primaryFontFamily} !important;
   }
-
-  .columns {
-    margin-right:0rem !important;
+  @media screen and (max-width: 768px) {
+    .columns {
+      margin-right: 0rem !important;
+    }
   }
 `;
 

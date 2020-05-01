@@ -42,6 +42,7 @@ export const blogArticleQuery = graphql`
 const BlogsWrapper = styled.div`
   margin-top: 3rem;
 `;
+
 const Section = styled.div`
   background-color: #e2e3e4;
   h1 {

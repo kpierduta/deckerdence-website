@@ -16,9 +16,7 @@ const GalleryWrapper = styled.div`
   margin-top: 4rem;
 `;
 
-const Section = styled.div`
-  margin-right: -0.75rem !important;
-`;
+const Section = styled.div``;
 
 const Button = styled.button`
   width: 100%;
