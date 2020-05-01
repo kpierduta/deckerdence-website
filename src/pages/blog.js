@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import Seo from '../components/Seo';
