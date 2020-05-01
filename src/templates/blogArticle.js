@@ -20,7 +20,7 @@ export const blogArticleQuery = graphql`
       blogArticleSeoMetaDescription
       blogArticleTitle(formatString: "DD-MM-YYYY")
       blogArticleMiddleText
-      blogArticleSubtitle
+      categorySet
       blogArticleHomeHeroImage {
         asset {
           url
@@ -52,6 +52,7 @@ const Section = styled.div`
 
 const BlogArticle = ({ data }) => {
   const page = data.sanityBlogPage;
+
   return (
     <Layout>
       <Seo
@@ -62,7 +63,7 @@ const BlogArticle = ({ data }) => {
       <HireOptions
         title={page.blogArticleTitle}
         middleText={page.blogArticleMiddleText}
-        subTitle={page.blogArticleSubtitle}
+        subTitle={page.categorySet}
         hireBgImage={page.blogArticleHomeHeroImage.asset.url}
         textColor={props => props.theme.darkShades}
       />

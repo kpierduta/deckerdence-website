@@ -1,22 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import PageHeading from '../components/PageHeading';
-import BlogCategoryItem from '../components/BlogCategoryItem';
+import BlogCategory from '../components/BlogCategory';
 import BlogData from '../components/BlogData';
 
 const Section = styled.section`
   .column {
     display: flex;
-  }
-`;
-
-const Wrapper = styled.div`
-  background-color: #e2e3e4;
-  h1 {
-    padding-bottom: 2rem;
   }
 `;
 
@@ -27,8 +20,6 @@ export const blogQuery = graphql`
       blogSeoKeywords
       blogSeoMetaDescription
       blogMainTitle
-      blogCatagoriesHeading
-      Catagories
     }
     allSanityBlogPage(sort: { fields: order }) {
       edges {
@@ -38,6 +29,7 @@ export const blogQuery = graphql`
           isSizeHalf
           hasTextBlack
           title
+          categorySet
           slug {
             current
           }
@@ -54,6 +46,7 @@ export const blogQuery = graphql`
 `;
 
 const BlogPage = ({ data }) => {
+  const [category, setCategory] = useState('all');
   const page = data.sanitySiteSettings;
   const blog = data.allSanityBlogPage.edges;
   return (
@@ -64,38 +57,31 @@ const BlogPage = ({ data }) => {
         keywords={page.blogSeoKeywords}
       />
       <PageHeading title={page.blogMainTitle} />
-      <Wrapper className="section">
-        <div className="container">
-          <h1 className="title is-4 has-text-centered">
-            {page.blogCatagoriesHeading}
-          </h1>
-          <div className="columns is-multiline">
-            {page.Catagories.map(options => (
-              <BlogCategoryItem category={options} />
-            ))}
-          </div>
-        </div>
-      </Wrapper>
+      <BlogCategory categoryChange={setCategory} />
       <Section className="section">
         <div className="columns is-multiline">
-          {blog.map(items => (
-            <div
-              className={
-                items.node.isSizeHalf
-                  ? 'column is-6 is-flex'
-                  : 'column is-3 is-flex'
-              }
-            >
-              <BlogData
-                key={items.node._id}
-                color={items.node.hasTextBlack}
-                title={items.node.title}
-                date={items.node.releaseDate}
-                boxImage={items.node.image.asset.url}
-                link={`/blog/${items.node.slug.current}`}
-              />
-            </div>
-          ))}
+          {blog.map(items => {
+            if (category === 'all' || items.node.categorySet == category) {
+              return (
+                <div
+                  className={
+                    items.node.isSizeHalf
+                      ? 'column is-6 is-flex'
+                      : 'column is-3 is-flex'
+                  }
+                >
+                  <BlogData
+                    key={items.node._id}
+                    color={items.node.hasTextBlack}
+                    title={items.node.title}
+                    date={items.node.releaseDate}
+                    boxImage={items.node.image.asset.url}
+                    link={`/blog/${items.node.slug.current}`}
+                  />
+                </div>
+              );
+            }
+          })}
         </div>
       </Section>
     </Layout>
