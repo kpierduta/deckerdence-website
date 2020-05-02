@@ -53,6 +53,7 @@ export const hireOptionPage = graphql`
           }
         }
       }
+
       festival {
         mainHeading
         subtitle
