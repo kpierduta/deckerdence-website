@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
-
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import HireOptions from '../components/HireOptions';
@@ -18,13 +17,18 @@ export const blogArticleQuery = graphql`
       blogArticleSeoTitle
       blogArticleSeoKeywords
       blogArticleSeoMetaDescription
-      blogArticleTitle(formatString: "DD-MM-YYYY")
-      blogArticleMiddleText
+      releaseDate(formatString: "DD-MM-YYYY")
+      title
       categorySet
-      blogArticleHomeHeroImage {
+      image {
         asset {
           url
         }
+      }
+      content {
+        _key
+        title
+        subTitle
       }
       blogArticleCategoriesHeading
       blogArticleCategories
@@ -61,10 +65,10 @@ const BlogArticle = ({ data }) => {
         description={page.blogArticleSeoMetaDescription}
       />
       <HireOptions
-        title={page.blogArticleTitle}
-        middleText={page.blogArticleMiddleText}
+        title={page.releaseDate}
+        middleText={page.title}
         subTitle={page.categorySet}
-        hireBgImage={page.blogArticleHomeHeroImage.asset.url}
+        hireBgImage={page.image.asset.url}
         textColor={props => props.theme.darkShades}
       />
       <Section className="section">
@@ -80,22 +84,13 @@ const BlogArticle = ({ data }) => {
         </div>
       </Section>
       <BlogsWrapper>
-        <BlogArticleItem
-          title="1. Not just a venue service"
-          subtitle="When you hire Deckerdence for your venue, you don’t simply get a venue. An event to us isn’t just about the location and the space you have, it’s about the experience you have at the start of the event when you arrive right through to the very end when everyone is leaving. We plan all the details right from where to park to tidying away at the end.  Your on-site team make sure that Deckerdence is gleaming, neat and tidy throughout, everyone is safe, the sound system sounds amazing, the light up dance floor is working and that your cocktails never run out."
-        />
-        <BlogArticleItem
-          title="2. Experienced event team"
-          subtitle="When you work with us you get the expert help and guidance of a team of people that have worked on events across the UK with a wide range of people and companies, including ITV, Slimming World, Breast Cancer Care + much more. Whether you hire us for a corporate event or for a wedding, we cover every aspect of your event in microscopic detail."
-        />
-        <BlogArticleItem
-          title="3. Bespoke cocktail service"
-          subtitle="When you hire Deckerdence for your venue, you don’t simply get a venue. An event to us isn’t just about the location and the space you have, it’s about the experience you have at the start of the event when you arrive right through to the very end when everyone is leaving. We plan all the details right from where to park to tidying away at the end.  Your on-site team make sure that Deckerdence is gleaming, neat and tidy throughout, everyone is safe, the sound system sounds amazing, the light up dance floor is working and that your cocktails never run out."
-        />
-        <BlogArticleItem
-          title="4. Not just a venue service"
-          subtitle="When you hire Deckerdence for your venue, you don’t simply get a venue. An event to us isn’t just about the location and the space you have, it’s about the experience you have at the start of the event when you arrive right through to the very end when everyone is leaving. We plan all the details right from where to park to tidying away at the end.  Your on-site team make sure that Deckerdence is gleaming, neat and tidy throughout, everyone is safe, the sound system sounds amazing, the light up dance floor is working and that your cocktails never run out."
-        />
+        {page.content.map(options => (
+          <BlogArticleItem
+            title={options.title}
+            subtitle={options.subTitle}
+            key={page._key}
+          />
+        ))}
       </BlogsWrapper>
       <CalendarSlider data={page} key={page._key} />
     </Layout>

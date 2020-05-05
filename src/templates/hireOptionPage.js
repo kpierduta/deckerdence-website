@@ -158,7 +158,6 @@ const HireOptionPage = ({ data }) => {
           frame={item.featuresFrameImage.asset.url}
         />
       ))}
-
       <section className="section">
         <div className="container">
           <h1 className="title is-4 has-text-centered is-uppercase">

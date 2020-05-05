@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Section = styled.div`
   background-image: url(${props => props.hireBgImage});
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   @media screen and (max-width: 768px) {
     background-size: cover;
