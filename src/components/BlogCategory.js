@@ -19,11 +19,11 @@ const Wrapper = styled.div`
 `;
 
 const Categories = [
-  'DECKERDENCE EVENTS',
-  'The Deckerdence Journal',
-  'WEDDING ADVICE & TIPS',
-  'WEDDINGS FAIRS',
-  'WEDDINGS VENUE',
+  'LATEST JOURNAL',
+  'THE DECKERDENCE JOURNAL',
+  'ALL THINGS WEDDINGS',
+  'EVENT PLANNING',
+  'SUPPLIER JOURNAL',
 ];
 
 const BlogCategory = ({ categoryChange }) => {
