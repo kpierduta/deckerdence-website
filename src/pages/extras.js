@@ -98,7 +98,7 @@ const ExtraPage = ({ data }) => {
       {page.extrasPage.extrasContent.map(items => (
         <div>
           <Section
-            className="section hero is-fullheight-withnavbar"
+            className="section hero is-fullheight-with-navbar"
             bgImage={items.backgroundImage.asset.url}
           >
             <div className="container">
