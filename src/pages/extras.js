@@ -46,73 +46,76 @@ const Columns = styled.div`
   }
 `;
 
-export const towBarQuery = graphql`
+export const externalQuery = graphql`
   query {
     sanitySiteSettings {
-      towBarSeoTitle
-      towBarSeoKeywords
-      towBarSeoMetaDescription
-      towBarMainTitle
-      towBarMainSubtitle
-      towBarPage {
-        towBarContent {
-          towBarSlug {
+      extrasPage {
+        _key
+        seoTitle
+        seoKeywords
+        seoMetaDescription
+        mainTitle
+        mainSubtitle
+        extrasContent {
+          _key
+          slug {
             current
           }
-          towBarTitle
-          towBarSubtitle
-          _key
-          towBarDescription
-          towBarBackgroundImage {
+          title
+          subtitle
+          description
+          backgroundImage {
             asset {
               url
             }
           }
-          towBarGallery {
+          gallery {
+            alt
+            _key
+            alt
             asset {
               url
             }
-            alt
           }
         }
       }
     }
   }
 `;
-const TowBarPage = ({ data }) => {
+const ExtraPage = ({ data }) => {
   const page = data.sanitySiteSettings;
   return (
     <Layout>
       <Seo
-        title={page.towBarSeoTitle}
-        description={page.towBarSeoMetaDescription}
-        keywords={page.towBarSeoKeywords}
+        title={page.extrasPage.seoTitle}
+        description={page.extrasPage.seoMetaDescription}
+        keywords={page.extrasPage.seoKeywords}
       />
       <PageHeading
-        title={page.towBarMainTitle}
-        subTitle={page.towBarMainSubtitle}
+        title={page.extrasPage.mainTitle}
+        subTitle={page.extrasPage.mainSubtitle}
       />
-      {page.towBarPage.towBarContent.map(items => (
+      {page.extrasPage.extrasContent.map(items => (
         <div>
           <Section
             className="section hero is-fullheight-withnavbar"
-            bgImage={items.towBarBackgroundImage.asset.url}
+            bgImage={items.backgroundImage.asset.url}
           >
             <div className="container">
               <div className="columns is-centered">
                 <div className="column is-9-desktop  ">
                   <div className="wrapper">
                     <h1 className="subtitle is-5 has-text-centered has-text-white">
-                      {items.towBarTitle}
+                      {items.title}
                     </h1>
                     <h1 className="title is-4 is-size-6-touch is-uppercase has-text-centered has-text-white">
-                      {items.towBarSubtitle}
+                      {items.subtitle}
                     </h1>
                     <p className="subtitle is-6 has-text-centered has-text-white">
-                      {items.towBarDescription}
+                      {items.description}
                     </p>
                     <div className="has-text-centered button-wrapper">
-                      <Link to={items.towBarSlug.current}>
+                      <Link to={items.slug.current}>
                         <ButtonGlobal title="Enquire Today" />
                       </Link>
                     </div>
@@ -122,7 +125,7 @@ const TowBarPage = ({ data }) => {
             </div>
           </Section>
           <Columns className="columns is-multiline is-variable is-1">
-            {items.towBarGallery.map(item => (
+            {items.gallery.map(item => (
               <div className="column is-6">
                 <figure className="image is-5by4">
                   <img src={item.asset.url} alt={item.alt} />
@@ -136,4 +139,4 @@ const TowBarPage = ({ data }) => {
   );
 };
 
-export default TowBarPage;
+export default ExtraPage;
