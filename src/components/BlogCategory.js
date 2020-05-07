@@ -35,7 +35,7 @@ const BlogCategory = ({ categoryChange }) => {
           {Categories.map(value => (
             <div className="column">
               <div
-                className="title is-5  has-text-weight-normal has-text-black"
+                className="title is-5 has-text-weight-normal has-text-black"
                 onClick={() => categoryChange(value)}
               >
                 {value}
