@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
-import HireOptionHero from '../components/HireOptionHero';
+import PartiesHero from '../components/PartiesHero';
 import HireOptionTestimonial from '../components/HireOptionTestimonial';
 
 export const testimonialPageQuery = graphql`
@@ -17,8 +17,6 @@ export const testimonialPageQuery = graphql`
           current
         }
         mainHeading
-        middleText
-        subtitle
         backgroundImage {
           asset {
             url
@@ -50,12 +48,9 @@ const TestimonialPage = ({ data }) => {
         description={options.testimonialsPage.seoKeywords}
         keywords={options.testimonialsPage.seoMetaDescription}
       />
-      <HireOptionHero
-        frame="/images/hire/optionFrame.png"
-        bgImage={options.testimonialsPage.backgroundImage.asset.url}
-        smallText={options.testimonialsPage.mainHeading}
-        largeText={options.testimonialsPage.middleText}
-        description={options.testimonialsPage.subtitle}
+      <PartiesHero
+        title={options.testimonialsPage.mainHeading}
+        partyBgImage={options.testimonialsPage.backgroundImage.asset.url}
       />
       {options.testimonialsPage.information.map(item => (
         <HireOptionTestimonial

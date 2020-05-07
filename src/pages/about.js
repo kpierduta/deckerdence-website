@@ -17,8 +17,6 @@ export const aboutPageQuery = graphql`
           current
         }
         mainHeading
-        middleText
-        subtitle
         backgroundImage {
           asset {
             url
