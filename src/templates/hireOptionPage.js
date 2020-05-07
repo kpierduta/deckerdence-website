@@ -150,12 +150,12 @@ const HireOptionPage = ({ data }) => {
       </section>
       {hire.firstVehicleFeature.items.map(item => (
         <VenueSection
-          key={item._key}
-          flex={item.hasFrameRight}
-          color={item.hasTextWhite}
-          text={item.title}
+          // key={item._key}
+          // flex={item.hasFrameRight}
+          // color={item.hasTextWhite}
+          // text={item.title}
           frameBgImage={item.featuresBackgroundImage.asset.url}
-          frame={item.featuresFrameImage.asset.url}
+          // frame={item.featuresFrameImage.asset.url}
         />
       ))}
       <section className="section">
@@ -187,22 +187,22 @@ const HireOptionPage = ({ data }) => {
       {hire.secondVehicleFeature.items.map(item => (
         <VenueSection
           key={item._key}
-          flex={item.hasFrameRight}
-          color={item.hasTextWhite}
-          text={item.title}
+          // flex={item.hasFrameRight}
+          // color={item.hasTextWhite}
+          // text={item.title}
           frameBgImage={item.featuresBackgroundImage.asset.url}
-          frame={item.featuresFrameImage.asset.url}
+          // frame={item.featuresFrameImage.asset.url}
         />
       ))}
       <TileItem />
       {hire.thirdVehicleFeature.items.map(item => (
         <VenueSection
-          key={item._key}
-          flex={item.hasFrameRight}
-          color={item.hasTextWhite}
-          text={item.title}
+          // key={item._key}
+          // flex={item.hasFrameRight}
+          // color={item.hasTextWhite}
+          // text={item.title}
           frameBgImage={item.featuresBackgroundImage.asset.url}
-          frame={item.featuresFrameImage.asset.url}
+          // frame={item.featuresFrameImage.asset.url}
         />
       ))}
       <Contact />
