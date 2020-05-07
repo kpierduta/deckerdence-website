@@ -66,8 +66,17 @@ export const MainPageQuery = graphql`
         }
       }
       detailsMainHeading
-      firstCardDescription
-      secondCardDescription
+      # firstCardDescription
+      # secondCardDescription
+      details {
+        _key
+        finerDetailsTitle
+        finerDetailsImage {
+          asset {
+            url
+          }
+        }
+      }
       Features {
         items {
           _key
@@ -126,7 +135,6 @@ const MainPage = ({ data }) => {
           date={item.date}
         />
       ))}
-
       <Section className="columns is-multiline">
         {page.arcade.map(item => (
           <div className={item.imageIsHalf ? 'column is-6' : 'column is-12'}>

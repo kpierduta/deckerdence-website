@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import DetailsCard from './DetailsCard';
 
 const Container = styled.section`
@@ -15,9 +14,14 @@ const DetailsCardSection = ({ data }) => (
       <h1 className="title is-3 has-text-centered">
         {data.detailsMainHeading}
       </h1>
-      <div className="columns">
-        <DetailsCard para={data.firstCardDescription} />
-        <DetailsCard para={data.secondCardDescription} />
+      <div className="columns is-multiline">
+        {data.details.map(item => (
+          <DetailsCard
+            key={item._key}
+            para={item.finerDetailsTitle}
+            boxImage={item.finerDetailsImage.asset.url}
+          />
+        ))}
       </div>
     </div>
   </Container>

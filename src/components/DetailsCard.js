@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const Section = styled.div`
   .main {
-    background-image: url(/images/events/frame@2x.png);
+    background-image: url('${props => props.boxImage}');
+
     background-size: 100% 100%;
     background-repeat: no-repeat;
     min-height: 45rem;
@@ -11,8 +12,8 @@ const Section = styled.div`
   }
 `;
 
-const DetailsCard = ({ para }) => (
-  <Section className="section column is-6">
+const DetailsCard = ({ para, boxImage }) => (
+  <Section className="section column is-6" boxImage={boxImage}>
     <div className="container">
       <div className="main">
         <div className="card-content">
