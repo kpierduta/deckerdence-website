@@ -8,6 +8,7 @@ import PageHeading from '../components/PageHeading';
 import ContactUsItem from '../components/ContactUsItem';
 import MyMapComponent from '../components/GoogleMap';
 import ContactTestimonial from '../components/ContactTestimonial';
+import Contact from '../components/Contact';
 
 export const contactUsQuery = graphql`
   query contactUsPage {
@@ -75,7 +76,7 @@ const Header = styled.div`
   padding-bottom: 3rem;
 `;
 
-const Contact = ({ data }) => {
+const ContactUs = ({ data }) => {
   const settings = data.sanitySiteSettings;
   return (
     <Layout>
@@ -130,9 +131,10 @@ const Contact = ({ data }) => {
           Visitors by appointment only
         </p>
       </Section>
+      <Contact />
       <ContactTestimonial data={settings} />
     </Layout>
   );
 };
 
-export default Contact;
+export default ContactUs;
