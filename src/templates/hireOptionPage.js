@@ -85,6 +85,18 @@ export const hireOptionPage = graphql`
           }
         }
       }
+      information {
+        avatar {
+          asset {
+            url
+          }
+        }
+        item {
+          _key
+          title
+          subtitle
+        }
+      }
       thirdVehicleFeature {
         items {
           _key
@@ -150,12 +162,12 @@ const HireOptionPage = ({ data }) => {
       </section>
       {hire.firstVehicleFeature.items.map(item => (
         <VenueSection
-          // key={item._key}
+          key={item._key}
+          frameBgImage={item.featuresBackgroundImage.asset.url}
+          // frame={item.featuresFrameImage.asset.url}
           // flex={item.hasFrameRight}
           // color={item.hasTextWhite}
           // text={item.title}
-          frameBgImage={item.featuresBackgroundImage.asset.url}
-          // frame={item.featuresFrameImage.asset.url}
         />
       ))}
       <section className="section">
@@ -177,31 +189,24 @@ const HireOptionPage = ({ data }) => {
           </h1>
         </div>
       </section>
-      {/* {hire.information.item.map(items => (
-        <TileItem
-          title={items.title}
-          subtitle={items.subtitle}
-          key={items._key}
-        />
-      ))} */}
       {hire.secondVehicleFeature.items.map(item => (
         <VenueSection
           key={item._key}
+          frameBgImage={item.featuresBackgroundImage.asset.url}
           // flex={item.hasFrameRight}
           // color={item.hasTextWhite}
           // text={item.title}
-          frameBgImage={item.featuresBackgroundImage.asset.url}
           // frame={item.featuresFrameImage.asset.url}
         />
       ))}
-      <TileItem />
+      <TileItem data={hire} />
       {hire.thirdVehicleFeature.items.map(item => (
         <VenueSection
-          // key={item._key}
+          key={item._key}
+          frameBgImage={item.featuresBackgroundImage.asset.url}
           // flex={item.hasFrameRight}
           // color={item.hasTextWhite}
           // text={item.title}
-          frameBgImage={item.featuresBackgroundImage.asset.url}
           // frame={item.featuresFrameImage.asset.url}
         />
       ))}
