@@ -7,50 +7,28 @@ import Layout from '../components/Layout';
 import PageHeading from '../components/PageHeading';
 import ContactUsItem from '../components/ContactUsItem';
 import MyMapComponent from '../components/GoogleMap';
-import ContactTestimonial from '../components/ContactTestimonial';
 import Contact from '../components/Contact';
 
 export const contactUsQuery = graphql`
   query contactUsPage {
     sanitySiteSettings {
-      contactUsSeoTitle
-      contactUsSeoKeywords
-      contactUsSeoMetaDescription
-      contactUsMainHeading
-      contactUsTitle
-      contactUsSubtitle
-      firstContactUsItemTitle
-      firstContactUsItemIcon {
-        asset {
-          url
-        }
-      }
-      firstContactUsItemSubtitle
-      secondContactUsItemTitle
-      secondContactUsItemIcon {
-        asset {
-          url
-        }
-      }
-      secondContactUsItemSubtitle
-      thirdContactUsItemTitle
-      thirdContactUsItemIcon {
-        asset {
-          url
-        }
-      }
-      thirdContactUsItemSubtitle
-      thirdContactUsItemSubtitle
-      contactUsSlider {
+      contactUs {
+        seoTitle
+        seoKeywords
+        seoMetaDescription
         mainHeading
+        title
         subtitle
-        sliderItem {
+        contactItem {
           _key
-          hasTextBlack
+          genre
           title
-          name
-          sliderDate(formatString: "DD-MM-YYYY")
-          description
+          subtitle
+          icon {
+            asset {
+              url
+            }
+          }
         }
       }
     }
@@ -81,41 +59,33 @@ const ContactUs = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={settings.contactUsSeoTitle}
-        description={settings.contactUsSeoMetaDescription}
-        keywords={settings.contactUsSeoKeywords}
+        title={settings.contactUs.seoTitle}
+        keywords={settings.contactUs.seoKeywords}
+        description={settings.contactUs.seoMetaDescription}
       />
-      <PageHeading title={settings.contactUsMainHeading} />
+      <PageHeading title={settings.contactUs.mainHeading} />
       <section className="section">
         <div className="container">
           <Header className="columns is-centered">
             <div className="column is-7">
               <h1 className="title is-4 is-spaced has-text-centered has-text-black">
-                {settings.contactUsTitle}
+                {settings.contactUs.title}
               </h1>
               <h1 className="subtitle is-5 has-text-centered has-text-black ">
-                {settings.contactUsSubtitle}
+                {settings.contactUs.subtitle}
               </h1>
             </div>
           </Header>
           <div className="columns">
-            <ContactUsItem
-              title={settings.firstContactUsItemTitle}
-              icon={settings.firstContactUsItemIcon.asset.url}
-              para={settings.firstContactUsItemSubtitle}
-            />
-            <ContactUsItem
-              title={settings.secondContactUsItemTitle}
-              icon={settings.secondContactUsItemIcon.asset.url}
-              para={settings.secondContactUsItemSubtitle}
-              href={`tel:${settings.secondContactUsItemSubtitle}`}
-            />
-            <ContactUsItem
-              title={settings.thirdContactUsItemTitle}
-              icon={settings.thirdContactUsItemIcon.asset.url}
-              para={settings.thirdContactUsItemSubtitle}
-              href={`mailto:${settings.thirdContactUsItemSubtitle}`}
-            />
+            {settings.contactUs.contactItem.map(item => (
+              <ContactUsItem
+                key={item._key}
+                title={item.title}
+                icon={item.icon.asset.url}
+                para={item.subtitle}
+                href={`mailto:${item.genre}`}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -132,7 +102,6 @@ const ContactUs = ({ data }) => {
         </p>
       </Section>
       <Contact />
-      <ContactTestimonial data={settings} />
     </Layout>
   );
 };
