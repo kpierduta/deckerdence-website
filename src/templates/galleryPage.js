@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 
 import Seo from '../components/Seo';
@@ -37,6 +37,12 @@ export const GalleryPage = graphql`
 
 const galleryPage = ({ data }) => {
   const page = data.sanityGalleryPage;
+  const [length, setLength] = useState(6);
+
+  const Images = page.galleryImages.galleryImage.slice(0, length);
+
+  console.log('data', Images);
+
   return (
     <Layout>
       <Seo
@@ -47,7 +53,7 @@ const galleryPage = ({ data }) => {
       <PageHeading title={page.mainHeading} />
       <PageTitle title={page.galleryTitle} />
       <div className="columns is-multiline">
-        {page.galleryImages.galleryImage.map(items => (
+        {Images.map(items => (
           <Testimonials
             key={items._key}
             src={items.image.asset.url}
@@ -56,11 +62,20 @@ const galleryPage = ({ data }) => {
           />
         ))}
       </div>
-      <BlackButton
+      {/* <BlackButton
         image="/images/parties/view-more@2x.png"
         alt="Learn More Button"
         haswidth="20%"
-      />
+      /> */}
+      {page.galleryImages.galleryImage.length !== length && (
+        <button
+          type="button"
+          onClick={() => setLength(page.galleryImages.galleryImage.length)}
+          className="button is-primary"
+        >
+          Load more
+        </button>
+      )}
     </Layout>
   );
 };

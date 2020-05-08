@@ -83,7 +83,13 @@ const ContactUs = ({ data }) => {
                 title={item.title}
                 icon={item.icon.asset.url}
                 para={item.subtitle}
-                href={`mailto:${item.genre}`}
+                href={`${
+                  item.genre === 'phoneNumber'
+                    ? 'tel:'
+                    : item.genre === 'mail'
+                    ? 'mailto:'
+                    : ''
+                }`}
               />
             ))}
           </div>
