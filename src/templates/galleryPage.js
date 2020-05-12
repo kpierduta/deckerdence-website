@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 
 import Seo from '../components/Seo';
@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 import PageHeading from '../components/PageHeading';
 import PageTitle from '../components/elements/PageTitle';
 import Testimonials from '../components/Testimonials';
-import BlackButton from '../components/elements/BlackButton';
+// import BlackButton from '../components/elements/BlackButton';
 
 export const GalleryPage = graphql`
   query galleryQuery($slug: String) {
@@ -37,11 +37,6 @@ export const GalleryPage = graphql`
 
 const galleryPage = ({ data }) => {
   const page = data.sanityGalleryPage;
-  const [length, setLength] = useState(6);
-
-  const Images = page.galleryImages.galleryImage.slice(0, length);
-
-  console.log('data', Images);
 
   return (
     <Layout>
@@ -53,7 +48,7 @@ const galleryPage = ({ data }) => {
       <PageHeading title={page.mainHeading} />
       <PageTitle title={page.galleryTitle} />
       <div className="columns is-multiline">
-        {Images.map(items => (
+        {page.galleryImages.galleryImage.map(items => (
           <Testimonials
             key={items._key}
             src={items.image.asset.url}
@@ -67,15 +62,6 @@ const galleryPage = ({ data }) => {
         alt="Learn More Button"
         haswidth="20%"
       /> */}
-      {page.galleryImages.galleryImage.length !== length && (
-        <button
-          type="button"
-          onClick={() => setLength(page.galleryImages.galleryImage.length)}
-          className="button is-primary"
-        >
-          Load more
-        </button>
-      )}
     </Layout>
   );
 };

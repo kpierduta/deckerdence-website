@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const Section = styled.div`
   .main {
     position: relative;
+    cursor: pointer;
   }
 
   .overlay {
