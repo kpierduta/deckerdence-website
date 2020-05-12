@@ -128,7 +128,9 @@ const ExtraPage = ({ data }) => {
             {items.gallery.map(item => (
               <div className="column is-6">
                 <figure className="image is-5by4">
-                  <img src={item.asset.url} alt={item.alt} />
+                  {item.asset.url && (
+                    <img src={item.asset.url} alt={item.alt} />
+                  )}
                 </figure>
               </div>
             ))}
