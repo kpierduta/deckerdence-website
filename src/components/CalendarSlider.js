@@ -30,10 +30,10 @@ const CalendarSlider = ({ data }) => {
     className: 'center',
     centerMode: true,
     centerPadding: '30px',
-    slidesToShow: 3,
+    slidesToShow: 1,
     speed: 400,
     rows: 1,
-    slidesPerRow: 2,
+    slidesPerRow: 1,
   };
   return (
     <Section className="section is-normal">

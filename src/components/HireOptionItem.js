@@ -52,12 +52,12 @@ const HireOptionItem = ({ item, onMouseOver }) => (
         <div className="column is-4 is-desktop">
           <figure className="image is-square">
             <img
-              src={item.hireOptionColoredImage.asset.url}
+              src={item.hireOptionBlackImage.asset.url}
               onFocus={onMouseOver}
               alt="coloredImage"
             />
             <img
-              src={item.hireOptionBlackImage.asset.url}
+              src={item.hireOptionColoredImage.asset.url}
               className="img-top"
               alt="blackImage"
             />
