@@ -22,7 +22,7 @@ export const blogQuery = graphql`
       blogSeoMetaDescription
       blogMainTitle
     }
-    allSanityBlogPage(sort: { fields: order }) {
+    allSanityBlogPage(sort: { fields: releaseDate, order: DESC }) {
       edges {
         node {
           _id
