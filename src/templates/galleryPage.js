@@ -37,7 +37,6 @@ export const GalleryPage = graphql`
 
 const galleryPage = ({ data }) => {
   const page = data.sanityGalleryPage;
-
   return (
     <Layout>
       <Seo

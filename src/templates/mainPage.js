@@ -66,8 +66,7 @@ export const MainPageQuery = graphql`
         }
       }
       detailsMainHeading
-      # firstCardDescription
-      # secondCardDescription
+
       details {
         _key
         finerDetailsTitle
@@ -146,7 +145,6 @@ const MainPage = ({ data }) => {
           </div>
         ))}
       </Section>
-
       <DetailsCardSection data={page} />
       {page.Features.items.map(item => (
         <VenueSection
