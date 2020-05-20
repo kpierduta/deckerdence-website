@@ -54,6 +54,18 @@ const Section = styled.div`
   }
 `;
 
+const Wrapper = styled.div`
+  .section.is-large {
+    @media screen and (min-width: 1024px) {
+      padding: 12rem 1.5rem !important;
+      background-size: 100% 100%;
+    }
+    @media screen and (max-width: 768px) {
+      background-size: 100% 100%;
+    }
+  }
+`;
+
 const BlogArticle = ({ data }) => {
   const page = data.sanityBlogPage;
 
@@ -64,13 +76,15 @@ const BlogArticle = ({ data }) => {
         keywords={page.blogArticleSeoKeywords}
         description={page.blogArticleSeoMetaDescription}
       />
-      <HireOptions
-        title={page.releaseDate}
-        middleText={page.title}
-        subTitle={page.categorySet}
-        hireBgImage={page.image.asset.url}
-        textColor={props => props.theme.darkShades}
-      />
+      <Wrapper>
+        <HireOptions
+          title={page.releaseDate}
+          middleText={page.title}
+          subTitle={page.categorySet}
+          hireBgImage={page.image.asset.url}
+          textColor={props => props.theme.darkShades}
+        />
+      </Wrapper>
       <Section className="section">
         <div className="container">
           <h1 className="title is-4 has-text-centered">
