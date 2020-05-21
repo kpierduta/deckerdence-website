@@ -14,6 +14,7 @@ export const blogArticleQuery = graphql`
       slug {
         current
       }
+      hasTextBlack
       blogArticleSeoTitle
       blogArticleSeoKeywords
       blogArticleSeoMetaDescription
@@ -32,13 +33,6 @@ export const blogArticleQuery = graphql`
       }
       blogArticleCategoriesHeading
       blogArticleCategories
-      blogArticleSliderHeading
-      blogArticleSliderItems {
-        _key
-        asset {
-          url
-        }
-      }
     }
   }
 `;
@@ -78,11 +72,11 @@ const BlogArticle = ({ data }) => {
       />
       <Wrapper>
         <HireOptions
+          color={page.hasTextBlack}
           title={page.releaseDate}
           middleText={page.title}
           subTitle={page.categorySet}
           hireBgImage={page.image.asset.url}
-          textColor={props => props.theme.darkShades}
         />
       </Wrapper>
       <Section className="section">
@@ -106,7 +100,7 @@ const BlogArticle = ({ data }) => {
           />
         ))}
       </BlogsWrapper>
-      <CalendarSlider data={page} key={page._key} />
+      <CalendarSlider />
     </Layout>
   );
 };

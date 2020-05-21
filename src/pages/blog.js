@@ -26,7 +26,6 @@ export const blogQuery = graphql`
       edges {
         node {
           _id
-          order
           isSizeHalf
           hasTextBlack
           title
