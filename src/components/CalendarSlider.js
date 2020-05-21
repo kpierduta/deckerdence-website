@@ -58,6 +58,174 @@ const data = [
   {
     options: '/images/archive/dec.jpg',
   },
+  {
+    options: '/images/archive/jan18.jpg',
+  },
+  {
+    options: '/images/archive/feb18.jpg',
+  },
+  {
+    options: '/images/archive/mar18.jpg',
+  },
+  {
+    options: '/images/archive/apr18.jpg',
+  },
+  {
+    options: '/images/archive/may18.jpg',
+  },
+  {
+    options: '/images/archive/june18.jpg',
+  },
+  {
+    options: '/images/archive/july18.jpg',
+  },
+  {
+    options: '/images/archive/aug18.jpg',
+  },
+  {
+    options: '/images/archive/sep18.jpg',
+  },
+  {
+    options: '/images/archive/oct18.jpg',
+  },
+  {
+    options: '/images/archive/nov18.jpg',
+  },
+  {
+    options: '/images/archive/dec18.jpg',
+  },
+  {
+    options: '/images/archive/may17.jpg',
+  },
+  {
+    options: '/images/archive/june17.jpg',
+  },
+  {
+    options: '/images/archive/july17.jpg',
+  },
+  {
+    options: '/images/archive/aug17.jpg',
+  },
+  {
+    options: '/images/archive/sep17.jpg',
+  },
+  {
+    options: '/images/archive/oct17.jpg',
+  },
+  {
+    options: '/images/archive/nov17.jpg',
+  },
+  {
+    options: '/images/archive/dec17.jpg',
+  },
+  {
+    options: '/images/archive/jan16.jpg',
+  },
+  {
+    options: '/images/archive/feb16.jpg',
+  },
+  {
+    options: '/images/archive/mar16.jpg',
+  },
+  {
+    options: '/images/archive/apr16.jpg',
+  },
+  {
+    options: '/images/archive/may16.jpg',
+  },
+  {
+    options: '/images/archive/june16.jpg',
+  },
+  {
+    options: '/images/archive/july16.jpg',
+  },
+  {
+    options: '/images/archive/aug16.jpg',
+  },
+  {
+    options: '/images/archive/sep16.jpg',
+  },
+  {
+    options: '/images/archive/oct16.jpg',
+  },
+  {
+    options: '/images/archive/nov16.jpg',
+  },
+  {
+    options: '/images/archive/dec16.jpg',
+  },
+  {
+    options: '/images/archive/jan15.jpg',
+  },
+  {
+    options: '/images/archive/feb15.jpg',
+  },
+  {
+    options: '/images/archive/mar15.jpg',
+  },
+  {
+    options: '/images/archive/apr15.jpg',
+  },
+  {
+    options: '/images/archive/may15.jpg',
+  },
+  {
+    options: '/images/archive/june15.jpg',
+  },
+  {
+    options: '/images/archive/july15.jpg',
+  },
+  {
+    options: '/images/archive/aug15.jpg',
+  },
+  {
+    options: '/images/archive/sep15.jpg',
+  },
+  {
+    options: '/images/archive/oct15.jpg',
+  },
+  {
+    options: '/images/archive/nov15.jpg',
+  },
+  {
+    options: '/images/archive/dec15.jpg',
+  },
+  {
+    options: '/images/archive/jan14.jpg',
+  },
+  {
+    options: '/images/archive/feb14.jpg',
+  },
+  {
+    options: '/images/archive/mar14.jpg',
+  },
+  {
+    options: '/images/archive/apr14.jpg',
+  },
+  {
+    options: '/images/archive/may14.jpg',
+  },
+  {
+    options: '/images/archive/june14.jpg',
+  },
+  {
+    options: '/images/archive/july14.jpg',
+  },
+  {
+    options: '/images/archive/aug14.jpg',
+  },
+  {
+    options: '/images/archive/sep14.jpg',
+  },
+  {
+    options: '/images/archive/oct14.jpg',
+  },
+  {
+    options: '/images/archive/nov14.jpg',
+  },
+  {
+    options: '/images/archive/dec14.jpg',
+  },
 ];
 const CalendarSlider = () => {
   const settings = {
