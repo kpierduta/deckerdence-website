@@ -11,8 +11,8 @@ const LinkStyled = styled(Link)`
   }
 `;
 
-const Button = ({ image, alt, haswidth }) => (
-  <LinkStyled to="/" haswidth={haswidth}>
+const Button = ({ image, alt, haswidth, linkTo }) => (
+  <LinkStyled to={linkTo} haswidth={haswidth}>
     <figure className="image-button">
       <img src={image} alt={alt} />
     </figure>

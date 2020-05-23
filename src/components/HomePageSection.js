@@ -39,6 +39,7 @@ const HomePageSection = ({
   bgImg,
   button,
   bannerImg,
+  buttonLink,
 }) => (
   <Section flex={flex} bgImg={bgImg} bannerImg={bannerImg}>
     <div className="section is-block">
@@ -59,6 +60,7 @@ const HomePageSection = ({
               <div className="has-text-centered-mobile">
                 {button && (
                   <Button
+                    linkTo={buttonLink}
                     image="/images/learn-more@2x.png"
                     alt="Learn More Button"
                     haswidth="50%"

@@ -28,6 +28,9 @@ export const homeQuery = graphql`
       homeFeatures {
         items {
           _key
+          buttonLink {
+            current
+          }
           hasRight
           title
           description
@@ -76,6 +79,7 @@ const Index = ({ data }) => {
           key={items._key}
           flex={items.hasRight}
           button
+          buttonLink={items.buttonLink.current}
           title={items.title}
           description={items.description}
           bgImg={items.featuresBackgroundImage.asset.url}
