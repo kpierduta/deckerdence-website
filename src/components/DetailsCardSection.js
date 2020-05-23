@@ -18,7 +18,7 @@ const DetailsCardSection = ({ data }) => (
         {data.details.map(item => (
           <DetailsCard
             key={item._key}
-            para={item.finerDetailsTitle}
+            para={item.body}
             boxImage={item.finerDetailsImage.asset.url}
           />
         ))}
