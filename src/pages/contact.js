@@ -37,16 +37,20 @@ export const contactUsQuery = graphql`
 
 const Section = styled.div`
   background-color: ${props => props.theme.textColorLite};
-  .columns {
+  .column.is-6 {
     background-image: url('/images/contacts/frame@2x.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  .is-10 {
-    padding: 6.5rem 0rem;
-  }
+
   p {
     margin-top: 2rem;
+  }
+  .my {
+    padding: 55px 0px 38px 0px;
+  }
+  img {
+    height: 20rem;
   }
 `;
 
@@ -97,9 +101,21 @@ const ContactUs = ({ data }) => {
       </section>
       <Section className="section is-hidden-mobile">
         <div className="container">
-          <div className="columns is-centered">
-            <div className="column is-10">
-              <MyMapComponent isMarkerShown />
+          <div className="columns is-vcentered is-variable is-8">
+            <div className="column is-6">
+              <div className="my">
+                <MyMapComponent isMarkerShown />
+              </div>
+            </div>
+            <div className="column is-6">
+              <div className="my">
+                <figure className="image">
+                  <img
+                    src="https://cdn.sanity.io/images/8zqv9o3f/production/d1539fbd26296d7f41613f909acc2cba6f43fdd9-1032x678.jpg"
+                    alt=""
+                  />
+                </figure>
+              </div>
             </div>
           </div>
         </div>
