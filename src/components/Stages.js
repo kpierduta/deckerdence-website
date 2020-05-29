@@ -26,9 +26,11 @@ const Stages = ({ title, subtitle, image }) => (
         </ImageWrapper>
       </div>
       <h2 className="title is-4 is-spaced has-text-centered">{title}</h2>
-      <p className="subtitle is-5 has-text-weight-normal has-text-centered">
-        {subtitle}
-      </p>
+      {subtitle && (
+        <p className="subtitle is-5 has-text-weight-normal has-text-centered">
+          {subtitle}
+        </p>
+      )}
     </div>
   </Section>
 );

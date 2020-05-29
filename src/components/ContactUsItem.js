@@ -44,9 +44,12 @@ const ContactUsItem = ({ title, icon, para, href }) => (
                 <img src={icon} alt="" />
               </figure>
             </ImageWrapper>
-            <p className="subtitle is-5 has-text-centered has-text-white">
+            <a
+              href="https://www.pinterest.co.uk/deckerdence/"
+              className="subtitle is-5 has-text-centered has-text-white"
+            >
               {para}
-            </p>
+            </a>
           </div>
         </div>
       </div>

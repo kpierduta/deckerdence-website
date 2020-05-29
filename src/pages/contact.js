@@ -92,7 +92,7 @@ const ContactUs = ({ data }) => {
                     ? 'tel:'
                     : item.genre === 'mail'
                     ? 'mailto:'
-                    : ''
+                    : 'https://'
                 }`}
               />
             ))}
