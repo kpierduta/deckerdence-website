@@ -89,9 +89,9 @@ const ContactUs = ({ data }) => {
                 para={item.subtitle}
                 href={`${
                   item.genre === 'phoneNumber'
-                    ? 'tel:'
+                    ? 'tel:01675 463555'
                     : item.genre === 'mail'
-                    ? 'mailto:'
+                    ? 'mailto:enquiries@deckerdence.com'
                     : 'https://www.pinterest.co.uk/deckerdence/'
                 }`}
               />
