@@ -11,11 +11,10 @@ const Section = styled.div`
     background-repeat: no-repeat;
     height: 500px;
     box-shadow: none;
-
-    padding: 0rem 2rem;
-    @media screen and (max-width: 768px) {
+    /* padding: 0rem 1rem; */
+    /* @media screen and (max-width: 768px) {
       padding: 0rem 1rem;
-    }
+    } */
   }
   h1 {
     border-bottom: 3px solid white;
@@ -44,7 +43,7 @@ const ContactUsItem = ({ title, icon, para, href }) => (
                 <img src={icon} alt="" />
               </figure>
             </ImageWrapper>
-            <p className="subtitle is-5 has-text-centered has-text-white">
+            <p className="subtitle is-6 has-text-centered has-text-white">
               {para}
             </p>
           </div>
