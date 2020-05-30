@@ -1,11 +1,6 @@
 import React from 'react';
 import { compose, withProps } from 'recompose';
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker,
-} from 'react-google-maps';
+import { withScriptjs, withGoogleMap, GoogleMap } from 'react-google-maps';
 
 const MyMapComponent = compose(
   withProps({
@@ -30,11 +25,7 @@ const MyMapComponent = compose(
   <GoogleMap
     defaultZoom={15}
     defaultCenter={{ lat: 52.5121692, lng: -1.6867767 }}
-  >
-    {props.isMarkerShown && (
-      <Marker position={{ lat: 52.5121692, lng: -1.6867767 }} />
-    )}
-  </GoogleMap>
+  />
 ));
 
 export default MyMapComponent;
