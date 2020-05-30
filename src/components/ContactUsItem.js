@@ -36,7 +36,7 @@ const ContactUsItem = ({ title, icon, para, href }) => (
       <div className="card">
         <div className="card-content">
           <div className="content has-text-centered">
-            <h1 className="title is-5 has-text-weight-normal has-text-centered has-text-white">
+            <h1 className="title is-5 has-text-weight-normal has-text-centered     has-text-white">
               {title}
             </h1>
             <ImageWrapper className="media align">
@@ -44,12 +44,9 @@ const ContactUsItem = ({ title, icon, para, href }) => (
                 <img src={icon} alt="" />
               </figure>
             </ImageWrapper>
-            <a
-              href="https://www.pinterest.co.uk/deckerdence/"
-              className="subtitle is-5 has-text-centered has-text-white"
-            >
+            <p className="subtitle is-5 has-text-centered has-text-white">
               {para}
-            </a>
+            </p>
           </div>
         </div>
       </div>
