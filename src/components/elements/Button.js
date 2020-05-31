@@ -5,6 +5,9 @@ import { Link } from 'gatsby';
 const LinkStyled = styled(Link)`
   img {
     width: ${props => (props.haswidth ? props.haswidth : '100%')};
+    @media screen and (max-width: 768px) {
+      width: auto;
+    }
   }
   figure {
     margin: 0 auto;
