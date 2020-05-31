@@ -20,8 +20,9 @@ export const contactUsQuery = graphql`
         title
         subtitle
         contactItem {
+          href
           _key
-          genre
+
           title
           subtitle
           icon {
@@ -87,13 +88,7 @@ const ContactUs = ({ data }) => {
                 title={item.title}
                 icon={item.icon.asset.url}
                 para={item.subtitle}
-                href={`${
-                  item.genre === 'phoneNumber'
-                    ? 'tel:01675 463555'
-                    : item.genre === 'mail'
-                    ? 'mailto:enquiries@deckerdence.com'
-                    : 'https://www.pinterest.co.uk/deckerdence/'
-                }`}
+                href={item.href}
               />
             ))}
           </div>
