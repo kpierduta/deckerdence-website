@@ -18,9 +18,7 @@ const DetailsCard = ({ para, boxImage }) => (
       <div className="main">
         <div className="card-content">
           <div className="content">
-            <p className="subtitle is-5 has-text-centered has-text-black">
-              {para}
-            </p>
+            <p className="subtitle is-5 has-text-black">{para}</p>
           </div>
         </div>
       </div>

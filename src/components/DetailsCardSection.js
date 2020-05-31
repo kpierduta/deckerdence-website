@@ -4,7 +4,7 @@ import DetailsCard from './DetailsCard';
 
 const Container = styled.section`
   h1 {
-    padding: 3rem 0;
+    padding: 1rem 0;
   }
 `;
 
