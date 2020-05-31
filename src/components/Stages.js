@@ -23,7 +23,7 @@ const ImageWrapper = styled.div`
   }
 `;
 
-const Stages = ({ title, subtitle, image }) => (
+const Stages = ({ title, subtitle, image, to }) => (
   <Section className="column is-flex">
     <div className="card-content">
       <div className="card-image">
@@ -41,7 +41,7 @@ const Stages = ({ title, subtitle, image }) => (
       )}
 
       <p className="has-text-centered">
-        <Link to="/" type="button" className="button is-size-6 has-text-black">
+        <Link to={to} type="button" className="button is-size-6 has-text-black">
           FIND OUT MORE
         </Link>
       </p>
