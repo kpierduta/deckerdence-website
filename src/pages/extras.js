@@ -11,6 +11,7 @@ const Section = styled.div`
   background-image: url(${props => props.bgImage});
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  margin-bottom: 1.5rem !important;
   .column {
     background-image: url(/images/towbar/frame@2x.png);
     background-size: 100% 100%;
@@ -30,7 +31,6 @@ const Section = styled.div`
 
 const Columns = styled.div`
   .column {
-    margin-top: 1.5rem !important;
     margin-bottom: 1.5rem !important;
   }
   img {
