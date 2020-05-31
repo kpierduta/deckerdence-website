@@ -29,10 +29,9 @@ const Section = styled.div`
 `;
 
 const Columns = styled.div`
-  margin-top: 1rem;
-  margin-block-end: auto !important;
   .column {
-    margin-top: -1rem;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
   }
   img {
     filter: gray;
@@ -124,7 +123,7 @@ const ExtraPage = ({ data }) => {
               </div>
             </div>
           </Section>
-          <Columns className="columns is-multiline is-variable is-1">
+          <Columns className="columns is-multiline">
             {items.gallery.map(item => (
               <div className="column is-6">
                 <figure className="image is-5by4">
