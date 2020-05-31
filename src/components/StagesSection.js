@@ -19,7 +19,7 @@ const StagesSection = ({ data }) => (
           size="is-size-3-mobile"
         />
       </div>
-      <div className="columns">
+      <div className="columns is-flex">
         {data.simpleStages.item.map(items => (
           <Stages
             key={items._key}

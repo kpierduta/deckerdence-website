@@ -1,9 +1,17 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const Section = styled.div`
   .title {
-    padding: 3rem 0 0;
+    padding: 2rem 0 0;
+  }
+
+  .button {
+    margin: 10px 0px 0px 0px;
+    border: 2px solid ${props => props.theme.darkShades};
+    font-family: ${props => props.theme.secondaryFontFamily};
+    letter-spacing: 1px;
   }
 `;
 
@@ -16,7 +24,7 @@ const ImageWrapper = styled.div`
 `;
 
 const Stages = ({ title, subtitle, image }) => (
-  <Section className="column">
+  <Section className="column is-flex">
     <div className="card-content">
       <div className="card-image">
         <ImageWrapper className="media align">
@@ -31,6 +39,12 @@ const Stages = ({ title, subtitle, image }) => (
           {subtitle}
         </p>
       )}
+
+      <p className="has-text-centered">
+        <Link to="/" type="button" className="button is-size-6 has-text-black">
+          FIND OUT MORE
+        </Link>
+      </p>
     </div>
   </Section>
 );
