@@ -52,6 +52,9 @@ export const homeQuery = graphql`
           _key
           title
           subTitle
+          buttonLink {
+            current
+          }
           avatar {
             asset {
               url

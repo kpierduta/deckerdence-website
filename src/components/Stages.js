@@ -39,7 +39,6 @@ const Stages = ({ title, subtitle, image, to }) => (
           {subtitle}
         </p>
       )}
-
       <p className="has-text-centered">
         <Link to={to} type="button" className="button is-size-6 has-text-black">
           FIND OUT MORE

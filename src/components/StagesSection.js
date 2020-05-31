@@ -26,7 +26,7 @@ const StagesSection = ({ data }) => (
             title={items.title}
             subtitle={items.subTitle}
             image={items.avatar.asset.url}
-            to="/"
+            to={items.buttonLink.current}
           />
         ))}
       </div>
