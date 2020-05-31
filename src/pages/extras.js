@@ -11,7 +11,7 @@ const Section = styled.div`
   background-image: url(${props => props.bgImage});
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  margin-bottom: 1.5rem !important;
+
   .column {
     background-image: url(/images/towbar/frame@2x.png);
     background-size: 100% 100%;
@@ -30,9 +30,12 @@ const Section = styled.div`
 `;
 
 const Columns = styled.div`
-  .column {
-    margin-bottom: 1.5rem !important;
+  :last-child {
+    margin-bottom: 1rem !important;
   }
+
+  margin-top: 1rem !important;
+
   img {
     filter: gray;
     filter: grayscale(1);
@@ -97,7 +100,7 @@ const ExtraPage = ({ data }) => {
       {page.extrasPage.extrasContent.map(items => (
         <div>
           <Section
-            className="section hero is-medium-with-navbar"
+            className="section hero is-medium-with-navbar is-block"
             bgImage={items.backgroundImage.asset.url}
           >
             <div className="container">
