@@ -13,6 +13,11 @@ const Section = styled.div`
     font-family: ${props => props.theme.secondaryFontFamily};
     letter-spacing: 1px;
   }
+  @media screen and (min-width: 769px), {
+    h2 {
+      min-height: 6.5rem !important;
+    }
+  }
 `;
 
 const ImageWrapper = styled.div`
