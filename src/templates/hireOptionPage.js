@@ -35,22 +35,9 @@ export const hireOptionPage = graphql`
         }
       }
       hireFormTitle
-      firstVehicleFeature {
-        items {
-          _key
-          hasFrameRight
-          hasTextWhite
-          title
-          featuresBackgroundImage {
-            asset {
-              url
-            }
-          }
-          featuresFrameImage {
-            asset {
-              url
-            }
-          }
+      firstFeature {
+        asset {
+          url
         }
       }
 
@@ -67,22 +54,10 @@ export const hireOptionPage = graphql`
           }
         }
       }
-      secondVehicleFeature {
-        items {
-          _key
-          hasFrameRight
-          hasTextWhite
-          title
-          featuresBackgroundImage {
-            asset {
-              url
-            }
-          }
-          featuresFrameImage {
-            asset {
-              url
-            }
-          }
+
+      secondFeature {
+        asset {
+          url
         }
       }
       information {
@@ -97,22 +72,9 @@ export const hireOptionPage = graphql`
           subtitle
         }
       }
-      thirdVehicleFeature {
-        items {
-          _key
-          hasFrameRight
-          hasTextWhite
-          title
-          featuresBackgroundImage {
-            asset {
-              url
-            }
-          }
-          featuresFrameImage {
-            asset {
-              url
-            }
-          }
+      thirdFeature {
+        asset {
+          url
         }
       }
     }
@@ -160,16 +122,9 @@ const HireOptionPage = ({ data }) => {
           </div>
         </div>
       </section>
-      {hire.firstVehicleFeature.items.map(item => (
-        <VenueSection
-          key={item._key}
-          frameBgImage={item.featuresBackgroundImage.asset.url}
-          // frame={item.featuresFrameImage.asset.url}
-          // flex={item.hasFrameRight}
-          // color={item.hasTextWhite}
-          // text={item.title}
-        />
-      ))}
+
+      <VenueSection frameBgImage={hire.firstFeature.asset.url} />
+
       <section className="section">
         <div className="container">
           <h1 className="title is-4 has-text-centered is-uppercase">
@@ -189,27 +144,9 @@ const HireOptionPage = ({ data }) => {
           </h1>
         </div>
       </section>
-      {hire.secondVehicleFeature.items.map(item => (
-        <VenueSection
-          key={item._key}
-          frameBgImage={item.featuresBackgroundImage.asset.url}
-          // flex={item.hasFrameRight}
-          // color={item.hasTextWhite}
-          // text={item.title}
-          // frame={item.featuresFrameImage.asset.url}
-        />
-      ))}
+      <VenueSection frameBgImage={hire.secondFeature.asset.url} />
       <TileItem data={hire} />
-      {hire.thirdVehicleFeature.items.map(item => (
-        <VenueSection
-          key={item._key}
-          frameBgImage={item.featuresBackgroundImage.asset.url}
-          // flex={item.hasFrameRight}
-          // color={item.hasTextWhite}
-          // text={item.title}
-          // frame={item.featuresFrameImage.asset.url}
-        />
-      ))}
+      <VenueSection frameBgImage={hire.thirdFeature.asset.url} />
       <Contact />
     </Layout>
   );
