@@ -40,7 +40,6 @@ export const hireOptionPage = graphql`
           url
         }
       }
-
       festival {
         mainHeading
         subtitle
@@ -54,7 +53,6 @@ export const hireOptionPage = graphql`
           }
         }
       }
-
       secondFeature {
         asset {
           url
