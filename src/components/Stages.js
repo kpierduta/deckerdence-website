@@ -29,7 +29,7 @@ const ImageWrapper = styled.div`
 `;
 
 const Stages = ({ title, subtitle, image, to }) => (
-  <Section className="column is-flex">
+  <Section className="column">
     <div className="card-content">
       <div className="card-image">
         <ImageWrapper className="media align">
