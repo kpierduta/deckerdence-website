@@ -101,6 +101,11 @@ export const MainPageQuery = graphql`
         }
         alt
       }
+      downloadShowcase {
+        asset {
+          url
+        }
+      }
     }
   }
 `;
@@ -168,7 +173,7 @@ const MainPage = ({ data }) => {
           <img src="/images/view-more-black.png" alt="button" />
         </figure>
       </Button>
-      <Contact />
+      <Contact data={page} />
     </Layout>
   );
 };

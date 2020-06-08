@@ -11,11 +11,15 @@ const Section = styled.div`
   border-bottom: 15px solid transparent;
   border-image: url('/images/hire/divider-2@2x.jpg') 50 round;
 `;
-
-const Contact = () => (
+downloadShowcase {
+  asset {
+    url
+  }
+}
+const Contact = ({ data }) => (
   <Section className="section is-block is-relative">
     <div className="container">
-      <Diagram avatar="/images/hire/icon@2x.png" />
+      <Diagram avatar={data.downloadShowcase.asset.url} />
     </div>
     <div className="columns is-centered">
       <div className="column is-6 has-text-centered">

@@ -75,6 +75,11 @@ export const hireOptionPage = graphql`
           url
         }
       }
+      downloadShowcase {
+        asset {
+          url
+        }
+      }
     }
   }
 `;
@@ -145,7 +150,7 @@ const HireOptionPage = ({ data }) => {
       <VenueSection frameBgImage={hire.secondFeature.asset.url} />
       <TileItem data={hire} />
       <VenueSection frameBgImage={hire.thirdFeature.asset.url} />
-      <Contact />
+      <Contact data={hire} />
     </Layout>
   );
 };
