@@ -11,11 +11,7 @@ const Section = styled.div`
   border-bottom: 15px solid transparent;
   border-image: url('/images/hire/divider-2@2x.jpg') 50 round;
 `;
-downloadShowcase {
-  asset {
-    url
-  }
-}
+
 const Contact = ({ data }) => (
   <Section className="section is-block is-relative">
     <div className="container">
