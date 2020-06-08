@@ -150,7 +150,7 @@ const HireOptionPage = ({ data }) => {
       <VenueSection frameBgImage={hire.secondFeature.asset.url} />
       <TileItem data={hire} />
       <VenueSection frameBgImage={hire.thirdFeature.asset.url} />
-      <Contact data={hire} />
+      <Contact avatar={hire.downloadShowcase.asset.url} />
     </Layout>
   );
 };

@@ -173,7 +173,7 @@ const MainPage = ({ data }) => {
           <img src="/images/view-more-black.png" alt="button" />
         </figure>
       </Button>
-      <Contact data={page} />
+      <Contact avatar={page.downloadShowcase.asset.url} />
     </Layout>
   );
 };

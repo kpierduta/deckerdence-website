@@ -22,7 +22,6 @@ export const contactUsQuery = graphql`
         contactItem {
           href
           _key
-
           title
           subtitle
           icon {
@@ -118,7 +117,7 @@ const ContactUs = ({ data }) => {
           Visitors by appointment only
         </p>
       </Section>
-      <Contact />
+      <Contact avatar="/images/hire/icon@2x.png" />
     </Layout>
   );
 };
