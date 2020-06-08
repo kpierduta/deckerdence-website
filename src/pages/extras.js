@@ -11,14 +11,15 @@ const Section = styled.div`
   background-image: url(${props => props.bgImage});
   background-size: 100% 100%;
   background-repeat: no-repeat;
-
+  .columns {
+    justify-content: ${props => (props.flex ? 'flex-end' : 'flex-start')};
+  }
   .column {
     background-image: url(/images/towbar/frame@2x.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 500px;
     justify-content: center;
-    display: grid;
     padding: 3rem 12rem;
     @media screen and (max-width: 768px) {
       padding: 0rem 3rem;
@@ -60,6 +61,7 @@ export const externalQuery = graphql`
         mainSubtitle
         extrasContent {
           _key
+          itemRight
           slug {
             current
           }
@@ -100,12 +102,13 @@ const ExtraPage = ({ data }) => {
       {page.extrasPage.extrasContent.map(items => (
         <div>
           <Section
-            className="section hero is-medium-with-navbar is-block"
+            className="section hero is-medium is-block"
             bgImage={items.backgroundImage.asset.url}
+            flex={items.itemRight}
           >
             <div className="container">
-              <div className="columns is-centered">
-                <div className="column is-9-desktop  ">
+              <div className="columns is-vcentered">
+                <div className="column is-8">
                   <div className="wrapper">
                     <h1 className="subtitle is-5 has-text-centered has-text-white">
                       {items.title}

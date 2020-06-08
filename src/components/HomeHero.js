@@ -24,7 +24,7 @@ const Section = styled.section`
     height: 1330px;
   }
   .columns.is-centered {
-    margin-top: 23rem;
+    margin-top: 25rem;
     @media screen and (max-width: 768px) {
       margin-top: 0;
     }
