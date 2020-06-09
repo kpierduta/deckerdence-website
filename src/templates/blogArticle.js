@@ -26,6 +26,7 @@ export const blogArticleQuery = graphql`
           url
         }
       }
+      _rawContent
       content {
         _key
         title
@@ -95,7 +96,7 @@ const BlogArticle = ({ data }) => {
         {page.content.map(options => (
           <BlogArticleItem
             title={options.title}
-            subtitle={options.body}
+            subtitle={page._rawContent}
             key={options._key}
           />
         ))}
