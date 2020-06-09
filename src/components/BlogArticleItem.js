@@ -6,6 +6,9 @@ const Section = styled.div`
   .title {
     color: ${props => props.theme.primaryColor} !important ;
   }
+  a {
+    color: ${props => props.theme.primaryColor} !important ;
+  }
 `;
 
 const BlogArticleItem = ({ title, subtitle }) => {
