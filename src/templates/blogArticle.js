@@ -29,7 +29,7 @@ export const blogArticleQuery = graphql`
       content {
         _key
         title
-        subTitle
+        body
       }
       blogArticleCategoriesHeading
       blogArticleCategories
@@ -95,8 +95,8 @@ const BlogArticle = ({ data }) => {
         {page.content.map(options => (
           <BlogArticleItem
             title={options.title}
-            subtitle={options.subTitle}
-            key={page._key}
+            subtitle={options.body}
+            key={options._key}
           />
         ))}
       </BlogsWrapper>
