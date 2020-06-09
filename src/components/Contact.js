@@ -17,6 +17,7 @@ const Contact = ({ avatar }) => (
     <div className="container">
       <Diagram avatar={avatar} />
     </div>
+
     <div className="columns is-centered">
       <div className="column is-6 has-text-centered">
         <ContactForm
