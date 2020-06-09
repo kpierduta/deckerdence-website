@@ -104,10 +104,7 @@ const ContactUs = ({ data }) => {
             <div className="column is-6">
               <div className="my">
                 <figure className="image">
-                  <img
-                    src="https://cdn.sanity.io/images/8zqv9o3f/production/d1539fbd26296d7f41613f909acc2cba6f43fdd9-1032x678.jpg"
-                    alt=""
-                  />
+                  <img src="/images/contacts/contact.jpg" alt="" />
                 </figure>
               </div>
             </div>
