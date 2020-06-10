@@ -27,11 +27,7 @@ export const blogArticleQuery = graphql`
         }
       }
       _rawContent
-      content {
-        _key
-        title
-        body
-      }
+
       blogArticleCategoriesHeading
       blogArticleCategories
     }
@@ -93,13 +89,7 @@ const BlogArticle = ({ data }) => {
         </div>
       </Section>
       <BlogsWrapper>
-        {page.content.map(options => (
-          <BlogArticleItem
-            title={options.title}
-            subtitle={page._rawContent}
-            key={options._key}
-          />
-        ))}
+        <BlogArticleItem subtitle={page._rawContent} />
       </BlogsWrapper>
       <CalendarSlider />
     </Layout>
