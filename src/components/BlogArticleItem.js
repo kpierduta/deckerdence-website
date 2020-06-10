@@ -12,12 +12,15 @@ const Section = styled.div`
     color: ${props => props.theme.primaryColor} !important ;
     font-size: 22px !important;
     text-align: center;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 2rem !important;
     text-transform: uppercase !important;
     font-weight: 600 !important;
   }
   a {
     color: ${props => props.theme.primaryColor} !important ;
+  }
+  p {
+    margin-bottom: 1.7rem !important;
   }
 `;
 
