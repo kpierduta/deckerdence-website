@@ -18,8 +18,8 @@ const DetailsCardSection = ({ data }) => (
         {data.details.map(item => (
           <div className="column is-6 hero is-medium">
             <DetailsCard
+              data={item._rawContent}
               key={item._key}
-              para={item.body}
               boxImage={item.finerDetailsImage.asset.url}
             />
           </div>

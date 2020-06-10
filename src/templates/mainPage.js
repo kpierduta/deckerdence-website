@@ -66,7 +66,7 @@ export const MainPageQuery = graphql`
         }
       }
       detailsMainHeading
-
+      _rawDetails
       details {
         _key
         body
