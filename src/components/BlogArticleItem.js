@@ -21,13 +21,11 @@ const Section = styled.div`
   }
 `;
 
-const BlogArticleItem = ({ subtitle }) => {
+const BlogArticleItem = ({ data }) => {
   return (
     <Section className="section">
       <div className="container">
-        {subtitle.map(item => (
-          <BlockContent blocks={item.portableText} />
-        ))}
+        <BlockContent blocks={data.portableText} />
       </div>
     </Section>
   );
