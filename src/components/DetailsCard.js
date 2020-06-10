@@ -13,10 +13,13 @@ const Section = styled.div`
     }
 `;
 
-const DetailsCard = ({ data, boxImage }) => (
-  <Section className="hero-body" boxImage={boxImage}>
-    <BlockContent blocks={data.content} />
-  </Section>
-);
+const DetailsCard = ({ data, boxImage }) => {
+  console.log('values', data);
+  return (
+    <Section className="hero-body" boxImage={boxImage}>
+      <BlockContent blocks={data} />
+    </Section>
+  );
+};
 
 export default DetailsCard;

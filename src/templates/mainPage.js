@@ -70,6 +70,12 @@ export const MainPageQuery = graphql`
       details {
         _key
         body
+        content {
+          _key
+          _type
+          style
+          list
+        }
         finerDetailsImage {
           asset {
             url
