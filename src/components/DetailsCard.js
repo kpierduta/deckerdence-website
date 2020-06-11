@@ -10,7 +10,8 @@ const Section = styled.div`
     p {
       font-size: 17px !important;
       color: rgb(44, 44, 42) !important;
-      margin-bottom:1.5rem;
+      margin-bottom:1rem;
+      text-align: center;
     }
 `;
 
