@@ -66,22 +66,7 @@ export const MainPageQuery = graphql`
         }
       }
       detailsMainHeading
-      _rawDetails
-      details {
-        _key
-
-        content {
-          _key
-          _type
-          style
-          list
-        }
-        finerDetailsImage {
-          asset {
-            url
-          }
-        }
-      }
+      _rawDetails(resolveReferences: { maxDepth: 3 })
       Features {
         items {
           _key
