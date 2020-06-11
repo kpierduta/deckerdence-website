@@ -21,6 +21,7 @@ const Section = styled.div`
   }
   p {
     margin-bottom: 1.7rem !important;
+    text-align: center !important;
   }
 `;
 
