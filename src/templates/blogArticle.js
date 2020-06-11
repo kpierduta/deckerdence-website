@@ -21,7 +21,7 @@ export const blogArticleQuery = graphql`
       releaseDate(formatString: "DD-MM-YYYY")
       title
       categorySet
-      image {
+      heroImage {
         asset {
           url
         }
@@ -72,7 +72,7 @@ const BlogArticle = ({ data }) => {
           title={page.releaseDate}
           middleText={page.title}
           subTitle={page.categorySet}
-          hireBgImage={page.image.asset.url}
+          hireBgImage={page.heroImage.asset.url}
         />
       </Wrapper>
       <Section className="section">

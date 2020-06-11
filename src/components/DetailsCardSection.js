@@ -15,17 +15,15 @@ const DetailsCardSection = ({ data }) => (
         {data.detailsMainHeading}
       </h1>
       <div className="columns is-multiline">
-        {data.details.map(test =>
-          data._rawDetails.map(item => (
-            <div className="column is-6 hero is-medium">
-              <DetailsCard
-                data={item.content}
-                key={item._key}
-                boxImage={test.finerDetailsImage.asset.url}
-              />
-            </div>
-          )),
-        )}
+        {data._rawDetails.map(test => (
+          <div className="column is-6 hero is-medium">
+            <DetailsCard
+              data={test.content}
+              key={test._key}
+              boxImage={test.finerDetailsImage.asset.url}
+            />
+          </div>
+        ))}
       </div>
     </div>
   </Container>
