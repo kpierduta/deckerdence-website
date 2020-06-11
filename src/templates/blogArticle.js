@@ -6,7 +6,6 @@ import Layout from '../components/Layout';
 import HireOptions from '../components/HireOptions';
 import BlogCategoryItem from '../components/BlogCategoryItem';
 import BlogArticleItem from '../components/BlogArticleItem';
-import CalendarSlider from '../components/CalendarSlider';
 
 export const blogArticleQuery = graphql`
   query blogArticle($slug: String) {
@@ -90,7 +89,6 @@ const BlogArticle = ({ data }) => {
       <BlogsWrapper>
         <BlogArticleItem data={page._rawContent} />
       </BlogsWrapper>
-      <CalendarSlider />
     </Layout>
   );
 };

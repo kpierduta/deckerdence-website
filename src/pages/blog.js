@@ -7,6 +7,7 @@ import Layout from '../components/Layout';
 import PageHeading from '../components/PageHeading';
 import BlogCategory from '../components/BlogCategory';
 import BlogData from '../components/BlogData';
+import CalendarSlider from '../components/CalendarSlider';
 
 const Section = styled.section`
   .column {
@@ -49,6 +50,7 @@ const BlogPage = ({ data }) => {
   const [category, setCategory] = useState('all');
   const page = data.sanitySiteSettings;
   const blog = data.allSanityBlogPage.edges;
+
   return (
     <Layout>
       <Seo
@@ -84,6 +86,7 @@ const BlogPage = ({ data }) => {
           })}
         </div>
       </Section>
+      <CalendarSlider />
     </Layout>
   );
 };
