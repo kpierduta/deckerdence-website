@@ -7,14 +7,14 @@ const Section = styled.div`
     background-size: 100% 100%;
     background-repeat: no-repeat;
     padding: 11rem 1.5rem !important;
-    p{
+    p {
       font-size: 17px !important;
       color: rgb(44, 44, 42) !important;
+      margin-bottom:1.5rem;
     }
 `;
 
 const DetailsCard = ({ data, boxImage }) => {
-  console.log('values', data);
   return (
     <Section className="hero-body" boxImage={boxImage}>
       <BlockContent blocks={data} />
