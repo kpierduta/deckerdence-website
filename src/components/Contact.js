@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Diagram from './Diagram';
-import ContactForm from './ContactForm';
+import ContactForm from './forms/ContactForm';
 
 const Section = styled.div`
   background-image: url('/images/hire/hireFormBg.png');
@@ -17,7 +17,6 @@ const Contact = ({ avatar }) => (
     <div className="container">
       <Diagram avatar={avatar} />
     </div>
-
     <div className="columns is-centered">
       <div className="column is-6 has-text-centered">
         <ContactForm
