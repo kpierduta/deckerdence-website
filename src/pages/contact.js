@@ -50,6 +50,7 @@ const Section = styled.div`
   .my {
     padding: 55px 0px 38px 0px;
   }
+
   img {
     height: 20rem;
   }
@@ -63,6 +64,9 @@ const ContactWrapper = styled.div`
   background-image: url(https://cdn.sanity.io/images/8zqv9o3f/production/941aa3bb3c4f72c85ec209e7857b026acd86f5ee-2816x1566.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  figure {
+    margin: 0 auto !important;
+  }
 `;
 
 const ContactUs = ({ data }) => {
@@ -127,10 +131,7 @@ const ContactUs = ({ data }) => {
           <div className="columns is-multiline">
             <div className="column is-3 has-text-centered">
               <figure className="image is-128x128">
-                <img
-                  src="https://bulma.io/images/placeholders/128x128.png"
-                  alt=""
-                />
+                <img src="/images/hire/icon@2x.png" alt="" />
               </figure>
               <DownloadForm
                 title="bus bar showcase download"
@@ -139,6 +140,9 @@ const ContactUs = ({ data }) => {
               />
             </div>
             <div className="column is-3 has-text-centered">
+              <figure className="image is-128x128">
+                <img src="/images/hire/icon@2x.png" alt="" />
+              </figure>
               <DownloadForm
                 title="Bus bar with side owning download"
                 pera="By submitting this form you agree to our contact terms and
@@ -146,6 +150,9 @@ const ContactUs = ({ data }) => {
               />
             </div>
             <div className="column is-3 has-text-centered">
+              <figure className="image is-128x128">
+                <img src="/images/hire/icon@2x.png" alt="" />
+              </figure>
               <DownloadForm
                 title="BUS BAR WITH HALF WRAPAROUND MARQUEE SHOWCASE DOWN LOAD"
                 pera="By submitting this form you agree to our contact terms and
@@ -153,6 +160,9 @@ const ContactUs = ({ data }) => {
               />
             </div>
             <div className="column is-3 has-text-centered">
+              <figure className="image is-128x128">
+                <img src="/images/hire/icon@2x.png" alt="" />
+              </figure>
               <DownloadForm
                 title="BUS BAR WITH HALF WRAPAROUND MARQUEE SHOWCASE DOWN LOAD"
                 pera="By submitting this form you agree to our contact terms and
