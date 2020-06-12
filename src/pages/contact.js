@@ -61,11 +61,12 @@ const Header = styled.div`
 `;
 
 const ContactWrapper = styled.div`
-  background-image: url(https://cdn.sanity.io/images/8zqv9o3f/production/941aa3bb3c4f72c85ec209e7857b026acd86f5ee-2816x1566.png);
+  background-image: url(/images/contacts/downloadBack.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   figure {
-    margin: 0 auto !important;
+    margin: 7px auto !important;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -131,7 +132,7 @@ const ContactUs = ({ data }) => {
           <div className="columns is-multiline">
             <div className="column is-3 has-text-centered">
               <figure className="image is-128x128">
-                <img src="/images/hire/icon@2x.png" alt="" />
+                <img src="/images/contacts/downloadFour.png" alt="" />
               </figure>
               <DownloadForm
                 title="bus bar showcase download"
@@ -141,7 +142,7 @@ const ContactUs = ({ data }) => {
             </div>
             <div className="column is-3 has-text-centered">
               <figure className="image is-128x128">
-                <img src="/images/hire/icon@2x.png" alt="" />
+                <img src="/images/contacts/downloadThree.png" alt="" />
               </figure>
               <DownloadForm
                 title="Bus bar with side owning download"
@@ -151,7 +152,7 @@ const ContactUs = ({ data }) => {
             </div>
             <div className="column is-3 has-text-centered">
               <figure className="image is-128x128">
-                <img src="/images/hire/icon@2x.png" alt="" />
+                <img src="/images/contacts/downloadTwo.png" alt="" />
               </figure>
               <DownloadForm
                 title="BUS BAR WITH HALF WRAPAROUND MARQUEE SHOWCASE DOWN LOAD"
@@ -161,7 +162,7 @@ const ContactUs = ({ data }) => {
             </div>
             <div className="column is-3 has-text-centered">
               <figure className="image is-128x128">
-                <img src="/images/hire/icon@2x.png" alt="" />
+                <img src="/images/contacts/downloadOne.png" alt="" />
               </figure>
               <DownloadForm
                 title="BUS BAR WITH HALF WRAPAROUND MARQUEE SHOWCASE DOWN LOAD"
