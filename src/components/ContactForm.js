@@ -57,7 +57,7 @@ class ContactForm extends React.Component {
     const { email, phone } = this.state;
     const { pera, dottedBorder } = this.props;
     return (
-      <Section className="section" dottedBorder={dottedBorder}>
+      <Section className="section is-paddingless" dottedBorder={dottedBorder}>
         <form data-netlify="true" name="contact" onSubmit={this.handleSubmit}>
           <div className="field">
             <div className="control">

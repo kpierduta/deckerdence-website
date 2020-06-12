@@ -13,7 +13,7 @@ const Section = styled.div`
 `;
 
 const Contact = ({ avatar }) => (
-  <Section className="section is-block is-relative">
+  <Section className="section ">
     <div className="container">
       <Diagram avatar={avatar} />
     </div>
