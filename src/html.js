@@ -42,12 +42,12 @@ export default class HTML extends React.Component {
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-111400300-1"
           />{' '}
-          <script>
+          {/* <script>
             {' '}
             window.dataLayer = window.dataLayer || []; function gtag()
             {dataLayer.push(arguments)} gtag('js', new Date()); gtag('config',
             'UA-111400300-1');{' '}
-          </script>
+          </script> */}
           <script src="/js/scripts.js" />
           {/* Add custom css or scripts here */}
           {this.props.headComponents}
