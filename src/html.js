@@ -38,16 +38,12 @@ export default class HTML extends React.Component {
             type="text/css"
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
           />
+
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-111400300-1"
-          />{' '}
-          {/* <script>
-            {' '}
-            window.dataLayer = window.dataLayer || []; function gtag()
-            {dataLayer.push(arguments)} gtag('js', new Date()); gtag('config',
-            'UA-111400300-1');{' '}
-          </script> */}
+          />
+
           <script src="/js/scripts.js" />
           {/* Add custom css or scripts here */}
           {this.props.headComponents}

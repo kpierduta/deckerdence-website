@@ -6,12 +6,12 @@ const Section = styled.section`
   background-image: url(${props => props.bgImg});
   background-size: 100% 100% !important;
   .columns {
-    justify-content: ${props => (props.flex ? 'flex-end' : 'flex-start')};
+    flex-direction: ${props => (props.flex ? 'row-reverse' : ' ')};
     @media screen and (max-width: 768px) {
       padding-top: 2rem;
     }
   }
-  .column {
+  .column.is-7 {
     background-image: url(${props => props.bannerImg});
     padding: 0rem 7rem !important;
     @media only screen and (device-width: 768px) {
@@ -29,6 +29,11 @@ const Section = styled.section`
   }
   h1 {
     padding-top: 1rem;
+  }
+  .gif {
+    position: absolute;
+    top: -264px;
+    right: -438px;
   }
 `;
 
@@ -68,6 +73,11 @@ const HomePageSection = ({
                 )}
               </div>
             </section>
+          </div>
+          <div className="column">
+            {/* <figure className=" gif image	 is-hidden-mobile">
+              <img src="/images/glass.gif" alt="gif" />
+            </figure> */}
           </div>
         </div>
       </div>
