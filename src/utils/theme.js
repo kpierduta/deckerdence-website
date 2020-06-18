@@ -11,7 +11,7 @@ export const theme = {
   mainBrandColor,
   // Accent colors can be used to bring attention to design elements
   // by contrasting with the rest of the palette.
-  lightAccent: '#FFDC57',
+  lightAccent: '#f7f7f7',
   // Use this color as the background for your dark-on-light designs,
   // or the text color of an inverted design.
   lightShades,
@@ -36,7 +36,7 @@ export const theme = {
   textColorInverse: lightShades,
   textColorLite: '#2c2c2a',
   menuTintColor: darkAccent,
-  primaryFontFamily: "'Avenir Next',sans-serif",
+  primaryFontFamily: "'BebasNeuePro-Book',sans-serif",
   secondaryFontFamily: "'BebasNeue-Regular', sans-serif",
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
 };
@@ -48,18 +48,13 @@ const GlobalStyle = createGlobalStyle`
   src: url("../fonts/BebasNeue-Regular.otf") format("opentype");
 }
 @font-face {
-    font-family: Avenir Next ;
-    src: url("../fonts/AvenirNextLTPro-It.otf") format("opentype");
+    font-family: BebasNeuePro-Book ;
+    src: url("../fonts/BebasNeuePro-Book.ttf") format("opentype");
 }
 @font-face {
-  font-family: Avenir Next ;
-  src: url("../fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-family: BebasNeuePro-Book ;
+  src: url("../fonts/BebasNeuePro-Book.eot") format("opentype");
 }
-@font-face {
-  font-family: Avenir Next ;
-  src: url("../fonts/AvenirNextLTPro-Regular.otf") format("opentype");
-}
-
 
   body {
     letter-spacing: 0.03rem !important;
