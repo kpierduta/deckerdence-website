@@ -125,9 +125,7 @@ const HireOptionPage = ({ data }) => {
           </div>
         </div>
       </section>
-
       <VenueSection frameBgImage={hire.firstFeature.asset.url} />
-
       <section className="section">
         <div className="container">
           <h1 className="title is-4 has-text-centered is-uppercase">
