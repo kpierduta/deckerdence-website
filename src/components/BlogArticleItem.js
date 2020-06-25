@@ -17,7 +17,7 @@ const Section = styled.div`
     font-weight: 600 !important;
   }
   a {
-    color: ${props => props.theme.primaryColor} !important ;
+    color: ${props => props.theme.darkAccent} !important ;
   }
   strong {
     font-weight: 800 !important;
@@ -27,7 +27,6 @@ const Section = styled.div`
     text-align: center !important;
   }
   li {
-    color: ${props => props.theme.primaryColor} !important ;
     text-align: center !important;
     margin-bottom: 0.5rem !important;
   }
