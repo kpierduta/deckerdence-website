@@ -34,5 +34,19 @@ export default {
       name: 'buttonLink',
       type: 'slug',
     },
+    {
+      title: 'Animations',
+      name: 'animations',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Animation One', value: 'animation-one' },
+          { title: 'Animation Two', value: 'animation-two' },
+          { title: 'Animation Third', value: 'animation-third' },
+          { title: 'Animation Fourth', value: 'animation-fourth' },
+        ],
+        layout: 'radio',
+      },
+    },
   ],
 };
