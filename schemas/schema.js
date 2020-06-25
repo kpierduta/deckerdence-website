@@ -28,11 +28,13 @@ import vehicleInformationItem from './vehicleInformationItem';
 import vehicleFeatureItem from './vehicleFeatureItem';
 import vehicleFeature from './vehicleFeature';
 import blogPage from './blogPage';
+import contact from './contact';
 import mainPageArcade from './mainPageArcade';
 import mainPageFinerDetail from './mainPageFinerDetail';
 import blogPageContent from './blogPageContent';
 import siteSettingsExtra from './siteSettingsExtra';
 import siteSettingsExtraItem from './siteSettingsExtraItem';
+import contactFile from './contactFile';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -49,6 +51,7 @@ export default createSchema({
     galleryPage,
     vehicleHirePage,
     blogPage,
+    contact,
     siteSettings,
     settingsFeatures,
     settingsFeaturesItem,
@@ -72,6 +75,7 @@ export default createSchema({
     blogPageContent,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
+    contactFile,
     blockContent,
   ]),
 });
