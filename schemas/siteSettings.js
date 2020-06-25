@@ -126,10 +126,5 @@ export default {
       name: 'blogMainTitle',
       type: 'string',
     },
-    {
-      title: 'Contact Us',
-      name: 'contactUs',
-      type: 'settingsContactUs',
-    },
   ],
 };
