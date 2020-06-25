@@ -19,6 +19,11 @@ export const contactUsQuery = graphql`
       mainHeading
       title
       subtitle
+      banner {
+        asset {
+          url
+        }
+      }
       contactItem {
         href
         title
@@ -127,7 +132,7 @@ const ContactUs = ({ data }) => {
             <div className="column is-6">
               <div className="my">
                 <figure className="image">
-                  <img src="/images/contacts/contact.jpg" alt="" />
+                  <img src={settings.banner.asset.url} alt="" />
                 </figure>
               </div>
             </div>
