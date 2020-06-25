@@ -58,7 +58,7 @@ class DownloadForm extends React.Component {
 
   render() {
     const { email, phone } = this.state;
-    const { pera, dottedBorder, title } = this.props;
+    const { file, dottedBorder, title } = this.props;
     return (
       <Section className="section is-paddingless" dottedBorder={dottedBorder}>
         <form data-netlify="true" name="contact" onSubmit={this.handleSubmit}>
@@ -87,11 +87,19 @@ class DownloadForm extends React.Component {
               />
             </div>
           </div>
-          <p className="subtitle is-6 has-text-centered-touch">{pera}</p>
+          <p className="subtitle is-6 has-text-centered-touch">
+            By submitting this form you agree to our contact terms and
+            conditions.
+          </p>
           <div>
-            <button type="submit" className="button is-danger title is-5 ">
+            <a
+              className="button is-danger title is-5 "
+              type="submit"
+              href={file}
+              download="pdf"
+            >
               <span className="is-size-5-touch is-uppercase">Download</span>
-            </button>
+            </a>
           </div>
         </form>
       </Section>

@@ -136,39 +136,26 @@ const ContactUs = ({ data }) => {
               </figure>
               <DownloadForm
                 title="bus bar showcase download"
-                pera="By submitting this form you agree to our contact terms and
-                conditions."
+                file="/images/1. Deckerdence Bus Bar.pdf"
               />
             </div>
             <div className="column is-3 has-text-centered">
               <figure className="image is-128x128">
                 <img src="/images/contacts/downloadThree.png" alt="" />
               </figure>
-              <DownloadForm
-                title="Bus bar with side owning download"
-                pera="By submitting this form you agree to our contact terms and
-                conditions."
-              />
+              <DownloadForm title="Bus bar with side owning download" />
             </div>
             <div className="column is-3 has-text-centered">
               <figure className="image is-128x128">
                 <img src="/images/contacts/downloadTwo.png" alt="" />
               </figure>
-              <DownloadForm
-                title="BUS BAR WITH HALF WRAPAROUND MARQUEE SHOWCASE DOWN LOAD"
-                pera="By submitting this form you agree to our contact terms and
-                conditions."
-              />
+              <DownloadForm title="BUS BAR WITH HALF WRAPAROUND MARQUEE SHOWCASE DOWN LOAD" />
             </div>
             <div className="column is-3 has-text-centered">
               <figure className="image is-128x128">
                 <img src="/images/contacts/downloadOne.png" alt="" />
               </figure>
-              <DownloadForm
-                title="BUS BAR WITH HALF WRAPAROUND MARQUEE SHOWCASE DOWN LOAD"
-                pera="By submitting this form you agree to our contact terms and
-                conditions."
-              />
+              <DownloadForm title="BUS BAR WITH HALF WRAPAROUND MARQUEE SHOWCASE DOWN LOAD" />
             </div>
           </div>
         </div>
