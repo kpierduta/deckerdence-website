@@ -1,6 +1,9 @@
+import { GrArticle } from 'react-icons/gr';
 export default {
   name: 'blogPage',
   title: 'Blog Page',
+  icon: GrArticle,
+
   type: 'document',
   fields: [
     {

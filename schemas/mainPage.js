@@ -1,6 +1,8 @@
+import { GiBus } from 'react-icons/gi';
 export default {
   name: 'mainPage',
   title: 'Main Page',
+  icon: GiBus,
   type: 'document',
   fields: [
     {

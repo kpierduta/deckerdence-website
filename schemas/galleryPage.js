@@ -1,7 +1,11 @@
+import { FcGallery } from 'react-icons/fc';
+
 export default {
   name: 'galleryPage',
   title: 'Gallery Page',
+  icon: FcGallery,
   type: 'document',
+
   fields: [
     {
       name: 'seoTitle',

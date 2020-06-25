@@ -1,7 +1,9 @@
+import { GrContactInfo } from 'react-icons/gr';
 export default {
   name: 'contact',
   title: 'Contact',
   type: 'document',
+  icon: GrContactInfo,
   __experimental_actions: [
     // 'create',
     'update',
