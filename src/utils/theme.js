@@ -27,7 +27,7 @@ export const theme = {
   backgroundColor: '#FFFFFF',
   backgroundInputColor: lightShades,
   backgroundInputColorDark: darkShades,
-  fontSize: 17,
+  fontSize: 18,
   fontSizeExtraSmall: 12,
   fontSizeSmall: 14,
   fontSizeMedium: 18,
@@ -60,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 0.03rem !important;
     font-family: ${theme.secondaryFontFamily};
     color: ${theme.textColor};
-    font-size: 17px;
+    font-size: 18px;
   }
   .title {
     font-family: ${theme.secondaryFontFamily};
@@ -70,8 +70,8 @@ const GlobalStyle = createGlobalStyle`
   .title.is-4 {
     font-size: 22px !important;
   }
-  .title.is-5{
-    font-size: 17px !important;
+  .title.is-5 {
+    font-size: 18px !important;
   }
   .title.is-6 {
     font-size: 14px !important;
@@ -86,7 +86,7 @@ p {
     font-size: 22px !important;
   }
   .subtitle.is-5{
-    font-size: 17px !important;
+    font-size: 18px !important;
   }
   .subtitle.is-6 {
     font-size: 14px !important;

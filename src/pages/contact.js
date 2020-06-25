@@ -12,23 +12,33 @@ import DownloadForm from '../components/forms/DownloadForm';
 
 export const contactUsQuery = graphql`
   query contactUsPage {
-    sanitySiteSettings {
-      contactUs {
-        seoTitle
-        seoKeywords
-        seoMetaDescription
-        mainHeading
+    sanityContact {
+      seoTitle
+      seoKeywords
+      seoMetaDescription
+      mainHeading
+      title
+      subtitle
+      contactItem {
+        href
         title
+        icon {
+          asset {
+            url
+          }
+        }
         subtitle
-        contactItem {
-          href
-          _key
-          title
-          subtitle
-          icon {
-            asset {
-              url
-            }
+      }
+      file {
+        title
+        image {
+          asset {
+            url
+          }
+        }
+        file {
+          asset {
+            url
           }
         }
       }
@@ -71,29 +81,29 @@ const ContactWrapper = styled.div`
 `;
 
 const ContactUs = ({ data }) => {
-  const settings = data.sanitySiteSettings;
+  const settings = data.sanityContact;
   return (
     <Layout>
       <Seo
-        title={settings.contactUs.seoTitle}
-        keywords={settings.contactUs.seoKeywords}
-        description={settings.contactUs.seoMetaDescription}
+        title={settings.seoTitle}
+        keywords={settings.seoKeywords}
+        description={settings.seoMetaDescription}
       />
-      <PageHeading title={settings.contactUs.mainHeading} />
+      <PageHeading title={settings.mainHeading} />
       <section className="section">
         <div className="container">
           <Header className="columns is-centered">
             <div className="column is-7">
               <h1 className="title is-4 is-spaced has-text-centered has-text-black">
-                {settings.contactUs.title}
+                {settings.title}
               </h1>
               <h1 className="subtitle is-5 has-text-centered has-text-black ">
-                {settings.contactUs.subtitle}
+                {settings.subtitle}
               </h1>
             </div>
           </Header>
           <div className="columns">
-            {settings.contactUs.contactItem.map(item => (
+            {settings.contactItem.map(item => (
               <ContactUsItem
                 key={item._key}
                 title={item.title}
@@ -113,6 +123,7 @@ const ContactUs = ({ data }) => {
                 <MyMapComponent isMarkerShown />
               </div>
             </div>
+
             <div className="column is-6">
               <div className="my">
                 <figure className="image">
@@ -130,33 +141,14 @@ const ContactUs = ({ data }) => {
       <ContactWrapper className="section hero is-medium">
         <div className="container">
           <div className="columns is-multiline">
-            <div className="column is-3 has-text-centered">
-              <figure className="image is-128x128">
-                <img src="/images/contacts/downloadFour.png" alt="" />
-              </figure>
-              <DownloadForm
-                title="bus bar showcase download"
-                file="/images/1. Deckerdence Bus Bar.pdf"
-              />
-            </div>
-            <div className="column is-3 has-text-centered">
-              <figure className="image is-128x128">
-                <img src="/images/contacts/downloadThree.png" alt="" />
-              </figure>
-              <DownloadForm title="Bus bar with side owning download" />
-            </div>
-            <div className="column is-3 has-text-centered">
-              <figure className="image is-128x128">
-                <img src="/images/contacts/downloadTwo.png" alt="" />
-              </figure>
-              <DownloadForm title="BUS BAR WITH HALF WRAPAROUND MARQUEE SHOWCASE DOWN LOAD" />
-            </div>
-            <div className="column is-3 has-text-centered">
-              <figure className="image is-128x128">
-                <img src="/images/contacts/downloadOne.png" alt="" />
-              </figure>
-              <DownloadForm title="BUS BAR WITH HALF WRAPAROUND MARQUEE SHOWCASE DOWN LOAD" />
-            </div>
+            {settings.file.map(item => (
+              <div className="column is-3 has-text-centered">
+                <figure className="image is-128x128">
+                  <img src={item.image.asset.url} alt="" />
+                </figure>
+                <DownloadForm title={item.title} file={item.file.asset.url} />
+              </div>
+            ))}
           </div>
         </div>
       </ContactWrapper>
