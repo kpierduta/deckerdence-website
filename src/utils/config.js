@@ -8,11 +8,13 @@ module.exports = {
   logo: '/images/logo.jpg',
 
   telephone: '+1-123-123-123',
-  email: 'john@doe.com',
+  email: 'enquiries@deckerdence.com',
   location: 'California, USA',
-  twitter: '@NAME-HERE',
-  fbUserId: '@NAME-HERE',
-  fbAppID: '@NAME-HERE',
+  twitter: 'https://twitter.com/deckerdence',
+  facebook: 'https://www.facebook.com/Deckerdence/',
+  linkedin: 'https://www.linkedin.com/company/8715264/',
+  instagram: 'https://www.instagram.com/deckerdence/',
+  pinterest: 'https://www.pinterest.co.uk/deckerdence/',
 
   type: 'website',
   googleAnalytics: 'UA-111400300-1',

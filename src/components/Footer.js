@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link, StaticQuery, graphql } from 'gatsby';
 
+import config from '../utils/config';
+
 import FooterOption from './FooterOptions';
 
 export const footerQuery = graphql`
@@ -56,21 +58,21 @@ const Footer = () => (
   <Container className="section is-normal">
     <div className="container">
       <IconContainer className="has-text-centered">
-        <Link to="/">
+        <a href={config.facebook}>
           <img src="/images/icon/facebook.png" alt="facebook icon" />
-        </Link>
-        <Link to="/">
+        </a>
+        <a href={config.twitter}>
           <img src="/images/icon/twitter.png" alt="twitter icon" />
-        </Link>
-        <Link to="/">
+        </a>
+        <a href={config.linkedin}>
           <img src="/images/icon/linked-in.png" alt="linkedin icon" />
-        </Link>
-        <Link to="/">
+        </a>
+        <a href={config.instagram}>
           <img src="/images/icon/instagram.png" alt="instagram icon" />
-        </Link>
-        <Link to="/">
+        </a>
+        <a href={config.pinterest}>
           <img src="/images/icon/pinterest.png" alt="pinterest icon" />
-        </Link>
+        </a>
       </IconContainer>
       <StaticQuery
         query={footerQuery}
