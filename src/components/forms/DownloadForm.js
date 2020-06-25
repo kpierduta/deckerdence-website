@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import addToMailchimp from 'gatsby-plugin-mailchimp';
 
 const Section = styled.div`
   .subtitle {
@@ -23,88 +24,80 @@ const Section = styled.div`
   }
 `;
 
-const encode = data => {
-  return Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join('&');
-};
-
-class DownloadForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { email: '', phone: '' };
-  }
-
-  /* Here’s the juicy bit for posting the form submission */
-  handleSubmit = e => {
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state }),
-    })
-      .then(() => {
-        this.setState({
-          email: '',
-          phone: '',
-        });
-        alert('Success!');
-      })
-      .catch(error => alert(error));
-
+const ContactForm = ({ file, dottedBorder, title }) => {
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const handleSubmit = e => {
     e.preventDefault();
+
+    addToMailchimp(phone)
+      .then(data => {
+        alert(data.result);
+      })
+      .catch(error => {
+        console.log('fail', error);
+      });
+
+    addToMailchimp(email)
+      .then(data => {
+        alert(data.result);
+      })
+      .catch(error => {
+        console.log('fail', error);
+      });
   };
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  const handleEmailChange = event => {
+    setEmail(event.currentTarget.value);
+  };
+  const handlePhoneChange = event => {
+    setPhone(event.currentTarget.value);
+  };
 
-  render() {
-    const { email, phone } = this.state;
-    const { file, dottedBorder, title } = this.props;
-    return (
-      <Section className="section is-paddingless" dottedBorder={dottedBorder}>
-        <form data-netlify="true" name="contact" onSubmit={this.handleSubmit}>
-          <h1 className="title is-5 has-text-centered-touch">{title}</h1>
-          <div className="field">
-            <div className="control">
-              <input
-                name="email"
-                className="input is-medium is-family-secondary subtitle is-5 is-uppercase"
-                value={email}
-                type="email"
-                placeholder="EMAIL"
-                onChange={this.handleChange}
-              />
-            </div>
+  return (
+    <Section className="section is-paddingless" dottedBorder={dottedBorder}>
+      <form onSubmit={handleSubmit}>
+        <h1 className="title is-5 has-text-centered-touch">{title}</h1>
+        <div className="field">
+          <div className="control">
+            <input
+              name="email"
+              className="input is-medium is-family-secondary subtitle is-5 "
+              value={email}
+              type="email"
+              placeholder="Your email"
+              onChange={handleEmailChange}
+            />
           </div>
-          <div className="field">
-            <div className="control">
-              <input
-                name="phone"
-                className="input is-medium is-family-secondary subtitle is-5 is-uppercase"
-                type="tel"
-                value={phone}
-                placeholder="Phone Number "
-                onChange={this.handleChange}
-              />
-            </div>
+        </div>
+        <div className="field">
+          <div className="control">
+            <input
+              name="phone"
+              className="input is-medium is-family-secondary subtitle is-5"
+              type="tel"
+              value={phone}
+              placeholder="Your phone number"
+              onChange={handlePhoneChange}
+            />
           </div>
-          <p className="subtitle is-6 has-text-centered-touch">
-            By submitting this form you agree to our contact terms and
-            conditions.
-          </p>
-          <div>
-            <a
-              className="button is-danger title is-5 "
-              type="submit"
-              href={file}
-              download="pdf"
-            >
-              <span className="is-size-5-touch is-uppercase">Download</span>
-            </a>
-          </div>
-        </form>
-      </Section>
-    );
-  }
-}
+        </div>
+        <p className="subtitle is-6 has-text-centered-touch">
+          By submitting this form you agree to our contact terms and conditions.
+        </p>
+        <div>
+          <button
+            className="button is-danger title is-5 "
+            type="submit"
+            // href={file}
+            download="pdf"
+          >
+            <span className="is-size-5-touch is-uppercase">Download</span>
+          </button>
+        </div>
+      </form>
+    </Section>
+  );
+};
 
-export default DownloadForm;
+export default ContactForm;
