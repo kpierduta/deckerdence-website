@@ -19,9 +19,17 @@ const Section = styled.div`
   a {
     color: ${props => props.theme.primaryColor} !important ;
   }
+  strong {
+    font-weight: 800 !important;
+  }
   p {
-    margin-bottom: 1.7rem !important;
+    margin-bottom: 1.3rem !important;
     text-align: center !important;
+  }
+  li {
+    color: ${props => props.theme.primaryColor} !important ;
+    text-align: center !important;
+    margin-bottom: 0.5rem !important;
   }
 `;
 
