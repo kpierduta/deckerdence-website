@@ -75,12 +75,14 @@ const HomePageSection = ({
               </div>
             </section>
           </div>
-          <div className="column">
-            {animations == 'animation-one' && (
-              <figure className=" gif image	 is-hidden-mobile">
-                <img src="/images/glass.gif" alt="gif" />
-              </figure>
-            )}
+          <div className="column is-hidden-mobile">
+            <div className="">
+              {animations == 'animation-one' && (
+                <figure className=" gif image">
+                  <img src="/images/glass.gif" alt="gif" />
+                </figure>
+              )}
+            </div>
           </div>
         </div>
       </div>

@@ -97,6 +97,12 @@ const Content = styled.div`
     bottom: -15.5rem;
     left: 2rem;
   }
+  @media screen and (max-width: 768px) {
+    .title {
+      line-height: 16px !important;
+    }
+  }
+
   .title:not(:last-child) {
     margin-bottom: 0.5rem;
   }
