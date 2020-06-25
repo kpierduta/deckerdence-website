@@ -43,7 +43,7 @@ export default class HTML extends React.Component {
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-111400300-1"
           />
-
+          <script src="//code.jivosite.com/widget/9q066bhCDG" async />
           <script src="/js/scripts.js" />
           {/* Add custom css or scripts here */}
           {this.props.headComponents}
