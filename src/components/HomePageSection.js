@@ -30,11 +30,19 @@ const Section = styled.section`
   h1 {
     padding-top: 1rem;
   }
-  .gif {
-    position: absolute;
-    top: -264px;
-    right: -438px;
-  }
+`;
+
+const BottleAnimation = styled.figure`
+  position: absolute;
+  top: -264px;
+  right: -438px;
+`;
+
+const GlassAnimation = styled.figure`
+  position: absolute;
+  top: 201px;
+  right: 314px;
+  width: 72%;
 `;
 
 const HomePageSection = ({
@@ -76,13 +84,26 @@ const HomePageSection = ({
             </section>
           </div>
           <div className="column is-hidden-mobile">
-            <div className="">
-              {animations == 'animation-one' && (
-                <figure className="gif image">
-                  <img src="/images/bottle.gif" alt="gif" />
-                </figure>
-              )}
-            </div>
+            {animations == 'animation-one' && (
+              <BottleAnimation className="gif image">
+                <img src="/images/animations/bottle.gif" alt="gif" />
+              </BottleAnimation>
+            )}
+            {animations == 'animation-third' && (
+              <figure className="gif image">
+                <img src="/images/animations/disco.gif.mp4" alt="gif" />
+              </figure>
+            )}
+            {animations == 'animation-third' && (
+              <figure className="gif image">
+                <img src="/images/animations/disco.gif.mp4" alt="gif" />
+              </figure>
+            )}
+            {animations == 'animation-fourth' && (
+              <GlassAnimation className="gif image">
+                <img src="/images/glass.gif" alt="gif" />
+              </GlassAnimation>
+            )}
           </div>
         </div>
       </div>
