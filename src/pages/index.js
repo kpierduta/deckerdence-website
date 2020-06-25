@@ -27,6 +27,7 @@ export const homeQuery = graphql`
       telephone
       homeFeatures {
         items {
+          animations
           _key
           buttonLink {
             current
@@ -87,6 +88,7 @@ const Index = ({ data }) => {
           description={items.description}
           bgImg={items.featuresBackgroundImage.asset.url}
           bannerImg={items.featuresFrameImage.asset.url}
+          animations={items.animations}
         />
       ))}
       <StagesSection data={settings} />

@@ -25,7 +25,7 @@ export const blogArticleQuery = graphql`
           url
         }
       }
-      _rawContent
+      _rawContent(resolveReferences: { maxDepth: 5 })
       blogArticleCategoriesHeading
       blogArticleCategories
     }

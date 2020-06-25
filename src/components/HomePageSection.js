@@ -45,6 +45,7 @@ const HomePageSection = ({
   button,
   bannerImg,
   buttonLink,
+  animations,
 }) => (
   <Section flex={flex} bgImg={bgImg} bannerImg={bannerImg}>
     <div className="section is-block">
@@ -75,9 +76,11 @@ const HomePageSection = ({
             </section>
           </div>
           <div className="column">
-            {/* <figure className=" gif image	 is-hidden-mobile">
-              <img src="/images/glass.gif" alt="gif" />
-            </figure> */}
+            {animations == 'animation-one' && (
+              <figure className=" gif image	 is-hidden-mobile">
+                <img src="/images/glass.gif" alt="gif" />
+              </figure>
+            )}
           </div>
         </div>
       </div>
