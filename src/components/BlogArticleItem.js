@@ -1,4 +1,6 @@
 import React from 'react';
+import getYouTubeId from 'get-youtube-id';
+import YouTube from 'react-youtube';
 import styled from 'styled-components';
 import BlockContent from '@sanity/block-content-to-react';
 
@@ -30,13 +32,28 @@ const Section = styled.div`
     text-align: center !important;
     margin-bottom: 0.5rem !important;
   }
+  iframe {
+    display: block !important;
+    margin: 0 auto;
+    height: 20rem !important;
+  }
 `;
+
+const serializers = {
+  types: {
+    youtube: ({ node }) => {
+      const { url } = node;
+      const id = getYouTubeId(url);
+      return <YouTube videoId={id} />;
+    },
+  },
+};
 
 const BlogArticleItem = ({ data }) => {
   return (
     <Section className="section">
       <div className="container">
-        <BlockContent blocks={data.portableText} />
+        <BlockContent blocks={data.portableText} serializers={serializers} />
       </div>
     </Section>
   );
