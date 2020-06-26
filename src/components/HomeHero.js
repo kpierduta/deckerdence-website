@@ -16,7 +16,7 @@ const Section = styled.section`
   }
   @media screen and (max-width: 767px) {
     background-size: 100% 100%;
-    height: 24rem;
+    height: 21rem;
   }
   @media only screen and (max-width: 2900px) and (min-width: 1700px) {
     background-size: cover;
@@ -94,7 +94,7 @@ const MovingRightContainer = styled(Container)`
 const Content = styled.div`
   @media screen and (max-width: 768px) {
     position: absolute;
-    bottom: -15.5rem;
+    bottom: -12.5rem !important;
     left: 2rem;
   }
   @media screen and (max-width: 768px) {
