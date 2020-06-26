@@ -12,7 +12,7 @@ module.exports = {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
         endpoint:
-          'https://gmail.us10.list-manage.com/subscribe/post?u=f532190aaeed769106e1f8c4c&amp;id=b574cd5adc',
+          'https://deckerdence.us15.list-manage.com/subscribe/post?u=8d702165ae74d729d15d53aac&amp;id=8e473db50c',
         timeout: 3500,
       },
     },

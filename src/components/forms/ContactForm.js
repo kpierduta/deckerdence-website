@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import addToMailchimp from 'gatsby-plugin-mailchimp';
 
 const Section = styled.div`
   .subtitle {
@@ -20,84 +21,71 @@ const Section = styled.div`
   }
 `;
 
-const encode = data => {
-  return Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join('&');
-};
-
-class ContactForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { email: '', phone: '' };
-  }
-
-  /* Here’s the juicy bit for posting the form submission */
-  handleSubmit = e => {
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state }),
-    })
-      .then(() => {
-        this.setState({
-          email: '',
-          phone: '',
-        });
-        alert('Success!');
-      })
-      .catch(error => alert(error));
-
+const ContactForm = ({ pera, dottedBorder }) => {
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const handleSubmit = e => {
     e.preventDefault();
+
+    addToMailchimp(phone)
+      .then(data => {
+        alert(data.result);
+      })
+      .catch(error => {
+        console.log('fail', error);
+      });
+
+    addToMailchimp(email)
+      .then(data => {
+        alert(data.result);
+      })
+      .catch(error => {
+        console.log('fail', error);
+      });
+  };
+  const handleEmailChange = event => {
+    setEmail(event.currentTarget.value);
+  };
+  const handlePhoneChange = event => {
+    setPhone(event.currentTarget.value);
   };
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
-
-  render() {
-    const { email, phone } = this.state;
-    const { pera, dottedBorder } = this.props;
-    return (
-      <Section className="section is-paddingless" dottedBorder={dottedBorder}>
-        <form
-          data-netlify="true"
-          name="contact"
-          onSubmit={this.handleSubmit}
-          action="https://gmail.us10.list-manage.com/subscribe/post?u=f532190aaeed769106e1f8c4c&amp;id=b574cd5adc"
-        >
-          <div className="field">
-            <div className="control">
-              <input
-                name="email"
-                className="input is-medium is-family-secondary subtitle is-5 is-uppercase"
-                value={email}
-                type="email"
-                placeholder="EMAIL"
-                onChange={this.handleChange}
-              />
-            </div>
+  return (
+    <Section className="section is-paddingless" dottedBorder={dottedBorder}>
+      <form onSubmit={handleSubmit}>
+        <div className="field">
+          <div className="control">
+            <input
+              name="email"
+              className="input is-medium is-family-secondary subtitle is-5 is-uppercase"
+              value={email}
+              type="email"
+              placeholder="EMAIL"
+              onChange={handleEmailChange}
+            />
           </div>
-          <div className="field">
-            <div className="control">
-              <input
-                name="phone"
-                className="input is-medium is-family-secondary subtitle is-5 is-uppercase"
-                type="tel"
-                value={phone}
-                placeholder="Phone Number "
-                onChange={this.handleChange}
-              />
-            </div>
+        </div>
+        <div className="field">
+          <div className="control">
+            <input
+              name="phone"
+              className="input is-medium is-family-secondary subtitle is-5 is-uppercase"
+              type="tel"
+              value={phone}
+              placeholder="Phone Number "
+              onChange={handlePhoneChange}
+            />
           </div>
-          <p className="subtitle is-5 has-text-centered-touch">{pera}</p>
-          <div>
-            <button type="submit" className="button is-danger title is-5 ">
-              <span className="is-size-5-touch is-uppercase">Download</span>
-            </button>
-          </div>
-        </form>
-      </Section>
-    );
-  }
-}
+        </div>
+        <p className="subtitle is-5 has-text-centered-touch">{pera}</p>
+        <div>
+          <button type="submit" className="button is-danger title is-5 ">
+            <span className="is-size-5-touch is-uppercase">Download</span>
+          </button>
+        </div>
+      </form>
+    </Section>
+  );
+};
 
 export default ContactForm;
