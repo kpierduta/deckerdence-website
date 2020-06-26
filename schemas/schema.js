@@ -35,6 +35,7 @@ import siteSettingsExtra from './siteSettingsExtra';
 import siteSettingsExtraItem from './siteSettingsExtraItem';
 import contactFile from './contactFile';
 import youtube from './youtube';
+import blockImage from './blockImage';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -77,5 +78,6 @@ export default createSchema({
     contactFile,
     youtube,
     blockContent,
+    blockImage,
   ]),
 });
