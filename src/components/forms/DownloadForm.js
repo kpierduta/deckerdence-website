@@ -6,6 +6,7 @@ const Section = styled.div`
   .subtitle {
     color: ${props => props.theme.darkShades} !important;
   }
+
   h1 {
     line-height: 20px !important;
     height: 30px;
