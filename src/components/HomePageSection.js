@@ -42,7 +42,10 @@ const GlassAnimation = styled.figure`
   position: absolute;
   top: 201px;
   right: 314px;
-  width: 72%;
+
+  img {
+    width: 58% !important;
+  }
 `;
 
 const HomePageSection = ({
