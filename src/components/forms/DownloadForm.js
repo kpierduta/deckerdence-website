@@ -30,15 +30,7 @@ const ContactForm = ({ file, dottedBorder, title }) => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    addToMailchimp(phone)
-      .then(data => {
-        alert(data.result);
-      })
-      .catch(error => {
-        console.log('fail', error);
-      });
-
-    addToMailchimp(email)
+    addToMailchimp(email, phone)
       .then(data => {
         alert(data.result);
       })
@@ -86,10 +78,19 @@ const ContactForm = ({ file, dottedBorder, title }) => {
           By submitting this form you agree to our contact terms and conditions.
         </p>
         <div>
+          {/* <a
+            href="path_to_file"
+            className="button is-danger title is-5 "
+            type="submit"
+            download="proposed_file_name"
+            download="pdf"
+          >
+            Download
+          </a> */}
           <button
             className="button is-danger title is-5 "
             type="submit"
-            // href={file}
+            href={file}
             download="pdf"
           >
             <span className="is-size-5-touch is-uppercase">Download</span>
