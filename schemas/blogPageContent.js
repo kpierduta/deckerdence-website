@@ -15,6 +15,9 @@ export default {
           type: 'block',
         },
         { type: 'image', icon: BsImageFill },
+        {
+          type: 'youtube',
+        },
       ],
     },
   ],

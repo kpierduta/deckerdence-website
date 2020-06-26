@@ -34,6 +34,7 @@ import blogPageContent from './blogPageContent';
 import siteSettingsExtra from './siteSettingsExtra';
 import siteSettingsExtraItem from './siteSettingsExtraItem';
 import contactFile from './contactFile';
+import youtube from './youtube';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -74,6 +75,7 @@ export default createSchema({
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     contactFile,
+    youtube,
     blockContent,
   ]),
 });
