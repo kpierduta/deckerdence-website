@@ -40,10 +40,10 @@ const ContactForm = ({ file, dottedBorder, title }) => {
   };
 
   const handleEmailChange = event => {
-    setEmail(event.currentTarget.value);
+    setEmail(event.target.value);
   };
   const handlePhoneChange = event => {
-    setPhone(event.currentTarget.value);
+    setPhone(event.target.value);
   };
 
   return (
@@ -63,14 +63,15 @@ const ContactForm = ({ file, dottedBorder, title }) => {
           </div>
         </div>
         <div className="field">
-          <div className="control">
+          <div className="control" htmlFor="mce-PHONE">
             <input
-              name="phone"
               className="input is-medium is-family-secondary subtitle is-5"
-              type="tel"
               value={phone}
               placeholder="Your phone number"
               onChange={handlePhoneChange}
+              type="text"
+              name="PHONE"
+              id="mce-PHONE"
             />
           </div>
         </div>
@@ -87,12 +88,7 @@ const ContactForm = ({ file, dottedBorder, title }) => {
           >
             Download
           </a> */}
-          <button
-            className="button is-danger title is-5 "
-            type="submit"
-            href={file}
-            download="pdf"
-          >
+          <button className="button is-danger title is-5 " type="submit">
             <span className="is-size-5-touch is-uppercase">Download</span>
           </button>
         </div>
