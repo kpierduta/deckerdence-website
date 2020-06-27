@@ -92,7 +92,7 @@ const HomePageSection = ({
                 <img src="/images/animations/bottle.gif" alt="gif" />
               </BottleAnimation>
             )}
-            {animations == 'animation-third' && (
+            {animations == 'animation-two' && (
               <figure className="gif image">
                 <img src="/images/animations/disco.gif.mp4" alt="gif" />
               </figure>

@@ -120,7 +120,7 @@ const ExtraPage = ({ data }) => {
                       {items.description}
                     </p>
                     <div className="has-text-centered button-wrapper">
-                      <Link to={items.slug.current}>
+                      <Link to={`/${items.slug.current}`}>
                         <ButtonGlobal title="Enquire Today" />
                       </Link>
                     </div>
