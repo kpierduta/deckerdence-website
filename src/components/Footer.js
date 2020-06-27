@@ -106,7 +106,7 @@ const Footer = () => (
                     <FooterOption
                       key={items.node._id}
                       option={items.node.footerTitle}
-                      link={`hire/${items.node.slug.current}`}
+                      link={`/hire/${items.node.slug.current}`}
                     />
                   ))}
                 </div>
