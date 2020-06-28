@@ -7,6 +7,9 @@ const Section = styled.section`
   background-position: center;
   background-size: 100% 100%;
   position: relative;
+  @media screen and (min-width: 1024px) {
+    padding: 20rem 1.5rem !important;
+  }
   @media only screen and (max-width: 768px) {
     padding: 7rem 1.5rem !important;
     span,
@@ -29,7 +32,7 @@ const Content = styled.div`
   }
   .main {
     position: absolute;
-    top: 190px;
+    top: 208px;
     left: 0;
     right: 0px;
     @media screen and (max-width: 768px) {
