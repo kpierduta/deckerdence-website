@@ -14,7 +14,7 @@ const Section = styled.section`
     padding: 7rem 1.5rem !important;
     span,
     h1 {
-      font-size: 14px !important;
+      font-size: 9px !important;
       margin: 0;
     }
   }
@@ -23,12 +23,12 @@ const Section = styled.section`
 const Content = styled.div`
   @media screen and (max-width: 768px) {
     .title {
-      line-height: 12px !important;
+      line-height: 10px !important;
     }
   }
 
   .title:not(:last-child) {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.1rem;
   }
   .main {
     position: absolute;
@@ -36,7 +36,7 @@ const Content = styled.div`
     left: 0;
     right: 0px;
     @media screen and (max-width: 768px) {
-      top: 77px !important;
+      top: 83px !important;
     }
   }
 `;
