@@ -9,7 +9,8 @@ const Section = styled.div`
 
   h1 {
     line-height: 20px !important;
-    height: 30px;
+
+    height: 2.3rem !important;
   }
   .input {
     border-radius: 0;

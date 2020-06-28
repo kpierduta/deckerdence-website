@@ -14,16 +14,16 @@ const Section = styled.section`
       margin: 0;
     }
   }
-  @media screen and (max-width: 767px) {
+  /* @media screen and (max-width: 767px) {
     background-size: 100% 100%;
     height: 21rem;
-  }
-  @media only screen and (max-width: 2900px) and (min-width: 1700px) {
+  } */
+  /* @media only screen and (max-width: 2900px) and (min-width: 1700px) {
     background-size: cover;
     width: 100%;
     height: 1330px;
-  }
-  .columns.is-centered {
+  } */
+  /* .columns.is-centered {
     margin-top: 25rem;
     @media screen and (max-width: 768px) {
       margin-top: 0;
@@ -31,31 +31,27 @@ const Section = styled.section`
     @media only screen and (max-width: 2900px) and (min-width: 1700px) {
       margin-top: 48rem;
     }
-  }
-  figure {
-    width: 50%;
-    margin: 0 auto;
-  }
+  } */
 
-  .axis:hover .move-ne {
+  /* .axis:hover .move-ne {
     transform: translate(150px, -90px);
     @media (max-width: 767px) {
       transform: translate(30px, -40px);
     }
-  }
-  .axis:hover .move-two {
+  } */
+  /* .axis:hover .move-two {
     transform: translate(-150px, -90px);
     @media (max-width: 767px) {
       transform: translate(-30px, -50px);
     }
-  }
-  .object {
+  } */
+  /* .object {
     transition: all 2s ease-in-out;
-  }
+  } */
 `;
 
 const Container = styled.div`
-  img {
+  /* img {
     width: 5rem;
     position: absolute;
     bottom: 9rem;
@@ -70,29 +66,29 @@ const Container = styled.div`
       width: 3rem;
       bottom: -11rem;
     }
-  }
+  } */
 `;
 
 const MovingLeftContainer = styled(Container)`
-  img {
+  /* img {
     left: 0;
     @media screen and (max-width: 768px) {
       left: -1.5rem;
     }
-  }
+  } */
 `;
 
 const MovingRightContainer = styled(Container)`
-  img {
+  /* img {
     right: 0;
     @media screen and (max-width: 768px) {
       right: -0.5rem;
     }
-  }
+  } */
 `;
 
 const Content = styled.div`
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     position: absolute;
     bottom: -12.5rem !important;
     left: 2rem;
@@ -110,20 +106,17 @@ const Content = styled.div`
     @media only screen and (max-width: 2900px) and (min-width: 1700px) {
       margin-top: 7.5rem;
     }
-  }
+  } */
 `;
 
 const HomeHero = ({ items }) => {
   return (
     <Section
-      className="section"
+      className="section hero is-large "
       bgImage={items.homeHeroBackgroundImage.asset.url}
     >
       <div className="container">
-        <figure className="image">
-          <img src={items.homeHeroBannerImage.asset.url} alt="" />
-        </figure>
-        <div className="columns axis">
+        {/* <div className="columns axis">
           <MovingLeftContainer className="column rocket object plane move-ne">
             <img
               className="object plane move-ne"
@@ -138,26 +131,26 @@ const HomeHero = ({ items }) => {
               alt=""
             />
           </MovingRightContainer>
-        </div>
-        <Content className="columns is-centered">
-          <div className="column is-8 has-text-centered">
-            <h1 className="title is-3 has-text-white has-text-weight-semibold">
-              FIND OUT MORE
-            </h1>
-            <h1 className="title is-4 has-text-white has-text-weight-semibold">
-              <span className="has-text-grey-lighter has-text-weight-light">
-                Email:
-              </span>
-              <span className="">{items.email}</span>
-              <span className="has-text-grey-lighter has-text-weight-light">
-                {' '}
-                OR Call:
-              </span>
-              <span className="">{items.telephone}</span>
-            </h1>
-          </div>
-        </Content>
+        </div> */}
       </div>
+      {/* <Content className="columns is-centered is-relative">
+        <div className="column is-8 has-text-centered">
+          <h1 className="title is-3 has-text-white has-text-weight-semibold">
+            FIND OUT MORE
+          </h1>
+          <h1 className="title is-4 has-text-white has-text-weight-semibold">
+            <span className="has-text-grey-lighter has-text-weight-light">
+              Email:
+            </span>
+            <span className="">{items.email}</span>
+            <span className="has-text-grey-lighter has-text-weight-light">
+              {' '}
+              OR Call:
+            </span>
+            <span className="">{items.telephone}</span>
+          </h1>
+        </div>
+      </Content> */}
     </Section>
   );
 };

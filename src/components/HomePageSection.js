@@ -33,16 +33,29 @@ const Section = styled.section`
 `;
 
 const BottleAnimation = styled.figure`
-  position: absolute;
-  top: -264px;
-  right: -438px;
+  @media screen and (min-width: 1024px) {
+    position: absolute;
+    top: -264px;
+    right: -438px;
+  }
+  img {
+    @media screen and (max-width: 768px) {
+      width: 0% !important;
+    }
+  }
 `;
 
 const GlassAnimation = styled.figure`
-  position: absolute;
-  top: 201px;
-  right: 314px;
-
+  @media screen and (min-width: 1024px) {
+    position: absolute;
+    top: 201px;
+    right: 314px;
+  }
+  @media screen and (max-width: 768px) {
+    img {
+      width: 0% !important;
+    }
+  }
   img {
     width: 58% !important;
   }
@@ -86,13 +99,13 @@ const HomePageSection = ({
               </div>
             </section>
           </div>
-          <div className="column is-hidden-mobile">
+          <div className="column is-hidden-mobile ">
             {animations == 'animation-one' && (
               <BottleAnimation className="gif image">
                 <img src="/images/animations/bottle.gif" alt="gif" />
               </BottleAnimation>
             )}
-            {animations == 'animation-two' && (
+            {/* {animations == 'animation-two' && (
               <figure className="gif image">
                 <img src="/images/animations/disco.gif.mp4" alt="gif" />
               </figure>
@@ -101,7 +114,7 @@ const HomePageSection = ({
               <figure className="gif image">
                 <img src="/images/animations/disco.gif.mp4" alt="gif" />
               </figure>
-            )}
+            )} */}
             {animations == 'animation-fourth' && (
               <GlassAnimation className="gif image">
                 <img src="/images/glass.gif" alt="gif" />
