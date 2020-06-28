@@ -73,6 +73,9 @@ const Footer = () => (
         <a href={config.pinterest}>
           <img src="/images/icon/pinterest.png" alt="pinterest icon" />
         </a>
+        <a href={config.youTube}>
+          <img src="/images/icon/youtube.jpg" alt="YouTube icon" />
+        </a>
       </IconContainer>
       <StaticQuery
         query={footerQuery}

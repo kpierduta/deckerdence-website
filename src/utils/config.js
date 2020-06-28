@@ -15,6 +15,7 @@ module.exports = {
   linkedin: 'https://www.linkedin.com/company/8715264/',
   instagram: 'https://www.instagram.com/deckerdence/',
   pinterest: 'https://www.pinterest.co.uk/deckerdence/',
+  youTube: 'https://www.youtube.com/channel/UCpnoJbZsKSu6JfCkFPYrYzw',
 
   type: 'website',
   googleAnalytics: 'UA-111400300-1',
