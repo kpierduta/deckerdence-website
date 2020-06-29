@@ -50,15 +50,6 @@ const GlassAnimation = styled.figure`
     position: absolute;
     top: 215px;
   }
-  /* @media screen and (max-device-width: 1400px), screen and (max-width: 2000px) {
-    top: 87px !important;
-    position: absolute;
-    right: 314px;
-  }
-
-  @media screen and (max-device-width: 1200px), screen and (max-width: 1399px) {
-    top: 201px !important;
-  } */
   @media screen and (max-width: 768px) {
     img {
       width: 0% !important;
