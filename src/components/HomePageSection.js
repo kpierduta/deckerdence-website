@@ -48,10 +48,9 @@ const BottleAnimation = styled.figure`
 const GlassAnimation = styled.figure`
   @media screen and (min-width: 1024px) {
     position: absolute;
-    top: 201px;
-    right: 314px;
+    top: 215px;
   }
-  @media screen and (max-device-width: 1400px), screen and (max-width: 2000px) {
+  /* @media screen and (max-device-width: 1400px), screen and (max-width: 2000px) {
     top: 87px !important;
     position: absolute;
     right: 314px;
@@ -59,7 +58,7 @@ const GlassAnimation = styled.figure`
 
   @media screen and (max-device-width: 1200px), screen and (max-width: 1399px) {
     top: 201px !important;
-  }
+  } */
   @media screen and (max-width: 768px) {
     img {
       width: 0% !important;
@@ -111,7 +110,7 @@ const HomePageSection = ({
           <div className="column is-hidden-touch ">
             {animations == 'animation-one' && (
               <BottleAnimation className="gif">
-                <img src="/images/animations/bottle.gif" alt="gif" />
+                <img src="/images/bottle.gif" alt="gif" />
               </BottleAnimation>
             )}
             {/* {animations == 'animation-two' && (
@@ -125,8 +124,8 @@ const HomePageSection = ({
               </figure>
             )} */}
             {animations == 'animation-fourth' && (
-              <GlassAnimation className="gif image">
-                <img src="/images/glass.gif" alt="gif" />
+              <GlassAnimation className="gif">
+                <img src="/images/animations/bottle.gif" alt="gif" />
               </GlassAnimation>
             )}
           </div>
