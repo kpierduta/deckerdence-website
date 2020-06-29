@@ -7,10 +7,13 @@ const Section = styled.section`
   background-position: center;
   background-size: 100% 100%;
   position: relative;
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1023px) {
     padding: 20rem 1.5rem !important;
   }
-  @media only screen and (max-width: 768px) {
+  @media screen and (max-width: 769px) {
+    padding: 13rem 1.5rem !important;
+  }
+  @media only screen and (max-width: 767px) {
     padding: 7rem 1.5rem !important;
     span,
     h1 {
@@ -38,6 +41,9 @@ const Content = styled.div`
     @media screen and (max-width: 768px) {
       top: 83px !important;
     }
+    /* @media screen and (max-width: 769px) {
+      top: 160px !important;
+    } */
   }
 `;
 

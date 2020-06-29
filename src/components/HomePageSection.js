@@ -99,7 +99,7 @@ const HomePageSection = ({
               </div>
             </section>
           </div>
-          <div className="column is-hidden-mobile ">
+          <div className="column is-hidden-touch ">
             {animations == 'animation-one' && (
               <BottleAnimation className="gif">
                 <img src="/images/animations/bottle.gif" alt="gif" />
