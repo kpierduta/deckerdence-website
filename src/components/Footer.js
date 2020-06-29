@@ -109,7 +109,7 @@ const Footer = () => (
                     <FooterOption
                       key={items.node._id}
                       option={items.node.footerTitle}
-                      link={`/hire/${items.node.slug.current}`}
+                      link={`/${items.node.slug.current}`}
                     />
                   ))}
                 </div>
@@ -119,7 +119,7 @@ const Footer = () => (
                     <FooterOption
                       key={items.node._id}
                       option={items.node.footerTitle}
-                      link={`/gallery/${items.node.slug.current}`}
+                      link={`/${items.node.slug.current}`}
                     />
                   ))}
                 </div>

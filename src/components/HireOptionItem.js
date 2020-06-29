@@ -98,7 +98,7 @@ const HireOptionItem = ({ item, onMouseOver }) => (
             {item.hireOptionPrice}
           </h3>
           <Link
-            to={`/hire/${item.slug.current}`}
+            to={`/${item.slug.current}`}
             type="button"
             className="button is-large is-size-5"
           >
