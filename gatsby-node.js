@@ -84,7 +84,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   });
   createRedirect({
-    fromPath: './src/pages/contact.js',
+    fromPath: '/contact',
     toPath: '/contact/local',
     statusCode: 301,
   });
