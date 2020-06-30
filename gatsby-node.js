@@ -88,6 +88,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     toPath: '/contact',
     statusCode: 301,
   });
+  createRedirect({
+    fromPath: '/vintage-bus-bar-hire/hire-options/',
+    toPath: '/hire',
+    statusCode: 301,
+  });
 };
 
 exports.onCreateWebpackConfig = ({ actions }) => {
