@@ -92,9 +92,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   });
 
   createRedirect({
-    fromPath: '/contact/darmveer',
-    toPath: '/contact',
-    // isPermanent: true,
+    fromPath: '/contact',
+    toPath: '/contact/darmveers',
     statusCode: 301,
   });
 };
