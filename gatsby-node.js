@@ -84,7 +84,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   });
   createRedirect({
-    fromPath: '/contact/local',
+    fromPath: '/vintage-bus-bar-hire/contact-deckerdence/',
     toPath: '/contact',
     statusCode: 301,
   });
