@@ -2,7 +2,7 @@ const path = require('path');
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   // Destructuring the createPage function from the actions object
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
   const result = await graphql(`
     query {
       allSanityVehicleHirePage {
@@ -82,6 +82,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         slug: node.slug.current,
       },
     });
+  });
+  result.data.allSanityContent.edges.forEach(({ node }) => {
+    createRedirect({
+      fromPath: node.newUrl,
+      toPath: node.oldUrl,
+      statusCode: 301,
+    });
+  });
+
+  createRedirect({
+    fromPath: '/contact/darmveer',
+    toPath: '/contact',
+    // isPermanent: true,
+    statusCode: 301,
   });
 };
 
