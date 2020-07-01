@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const Section = styled.section`
@@ -55,9 +56,11 @@ const HomeHero = ({ items }) => {
           <Content className="columns is-centered">
             <div className="column is-8 has-text-centered">
               <div className="main">
-                <h1 className="title is-3 has-text-white has-text-weight-semibold">
-                  FIND OUT MORE
-                </h1>
+                <Link to="/hire">
+                  <h1 className="title is-3 has-text-white has-text-weight-semibold">
+                    FIND OUT MORE
+                  </h1>
+                </Link>
                 <h1 className="title is-4 has-text-white has-text-weight-semibold">
                   <span className="has-text-grey-lighter has-text-weight-light">
                     Email:
