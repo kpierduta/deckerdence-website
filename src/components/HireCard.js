@@ -5,9 +5,10 @@ import styled from 'styled-components';
 const Section = styled.div`
   box-shadow: none;
   background-color: transparent;
-  padding-top: 5rem;
-  @media screen and (max-width: 768px) {
-    padding-top: 7rem;
+  padding-top: 6rem;
+  @media screen and (max-width: 767px) {
+    padding-top: 10rem;
+    padding-bottom: 4rem;
   }
   .title,
   .subtitle {
@@ -15,6 +16,11 @@ const Section = styled.div`
   }
   .title.is-4 {
     margin-bottom: 1rem !important;
+  }
+  .card-content {
+    @media screen and (max-width: 767px) {
+      padding: 0.5rem !important;
+    }
   }
 `;
 
