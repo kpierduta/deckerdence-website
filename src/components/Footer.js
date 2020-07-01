@@ -60,6 +60,10 @@ const IconContainer = styled.div`
   }
 `;
 
+const FooterWrapper = styled.div`
+  margin-top: 0rem !important;
+`;
+
 const Footer = () => (
   <Container className="section is-normal">
     <div className="container">
@@ -130,7 +134,7 @@ const Footer = () => (
                   ))}
                 </div>
               </div>
-              <div className="columns is-centered">
+              <FooterWrapper className="columns is-centered">
                 <div className="column is-7">
                   <div className="content has-text-centered">
                     <p className="is-size-6 has-text-weight-semibold	is-capitalized">
@@ -142,7 +146,7 @@ const Footer = () => (
                     </p>
                   </div>
                 </div>
-              </div>
+              </FooterWrapper>
             </>
           );
         }}
