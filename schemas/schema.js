@@ -35,6 +35,7 @@ import siteSettingsExtra from './siteSettingsExtra';
 import siteSettingsExtraItem from './siteSettingsExtraItem';
 import contactFile from './contactFile';
 import youtube from './youtube';
+import agreement from './agreement';
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -50,6 +51,7 @@ export default createSchema({
     galleryPage,
     vehicleHirePage,
     blogPage,
+    agreement,
     contact,
     siteSettings,
     settingsFeatures,

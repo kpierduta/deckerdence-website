@@ -3,7 +3,6 @@ import { BsImageFill } from 'react-icons/bs';
 export default {
   title: 'Blog Article Content',
   name: 'blogPageContent',
-
   type: 'object',
   fields: [
     {
