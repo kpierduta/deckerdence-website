@@ -59,12 +59,14 @@ const HomeHero = ({ items }) => {
                   <span className="has-text-grey-lighter has-text-weight-light">
                     Email:
                   </span>
-                  <span className="">{items.email}</span>
+                  <animateMotion className="">{items.email}</animateMotion>
                   <span className="has-text-grey-lighter has-text-weight-light">
                     {' '}
                     OR Call:
                   </span>
-                  <span className="">{items.telephone}</span>
+                  <a className="" href="tel:1231231234">
+                    {items.telephone}
+                  </a>
                 </h1>
               </div>
             </div>

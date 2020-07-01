@@ -35,8 +35,7 @@ const Section = styled.section`
 const BottleAnimation = styled.figure`
   @media screen and (min-width: 1024px) {
     position: absolute;
-    top: -264px;
-    right: -438px;
+    right: -273px;
   }
   img {
     @media screen and (max-width: 768px) {
@@ -101,7 +100,7 @@ const HomePageSection = ({
           <div className="column is-hidden-touch ">
             {animations == 'animation-one' && (
               <BottleAnimation className="gif">
-                <img src="/images/bottle.gif" alt="gif" />
+                <img src="/images/loca.gif" alt="gif" />
               </BottleAnimation>
             )}
             {/* {animations == 'animation-two' && (
