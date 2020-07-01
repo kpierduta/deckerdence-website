@@ -138,8 +138,9 @@ const Footer = () => (
                 <div className="column is-7">
                   <div className="content has-text-centered">
                     <p className="is-size-6 has-text-weight-semibold	is-capitalized">
-                      ©Deckerdence 2020. All Rights Reserved. | Terms &
-                      Conditions | Privacy Policy |
+                      ©Deckerdence 2020. All Rights Reserved. |
+                      <Link to="/privacy-policy">Terms & Conditions |</Link>
+                      <Link to="/terms&Condition"> Privacy Policy |</Link>
                       <a href="https://www.kpdigitalstrategy.com/">
                         Website by kp digital strategy.
                       </a>
