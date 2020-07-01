@@ -52,6 +52,12 @@ const Container = styled.section`
 
 const IconContainer = styled.div`
   padding-bottom: 1rem;
+  img {
+    margin-right: 1.5rem;
+    @media screen and (max-width: 767px) {
+      margin-right: 0.5rem;
+    }
+  }
 `;
 
 const Footer = () => (
