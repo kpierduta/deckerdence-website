@@ -26,6 +26,9 @@ const Content = styled.div`
       line-height: 10px !important;
     }
   }
+  a:hover {
+    color: #fff !important;
+  }
 
   .title:not(:last-child) {
     margin-bottom: 0.1rem;
@@ -59,12 +62,13 @@ const HomeHero = ({ items }) => {
                   <span className="has-text-grey-lighter has-text-weight-light">
                     Email:
                   </span>
-                  <animateMotion className="">{items.email}</animateMotion>
+                  <a href="mailto:enquiries@deckerdence.com"> {items.email}</a>
+
                   <span className="has-text-grey-lighter has-text-weight-light">
                     {' '}
                     OR Call:
                   </span>
-                  <a className="" href="tel:1231231234">
+                  <a className="" href="tel:01675463555">
                     {items.telephone}
                   </a>
                 </h1>
