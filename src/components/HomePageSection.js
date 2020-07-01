@@ -100,7 +100,7 @@ const HomePageSection = ({
           <div className="column is-hidden-touch ">
             {animations == 'animation-one' && (
               <BottleAnimation className="gif">
-                <img src="/images/loca.gif" alt="gif" />
+                <img src="/images/bottle.gif" alt="gif" />
               </BottleAnimation>
             )}
             {/* {animations == 'animation-two' && (
