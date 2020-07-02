@@ -26,7 +26,7 @@ const Section = styled.div`
   }
 `;
 
-const ContactForm = ({ file, dottedBorder, title }) => {
+const DownloadForm = ({ file, dottedBorder, title }) => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const handleSubmit = e => {
@@ -82,7 +82,11 @@ const ContactForm = ({ file, dottedBorder, title }) => {
           </div>
         </div>
         <div>
-          <button className="button is-danger title is-5 " type="submit">
+          <button
+            className="button is-danger title is-5 "
+            type="submit"
+            onClick={() => alert('sucess')}
+          >
             <span className="is-size-5-touch is-uppercase">Download</span>
           </button>
         </div>
@@ -91,4 +95,4 @@ const ContactForm = ({ file, dottedBorder, title }) => {
   );
 };
 
-export default ContactForm;
+export default DownloadForm;
