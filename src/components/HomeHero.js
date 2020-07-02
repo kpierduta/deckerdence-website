@@ -11,6 +11,10 @@ const Section = styled.section`
   @media screen and (max-device-width: 761px), screen and (max-width: 1022px) {
     padding: 20rem 1.5rem !important;
   }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    padding: 13rem 1.5rem !important;
+  }
+
   @media only screen and (max-width: 767px) {
     padding: 7rem 1.5rem !important;
     span,
@@ -43,6 +47,15 @@ const Content = styled.div`
     @media screen and (max-width: 768px) {
       top: 83px !important;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+      top: 151px !important;
+      margin-bottom: 1rem !important;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+      .title.is-3 {
+        margin-bottom: 1rem !important;
+      }
+    }
   }
 `;
 
@@ -67,7 +80,6 @@ const HomeHero = ({ items }) => {
                     Email:
                   </span>
                   <a href="mailto:enquiries@deckerdence.com"> {items.email}</a>
-
                   <span className="has-text-grey-lighter has-text-weight-light">
                     {' '}
                     OR Call:
