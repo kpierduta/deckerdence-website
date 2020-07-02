@@ -30,11 +30,16 @@ const ContactForm = ({ file, dottedBorder, title }) => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const handleSubmit = e => {
+    console.log(email);
+    console.log(name);
+
     e.preventDefault();
 
-    addToMailchimp(email, phone)
+    addToMailchimp(email, {
+      PHONE: phone,
+    })
       .then(data => {
-        alert(data.result);
+        console.log(data.result);
       })
       .catch(error => {
         console.log('fail', error);
@@ -42,10 +47,10 @@ const ContactForm = ({ file, dottedBorder, title }) => {
   };
 
   const handleEmailChange = event => {
-    setEmail(event.target.value);
+    setEmail(event.currentTarget.value);
   };
   const handlePhoneChange = event => {
-    setPhone(event.target.value);
+    setPhone(event.currentTarget.value);
   };
 
   return (
@@ -65,31 +70,18 @@ const ContactForm = ({ file, dottedBorder, title }) => {
           </div>
         </div>
         <div className="field">
-          <div className="control" htmlFor="mce-PHONE">
+          <div className="control">
             <input
               className="input is-medium is-family-secondary subtitle is-5"
+              name="phone"
               value={phone}
               placeholder="Your phone number"
               onChange={handlePhoneChange}
-              type="text"
-              name="PHONE"
-              id="mce-PHONE"
+              type="number"
             />
           </div>
         </div>
-        <p className="subtitle is-6 has-text-centered-touch">
-          By submitting this form you agree to our contact terms and conditions.
-        </p>
         <div>
-          {/* <a
-            href="path_to_file"
-            className="button is-danger title is-5 "
-            type="submit"
-            download="proposed_file_name"
-            download="pdf"
-          >
-            Download
-          </a> */}
           <button className="button is-danger title is-5 " type="submit">
             <span className="is-size-5-touch is-uppercase">Download</span>
           </button>

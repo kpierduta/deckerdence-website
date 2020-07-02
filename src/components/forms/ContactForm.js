@@ -63,16 +63,13 @@ const ContactForm = ({ pera, dottedBorder }) => {
               placeholder="EMAIL"
               onChange={handleEmailChange}
             />
-          </div>
-        </div>
-        <div className="field">
-          <div className="control">
+
             <input
               name="phone"
               className="input is-medium is-family-secondary subtitle is-5 is-uppercase"
               type="tel"
               value={phone}
-              placeholder="Phone Number "
+              placeholder="Phone Number"
               onChange={handlePhoneChange}
             />
           </div>
