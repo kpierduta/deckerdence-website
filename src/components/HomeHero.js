@@ -53,7 +53,7 @@ const Content = styled.div`
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
       .title.is-3 {
-        margin-bottom: 1rem !important;
+        margin-bottom: 0.3rem !important;
       }
     }
   }
