@@ -54,7 +54,11 @@ const DownloadForm = ({ file, dottedBorder, title }) => {
   };
 
   return (
-    <Section className="section is-paddingless" dottedBorder={dottedBorder}>
+    <Section
+      className="section is-paddingless"
+      dottedBorder={dottedBorder}
+      request
+    >
       <form onSubmit={handleSubmit} method="get" action="file.doc">
         <h1 className="title is-5 has-text-centered-touch">{title}</h1>
         <div className="field">
@@ -83,7 +87,9 @@ const DownloadForm = ({ file, dottedBorder, title }) => {
         </div>
         <div>
           <button className="button is-danger title is-5" type="submit">
-            <span className="is-size-5-touch is-uppercase">Download</span>
+            <a download href={file} className="is-size-5-touch is-uppercase">
+              Download
+            </a>
           </button>
         </div>
       </form>
