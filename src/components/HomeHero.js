@@ -3,6 +3,9 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const Section = styled.section`
+  @media screen and (min-width: 1024px) {
+    padding: 20rem 1.5rem !important;
+  }
   background-image: url(${props => props.bgImage});
   background-repeat: no-repeat;
   background-position: center;
