@@ -26,7 +26,7 @@ const ContactForm = ({ dottedBorder, pera }) => {
   const [phone, setPhone] = useState('');
   const handleSubmit = e => {
     console.log(email);
-    console.log(name);
+    console.log(phone);
 
     e.preventDefault();
 
