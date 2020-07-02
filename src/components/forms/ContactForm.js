@@ -21,28 +21,26 @@ const Section = styled.div`
   }
 `;
 
-const ContactForm = ({ pera, dottedBorder }) => {
+const ContactForm = ({ dottedBorder, pera }) => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const handleSubmit = e => {
+    console.log(email);
+    console.log(name);
+
     e.preventDefault();
 
-    addToMailchimp(phone)
+    addToMailchimp(email, {
+      PHONE: phone,
+    })
       .then(data => {
-        alert(data.result);
-      })
-      .catch(error => {
-        console.log('fail', error);
-      });
-
-    addToMailchimp(email)
-      .then(data => {
-        alert(data.result);
+        console.log(data.result);
       })
       .catch(error => {
         console.log('fail', error);
       });
   };
+
   const handleEmailChange = event => {
     setEmail(event.currentTarget.value);
   };
@@ -57,20 +55,19 @@ const ContactForm = ({ pera, dottedBorder }) => {
           <div className="control">
             <input
               name="email"
-              className="input is-medium is-family-secondary subtitle is-5 is-uppercase"
+              className="input is-medium is-family-secondary subtitle is-5 "
               value={email}
               type="email"
-              placeholder="EMAIL"
+              placeholder="Your email"
               onChange={handleEmailChange}
             />
-
             <input
+              className="input is-medium is-family-secondary subtitle is-5"
               name="phone"
-              className="input is-medium is-family-secondary subtitle is-5 is-uppercase"
-              type="tel"
               value={phone}
-              placeholder="Phone Number"
+              placeholder="Your phone number"
               onChange={handlePhoneChange}
+              type="number"
             />
           </div>
         </div>
