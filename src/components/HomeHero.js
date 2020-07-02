@@ -14,7 +14,8 @@ const Section = styled.section`
   @media only screen and (max-width: 767px) {
     padding: 7rem 1.5rem !important;
     span,
-    h1 {
+    h1,
+    a {
       font-size: 9px !important;
       margin: 0;
     }
