@@ -33,10 +33,11 @@ const Section = styled.section`
 `;
 
 const BottleAnimation = styled.figure`
-  @media screen and (min-width: 1024px) {
+  @media (min-width: 1281px) {
     position: absolute;
     right: -273px;
   }
+
   img {
     @media screen and (max-width: 768px) {
       width: 0% !important;
