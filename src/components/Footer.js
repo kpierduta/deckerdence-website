@@ -53,6 +53,7 @@ const Container = styled.section`
 const IconContainer = styled.div`
   padding-bottom: 1rem;
   img {
+    width: 4%;
     margin-right: 1.5rem;
     @media screen and (max-width: 767px) {
       margin-right: 0.5rem;
