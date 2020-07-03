@@ -137,7 +137,7 @@ const Footer = () => (
               <FooterWrapper className="columns is-centered">
                 <div className="column is-7">
                   <div className="content has-text-centered">
-                    <p className="is-size-6 has-text-weight-semibold	is-capitalized">
+                    <p className="is-size-6 is-capitalized">
                       ©Deckerdence 2020. All Rights Reserved. |
                       <Link to="/privacy-policy">Terms & Conditions |</Link>
                       <Link to="/terms&Condition"> Privacy Policy |</Link>
