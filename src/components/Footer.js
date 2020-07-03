@@ -84,7 +84,7 @@ const Footer = () => (
           <img src="/images/icon/pinterest.png" alt="pinterest icon" />
         </a>
         <a href={config.youTube}>
-          <img src="/images/icon/youtube.jpg" alt="YouTube icon" />
+          <img src="/images/icon/youtube.png" alt="YouTube icon" />
         </a>
       </IconContainer>
       <StaticQuery
