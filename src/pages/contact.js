@@ -47,6 +47,11 @@ export const contactUsQuery = graphql`
           }
         }
       }
+      downloadBrochure {
+        asset {
+          url
+        }
+      }
     }
   }
 `;
@@ -142,7 +147,7 @@ const ContactUs = ({ data }) => {
           Visitors by appointment only
         </p>
       </Section>
-      <Contact avatar="/images/hire/icon@2x.png" />
+      <Contact avatar={settings.downloadBrochure.asset.url} />
       <ContactWrapper className="section hero is-medium">
         <div className="container">
           <div className="columns is-multiline">
