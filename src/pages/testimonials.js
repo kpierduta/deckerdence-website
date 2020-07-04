@@ -22,13 +22,18 @@ export const testimonialPageQuery = graphql`
             url
           }
         }
-        information {
-          asset {
-            url
-          }
-          _key
-          alt
+      }
+    }
+    allSanityTestimonial(sort: { fields: order, order: ASC }) {
+      edges {
+        node {
+          order
           columnReverse
+          image {
+            asset {
+              url
+            }
+          }
           title
           description
           name
@@ -41,6 +46,7 @@ export const testimonialPageQuery = graphql`
 
 const TestimonialPage = ({ data }) => {
   const options = data.sanitySiteSettings;
+  const myTestimonial = data.allSanityTestimonial.edges;
   return (
     <Layout>
       <Seo
@@ -52,17 +58,16 @@ const TestimonialPage = ({ data }) => {
         title={options.testimonialsPage.mainHeading}
         partyBgImage={options.testimonialsPage.backgroundImage.asset.url}
       />
-      {options.testimonialsPage.information.map(item => (
+      {myTestimonial.map(item => (
         <HireOptionTestimonial
-          key={item._key}
-          image={item.asset.url}
-          flex={item.columnReverse}
-          title={item.title}
-          position={item.subtitle}
-          pera={item.description}
-          alt={item.alt}
-          name={item.name}
-          date={item.date}
+          key={item.node._key}
+          image={item.node.image.asset.url}
+          flex={item.node.columnReverse}
+          title={item.node.title}
+          pera={item.node.description}
+          alt="HireOptionTestimonial"
+          name={item.node.name}
+          date={item.node.date}
         />
       ))}
     </Layout>

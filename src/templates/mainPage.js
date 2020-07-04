@@ -44,18 +44,18 @@ export const MainPageQuery = graphql`
         }
       }
       normalSubtitle
-      information {
-        _key
+      testimonials {
+        _id
         columnReverse
-        alt
+        image {
+          asset {
+            url
+          }
+        }
         title
-        subtitle
         description
         name
-        date(formatString: "DD-MM-YYYY")
-        asset {
-          url
-        }
+        date
       }
       arcade {
         _key
@@ -117,15 +117,14 @@ const MainPage = ({ data }) => {
         partyBgImage={page.heroBackgroundImage.asset.url}
       />
       <PageHeading subTitle={page.normalSubtitle} />
-      {page.information.map(item => (
+      {page.testimonials.map(item => (
         <HireOptionTestimonial
-          key={item._key}
-          image={item.asset.url}
+          key={item._id}
+          image={item.image.asset.url}
           flex={item.columnReverse}
           title={item.title}
-          position={item.subtitle}
           pera={item.description}
-          alt={item.alt}
+          alt="Testimonials"
           name={item.name}
           date={item.date}
         />

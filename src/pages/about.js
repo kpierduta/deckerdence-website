@@ -22,13 +22,19 @@ export const aboutPageQuery = graphql`
             url
           }
         }
-        information {
-          asset {
-            url
-          }
-          _key
-          alt
+      }
+    }
+    allSanityTeam(sort: { fields: order, order: ASC }) {
+      edges {
+        node {
+          _id
+          order
           columnReverse
+          image {
+            asset {
+              url
+            }
+          }
           title
           subtitle
           description
@@ -40,6 +46,7 @@ export const aboutPageQuery = graphql`
 
 const AboutPage = ({ data }) => {
   const options = data.sanitySiteSettings;
+  const team = data.allSanityTeam.edges;
   return (
     <Layout>
       <Seo
@@ -51,17 +58,14 @@ const AboutPage = ({ data }) => {
         title={options.aboutPage.mainHeading}
         partyBgImage={options.aboutPage.backgroundImage.asset.url}
       />
-      {options.aboutPage.information.map(option => (
+      {team.map(option => (
         <HireOptionTestimonial
-          key={option._key}
-          image={option.asset.url}
-          flex={option.columnReverse}
-          title={option.title}
-          position={option.subtitle}
-          pera={option.description}
-          alt={option.alt}
-          name={option.name}
-          date={option.date}
+          key={option.node._key}
+          image={option.node.image.asset.url}
+          flex={option.node.columnReverse}
+          title={option.node.title}
+          position={option.node.subtitle}
+          pera={option.node.description}
         />
       ))}
     </Layout>

@@ -18,11 +18,7 @@ export const homeQuery = graphql`
           url
         }
       }
-      homeHeroBannerImage {
-        asset {
-          url
-        }
-      }
+
       email
       telephone
       homeFeatures {
