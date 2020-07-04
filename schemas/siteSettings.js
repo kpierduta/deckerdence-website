@@ -29,11 +29,7 @@ export default {
       title: 'Home Hero Background Image',
       type: 'image',
     },
-    {
-      name: 'homeHeroBannerImage',
-      title: 'Home Hero Banner Image',
-      type: 'image',
-    },
+
     {
       name: 'telephone',
       type: 'string',
@@ -74,7 +70,6 @@ export default {
       type: 'string',
       title: 'Hire Option Small Text',
     },
-
     {
       name: 'hireOptionLargeText',
       type: 'string',

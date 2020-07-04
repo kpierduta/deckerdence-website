@@ -7,10 +7,11 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 // We import object and document schemas
 import blockContent from './blockContent';
 import about from './about';
-import aboutFeature from './aboutFeature';
 import galleryPage from './galleryPage';
 import mainPage from './mainPage';
 import vehicleHirePage from './vehicleHirePage';
+import team from './team';
+import testimonial from './testimonial';
 import siteSettings from './siteSettings';
 import settingsFeatures from './settingsFeatures';
 import settingsFeaturesItem from './settingsFeaturesItem';
@@ -45,7 +46,6 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
-    aboutFeature,
     about,
     mainPage,
     galleryPage,
@@ -53,6 +53,8 @@ export default createSchema({
     blogPage,
     agreement,
     contact,
+    team,
+    testimonial,
     siteSettings,
     settingsFeatures,
     settingsFeaturesItem,

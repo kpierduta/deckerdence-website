@@ -41,13 +41,13 @@ export default {
       type: 'string',
     },
     {
-      title: 'Information',
-      name: 'information',
+      title: 'Testimonial',
+      name: 'testimonials',
       type: 'array',
       of: [
         {
-          title: 'Section',
-          type: 'aboutFeature',
+          type: 'reference',
+          to: [{ type: 'testimonial' }],
         },
       ],
     },

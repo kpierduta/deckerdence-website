@@ -33,16 +33,5 @@ export default {
       title: 'Background Image',
       type: 'image',
     },
-    {
-      title: 'Information',
-      name: 'information',
-      type: 'array',
-      of: [
-        {
-          title: 'Section',
-          type: 'aboutFeature',
-        },
-      ],
-    },
   ],
 };
