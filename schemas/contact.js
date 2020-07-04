@@ -68,6 +68,11 @@ export default {
         },
       ],
     },
+    {
+      name: 'downloadBrochure',
+      type: 'image',
+      title: 'Download Brochure',
+    },
   ],
   preview: {
     select: {
