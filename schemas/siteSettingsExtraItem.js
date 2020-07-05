@@ -9,9 +9,9 @@ export default {
       type: 'boolean',
     },
     {
-      title: 'Slug',
-      name: 'slug',
-      type: 'slug',
+      title: 'Button Url',
+      name: 'url',
+      type: 'url',
     },
     {
       name: 'title',
