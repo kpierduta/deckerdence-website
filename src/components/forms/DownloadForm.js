@@ -35,15 +35,22 @@ const DownloadForm = ({ file, dottedBorder, title }) => {
 
     e.preventDefault();
 
-    addToMailchimp(email, {
-      PHONE: phone,
-    })
+    addToMailchimp(
+      email,
+      {
+        PHONE: phone,
+      },
+      'https://deckerdence.us15.list-manage.com/subscribe/post?u=8d702165ae74d729d15d53aac&amp;id=0d88b23380',
+    )
       .then(data => {
         console.log(data.result);
+        alert('Please check your email for your download link');
       })
       .catch(error => {
         console.log('fail', error);
       });
+    setEmail('');
+    setPhone('');
   };
 
   const handleEmailChange = event => {
@@ -86,10 +93,11 @@ const DownloadForm = ({ file, dottedBorder, title }) => {
           </div>
         </div>
         <div>
-          <button className="button is-danger title is-5" type="submit">
-            <a download href={file} className="is-size-5-touch is-uppercase">
-              Download
-            </a>
+          <button
+            className="button is-danger title is-5 is-uppercase"
+            type="submit"
+          >
+            Download
           </button>
         </div>
       </form>
