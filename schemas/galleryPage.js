@@ -48,11 +48,6 @@ export default {
       type: 'gallery',
     },
     {
-      title: 'Button Link',
-      name: 'buttonLink',
-      type: 'slug',
-    },
-    {
       title: 'Footer Title',
       name: 'footerTitle',
       type: 'string',

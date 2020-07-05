@@ -57,6 +57,7 @@ export default {
       type: 'array',
       of: [{ type: 'mainPageArcade' }],
     },
+
     {
       name: 'detailsMainHeading',
       title: 'Details Main Heading',
@@ -78,6 +79,11 @@ export default {
       name: 'gallery',
       type: 'array',
       of: [{ type: 'mainPageGallery' }],
+    },
+    {
+      title: 'Button Link',
+      name: 'buttonLink',
+      type: 'slug',
     },
     {
       title: 'Download Showcase',
