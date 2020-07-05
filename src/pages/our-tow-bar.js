@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import styled from 'styled-components';
 import ButtonGlobal from '../components/elements/ButtonGlobal';
@@ -120,9 +120,9 @@ const ExtraPage = ({ data }) => {
                       {items.description}
                     </p>
                     <div className="has-text-centered button-wrapper">
-                      <Link to={`/${items.slug.current}`}>
+                      <a href={`/${items.slug.current}`}>
                         <ButtonGlobal title="Enquire Today" />
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
