@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import styled from 'styled-components';
 import Seo from '../components/Seo';
@@ -92,6 +92,9 @@ export const MainPageQuery = graphql`
         }
         alt
       }
+      buttonLink {
+        current
+      }
       downloadShowcase {
         asset {
           url
@@ -158,11 +161,13 @@ const MainPage = ({ data }) => {
           <GalleryItem src={items.asset.url} key={items._key} alt={items.alt} />
         ))}
       </GalleryWrapper>
-      <Button type="button">
-        <figure className="image-button">
-          <img src="/images/view-more-black.png" alt="button" />
-        </figure>
-      </Button>
+      <Link to={page.buttonLink.current}>
+        <Button type="button">
+          <figure className="image-button">
+            <img src="/images/view-more-black.png" alt="button" />
+          </figure>
+        </Button>
+      </Link>
       <Contact avatar={page.downloadShowcase.asset.url} />
     </Layout>
   );
