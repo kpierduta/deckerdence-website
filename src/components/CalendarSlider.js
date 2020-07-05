@@ -24,6 +24,54 @@ const Wrapper = styled.div`
 `;
 const data = [
   {
+    options: '/images/archive/jan20.jpg',
+    value: '01-2020',
+  },
+  {
+    options: '/images/archive/feb20.jpg',
+    value: '02-2020',
+  },
+  {
+    options: '/images/archive/mar20.jpg',
+    value: '03-2020',
+  },
+  {
+    options: '/images/archive/apr20.jpg',
+    value: '04-2020',
+  },
+  {
+    options: '/images/archive/may20.jpg',
+    value: '05-2020',
+  },
+  {
+    options: '/images/archive/june20.jpg',
+    value: '06-2020',
+  },
+  {
+    options: '/images/archive/july20.jpg',
+    value: '07-2020',
+  },
+  {
+    options: '/images/archive/aug20.jpg',
+    value: '08-2020',
+  },
+  {
+    options: '/images/archive/sep20.jpg',
+    value: '09-2020',
+  },
+  {
+    options: '/images/archive/oct20.jpg',
+    value: '10-2020',
+  },
+  {
+    options: '/images/archive/nov20.jpg',
+    value: '11-2020',
+  },
+  {
+    options: '/images/archive/dec20.jpg',
+    value: '12-2020',
+  },
+  {
     options: '/images/archive/jan.jpg',
     value: '01-2019',
   },
