@@ -60,11 +60,9 @@ export const externalQuery = graphql`
         mainTitle
         mainSubtitle
         extrasContent {
+          url
           _key
           itemRight
-          slug {
-            current
-          }
           title
           subtitle
           description
@@ -120,7 +118,7 @@ const ExtraPage = ({ data }) => {
                       {items.description}
                     </p>
                     <div className="has-text-centered button-wrapper">
-                      <a href={`/${items.slug.current}`}>
+                      <a href={items.url}>
                         <ButtonGlobal title="Enquire Today" />
                       </a>
                     </div>
