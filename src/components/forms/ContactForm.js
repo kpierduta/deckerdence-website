@@ -30,15 +30,22 @@ const ContactForm = ({ dottedBorder, pera }) => {
 
     e.preventDefault();
 
-    addToMailchimp(email, {
-      PHONE: phone,
-    })
+    addToMailchimp(
+      email,
+      {
+        PHONE: phone,
+      },
+      'https://deckerdence.us15.list-manage.com/subscribe/post?u=8d702165ae74d729d15d53aac&amp;id=8e473db50c',
+    )
       .then(data => {
         console.log(data.result);
+        alert('Please check your email for your download link');
       })
       .catch(error => {
         console.log('fail', error);
       });
+    setEmail('');
+    setPhone('');
   };
 
   const handleEmailChange = event => {
