@@ -5,6 +5,9 @@ const Section = styled.div`
   background-image: url(${props => props.bgImage});
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  @media screen and (min-width: 1024px) {
+    padding: 6rem 1.5rem !important;
+  }
   .column {
     background-image: url(${props => props.frame});
     background-repeat: no-repeat;
@@ -22,7 +25,7 @@ const HireOptionHero = ({
   largeText,
   description,
 }) => (
-  <Section className="hero is-medium" bgImage={bgImage} frame={frame}>
+  <Section className="section hero is-medium" bgImage={bgImage} frame={frame}>
     <div className="hero-body">
       <div className="container">
         <div className="columns is-centered">
