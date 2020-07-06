@@ -5,6 +5,9 @@ import Button from './elements/Button';
 const Section = styled.section`
   background-image: url(${props => props.bgImg});
   background-size: 100% 100% !important;
+  @media screen and (min-width: 1024px) {
+    padding: 3.3rem 1.5rem !important;
+  }
   .columns {
     flex-direction: ${props => (props.flex ? 'row-reverse' : ' ')};
     @media screen and (max-width: 768px) {
@@ -48,7 +51,10 @@ const BottleAnimation = styled.figure`
 const GlassAnimation = styled.figure`
   @media screen and (min-width: 1024px) {
     position: absolute;
-    top: 215px;
+    top: 278px;
+  }
+  @media screen and (min-width: 1407px) {
+    top: 264px;
   }
   @media screen and (max-width: 768px) {
     img {
@@ -104,16 +110,6 @@ const HomePageSection = ({
                 <img src="/images/bottle.gif" alt="gif" />
               </BottleAnimation>
             )}
-            {/* {animations == 'animation-two' && (
-              <figure className="gif image">
-                <img src="/images/animations/disco.gif.mp4" alt="gif" />
-              </figure>
-            )}
-            {animations == 'animation-third' && (
-              <figure className="gif image">
-                <img src="/images/animations/disco.gif.mp4" alt="gif" />
-              </figure>
-            )} */}
             {animations == 'animation-fourth' && (
               <GlassAnimation className="gif">
                 <img src="/images/animations/bottle.gif" alt="gif" />

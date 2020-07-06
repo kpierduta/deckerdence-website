@@ -60,6 +60,10 @@ const Content = styled.div`
     @media only screen and (min-width: 1408px) {
       top: 300px !important;
     }
+    @media screen and (max-device-width: 761px),
+      screen and (max-width: 1022px) {
+      top: 151;
+    }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
       .title.is-3 {
         margin-bottom: 0.3rem !important;

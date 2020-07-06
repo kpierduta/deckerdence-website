@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 const LinkStyled = styled(Link)`
   img {
     width: ${props => (props.haswidth ? props.haswidth : '100%')};
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       width: auto;
     }
   }
