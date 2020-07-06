@@ -130,7 +130,7 @@ const ExtraPage = ({ data }) => {
           <Columns className="columns is-multiline">
             {items.gallery.map(item => (
               <div className="column is-6">
-                <figure className="image is-5by4">
+                <figure className="image is-3by2">
                   {item.asset.url && (
                     <img src={item.asset.url} alt={item.alt} />
                   )}
