@@ -34,7 +34,7 @@ const BlogCategory = ({ categoryChange }) => {
         <h1 className="title is-4 has-text-centered">Catagories</h1>
         <div className="columns is-multiline">
           {Categories.map(value => (
-            <div className="column">
+            <div className="column has-text-centered">
               <div
                 className="title is-5 has-text-weight-normal has-text-black"
                 onClick={() => categoryChange(value)}
