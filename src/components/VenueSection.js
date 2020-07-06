@@ -5,6 +5,9 @@ const Section = styled.div`
   @media screen and (min-width: 1024px) {
     padding: 11rem 1.5rem !important;
   }
+  @media only screen and (min-width: 1408px) {
+    padding: 16rem 1.5rem !important;
+  }
   background-image: url(${props => props.frameBgImage});
   background-repeat: no-repeat;
   background-size: 100% 100%;
