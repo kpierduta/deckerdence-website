@@ -22,7 +22,7 @@ const Section = styled.div`
     color: ${props => props.theme.darkAccent} !important ;
   }
   strong {
-    font-weight: 800 !important;
+    font-weight: 600 !important;
   }
   p {
     margin-bottom: 1.3rem !important;
