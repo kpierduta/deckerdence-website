@@ -73,6 +73,16 @@ export default {
       type: 'image',
       title: 'Download Brochure',
     },
+    {
+      title: 'Download Files',
+      name: 'downloadFiles',
+      type: 'array',
+      of: [
+        {
+          type: 'file',
+        },
+      ],
+    },
   ],
   preview: {
     select: {
