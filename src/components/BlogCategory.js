@@ -23,7 +23,8 @@ const Categories = [
   'THE DECKERDENCE JOURNAL',
   'ALL THINGS WEDDINGS',
   'EVENT PLANNING',
-  'SUPPLIER JOURNAL',
+  'SUPPALIER JOURNAL',
+  'ALL CATEGORIES',
 ];
 
 const BlogCategory = ({ categoryChange }) => {

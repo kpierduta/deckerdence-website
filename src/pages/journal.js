@@ -47,9 +47,11 @@ export const blogQuery = graphql`
 `;
 
 const BlogPage = ({ data }) => {
-  const [category, setCategory] = useState('all');
+  const [category, setCategory] = useState('ALL CATEGORIES');
   const page = data.sanitySiteSettings;
   const blog = data.allSanityBlogPage.edges;
+
+  console.log(category, 'data');
 
   return (
     <Layout>
@@ -63,7 +65,11 @@ const BlogPage = ({ data }) => {
       <Section className="section">
         <div className="columns is-multiline">
           {blog.map(items => {
-            if (category === 'all' || items.node.categorySet == category) {
+            console.log(items.node.categorySet, 'data');
+            if (
+              category === 'ALL CATEGORIES' ||
+              items.node.categorySet == category
+            ) {
               return (
                 <div
                   className={
