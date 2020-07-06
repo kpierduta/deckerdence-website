@@ -29,6 +29,8 @@ const Section = styled.div`
     text-align: center !important;
   }
   li {
+    color: #2c2c2a;
+    color: ${props => props.theme.darkShades} !important ;
     text-align: center !important;
     margin-bottom: 0.5rem !important;
   }
