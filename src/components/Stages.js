@@ -13,7 +13,13 @@ const Section = styled.div`
     font-family: ${props => props.theme.secondaryFontFamily};
     letter-spacing: 1px;
   }
-  @media screen and (min-width: 769px), {
+  @media screen and (max-width: 769px) {
+    h2 {
+      font-size: 16px !important;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
     h2 {
       min-height: 6.5rem !important;
     }

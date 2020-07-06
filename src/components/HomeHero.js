@@ -3,14 +3,15 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  @media screen and (min-width: 1024px) {
-    padding: 20rem 1.5rem !important;
-  }
   background-image: url(${props => props.bgImage});
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
   position: relative;
+
+  @media screen and (max-width: 1023px) {
+    padding: 20rem 1.5rem !important;
+  }
   @media screen and (max-device-width: 761px), screen and (max-width: 1022px) {
     padding: 20rem 1.5rem !important;
   }
@@ -22,6 +23,8 @@ const Section = styled.section`
   }
   @media only screen and (max-width: 767px) {
     padding: 7rem 1.5rem !important;
+  }
+  @media only screen and (max-width: 767px) {
     span,
     h1,
     a {
@@ -54,7 +57,7 @@ const Content = styled.div`
     }
 
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-      top: 151px !important;
+      top: 160px !important;
       margin-bottom: 1rem !important;
     }
     @media only screen and (min-width: 1408px) {
