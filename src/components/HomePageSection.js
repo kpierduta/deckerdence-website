@@ -6,7 +6,7 @@ const Section = styled.section`
   background-image: url(${props => props.bgImg});
   background-size: 100% 100% !important;
   @media screen and (min-width: 1024px) {
-    padding: 3.3rem 1.5rem !important;
+    padding: 4.3rem 1.5rem !important;
   }
   .columns {
     flex-direction: ${props => (props.flex ? 'row-reverse' : ' ')};
