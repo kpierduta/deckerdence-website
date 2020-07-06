@@ -141,8 +141,8 @@ const Footer = () => (
                   <div className="content has-text-centered">
                     <p className="is-size-6 is-capitalized">
                       ©Deckerdence 2020. All Rights Reserved. |
-                      <Link to="/privacy-policy">Terms & Conditions |</Link>
-                      <Link to="/terms&Condition"> Privacy Policy |</Link>
+                      <Link to="/terms&Condition">Terms & Conditions |</Link>
+                      <Link to="/privacy-policy"> Privacy Policy |</Link>
                       <a href="https://www.kpdigitalstrategy.com/">
                         Website by kp digital strategy.
                       </a>
