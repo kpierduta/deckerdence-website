@@ -8,7 +8,7 @@ const Section = styled.div`
     background-repeat: no-repeat;
     padding: 11rem 1.5rem !important;
     p {
-      font-size: 17px !important;
+      font-size: 19px !important;
       color: rgb(44, 44, 42) !important;
       margin-bottom:1rem;
       text-align: center;
