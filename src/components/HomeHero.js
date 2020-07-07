@@ -9,7 +9,7 @@ const Section = styled.section`
   background-size: 100% 100%;
   position: relative;
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1024px) {
     padding: 20rem 1.5rem !important;
   }
   @media screen and (max-device-width: 761px), screen and (max-width: 1022px) {
