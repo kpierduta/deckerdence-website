@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 const Section = styled.div`
   .title {
@@ -40,7 +41,7 @@ const Stages = ({ title, subtitle, image, to }) => (
       <div className="card-image">
         <ImageWrapper className="media align">
           <figure className="image is-128x128">
-            <img className="is-rounded" src={image} alt="IconImage" />
+            <Img className="is-rounded" fluid={image} alt="IconImage" />
           </figure>
         </ImageWrapper>
       </div>

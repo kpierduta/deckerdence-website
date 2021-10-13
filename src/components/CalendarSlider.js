@@ -365,7 +365,7 @@ const CalendarSlider = () => {
             <h1 className="title is-4 has-text-centered">ARCHIVE</h1>
             <Slider {...settings}>
               {data.map(item => (
-                <Wrapper>
+                <Wrapper key={item.options}>
                   <img src={item.options} alt="" />
                 </Wrapper>
               ))}

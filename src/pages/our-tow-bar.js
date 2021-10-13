@@ -98,12 +98,11 @@ const ExtraPage = ({ data }) => {
         subTitle={page.extrasPage.mainSubtitle}
       />
       {page.extrasPage.extrasContent.map(items => (
-        <div>
+        <div key={items._key}>
           <Section
             className="section hero is-medium is-block"
             bgImage={items.backgroundImage.asset.url}
-            flex={items.itemRight}
-          >
+            flex={items.itemRight}>
             <div className="container">
               <div className="columns is-vcentered">
                 <div className="column is-8">
@@ -129,7 +128,7 @@ const ExtraPage = ({ data }) => {
           </Section>
           <Columns className="columns is-multiline">
             {items.gallery.map(item => (
-              <div className="column is-6">
+              <div className="column is-6" key={item._key}>
                 <figure className="image is-3by2">
                   {item.asset.url && (
                     <img src={item.asset.url} alt={item.alt} />

@@ -16,10 +16,9 @@ const DetailsCardSection = ({ data }) => (
       </h1>
       <div className="columns is-multiline">
         {data._rawDetails.map(item => (
-          <div className="column is-6 hero is-medium">
+          <div className="column is-6 hero is-medium" key={item._key}>
             <DetailsCard
               data={item.content}
-              key={item._key}
               boxImage={item.finerDetailsImage.asset.url}
             />
           </div>

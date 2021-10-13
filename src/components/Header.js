@@ -1,6 +1,4 @@
-/* eslint global-require: 0 */
-
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
@@ -58,134 +56,111 @@ const ContactWrapper = styled.div`
   color: ${props => props.theme.textColorLite};
 `;
 
-export default class Header extends React.Component {
-  constructor(props) {
-    super(props);
+const data1 = [
+  {
+    key: 1,
+    linkTo: '/vintage-bus-bar-hire/unique-wedding-venue',
+    name: 'WEDDINGS',
+  },
+  {
+    key: 2,
+    linkTo: '/vintage-bus-bar-hire/party-venue-birmingham',
+    name: 'PARTIES',
+  },
+  { key: 3, linkTo: '/vintage-bus-bar-hire/event-venue', name: 'EVENTS' },
+  { key: 4, linkTo: '/vintage-bus-bar-hire/event-venue', name: 'HOSPITALITY' },
+];
 
-    this.state = {
-      isActive: false,
-    };
-  }
+const data2 = [
+  { key: 5, linkTo: '/', name: 'HOME' },
+  { key: 6, linkTo: '/hire', name: 'HIRE OPTIONS' },
+  {
+    key: 7,
+    linkTo: '/vintage-bus-bar-hire/unique-wedding-venue',
+    name: 'WEDDINGS',
+    hidden: true,
+  },
+  {
+    key: 8,
+    linkTo: '/vintage-bus-bar-hire/party-venue-birmingham',
+    name: 'PARTIES',
+    hidden: true,
+  },
+  {
+    key: 9.2,
+    linkTo: '/vintage-bus-bar-hire/event-venue',
+    name: 'EVENTS',
+    hidden: true,
+  },
 
-  handleMobileMenu() {
-    const { isActive } = this.state;
+  {
+    key: 10,
+    linkTo: '/vintage-bus-bar-hire/hospitality',
+    name: 'HOSPITALITY',
+    hidden: true,
+  },
+  { key: 11, linkTo: '/our-tow-bar', name: 'ADDITIONAL SERVICES' },
+  { key: 12, linkTo: '/about', name: 'About' },
+  { key: 13, linkTo: '/testimonials', name: 'Testimonials' },
+  { key: 13, linkTo: '/journal', name: 'JOURNAL' },
+  { key: 14, linkTo: '/contact', name: 'CONTACT' },
+];
 
-    this.setState({
-      isActive: !isActive,
-    });
-  }
+const Header = () => {
+  const [isActive, setIsActive] = useState(false);
 
-  render() {
-    const { isActive } = this.state;
-
-    return (
-      <Section className="section is-normal">
-        <div>
-          <ContactWrapper className="columns is-hidden-touch">
-            <div className="column is-flex navbar-end">
-              <Link
-                to="/vintage-bus-bar-hire/unique-wedding-venue"
-                className="navbar-item"
-              >
-                WEDDINGS
-              </Link>
-              <Link
-                to="/vintage-bus-bar-hire/party-venue-birmingham"
-                className="navbar-item"
-              >
-                PARTIES
-              </Link>
-              <Link
-                to="/vintage-bus-bar-hire/event-venue"
-                className="navbar-item"
-              >
-                EVENTS
-              </Link>
-              <Link
-                to="/vintage-bus-bar-hire/hospitality"
-                className="navbar-item"
-              >
-                HOSPITALITY
-              </Link>
+  return (
+    <Section className="section is-normal">
+      <div>
+        <ContactWrapper className="columns is-hidden-touch">
+          <div className="column is-flex navbar-end">
+            {data1.map(item => {
+              return (
+                <Link key={item.key} to={item.linkTo} className="navbar-item">
+                  {item.name}
+                </Link>
+              );
+            })}
+          </div>
+        </ContactWrapper>
+        <nav className="navbar" role="navigation" aria-label="main navigation">
+          <div className="navbar-brand">
+            <Link className="navbar-item" to="/">
+              <img className="logo" src="/images/logo.jpg" alt="site logo" />
+            </Link>
+            <a
+              href="#"
+              role="button"
+              className={isActive ? 'navbar-burger is-active' : 'navbar-burger'}
+              aria-label="menu"
+              aria-expanded="false"
+              data-target="navbarBasicExample"
+              onClick={() => {
+                setIsActive(!isActive);
+              }}>
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </a>
+          </div>
+          <div className={isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
+            <div className="navbar-end">
+              {data2.map(item => {
+                return (
+                  <Link
+                    to={item.linkTo}
+                    className={`navbar-item ${item.hidden &&
+                      'is-hidden-desktop'}`}
+                    key={item.key}>
+                    {item.name}
+                  </Link>
+                );
+              })}
             </div>
-          </ContactWrapper>
-          <nav
-            className="navbar"
-            role="navigation"
-            aria-label="main navigation"
-          >
-            <div className="navbar-brand">
-              <Link className="navbar-item" to="/">
-                <img className="logo" src="/images/logo.jpg" alt="site logo" />
-              </Link>
-              <a
-                href="#"
-                role="button"
-                className={
-                  isActive ? 'navbar-burger is-active' : 'navbar-burger'
-                }
-                aria-label="menu"
-                aria-expanded="false"
-                data-target="navbarBasicExample"
-                onClick={() => this.handleMobileMenu()}
-              >
-                <span aria-hidden="true" />
-                <span aria-hidden="true" />
-                <span aria-hidden="true" />
-              </a>
-            </div>
-            <div className={isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
-              <div className="navbar-end">
-                <Link to="/" className="navbar-item">
-                  HOME
-                </Link>
-                <Link to="/hire" className="navbar-item">
-                  HIRE OPTIONS
-                </Link>
-                <Link
-                  to="/vintage-bus-bar-hire/unique-wedding-venue"
-                  className="navbar-item is-hidden-desktop"
-                >
-                  WEDDINGS
-                </Link>
-                <Link
-                  to="/vintage-bus-bar-hire/party-venue-birmingham"
-                  className="navbar-item is-hidden-desktop"
-                >
-                  PARTIES
-                </Link>
-                <Link
-                  to="/vintage-bus-bar-hire/event-venue"
-                  className="navbar-item is-hidden-desktop"
-                >
-                  EVENTS
-                </Link>
-                <Link
-                  to="/vintage-bus-bar-hire/hospitality"
-                  className="navbar-item is-hidden-desktop"
-                >
-                  HOSPITALITY
-                </Link>
-                <Link to="/our-tow-bar" className="navbar-item">
-                  ADDITIONAL SERVICES
-                </Link>
-                <Link to="/about" className="navbar-item">
-                  About
-                </Link>
-                <Link to="/testimonials" className="navbar-item">
-                  Testimonials
-                </Link>
-                <Link to="/journal" className="navbar-item">
-                  JOURNAL
-                </Link>
-                <Link to="/contact" className="navbar-item">
-                  CONTACT
-                </Link>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </Section>
-    );
-  }
-}
+          </div>
+        </nav>
+      </div>
+    </Section>
+  );
+};
+export default Header;

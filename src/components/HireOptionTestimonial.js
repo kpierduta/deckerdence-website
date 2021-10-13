@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 import HireCard from './HireCard';
 
 const Section = styled.section`
@@ -49,8 +50,8 @@ const HireOptionTestimonial = ({
     <div className="container">
       <div className="columns">
         <div className="column is-4">
-          <figure className="image is-square">
-            <img src={image} className="is-rounded" alt={alt} />
+          <figure className="image">
+            <Img fluid={image} className="is-rounded" alt={alt} />
           </figure>
         </div>
         <div className="column is-2 is-desktop" />

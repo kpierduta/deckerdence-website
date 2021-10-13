@@ -27,11 +27,14 @@ export const testimonialPageQuery = graphql`
     allSanityTestimonial(sort: { fields: order, order: ASC }) {
       edges {
         node {
+          _id
           order
           columnReverse
           image {
             asset {
-              url
+              fluid(maxWidth: 800) {
+                ...GatsbySanityImageFluid
+              }
             }
           }
           title
@@ -60,8 +63,8 @@ const TestimonialPage = ({ data }) => {
       />
       {myTestimonial.map(item => (
         <HireOptionTestimonial
-          key={item.node._key}
-          image={item.node.image.asset.url}
+          key={item.node._id}
+          image={item.node.image.asset.fluid}
           flex={item.node.columnReverse}
           title={item.node.title}
           pera={item.node.description}

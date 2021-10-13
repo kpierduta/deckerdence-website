@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 const Section = styled.div`
@@ -39,8 +39,8 @@ const Testimonials = ({ src, title, alt }) => {
   return (
     <Section className="column is-4">
       <div className="main" onClick={() => setActive(true)}>
-        <figure className="image is-5by4">
-          <img src={src} alt={alt} />
+        <figure className="">
+          <Img fluid={src} alt={alt} />
         </figure>
         <div className="overlay">
           <div className="text">
@@ -53,11 +53,12 @@ const Testimonials = ({ src, title, alt }) => {
       <div className={active ? 'modal is-active' : 'modal is-close'}>
         <div className="modal-background" />
         <div className="modal-content">
-          <p className="image is-5by4 ">
-            <img src={src} alt={alt} />
+          <p className="image">
+            <Img fluid={src} alt={alt} />
           </p>
         </div>
         <button
+          label="button"
           type="button"
           className="modal-close is-large"
           onClick={() => {

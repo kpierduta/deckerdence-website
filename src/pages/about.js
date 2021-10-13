@@ -32,7 +32,9 @@ export const aboutPageQuery = graphql`
           columnReverse
           image {
             asset {
-              url
+              fluid(maxWidth: 800) {
+                ...GatsbySanityImageFluid
+              }
             }
           }
           title
@@ -60,8 +62,8 @@ const AboutPage = ({ data }) => {
       />
       {team.map(option => (
         <HireOptionTestimonial
-          key={option.node._key}
-          image={option.node.image.asset.url}
+          key={option.node._id}
+          image={option.node.image.asset.fluid}
           flex={option.node.columnReverse}
           title={option.node.title}
           position={option.node.subtitle}

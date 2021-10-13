@@ -65,21 +65,19 @@ const BlogPage = ({ data }) => {
       <Section className="section">
         <div className="columns is-multiline">
           {blog.map(items => {
-            console.log(items.node.categorySet, 'data');
             if (
               category === 'ALL CATEGORIES' ||
               items.node.categorySet == category
             ) {
               return (
                 <div
+                  key={items.node._id}
                   className={
                     items.node.isSizeHalf
                       ? 'column is-6 is-flex'
                       : 'column is-3 is-flex'
-                  }
-                >
+                  }>
                   <BlogData
-                    key={items.node._id}
                     color={items.node.hasTextBlack}
                     title={items.node.title}
                     date={items.node.releaseDate}

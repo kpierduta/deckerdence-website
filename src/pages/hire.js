@@ -36,12 +36,16 @@ export const hireQuery = graphql`
           hireOptionPrice
           hireOptionBlackImage {
             asset {
-              url
+              fluid(maxWidth: 800) {
+                ...GatsbySanityImageFluid
+              }
             }
           }
           hireOptionColoredImage {
             asset {
-              url
+              fluid(maxWidth: 800) {
+                ...GatsbySanityImageFluid
+              }
             }
           }
         }

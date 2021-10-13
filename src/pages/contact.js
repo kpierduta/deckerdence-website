@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
@@ -21,15 +22,20 @@ export const contactUsQuery = graphql`
       subtitle
       banner {
         asset {
-          url
+          fluid(maxWidth: 800) {
+            ...GatsbySanityImageFluid
+          }
         }
       }
       contactItem {
+        _key
         href
         title
         icon {
           asset {
-            url
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
           }
         }
         subtitle
@@ -38,7 +44,9 @@ export const contactUsQuery = graphql`
         title
         image {
           asset {
-            url
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
           }
         }
         file {
@@ -117,7 +125,7 @@ const ContactUs = ({ data }) => {
               <ContactUsItem
                 key={item._key}
                 title={item.title}
-                icon={item.icon.asset.url}
+                icon={item.icon.asset.fluid}
                 para={item.subtitle}
                 href={item.href}
               />
@@ -137,7 +145,7 @@ const ContactUs = ({ data }) => {
             <div className="column is-6">
               <div className="my">
                 <figure className="image">
-                  <img src={settings.banner.asset.url} alt="" />
+                  <Img fluid={settings.banner.asset.fluid} alt="deckerdence" />
                 </figure>
               </div>
             </div>
@@ -154,7 +162,7 @@ const ContactUs = ({ data }) => {
             {settings.file.map(item => (
               <div className="column is-3 has-text-centered">
                 <figure className="image is-128x128">
-                  <img src={item.image.asset.url} alt="" />
+                  <Img fluid={item.image.asset.fluid} alt="" />
                 </figure>
                 <DownloadForm title={item.title} file={item.file.asset.url} />
               </div>

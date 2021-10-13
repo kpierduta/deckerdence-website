@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 const Section = styled.section`
   background-color: ${props => (props.flex ? '#AAB3B6' : '')};
@@ -52,12 +53,13 @@ const HireOptionItem = ({ item, onMouseOver }) => (
         <div className="column is-4 is-desktop">
           <figure className="image is-square">
             <img
-              src={item.hireOptionBlackImage.asset.url}
+              src={item.hireOptionBlackImage.asset.fluid.src}
               onFocus={onMouseOver}
               alt="coloredImage"
             />
+
             <img
-              src={item.hireOptionColoredImage.asset.url}
+              src={item.hireOptionColoredImage.asset.fluid.src}
               className="img-top"
               alt="blackImage"
             />
@@ -100,8 +102,7 @@ const HireOptionItem = ({ item, onMouseOver }) => (
           <Link
             to={`/${item.slug.current}`}
             type="button"
-            className="button is-large is-size-5"
-          >
+            className="button is-large is-size-5">
             FIND OUT MORE
           </Link>
         </div>

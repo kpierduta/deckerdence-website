@@ -20,15 +20,17 @@ const StagesSection = ({ data }) => (
         />
       </div>
       <div className="columns is-multiline">
-        {data.simpleStages.item.map(items => (
-          <Stages
-            key={items._key}
-            title={items.title}
-            subtitle={items.subTitle}
-            image={items.avatar.asset.url}
-            to={items.buttonLink.current}
-          />
-        ))}
+        {data.simpleStages.item.map(items => {
+          return (
+            <Stages
+              key={items._key}
+              title={items.title}
+              subtitle={items.subTitle}
+              image={items.avatar.asset.fluid}
+              to={items.buttonLink.current}
+            />
+          );
+        })}
       </div>
     </div>
   </Section>
