@@ -6,7 +6,7 @@ const TileItem = ({ data }) => (
       <div className="tile is-ancestor">
         <div className="tile is-5 is-vertical is-parent">
           {data.information.item.map(items => (
-            <div className="tile is-child" key={item._key}>
+            <div className="tile is-child" key={items._key}>
               <p className="title is-5 has-text-weight-bold is-family-primary">
                 {items.title}
               </p>

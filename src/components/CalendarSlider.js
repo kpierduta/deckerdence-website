@@ -22,6 +22,7 @@ const Wrapper = styled.div`
     outline: none !important;
   }
 `;
+
 const data = [
   {
     options: '/images/archive/jan20.jpg',
@@ -344,6 +345,7 @@ const data = [
     value: '12-2014',
   },
 ];
+
 const CalendarSlider = () => {
   const settings = {
     dots: false,

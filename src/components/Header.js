@@ -99,6 +99,7 @@ const data2 = [
     name: 'HOSPITALITY',
     hidden: true,
   },
+
   { key: 11, linkTo: '/our-tow-bar', name: 'ADDITIONAL SERVICES' },
   { key: 12, linkTo: '/about', name: 'About' },
   { key: 13, linkTo: '/testimonials', name: 'Testimonials' },
