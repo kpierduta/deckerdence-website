@@ -102,7 +102,7 @@ const data2 = [
   { key: 11, linkTo: '/our-tow-bar', name: 'ADDITIONAL SERVICES' },
   { key: 12, linkTo: '/about', name: 'About' },
   { key: 13, linkTo: '/testimonials', name: 'Testimonials' },
-  { key: 13, linkTo: '/journal', name: 'JOURNAL' },
+  { key: 13.3, linkTo: '/journal', name: 'JOURNAL' },
   { key: 14, linkTo: '/contact', name: 'CONTACT' },
 ];
 

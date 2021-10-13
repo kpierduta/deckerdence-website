@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link, StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
 import config from '../utils/config';
 
@@ -63,6 +62,15 @@ const IconContainer = styled.div`
   }
 `;
 
+const socialIcons = [
+  { key: '1', icon: '/images/icon/facebook.png', link: config.facebook },
+  { key: '2', icon: '/images/icon/twitter.png', link: config.twitter },
+  { key: '3', icon: '/images/icon/linked-in.png', link: config.linkedin },
+  { key: '4', icon: '/images/icon/instagram.png', link: config.instagram },
+  { key: '5', icon: '/images/icon/pinterest.png', link: config.pinterest },
+  { key: '6', icon: '/images/icon/youtube.png', link: config.youTube },
+];
+
 const FooterWrapper = styled.div`
   margin-top: 0rem !important;
 `;
@@ -71,24 +79,13 @@ const Footer = () => (
   <Container className="section is-normal">
     <div className="container">
       <IconContainer className="has-text-centered">
-        <a href={config.facebook}>
-          <img src="/images/icon/facebook.png" alt="facebook icon" />
-        </a>
-        <a href={config.twitter}>
-          <img src="/images/icon/twitter.png" alt="twitter icon" />
-        </a>
-        <a href={config.linkedin}>
-          <img src="/images/icon/linked-in.png" alt="linkedin icon" />
-        </a>
-        <a href={config.instagram}>
-          <img src="/images/icon/instagram.png" alt="instagram icon" />
-        </a>
-        <a href={config.pinterest}>
-          <img src="/images/icon/pinterest.png" alt="pinterest icon" />
-        </a>
-        <a href={config.youTube}>
-          <img src="/images/icon/youtube.png" alt="YouTube icon" />
-        </a>
+        {socialIcons.map(item => {
+          return (
+            <a href={item.link} key={item.key}>
+              <img src={item.icon} alt="deckerdence social icon" />
+            </a>
+          );
+        })}
       </IconContainer>
       <StaticQuery
         query={footerQuery}
@@ -103,6 +100,7 @@ const Footer = () => (
               <div className="columns has-text-centered is-variable is-6">
                 <div className="column">
                   <h3 className="title is-5">CONTACT</h3>
+
                   <FooterOption option="Tel: 01675 463 555" link="/contact" />
                   <FooterOption
                     option="Email: enquiries@deckerdence.com"
