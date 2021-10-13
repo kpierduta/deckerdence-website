@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
@@ -19,36 +19,39 @@ const Container = styled.div`
 `;
 
 const CookiesPopUp = () => {
-  const [display, setDisplay] = useState(true);
+  const [display, setDisplay] = useState(false);
 
-  const rememberME =
-    typeof window !== `undefined`
-      ? window.localStorage.getItem('cookieAccepted')
-      : null;
+  useEffect(() => {
+    if (window.localStorage.getItem('cookieAccepted') === null) {
+      setDisplay(true);
+    }
+  }, []);
 
-  if (rememberME) {
-    return null;
-  }
+  const setCookie = () => {
+    window.localStorage.setItem('cookieAccepted', true);
+    setDisplay(!display);
+  };
+
   return (
-    <Container
-      className={display ? 'notification has-text-centered-desktop' : ''}
-    >
-      <p className="has-text-white">
-        By using our site, you acknowledge that you have read and understand our
-        Cookie Policy, <Link to="/privacy-policy"> Privacy Policy,</Link> and
-        our <Link to="/terms&Condition">Terms of Service</Link>.
-      </p>
-      <button
-        type="button"
-        onClick={() => {
-          window.localStorage.setItem('cookieAccepted', true);
-          setDisplay(false);
-        }}
-        className="button is-rounded"
-      >
-        Agree
-      </button>
-    </Container>
+    <div>
+      {display && (
+        <Container
+          className={display ? 'notification has-text-centered-desktop' : ''}>
+          <p className="has-text-white">
+            By using our site, you acknowledge that you have read and understand
+            our Cookie Policy,{' '}
+            <Link to="/privacy-policy"> Privacy Policy,</Link> and our{' '}
+            <Link to="/terms&Condition">Terms of Service</Link>.
+          </p>
+          <button
+            type="button"
+            onClick={() => setCookie()}
+            className="button is-rounded">
+            Agree
+          </button>
+        </Container>
+      )}
+    </div>
   );
 };
 
