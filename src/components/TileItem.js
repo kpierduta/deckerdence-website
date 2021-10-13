@@ -1,15 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const Section = styled.div``;
 
 const TileItem = ({ data }) => (
-  <Section className="section">
+  <div className="section">
     <div className="container">
       <div className="tile is-ancestor">
         <div className="tile is-5 is-vertical is-parent">
           {data.information.item.map(items => (
-            <div className="tile is-child">
+            <div className="tile is-child" key={item._key}>
               <p className="title is-5 has-text-weight-bold is-family-primary">
                 {items.title}
               </p>
@@ -28,7 +25,7 @@ const TileItem = ({ data }) => (
         </div>
       </div>
     </div>
-  </Section>
+  </div>
 );
 
 export default TileItem;

@@ -53,9 +53,9 @@ const Testimonials = ({ src, title, alt }) => {
       <div className={active ? 'modal is-active' : 'modal is-close'}>
         <div className="modal-background" />
         <div className="modal-content">
-          <p className="image">
+          <figure className="image">
             <Img fluid={src} alt={alt} />
-          </p>
+          </figure>
         </div>
         <button
           label="button"
