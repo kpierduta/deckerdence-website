@@ -33,6 +33,8 @@ const DownloadForm = ({ file, dottedBorder, title }) => {
     console.log(email);
     console.log(phone);
 
+    console.log(file, 'file');
+
     e.preventDefault();
 
     addToMailchimp(
@@ -47,7 +49,7 @@ const DownloadForm = ({ file, dottedBorder, title }) => {
         alert('Please check your email for your download link');
       })
       .catch(error => {
-        console.log('fail', error);
+        console.log(error);
       });
     setEmail('');
     setPhone('');

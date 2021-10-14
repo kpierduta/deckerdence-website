@@ -42,8 +42,9 @@ const ContactForm = ({ dottedBorder, pera }) => {
         alert('Please check your email for your download link');
       })
       .catch(error => {
-        console.log('fail', error);
+        console.log(error);
       });
+
     setEmail('');
     setPhone('');
   };
