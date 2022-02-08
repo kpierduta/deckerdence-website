@@ -6,6 +6,7 @@ import {
   Features,
   BookCall,
   EventDescription,
+  Testimonials,
 } from '../components/NewComponents';
 import Layout from '../components/Layout';
 
@@ -17,6 +18,7 @@ const Test = () => (
     <BookCall />
     <Hero bgImg="/images/new/bg1.png" />
     <EventDescription />
+    <Testimonials />
   </Layout>
 );
 
