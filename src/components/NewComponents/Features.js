@@ -1,0 +1,48 @@
+import React from 'react';
+import styled from 'styled-components';
+
+const Section = styled.section`
+  margin-top: -4.5rem;
+`;
+
+const CardsContainer = styled.div``;
+
+const Card = styled.div`
+  background-color: ${props => props.theme.cardBackground};
+  padding: 1.5rem 0rem;
+  img {
+    width: 100px;
+    height: auto;
+  }
+  p {
+    font-size: ${props => props.theme.fontSizeExtraLarge}px;
+    padding-top: 25px;
+  }
+`;
+
+const FeatureCard = ({ src, title }) => (
+  <Card className="has-text-centered">
+    <img src={src} alt="feature-img" />
+    <p className="has-text-weight-bold is-uppercase">{title}</p>
+  </Card>
+);
+
+const Features = () => (
+  <Section className="section">
+    <div className="container">
+      <CardsContainer className="columns">
+        <div className="column">
+          <FeatureCard src="/images/new/wedding.png" title="Weddings" />
+        </div>
+        <div className="column">
+          <FeatureCard src="/images/new/parties.png" title="Parties" />
+        </div>
+        <div className="column">
+          <FeatureCard src="/images/new/events.png" title="Events" />
+        </div>
+      </CardsContainer>
+    </div>
+  </Section>
+);
+
+export default Features;

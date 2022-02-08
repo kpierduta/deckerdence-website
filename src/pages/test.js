@@ -1,11 +1,20 @@
 import React from 'react';
 
-import Hero from '../components/Hero';
+import {
+  Hero,
+  WelcomeBanner,
+  Features,
+  BookCall,
+} from '../components/NewComponents';
 import Layout from '../components/Layout';
 
 const Test = () => (
   <Layout>
-    <Hero />
+    <Hero bgImg="/images/new/hero-img.png" />
+    <WelcomeBanner />
+    <Features />
+    <BookCall />
+    <Hero bgImg="/images/new/bg1.png" />
   </Layout>
 );
 
