@@ -79,7 +79,7 @@ const HomeHero = ({ items }) => {
   return (
     <div>
       <Section
-        className="section hero is-large is-block "
+        className="section hero is-large is-block"
         bgImage={items.homeHeroBackgroundImage.asset.url}
       >
         <div className="container">

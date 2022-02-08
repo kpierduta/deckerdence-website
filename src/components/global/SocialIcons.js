@@ -18,25 +18,16 @@ import config from '../../utils/config';
 //   }
 // `;
 
-const Container = styled.div``;
-// const Container = styled.div(({ flex }) => [
-//   tw`sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start`,
-//   flex && tw`inline-flex`,
-// ]);
+const Container = styled.div`
+  display: flex;
+`;
 
-const IconWrapper = styled.div``;
-
-// const IconWrapper = styled.div(({ type, variant }) => [
-//   tw`border-green hover:-translate-y-1 p-1 transition duration-500 ease-in-out transform border-2`,
-//   type === 'twitter' && tw`hover:border-blue-900`,
-//   type === 'instagram' && tw`hover:border-purple-500`,
-//   type === 'youtube' && tw`hover:border-red-800`,
-//   type === 'facebook' && tw`hover:border-blue-800`,
-//   variant === 'primary'
-//     ? tw`bg-green ml-2 `
-//     : tw`rounded-full p-2 bg-green-light mr-2`,
-//   variant === 'secondary' && tw`my-2`,
-// ]);
+const IconWrapper = styled.div`
+  img {
+    height: 40px !important;
+    width: 40px !important;
+  }
+`;
 
 // const socialNetworks = ({ twitter, facebook, instagram, youtube }) => {
 //   const items = [];
@@ -84,20 +75,26 @@ const socialIcons = [
   { key: '6', icon: '/images/icon/youtube.png', link: config.youTube },
 ];
 
-const SocialIcons = ({ variant, ...props }) => {
+const SocialIcons = () => {
   // const { sanityGlobals: data } = useStaticQuery(query);
 
   return (
-    <Container {...props}>
+    <Container>
       {socialIcons.map(item => (
         <IconWrapper key={item.id} type={item.icon}>
           <a
             href={item.link}
-            tw="cursor-pointer text-xl relative text-white"
+            // tw="cursor-pointer text-xl relative text-white"
             target="_blank"
             rel="noreferrer"
           >
-            <span> {item.icon}</span>
+            <a href={item.link} key={item.key}>
+              <img
+                src={item.icon}
+                alt="deckerdence social icon"
+                width="100px"
+              />
+            </a>
           </a>
         </IconWrapper>
       ))}

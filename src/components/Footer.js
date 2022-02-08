@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link, StaticQuery, graphql } from 'gatsby';
 
-import config from '../utils/config';
+import SocialIcons from './global/SocialIcons';
 
 export const footerQuery = graphql`
   query footer {
@@ -50,6 +50,8 @@ const Container = styled.section`
 
 const IconContainer = styled.div`
   align-self: flex-end;
+  justify-content: center;
+  display: flex;
   img {
     width: 5%;
     margin-right: 1.5rem;
@@ -72,18 +74,18 @@ const FooterOption = ({ title, link }) => (
   </LinkStyled>
 );
 
-const socialIcons = [
-  { key: '1', icon: '/images/icon/facebook.png', link: config.facebook },
-  { key: '2', icon: '/images/icon/twitter.png', link: config.twitter },
-  { key: '3', icon: '/images/icon/linked-in.png', link: config.linkedin },
-  { key: '4', icon: '/images/icon/instagram.png', link: config.instagram },
-  { key: '5', icon: '/images/icon/pinterest.png', link: config.pinterest },
-  { key: '6', icon: '/images/icon/youtube.png', link: config.youTube },
+const data1 = [
+  { id: 1, title: 'Additional services' },
+  { id: 2, title: 'Journal (blog)' },
+  { id: 3, title: 'Testimonials' },
+  { id: 4, title: 'Contact' },
 ];
-
-// const FooterWrapper = styled.div`
-//   margin-top: 0rem !important;
-// `;
+const data2 = [
+  { id: 1, title: 'Wedding' },
+  { id: 2, title: 'Parties' },
+  { id: 3, title: 'Events' },
+  { id: 4, title: 'Hospitality' },
+];
 
 const Footer = () => (
   <Container className="section is-normal">
@@ -99,28 +101,18 @@ const Footer = () => (
           return (
             <>
               <div className="columns is-variable is-6">
-                <div className="column is-3">
-                  <FooterOption title="Additional services" />
-                  <FooterOption title="Journal (blog)" />
-                  <FooterOption title="Testimonials" />
-                  <FooterOption title="Contact" />
+                <div className="column is-3 has-text-centered-mobile">
+                  {data1.map(item => (
+                    <FooterOption title={item.title} />
+                  ))}
                 </div>
-                <IconContainer className="column is-6 has-text-centered">
-                  <div>
-                    {socialIcons.map(item => {
-                      return (
-                        <a href={item.link} key={item.key}>
-                          <img src={item.icon} alt="deckerdence social icon" />
-                        </a>
-                      );
-                    })}
-                  </div>
+                <IconContainer className="column is-6">
+                  <SocialIcons />
                 </IconContainer>
-                <div className="column is-3 has-text-right">
-                  <FooterOption title="Wedding" />
-                  <FooterOption title="Parties" />
-                  <FooterOption title="Events" />
-                  <FooterOption title="Hospitality" />
+                <div className="column is-3 has-text-right has-text-centered-mobile">
+                  {data2.map(item => (
+                    <FooterOption title={item.title} />
+                  ))}
                 </div>
               </div>
               {/* <FooterWrapper className="columns is-centered">

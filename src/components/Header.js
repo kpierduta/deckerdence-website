@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 const Section = styled.section`
-  padding: 1rem 1.5rem 3rem 1.5rem;
+  padding: 0rem 1.5rem 1.22rem 1.5rem;
   .navbar {
     background-color: transparent;
   }

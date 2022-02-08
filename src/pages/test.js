@@ -1,9 +1,11 @@
 import React from 'react';
+
+import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 
 const Test = () => (
   <Layout>
-    <p>This is test page</p>
+    <Hero />
   </Layout>
 );
 
