@@ -27,19 +27,21 @@ const FeatureCard = ({ src, title }) => (
   </Card>
 );
 
+const features = [
+  { id: 1, img: '/images/new/wedding.png', title: 'Weddings' },
+  { id: 2, img: '/images/new/parties.png', title: 'Parties' },
+  { id: 3, img: '/images/new/events.png', title: 'Events' },
+];
+
 const Features = () => (
   <Section className="section">
     <div className="container">
       <CardsContainer className="columns">
-        <div className="column">
-          <FeatureCard src="/images/new/wedding.png" title="Weddings" />
-        </div>
-        <div className="column">
-          <FeatureCard src="/images/new/parties.png" title="Parties" />
-        </div>
-        <div className="column">
-          <FeatureCard src="/images/new/events.png" title="Events" />
-        </div>
+        {features.map(feature => (
+          <div className="column" key={feature.id}>
+            <FeatureCard src={feature.img} title={feature.title} />
+          </div>
+        ))}
       </CardsContainer>
     </div>
   </Section>

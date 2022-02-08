@@ -26,6 +26,7 @@ export const theme = {
   borderColor: '#f7f7f7',
   backgroundColor: '#FFFFFF',
   backgroundDark: '#3C3C3B',
+  backgroundDarkSecondary: '#E9E9E9',
   backgroundInputColor: lightShades,
   backgroundInputColorDark: darkShades,
   cardBackground: '#C4C4C4',
