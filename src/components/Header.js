@@ -20,9 +20,9 @@ const Section = styled.section`
   }
   .navbar-item {
     font-family: ${props => props.theme.secondaryFontFamily} !important;
-    font-weight: 100;
+    font-weight: 400;
     letter-spacing: 1px;
-    font-size: 1rem;
+    font-size: ${props => props.theme.fontSizeExtraLarge}px;
     height: 3rem;
     color: ${props => props.theme.textColorLite};
     :hover {
@@ -56,55 +56,47 @@ const ContactWrapper = styled.div`
   color: ${props => props.theme.textColorLite};
 `;
 
-const data1 = [
-  {
-    key: 1,
-    linkTo: '/vintage-bus-bar-hire/unique-wedding-venue',
-    name: 'WEDDINGS',
-  },
-  {
-    key: 2,
-    linkTo: '/vintage-bus-bar-hire/party-venue-birmingham',
-    name: 'PARTIES',
-  },
-  { key: 3, linkTo: '/vintage-bus-bar-hire/event-venue', name: 'EVENTS' },
-  { key: 4, linkTo: '/vintage-bus-bar-hire/event-venue', name: 'HOSPITALITY' },
-];
+const Button = styled.button`
+  background-color: ${props => props.theme.primaryColor};
+  padding: 10px 20px;
+  cursor: pointer;
+  color: ${props => props.theme.lightAccent};
+`;
 
 const data2 = [
   { key: 5, linkTo: '/', name: 'HOME' },
   { key: 6, linkTo: '/hire', name: 'HIRE OPTIONS' },
-  {
-    key: 7,
-    linkTo: '/vintage-bus-bar-hire/unique-wedding-venue',
-    name: 'WEDDINGS',
-    hidden: true,
-  },
-  {
-    key: 8,
-    linkTo: '/vintage-bus-bar-hire/party-venue-birmingham',
-    name: 'PARTIES',
-    hidden: true,
-  },
-  {
-    key: 9.2,
-    linkTo: '/vintage-bus-bar-hire/event-venue',
-    name: 'EVENTS',
-    hidden: true,
-  },
+  // {
+  //   key: 7,
+  //   linkTo: '/vintage-bus-bar-hire/unique-wedding-venue',
+  //   name: 'WEDDINGS',
+  //   hidden: true,
+  // },
+  // {
+  //   key: 8,
+  //   linkTo: '/vintage-bus-bar-hire/party-venue-birmingham',
+  //   name: 'PARTIES',
+  //   hidden: true,
+  // },
+  // {
+  //   key: 9.2,
+  //   linkTo: '/vintage-bus-bar-hire/event-venue',
+  //   name: 'EVENTS',
+  //   hidden: true,
+  // },
 
-  {
-    key: 10,
-    linkTo: '/vintage-bus-bar-hire/hospitality',
-    name: 'HOSPITALITY',
-    hidden: true,
-  },
+  // {
+  //   key: 10,
+  //   linkTo: '/vintage-bus-bar-hire/hospitality',
+  //   name: 'HOSPITALITY',
+  //   hidden: true,
+  // },
 
-  { key: 11, linkTo: '/our-tow-bar', name: 'ADDITIONAL SERVICES' },
+  // { key: 11, linkTo: '/our-tow-bar', name: 'ADDITIONAL SERVICES' },
   { key: 12, linkTo: '/about', name: 'About' },
-  { key: 13, linkTo: '/testimonials', name: 'Testimonials' },
-  { key: 13.3, linkTo: '/journal', name: 'JOURNAL' },
-  { key: 14, linkTo: '/contact', name: 'CONTACT' },
+  // { key: 13, linkTo: '/testimonials', name: 'Testimonials' },
+  // { key: 13.3, linkTo: '/journal', name: 'JOURNAL' },
+  // { key: 14, linkTo: '/contact', name: 'CONTACT' },
 ];
 
 const Header = () => {
@@ -115,13 +107,9 @@ const Header = () => {
       <div>
         <ContactWrapper className="columns is-hidden-touch">
           <div className="column is-flex navbar-end">
-            {data1.map(item => {
-              return (
-                <Link key={item.key} to={item.linkTo} className="navbar-item">
-                  {item.name}
-                </Link>
-              );
-            })}
+            <Button type="button" className="px-4 is-capitalise">
+              Book a call with us
+            </Button>
           </div>
         </ContactWrapper>
         <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -138,7 +126,8 @@ const Header = () => {
               data-target="navbarBasicExample"
               onClick={() => {
                 setIsActive(!isActive);
-              }}>
+              }}
+            >
               <span aria-hidden="true" />
               <span aria-hidden="true" />
               <span aria-hidden="true" />
@@ -152,7 +141,8 @@ const Header = () => {
                     to={item.linkTo}
                     className={`navbar-item ${item.hidden &&
                       'is-hidden-desktop'}`}
-                    key={item.key}>
+                    key={item.key}
+                  >
                     {item.name}
                   </Link>
                 );
