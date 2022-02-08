@@ -4,8 +4,6 @@ import { Link, StaticQuery, graphql } from 'gatsby';
 
 import config from '../utils/config';
 
-import FooterOption from './FooterOptions';
-
 export const footerQuery = graphql`
   query footer {
     allSanityVehicleHirePage(sort: { fields: order }) {
@@ -51,9 +49,9 @@ const Container = styled.section`
 `;
 
 const IconContainer = styled.div`
-  padding-bottom: 1rem;
+  align-self: flex-end;
   img {
-    width: 4%;
+    width: 5%;
     margin-right: 1.5rem;
     @media screen and (max-width: 767px) {
       margin-right: 0.5rem;
@@ -61,6 +59,18 @@ const IconContainer = styled.div`
     }
   }
 `;
+
+const LinkStyled = styled(Link)`
+  h4 {
+    padding: 1rem 0;
+  }
+`;
+
+const FooterOption = ({ title, link }) => (
+  <LinkStyled to={link}>
+    <h4 className="title is-5 is-uppercase">{title}</h4>
+  </LinkStyled>
+);
 
 const socialIcons = [
   { key: '1', icon: '/images/icon/facebook.png', link: config.facebook },
@@ -71,22 +81,13 @@ const socialIcons = [
   { key: '6', icon: '/images/icon/youtube.png', link: config.youTube },
 ];
 
-const FooterWrapper = styled.div`
-  margin-top: 0rem !important;
-`;
+// const FooterWrapper = styled.div`
+//   margin-top: 0rem !important;
+// `;
 
 const Footer = () => (
   <Container className="section is-normal">
     <div className="container">
-      <IconContainer className="has-text-centered">
-        {socialIcons.map(item => {
-          return (
-            <a href={item.link} key={item.key}>
-              <img src={item.icon} alt="deckerdence social icon" />
-            </a>
-          );
-        })}
-      </IconContainer>
       <StaticQuery
         query={footerQuery}
         render={data => {
@@ -97,45 +98,32 @@ const Footer = () => (
 
           return (
             <>
-              <div className="columns has-text-centered is-variable is-6">
-                <div className="column">
-                  <h3 className="title is-5">CONTACT</h3>
-
-                  <FooterOption option="Tel: 01675 463 555" link="/contact" />
-                  <FooterOption
-                    option="Email: enquiries@deckerdence.com"
-                    link="/contact"
-                  />
-                  <FooterOption
-                    option="Blyth Hall Farm, Blythe Road, Coleshill, Birmingham, B46 2AF"
-                    link="/contact"
-                  />
-                  <p className="is-size-7 is-italic	is-capitalized">
-                    Viewings By Appointment Only
-                  </p>
+              <div className="columns is-variable is-6">
+                <div className="column is-3">
+                  <FooterOption title="Additional services" />
+                  <FooterOption title="Journal (blog)" />
+                  <FooterOption title="Testimonials" />
+                  <FooterOption title="Contact" />
                 </div>
-                <div className="column">
-                  <h3 className="title is-5">HIRE OPTIONS</h3>
-                  {hire.edges.map(items => (
-                    <FooterOption
-                      key={items.node._id}
-                      option={items.node.footerTitle}
-                      link={`/${items.node.slug.current}`}
-                    />
-                  ))}
-                </div>
-                <div className="column">
-                  <h3 className="title is-5">THE GALLERY</h3>
-                  {gallery.edges.map(items => (
-                    <FooterOption
-                      key={items.node._id}
-                      option={items.node.footerTitle}
-                      link={`/${items.node.slug.current}`}
-                    />
-                  ))}
+                <IconContainer className="column is-6 has-text-centered">
+                  <div>
+                    {socialIcons.map(item => {
+                      return (
+                        <a href={item.link} key={item.key}>
+                          <img src={item.icon} alt="deckerdence social icon" />
+                        </a>
+                      );
+                    })}
+                  </div>
+                </IconContainer>
+                <div className="column is-3 has-text-right">
+                  <FooterOption title="Wedding" />
+                  <FooterOption title="Parties" />
+                  <FooterOption title="Events" />
+                  <FooterOption title="Hospitality" />
                 </div>
               </div>
-              <FooterWrapper className="columns is-centered">
+              {/* <FooterWrapper className="columns is-centered">
                 <div className="column is-7">
                   <div className="content has-text-centered">
                     <p className="is-size-6 is-capitalized">
@@ -148,7 +136,7 @@ const Footer = () => (
                     </p>
                   </div>
                 </div>
-              </FooterWrapper>
+              </FooterWrapper> */}
             </>
           );
         }}
