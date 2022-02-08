@@ -2,7 +2,7 @@ import React from 'react';
 
 import {
   Hero,
-  WelcomeBanner,
+  AnnouncementBanner,
   Features,
   BookCall,
   EventDescription,
@@ -14,7 +14,10 @@ import Layout from '../components/Layout';
 const Test = () => (
   <Layout>
     <Hero bgImg="/images/new/hero-img.png" />
-    <WelcomeBanner />
+    <AnnouncementBanner
+      title="WELCOME TO DECKERDENCE"
+      subTitle="UNIQUE MOBILE VENUE"
+    />
     <Features />
     <BookCall />
     <Hero bgImg="/images/new/bg1.png" />
@@ -22,6 +25,12 @@ const Test = () => (
     <Testimonials />
     <Hero bgImg="/images/new/hero-img.png" />
     <KeyInformation />
+    <Hero bgImg="/images/new/love.png" />
+    <Testimonials flex />
+    <AnnouncementBanner
+      title="DECKERDENCE FEATURES"
+      subTitle="DECKERDENCE VINTAGE BUS BAR"
+    />
   </Layout>
 );
 

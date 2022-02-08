@@ -17,11 +17,12 @@ const testimonial = [
   },
 ];
 
-const Testimonials = () => (
+const Testimonials = ({ flex }) => (
   <Section className="section">
     <div className="container">
       {testimonial.map(item => (
         <HireOptionTestimonial
+          flex={flex}
           key={item._id}
           image="/images/new/bg1.png"
           //   flex={item.node.columnReverse}

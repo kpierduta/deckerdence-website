@@ -5,12 +5,12 @@ const Section = styled.section`
   background-image: url('${props => props.bgImg}');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
+  background-size: cover;
 `;
 
 const Hero = ({ bgImg }) => (
   <Section className="hero is-fullheight" bgImg={bgImg}>
-    <div className="hero-body" />
+    {/* <div className="hero-body" /> */}
   </Section>
 );
 

@@ -9,19 +9,18 @@ const Section = styled.section`
   }
   .title {
     color: ${props => props.theme.lightAccent};
+    font-weight: 200;
   }
 `;
 
-const WelcomeBanner = () => (
+const WelcomeBanner = ({ title, subTitle }) => (
   <Section className="section">
     <div className="container has-text-centered">
       <div>
-        <span className="title is-uppercase has-text-weight-bold is-size-3-mobile">
-          WELCOME TO DECKERDENCE
-        </span>
+        <span className="title is-uppercase is-size-3-mobile">{title}</span>
       </div>
       <div className="subtitle is-uppercase has-text-weight-bold is-size-2-mobile">
-        UNIQUE MOBILE VENUE
+        {subTitle}
       </div>
     </div>
   </Section>
