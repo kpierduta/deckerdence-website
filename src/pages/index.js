@@ -42,6 +42,9 @@ const Test = () => (
     <Hero bgImg="/images/new/wedding.png" />
     <GalleryInfo />
     <BookCall />
+    <Testimonials />
+    <Testimonials flex />
+    <Hero bgImg="/images/new/hero-img.png" />
   </Layout>
 );
 
