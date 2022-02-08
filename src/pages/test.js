@@ -7,6 +7,7 @@ import {
   BookCall,
   EventDescription,
   Testimonials,
+  KeyInformation,
 } from '../components/NewComponents';
 import Layout from '../components/Layout';
 
@@ -19,6 +20,8 @@ const Test = () => (
     <Hero bgImg="/images/new/bg1.png" />
     <EventDescription />
     <Testimonials />
+    <Hero bgImg="/images/new/hero-img.png" />
+    <KeyInformation />
   </Layout>
 );
 
