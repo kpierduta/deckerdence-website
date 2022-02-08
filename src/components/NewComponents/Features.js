@@ -28,7 +28,7 @@ const FeatureCard = ({ src, title }) => (
 );
 
 const features = [
-  { id: 1, img: '/images/new/wedding.png', title: 'Weddings' },
+  { id: 1, img: '/images/new/weddings.png', title: 'Weddings' },
   { id: 2, img: '/images/new/parties.png', title: 'Parties' },
   { id: 3, img: '/images/new/events.png', title: 'Events' },
 ];
