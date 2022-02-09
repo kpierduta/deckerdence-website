@@ -10,6 +10,7 @@ import {
   KeyInformation,
   GalleryImages,
   GalleryInfo,
+  InfoSteps,
 } from '../components/NewComponents';
 import Layout from '../components/Layout';
 
@@ -21,7 +22,7 @@ const Test = () => (
       subTitle="UNIQUE MOBILE VENUE"
     />
     <Features />
-    <BookCall />
+    <BookCall text="Book a call with us" />
     <Hero bgImg="/images/new/bg1.png" />
     <EventDescription />
     <Testimonials />
@@ -41,10 +42,14 @@ const Test = () => (
     <GalleryInfo />
     <Hero bgImg="/images/new/wedding.png" />
     <GalleryInfo />
-    <BookCall />
+    <BookCall text="Book a call with us" />
     <Testimonials />
     <Testimonials flex />
     <Hero bgImg="/images/new/hero-img.png" />
+    <InfoSteps />
+    <BookCall text="Hire Options" />
+
+    <BookCall text="Book a call with us" />
   </Layout>
 );
 

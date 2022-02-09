@@ -9,11 +9,11 @@ const Section = styled.section`
   }
 `;
 
-const BookCall = () => (
+const BookCall = ({ text }) => (
   <Section className="section">
     <div className="container">
       <p className="is-uppercase has-text-weight-bold has-text-centered is-size-1-mobile">
-        Book a call with us
+        {text}
       </p>
     </div>
   </Section>
