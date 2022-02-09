@@ -8,6 +8,9 @@ const Section = styled.section`
   .table-width {
     width: 11rem;
   }
+  .container {
+    overflow: scroll;
+  }
 `;
 
 const TableRow = styled.tr`
