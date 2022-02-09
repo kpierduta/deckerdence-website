@@ -43,8 +43,8 @@ export const theme = {
   textColorInverse: lightShades,
   textColorLite: '#2c2c2a',
   menuTintColor: darkAccent,
-  primaryFontFamily: "'Bebas-Regular',sans-serif",
-  secondaryFontFamily: "'Bebas-Regular', sans-serif",
+  primaryFontFamily: "'BebasNeuePro-Book',sans-serif",
+  secondaryFontFamily: "'BebasNeue-Regular', sans-serif",
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
 };
 
