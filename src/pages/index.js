@@ -5,7 +5,7 @@ import {
   Banner,
   AnnouncementBanner,
   Features,
-  BookCall,
+  BannerText,
   EventDescription,
   Testimonials,
   KeyInformation,
@@ -28,7 +28,6 @@ export const homeQuery = graphql`
           url
         }
       }
-
       email
       telephone
       homeFeatures {
@@ -85,7 +84,7 @@ const Homepage = ({ data }) => {
         subTitle="UNIQUE MOBILE VENUE"
       />
       <Features />
-      <BookCall text="Book a call with us" />
+      <BannerText text="Book a call with us" />
       <Banner bgImg="/images/new/bg1.png" />
       <EventDescription />
       <Testimonials />
@@ -105,15 +104,15 @@ const Homepage = ({ data }) => {
       <GalleryInfo />
       <Banner bgImg="/images/new/wedding.png" />
       <GalleryInfo />
-      <BookCall text="Book a call with us" />
+      <BannerText text="Book a call with us" />
       <Testimonials />
       <Testimonials flex />
       <Banner bgImg="/images/new/hero-img.png" />
       <InfoSteps />
       <Contact />
-      <BookCall text="Hire Options" bgDark />
+      <BannerText text="Hire Options" bgDark />
       <StagesSection data={settings} />
-      <BookCall text="Book a call with us" />
+      <BannerText text="Book a call with us" />
     </Layout>
   );
 };

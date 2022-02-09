@@ -10,7 +10,7 @@ const Section = styled.section`
   }
 `;
 
-const BookCall = ({ text, bgDark }) => (
+const BannerText = ({ text, bgDark }) => (
   <Section className="section" bgDark={bgDark}>
     <div className="container">
       <p className="is-uppercase has-text-weight-bold has-text-centered is-size-1-mobile">
@@ -20,4 +20,4 @@ const BookCall = ({ text, bgDark }) => (
   </Section>
 );
 
-export default BookCall;
+export default BannerText;
