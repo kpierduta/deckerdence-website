@@ -44,6 +44,7 @@ const Content = styled.div`
   background-color: ${props => props.theme.backgroundColor};
   margin-top: 1.5rem;
   padding-bottom: 1rem;
+  padding: 1rem;
 `;
 
 const Stages = ({ title, subtitle, image, to }) => (

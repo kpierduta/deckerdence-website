@@ -43,8 +43,8 @@ export const theme = {
   textColorInverse: lightShades,
   textColorLite: '#2c2c2a',
   menuTintColor: darkAccent,
-  primaryFontFamily: "'BebasNeuePro-Book',sans-serif",
-  secondaryFontFamily: "'BebasNeue-Regular', sans-serif",
+  primaryFontFamily: "'Bebas-Regular',sans-serif",
+  secondaryFontFamily: "'Bebas-Regular', sans-serif",
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
 };
 
@@ -83,9 +83,9 @@ const GlobalStyle = createGlobalStyle`
   .title.is-6 {
     font-size: 14px !important;
   }
-p {
-  font-family: ${props => props.theme.primaryFontFamily} !important;
-}
+  p {
+    font-family: ${props => props.theme.primaryFontFamily} !important;
+  }
   .subtitle {
     font-family: ${props => props.theme.primaryFontFamily};
   }
@@ -100,7 +100,7 @@ p {
   }
 
   p {
-    line-height: 1.5rem !important;
+    line-height: 2rem !important;
   }
   p, .title, .box {
     color: ${theme.textColor};
