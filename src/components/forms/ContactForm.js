@@ -85,7 +85,7 @@ const ContactForm = ({ dottedBorder, para }) => {
         </div>
         <p className="subtitle is-4">{para}</p>
         <div>
-          <button type="submit" className="button is-norma title is-5 ">
+          <button type="submit" className="button title is-5 ">
             <span className="is-size-5-touch is-uppercase">Download</span>
           </button>
         </div>
