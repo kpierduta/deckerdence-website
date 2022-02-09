@@ -3,13 +3,15 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   background-color: ${props => props.theme.backgroundDark};
-  .subtitle {
-    font-size: ${props => props.theme.fontFullLarge}px;
-    color: ${props => props.theme.lightAccent};
-  }
   .title {
     color: ${props => props.theme.lightAccent};
     font-weight: 200;
+    font-size: ${props => props.theme.fontSizeExtra}px;
+  }
+  .subtitle {
+    font-size: ${props => props.theme.fontFullLarge}px;
+    color: ${props => props.theme.lightAccent};
+    padding-top: 1rem;
   }
 `;
 

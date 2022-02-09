@@ -37,6 +37,7 @@ export const theme = {
   fontSizeMedium: 18,
   fontSizeLarge: 22,
   fontSizeExtraLarge: 30,
+  fontSizeExtra: 40,
   fontFullLarge: 60,
   textColor: darkShades, // '#2c2c2a',
   textColorInverse: lightShades,

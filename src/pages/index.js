@@ -75,7 +75,7 @@ export const homeQuery = graphql`
   }
 `;
 
-const Test = ({ data }) => {
+const Homepage = ({ data }) => {
   const settings = data.sanitySiteSettings;
   return (
     <Layout>
@@ -118,4 +118,4 @@ const Test = ({ data }) => {
   );
 };
 
-export default Test;
+export default Homepage;
