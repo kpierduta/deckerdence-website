@@ -12,7 +12,7 @@ import {
   GalleryImages,
   GalleryInfo,
   InfoSteps,
-} from '../components/newComponents1';
+} from '../components/newComponents';
 import Layout from '../components/Layout';
 import Contact from '../components/Contact';
 import StagesSection from '../components/StagesSection';
