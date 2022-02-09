@@ -8,7 +8,7 @@ import HomePageSection from '../components/HomePageSection';
 import StagesSection from '../components/StagesSection';
 
 export const homeQuery = graphql`
-  query homepage {
+  query homepage1 {
     sanitySiteSettings {
       homeSeoTitle
       homeSeoKeywords
