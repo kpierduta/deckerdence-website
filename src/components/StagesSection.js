@@ -5,6 +5,7 @@ import Stages from './Stages';
 import Heading from './elements/Heading';
 
 const Section = styled.section`
+  background-color: ${props => props.theme.lightAccent};
   .heading {
     margin: 3rem 0;
   }
@@ -31,6 +32,14 @@ const StagesSection = ({ data }) => (
             />
           );
         })}
+      </div>
+      <div className="has-text-centered">
+        <p className="is-size-4">
+          Prices shown are for 2022 based at our site in North Warwickshire. To
+          find out all of the details of what is included in each hire option or
+          to learn more about hosting an event at your chosen location click the
+          link below.
+        </p>
       </div>
     </div>
   </Section>
