@@ -41,15 +41,32 @@ const DescriptionItem = ({ title, hasColRev }) => (
   </Wrapper>
 );
 
+const data = [
+  {
+    id: 1,
+    title: 'Bored of looking at tipi’s and marquees that all look the same?',
+  },
+  {
+    id: 2,
+    title: 'Bored of looking at tipi’s and marquees that all look the same?',
+    hasColRev: true,
+  },
+  {
+    id: 3,
+    title: 'Bored of looking at tipi’s and marquees that all look the same?',
+  },
+];
+
 const EventDescription = () => (
   <Section className="section">
     <div className="container">
-      <DescriptionItem title="Bored of looking at tipi’s and marquees that all look the same?" />
-      <DescriptionItem
-        title="Bored of looking at tipi’s and marquees that all look the same?"
-        hasColRev
-      />
-      <DescriptionItem title="Bored of looking at tipi’s and marquees that all look the same?" />
+      {data.map(item => (
+        <DescriptionItem
+          key={item.id}
+          title={item.title}
+          hasColRev={item.hasColRev}
+        />
+      ))}
     </div>
   </Section>
 );

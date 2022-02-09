@@ -1,6 +1,6 @@
 import AnnouncementBanner from './AnnouncementBanner';
 import Banner from './Banner';
-import BookCall from './BookCall';
+import BannerText from './BannerText';
 import EventDescription from './EventDescription';
 import Features from './Features';
 import InfoSteps from './InfoSteps';
@@ -12,7 +12,7 @@ import Testimonials from './Testimonials';
 export {
   AnnouncementBanner,
   Banner,
-  BookCall,
+  BannerText,
   EventDescription,
   Features,
   InfoSteps,

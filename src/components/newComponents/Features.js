@@ -15,7 +15,7 @@ const Card = styled.div`
     height: auto;
   }
   p {
-    font-size: ${props => props.theme.fontSizeExtraLarge}px;
+    font-size: ${props => props.theme.fontSizeExtra}px;
     padding-top: 25px;
   }
 `;

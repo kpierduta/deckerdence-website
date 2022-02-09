@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 
 const Section = styled.div`
   .title {
-    padding: 2rem 0 0;
+    padding: 2rem 0;
   }
 
   .button {
@@ -25,6 +25,11 @@ const Section = styled.div`
       min-height: 6.5rem !important;
     }
   }
+
+  .card-image {
+    background-color: ${props => props.theme.backgroundColor};
+    padding: 2rem 0;
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -33,6 +38,12 @@ const ImageWrapper = styled.div`
     height: 14rem;
     width: 14rem;
   }
+`;
+
+const Content = styled.div`
+  background-color: ${props => props.theme.backgroundColor};
+  margin-top: 1.5rem;
+  padding-bottom: 1rem;
 `;
 
 const Stages = ({ title, subtitle, image, to }) => (
@@ -45,17 +56,18 @@ const Stages = ({ title, subtitle, image, to }) => (
           </figure>
         </ImageWrapper>
       </div>
-      <h2 className="title is-4 is-spaced has-text-centered">{title}</h2>
-      {subtitle && (
+      <Content>
+        <h2 className="title is-4 has-text-centered">{title}</h2>
         <p className="subtitle is-5 has-text-weight-normal has-text-centered">
-          {subtitle}
+          150 - 300 guests
         </p>
-      )}
-      <p className="has-text-centered">
-        <Link to={to} type="button" className="button is-size-6 has-text-black">
-          FIND OUT MORE
-        </Link>
-      </p>
+        <p className="subtitle is-5 has-text-weight-normal has-text-centered">
+          Seated up to 350 total capacity
+        </p>
+        <p className="subtitle is-5 has-text-weight-bold has-text-centered">
+          £18,595
+        </p>
+      </Content>
     </div>
   </Section>
 );

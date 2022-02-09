@@ -9,9 +9,7 @@ const Section = styled.section`
 `;
 
 const Hero = ({ bgImg }) => (
-  <Section className="hero is-fullheight" bgImg={bgImg}>
-    {/* <div className="hero-body" /> */}
-  </Section>
+  <Section className="hero is-fullheight" bgImg={bgImg} />
 );
 
 export default Hero;
