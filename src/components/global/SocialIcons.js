@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
 
 const query = graphql`
   query socialUrlQuery {
@@ -12,6 +13,11 @@ const query = graphql`
       facebook
     }
   }
+`;
+
+const Image = styled.img`
+  height: 42px;
+  width: 42px;
 `;
 
 const socialNetworks = ({
@@ -41,7 +47,7 @@ const socialNetworks = ({
   }
   if (instagram) {
     items.push({
-      id: 3,
+      id: 10,
       name: 'instagram',
       icon: '/images/icon/instagram.png',
       link: instagram,
@@ -49,7 +55,7 @@ const socialNetworks = ({
   }
   if (youtube) {
     items.push({
-      id: 4,
+      id: 11,
       name: 'youtube',
       icon: '/images/icon/youtube.png',
       link: youtube,
@@ -57,7 +63,7 @@ const socialNetworks = ({
   }
   if (linkedin) {
     items.push({
-      id: 4,
+      id: 12,
       name: 'linkedin',
       icon: '/images/icon/linked-in.png',
       link: linkedin,
@@ -78,7 +84,7 @@ const SocialIcons = () => {
   const { sanitySiteSettings: data } = useStaticQuery(query);
 
   return (
-    <div>
+    <div className="">
       {socialNetworks({
         twitter: data.twitter,
         facebook: data.facebook,
@@ -87,11 +93,14 @@ const SocialIcons = () => {
         pinterest: data.pinterest,
         linkedin: data.linkedin,
       }).map(item => (
-        <div key={item.id} type={item.name}>
-          <a href={item.link} target="_blank" rel="noreferrer">
-            <span> {item.icon}</span>
-          </a>
-        </div>
+        <a
+          href={item.link}
+          target="_blank"
+          rel="noreferrer"
+          key={item.id}
+          className="p-3">
+          <Image src={item.icon} alt={item.name} />
+        </a>
       ))}
     </div>
   );

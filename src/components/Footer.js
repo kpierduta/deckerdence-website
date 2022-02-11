@@ -1,50 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 import SocialIcons from './global/SocialIcons';
 
-const Container = styled.section`
-  margin-top: 1rem;
-  img {
-    margin-right: 1.5rem;
-    @media screen and (max-width: 768px) {
-      margin-right: 1rem;
-    }
-  }
-  .columns {
-    margin-top: 2rem;
-  }
-  p {
-    margin-top: 2rem;
-    font-family: ${props => props.theme.primaryFontFamily};
-  }
-`;
-
-const IconContainer = styled.div`
-  align-self: flex-end;
-  justify-content: center;
-  display: flex;
-  img {
-    width: 5%;
-    margin-right: 1.5rem;
-    @media screen and (max-width: 767px) {
-      margin-right: 0.5rem;
-      width: 6%;
-    }
-  }
-`;
-
-const LinkStyled = styled(Link)`
-  h4 {
-    padding: 1rem 0;
-  }
-`;
-
 const FooterOption = ({ title, link }) => (
-  <LinkStyled to={link}>
-    <h4 className="title is-5 is-uppercase">{title}</h4>
-  </LinkStyled>
+  <Link className="title is-5 is-uppercase" to={link || '/'}>
+    <h4 className="title is-5 is-uppercase pb-5">{title}</h4>
+  </Link>
 );
 
 const data1 = [
@@ -61,7 +23,7 @@ const data2 = [
 ];
 
 const Footer = () => (
-  <Container className="section is-normal">
+  <section className="section">
     <div className="container">
       <div className="columns is-variable is-6">
         <div className="column is-3 has-text-centered-mobile">
@@ -69,9 +31,9 @@ const Footer = () => (
             <FooterOption title={item.title} />
           ))}
         </div>
-        <IconContainer className="column is-6">
+        <div className="column is-6 is-flex is-justify-content-center is-align-items-end">
           <SocialIcons />
-        </IconContainer>
+        </div>
         <div className="column is-3 has-text-right has-text-centered-mobile">
           {data2.map(item => (
             <FooterOption title={item.title} />
@@ -79,7 +41,7 @@ const Footer = () => (
         </div>
       </div>
     </div>
-  </Container>
+  </section>
 );
 
 export default Footer;
