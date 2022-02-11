@@ -4,11 +4,13 @@ import { EmptyState } from '../components/elements';
 
 import HomeBanner from '../components/hero/HomeBanner';
 import WelcomeHeading from '../components/welcome/WelcomeHeading';
+import Venues from '../components/venue/Venues';
 
 // sanity blocks
 const Blocks = {
   heroBlock: HomeBanner,
   headingBlock: WelcomeHeading,
+  venueBlock: Venues,
 };
 
 const ContentBlocks = type => {
