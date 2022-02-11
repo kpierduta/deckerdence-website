@@ -1,4 +1,3 @@
-import AnnouncementBanner from './AnnouncementBanner';
 import BannerText from './BannerText';
 import EventDescription from './EventDescription';
 import Features from './Features';
@@ -9,7 +8,6 @@ import KeyInformation from './KeyInformation';
 import Testimonials from './Testimonials';
 
 export {
-  AnnouncementBanner,
   BannerText,
   EventDescription,
   Features,

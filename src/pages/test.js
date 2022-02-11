@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import {
-  AnnouncementBanner,
   Features,
   BannerText,
   EventDescription,
@@ -77,10 +76,7 @@ const Homepage = ({ data }) => {
   return (
     <Layout>
       {/* <Banner bgImg="/images/new/hero-img.png" /> */}
-      <AnnouncementBanner
-        title="WELCOME TO DECKERDENCE"
-        subTitle="UNIQUE MOBILE VENUE"
-      />
+
       <Features />
       <BannerText text="Book a call with us" />
       {/* <Banner bgImg="/images/new/bg1.png" /> */}
@@ -90,10 +86,10 @@ const Homepage = ({ data }) => {
       <KeyInformation />
       {/* <Banner bgImg="/images/new/love.png" /> */}
       <Testimonials flex />
-      <AnnouncementBanner
+      {/* <WelcomeHeading
         title="DECKERDENCE FEATURES"
         subTitle="DECKERDENCE VINTAGE BUS BAR"
-      />
+      /> */}
       <GalleryImages />
       <GalleryInfo />
       <GalleryImages />

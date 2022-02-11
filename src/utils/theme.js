@@ -41,6 +41,7 @@ export const theme = {
   textColor: darkShades, // '#2c2c2a',
   textColorInverse: lightShades,
   textColorLite: '#2c2c2a',
+  textDark: '#000',
   menuTintColor: darkAccent,
   primaryFontFamily: "'BebasNeuePro-Book',sans-serif",
   secondaryFontFamily: "'BebasNeue-Regular', sans-serif",
@@ -80,6 +81,7 @@ const GlobalStyle = createGlobalStyle`
   .title.is-6 {
     font-size: 14px !important;
   }
+
   p {
     font-family: ${props => props.theme.primaryFontFamily} !important;
   }
@@ -102,7 +104,9 @@ const GlobalStyle = createGlobalStyle`
   p, .title, .box {
     color: ${theme.textColor};
   }
-
+ .has-background-dark {
+    background-color: ${theme.backgroundDark} !important;
+  }
   .button {
     font-family: ${theme.primaryFontFamily};
   }
@@ -119,9 +123,6 @@ const GlobalStyle = createGlobalStyle`
     border-color:  ${theme.darkShades};
   }
 
-  .has-text-warning {
-    color: ${theme.mainBrandColor} !important;
-  }
   .has-text-black {
     color: ${theme.textColorLite} !important;
   }
@@ -131,11 +132,6 @@ const GlobalStyle = createGlobalStyle`
   }
   .is-family-primary {
     font-family: ${props => props.theme.primaryFontFamily} !important;
-  }
-  @media screen and (max-width: 768px) {
-    .columns {
-      margin-right: 0rem !important;
-    }
   }
 `;
 
