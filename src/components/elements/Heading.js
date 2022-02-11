@@ -9,8 +9,7 @@ const Wrapper = styled.h1`
 const Heading = ({ heading, size, color }) => (
   <Wrapper
     className={`title is-spaced has-text-centered ${size || 'is-3'}`}
-    color={color}
-  >
+    color={color}>
     {heading}
   </Wrapper>
 );

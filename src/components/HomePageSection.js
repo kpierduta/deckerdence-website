@@ -105,12 +105,12 @@ const HomePageSection = ({
             </section>
           </div>
           <div className="column is-hidden-touch ">
-            {animations == 'animation-one' && (
+            {animations === 'animation-one' && (
               <BottleAnimation className="gif">
                 <img src="/images/bottle.gif" alt="gif" />
               </BottleAnimation>
             )}
-            {animations == 'animation-fourth' && (
+            {animations === 'animation-fourth' && (
               <GlassAnimation className="gif">
                 <img src="/images/animations/bottle.gif" alt="gif" />
               </GlassAnimation>

@@ -126,8 +126,7 @@ const Header = () => {
               data-target="navbarBasicExample"
               onClick={() => {
                 setIsActive(!isActive);
-              }}
-            >
+              }}>
               <span aria-hidden="true" />
               <span aria-hidden="true" />
               <span aria-hidden="true" />
@@ -141,8 +140,7 @@ const Header = () => {
                     to={item.linkTo}
                     className={`navbar-item ${item.hidden &&
                       'is-hidden-desktop'}`}
-                    key={item.key}
-                  >
+                    key={item.key}>
                     {item.name}
                   </Link>
                 );

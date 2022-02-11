@@ -1,70 +1,87 @@
-import React from 'react';
-import Helmet from 'react-helmet';
+import * as React from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import config from '../utils/config';
-
-const getSchemaOrgJSONLD = ({ url, title }) => [
-  {
-    '@context': 'http://schema.org',
-    '@type': 'WebSite',
-    url,
-    name: title,
-    alternateName: config.siteName,
-  },
-];
-
-const Seo = ({ title, description, url, image, keywords }) => {
-  const pageTitle = `${title} - ${config.siteName}`;
-
-  const schemaOrgJSONLD = getSchemaOrgJSONLD({
-    url,
-    pageTitle,
-    image,
-    description,
-    title,
-    keywords,
-  });
+function Seo({ description, lang = 'en', meta, title, image, keywords }) {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            author
+          }
+        }
+      }
+    `,
+  );
 
   return (
-    <Helmet>
-      {/* General tags */}
-      <title>{pageTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="image" content={image} />
-
-      {/* Schema.org tags */}
-      <script type="application/ld+json">
-        {JSON.stringify(schemaOrgJSONLD)}
-      </script>
-
-      {/* OpenGraph tags */}
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={pageTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="fb:app_id" content={config.fbAppID} />
-
-      {/* Twitter Card tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={config.twitter} />
-      <meta name="twitter:title" content={pageTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-    </Helmet>
+    <Helmet
+      htmlAttributes={{
+        lang,
+      }}
+      title={title}
+      titleTemplate={title ? `%s | ${description}` : null}
+      meta={[
+        {
+          name: `description`,
+          content: description,
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:description`,
+          content: description,
+        },
+        {
+          property: `og:keywords`,
+          content: keywords,
+        },
+        {
+          property: `og:image`,
+          content: image,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata?.author || ``,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: description,
+        },
+      ].concat(meta)}
+    />
   );
-};
+}
 
 Seo.defaultProps = {
-  url: config.siteUrl,
-  image: config.logo,
-  description: config.description,
+  title: '',
+  lang: `en`,
+  meta: [],
+  description: ``,
+  image: ``,
 };
 
 Seo.propTypes = {
-  title: PropTypes.string.isRequired,
   description: PropTypes.string,
-  url: PropTypes.string,
+  lang: PropTypes.string,
+  meta: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string,
   image: PropTypes.string,
 };
 

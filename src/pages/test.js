@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import {
-  Banner,
   AnnouncementBanner,
   Features,
   BannerText,
@@ -63,9 +62,8 @@ export const homeQuery = graphql`
           }
           avatar {
             asset {
-              fluid(maxWidth: 800) {
-                ...GatsbySanityImageFluid
-              }
+              id
+              gatsbyImageData
             }
           }
         }
@@ -78,19 +76,19 @@ const Homepage = ({ data }) => {
   const settings = data.sanitySiteSettings;
   return (
     <Layout>
-      <Banner bgImg="/images/new/hero-img.png" />
+      {/* <Banner bgImg="/images/new/hero-img.png" /> */}
       <AnnouncementBanner
         title="WELCOME TO DECKERDENCE"
         subTitle="UNIQUE MOBILE VENUE"
       />
       <Features />
       <BannerText text="Book a call with us" />
-      <Banner bgImg="/images/new/bg1.png" />
+      {/* <Banner bgImg="/images/new/bg1.png" /> */}
       <EventDescription />
       <Testimonials />
-      <Banner bgImg="/images/new/hero-img.png" />
+      {/* <Banner bgImg="/images/new/hero-img.png" /> */}
       <KeyInformation />
-      <Banner bgImg="/images/new/love.png" />
+      {/* <Banner bgImg="/images/new/love.png" /> */}
       <Testimonials flex />
       <AnnouncementBanner
         title="DECKERDENCE FEATURES"
@@ -102,12 +100,12 @@ const Homepage = ({ data }) => {
       <GalleryInfo hasDarkBg />
       <GalleryImages />
       <GalleryInfo />
-      <Banner bgImg="/images/new/wedding.png" />
+      {/* <Banner bgImg="/images/new/wedding.png" /> */}
       <GalleryInfo />
       <BannerText text="Book a call with us" />
       <Testimonials />
       <Testimonials flex />
-      <Banner bgImg="/images/new/hero-img.png" />
+      {/* <Banner bgImg="/images/new/hero-img.png" /> */}
       <InfoSteps />
       <Contact />
       <BannerText text="Hire Options" bgDark />

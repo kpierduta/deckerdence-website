@@ -48,6 +48,7 @@ export const hireOptionPage = graphql`
           title
           avatar {
             asset {
+              gatsbyImageData
               url
             }
           }
@@ -61,6 +62,7 @@ export const hireOptionPage = graphql`
       information {
         avatar {
           asset {
+            gatsbyImageData
             url
           }
         }
@@ -135,7 +137,7 @@ const HireOptionPage = ({ data }) => {
             {hire.festival.item.map(items => (
               <FestivalIcon
                 key={items._key}
-                image={items.avatar.asset.url}
+                image={items.avatar.asset.gatsbyImageData}
                 alternative="festivals"
               />
             ))}

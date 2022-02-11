@@ -1,35 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, StaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 
 import SocialIcons from './global/SocialIcons';
-
-export const footerQuery = graphql`
-  query footer {
-    allSanityVehicleHirePage(sort: { fields: order }) {
-      edges {
-        node {
-          slug {
-            current
-          }
-          _id
-          footerTitle
-        }
-      }
-    }
-    allSanityGalleryPage(sort: { fields: order }) {
-      edges {
-        node {
-          slug {
-            current
-          }
-          _id
-          footerTitle
-        }
-      }
-    }
-  }
-`;
 
 const Container = styled.section`
   margin-top: 1rem;
@@ -90,49 +63,21 @@ const data2 = [
 const Footer = () => (
   <Container className="section is-normal">
     <div className="container">
-      <StaticQuery
-        query={footerQuery}
-        render={data => {
-          const {
-            allSanityVehicleHirePage: hire,
-            allSanityGalleryPage: gallery,
-          } = data;
-
-          return (
-            <>
-              <div className="columns is-variable is-6">
-                <div className="column is-3 has-text-centered-mobile">
-                  {data1.map(item => (
-                    <FooterOption title={item.title} />
-                  ))}
-                </div>
-                <IconContainer className="column is-6">
-                  <SocialIcons />
-                </IconContainer>
-                <div className="column is-3 has-text-right has-text-centered-mobile">
-                  {data2.map(item => (
-                    <FooterOption title={item.title} />
-                  ))}
-                </div>
-              </div>
-              {/* <FooterWrapper className="columns is-centered">
-                <div className="column is-7">
-                  <div className="content has-text-centered">
-                    <p className="is-size-6 is-capitalized">
-                      ©Deckerdence 2020. All Rights Reserved. |
-                      <Link to="/terms&condition">Terms & Conditions |</Link>
-                      <Link to="/privacy-policy"> Privacy Policy |</Link>
-                      <a href="https://www.kpdigitalstrategy.com/">
-                        Website by kp digital strategy.
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </FooterWrapper> */}
-            </>
-          );
-        }}
-      />
+      <div className="columns is-variable is-6">
+        <div className="column is-3 has-text-centered-mobile">
+          {data1.map(item => (
+            <FooterOption title={item.title} />
+          ))}
+        </div>
+        <IconContainer className="column is-6">
+          <SocialIcons />
+        </IconContainer>
+        <div className="column is-3 has-text-right has-text-centered-mobile">
+          {data2.map(item => (
+            <FooterOption title={item.title} />
+          ))}
+        </div>
+      </div>
     </div>
   </Container>
 );

@@ -26,9 +26,8 @@ export const GalleryPage = graphql`
           alternative
           image {
             asset {
-              fluid(maxWidth: 800) {
-                ...GatsbySanityImageFluid
-              }
+              id
+              gatsbyImageData
             }
           }
         }
@@ -53,7 +52,7 @@ const galleryPage = ({ data }) => {
         {page.galleryImages.galleryImage.map(items => (
           <Testimonials
             key={items._key}
-            src={items.image.asset.fluid}
+            src={items.image.asset.gatsbyImageData}
             title={items.title}
             alt={items.alternative}
           />

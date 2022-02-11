@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import SanityImage from './global/SanityImage';
 
 const Section = styled.div`
   .column {
@@ -41,7 +41,10 @@ const ContactUsItem = ({ title, icon, para, href }) => (
             </h1>
             <ImageWrapper className="media align">
               <figure className="image is-96x96">
-                <Img fluid={icon} alt="deckerdence contact information" />
+                <SanityImage
+                  gatsbyImage={icon}
+                  alt="deckerdence contact information"
+                />
               </figure>
             </ImageWrapper>
             <p className="subtitle is-6 has-text-centered has-text-white">

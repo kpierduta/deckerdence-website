@@ -40,8 +40,7 @@ const BlogData = ({ title, date, boxImage, color, link }) => {
         <Link
           to={link}
           className="button is-normal title is-4 has-text-weight-normal is-family-secondary text"
-          type="button"
-        >
+          type="button">
           READ MORE
         </Link>
       </div>

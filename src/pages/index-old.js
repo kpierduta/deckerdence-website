@@ -54,9 +54,8 @@ export const homeQuery = graphql`
           }
           avatar {
             asset {
-              fluid(maxWidth: 800) {
-                ...GatsbySanityImageFluid
-              }
+              id
+              gatsbyImageData
             }
           }
         }

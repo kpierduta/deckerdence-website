@@ -32,9 +32,8 @@ export const testimonialPageQuery = graphql`
           columnReverse
           image {
             asset {
-              fluid(maxWidth: 800) {
-                ...GatsbySanityImageFluid
-              }
+              id
+              gatsbyImageData
             }
           }
           title
@@ -64,7 +63,7 @@ const TestimonialPage = ({ data }) => {
       {myTestimonial.map(item => (
         <HireOptionTestimonial
           key={item.node._id}
-          image={item.node.image.asset.fluid}
+          image={item.node.image.asset.gatsbyImageData}
           flex={item.node.columnReverse}
           title={item.node.title}
           pera={item.node.description}

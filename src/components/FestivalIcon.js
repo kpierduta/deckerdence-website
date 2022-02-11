@@ -1,16 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const Section = styled.div``;
+import SanityImage from './global/SanityImage';
 
 const FestivalIcon = ({ image, alternative }) => (
-  <Section className="section column is-3">
+  <div className="section column is-3">
     <div className="container">
       <figure className="image">
-        <img src={image} alt={alternative} />
+        <SanityImage gatsbyImage={image} alt={alternative} />
       </figure>
     </div>
-  </Section>
+  </div>
 );
 
 export default FestivalIcon;

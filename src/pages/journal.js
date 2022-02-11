@@ -51,8 +51,6 @@ const BlogPage = ({ data }) => {
   const page = data.sanitySiteSettings;
   const blog = data.allSanityBlogPage.edges;
 
-  console.log(category, 'data');
-
   return (
     <Layout>
       <Seo
@@ -67,7 +65,7 @@ const BlogPage = ({ data }) => {
           {blog.map(items => {
             if (
               category === 'ALL CATEGORIES' ||
-              items.node.categorySet == category
+              items.node.categorySet === category
             ) {
               return (
                 <div
@@ -87,6 +85,7 @@ const BlogPage = ({ data }) => {
                 </div>
               );
             }
+            return null;
           })}
         </div>
       </Section>

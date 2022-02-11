@@ -1,9 +1,9 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 
-import Img from 'gatsby-image';
-
 import styled from 'styled-components';
+import SanityImage from '../components/global/SanityImage';
+
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import PartiesHero from '../components/PartiesHero';
@@ -51,9 +51,8 @@ export const MainPageQuery = graphql`
         columnReverse
         image {
           asset {
-            fluid(maxWidth: 800) {
-              ...GatsbySanityImageFluid
-            }
+            id
+            gatsbyImageData
           }
         }
         title
@@ -66,9 +65,8 @@ export const MainPageQuery = graphql`
         alt
         imageIsHalf
         asset {
-          fluid(maxWidth: 800) {
-            ...GatsbySanityImageFluid
-          }
+          id
+          gatsbyImageData
         }
       }
       detailsMainHeading
@@ -94,9 +92,8 @@ export const MainPageQuery = graphql`
       gallery {
         _key
         asset {
-          fluid(maxWidth: 800) {
-            ...GatsbySanityImageFluid
-          }
+          id
+          gatsbyImageData
         }
         alt
       }
@@ -105,9 +102,8 @@ export const MainPageQuery = graphql`
       }
       downloadShowcase {
         asset {
-          fluid(maxWidth: 800) {
-            ...GatsbySanityImageFluid
-          }
+          id
+          gatsbyImageData
         }
       }
     }
@@ -131,7 +127,7 @@ const MainPage = ({ data }) => {
       {page.testimonials.map(item => (
         <HireOptionTestimonial
           key={item._id}
-          image={item.image.asset.fluid}
+          image={item.image.asset.gatsbyImageData}
           flex={item.columnReverse}
           title={item.title}
           pera={item.description}
@@ -146,7 +142,10 @@ const MainPage = ({ data }) => {
             className={item.imageIsHalf ? 'column is-6' : 'column is-12'}
             key={item._key}>
             <figure className={item.imageIsHalf ? '' : ''}>
-              <Img fluid={item.asset.fluid} alt={item.alt} />
+              <SanityImage
+                gatsbyImage={item.asset.gatsbyImageData}
+                alt={item.alt}
+              />
             </figure>
           </div>
         ))}
@@ -167,7 +166,7 @@ const MainPage = ({ data }) => {
       <GalleryWrapper className="columns is-variable is-3 is-multiline">
         {page.gallery.map(items => (
           <GalleryItem
-            src={items.asset.fluid.src}
+            src={items.asset.url}
             key={items._key}
             alt={items.alt || ''}
           />
@@ -180,7 +179,7 @@ const MainPage = ({ data }) => {
           </figure>
         </Button>
       </Link>
-      <Contact avatar={page.downloadShowcase.asset.fluid.src} />
+      <Contact avatar={page.downloadShowcase.asset.gatsbyImageData} />
     </Layout>
   );
 };

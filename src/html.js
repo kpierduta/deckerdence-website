@@ -15,28 +15,10 @@ export default class HTML extends React.Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           {/* Add custom css or scripts here */}
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
-          />
+
           <script
             defer
             src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-          />
-          <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap"
-            rel="stylesheet"
-          />
-          <link
-            rel="stylesheet"
-            type="text/css"
-            charset="UTF-8"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-          />
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
           />
 
           <script

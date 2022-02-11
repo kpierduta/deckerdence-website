@@ -42,7 +42,7 @@ const StagesSection = ({ data }) => (
               key={items._key}
               title={items.title}
               subtitle={items.subTitle}
-              image={items.avatar.asset.fluid}
+              image={items.avatar.asset.gatsbyImageData}
               to={items.buttonLink.current}
             />
           );

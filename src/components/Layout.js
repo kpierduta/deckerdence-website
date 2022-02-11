@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled, { ThemeProvider } from 'styled-components';
+import 'bulma/css/bulma.css';
 
 import GlobalStyle, { theme } from '../utils/theme';
 import config from '../utils/config';

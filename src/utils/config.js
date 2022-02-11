@@ -7,6 +7,9 @@ module.exports = {
   siteUrl: 'http://deckerdence.netlify.com',
   logo: '/images/logo.jpg',
 
+  sanityId: 'hrx9hnjc',
+  dataset: 'production',
+
   telephone: '+1-123-123-123',
   email: 'enquiries@deckerdence.com',
   location: 'California, USA',

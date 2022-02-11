@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
 
 import Seo from '../components/Seo';
 import Layout from '../components/Layout';
@@ -10,6 +9,7 @@ import ContactUsItem from '../components/ContactUsItem';
 import MyMapComponent from '../components/GoogleMap';
 import Contact from '../components/Contact';
 import DownloadForm from '../components/forms/DownloadForm';
+import SanityImage from '../components/global/SanityImage';
 
 export const contactUsQuery = graphql`
   query contactUsPage {
@@ -22,9 +22,8 @@ export const contactUsQuery = graphql`
       subtitle
       banner {
         asset {
-          fluid(maxWidth: 800) {
-            ...GatsbySanityImageFluid
-          }
+          id
+          gatsbyImageData
         }
       }
       contactItem {
@@ -33,9 +32,8 @@ export const contactUsQuery = graphql`
         title
         icon {
           asset {
-            fluid(maxWidth: 800) {
-              ...GatsbySanityImageFluid
-            }
+            id
+            gatsbyImageData
           }
         }
         subtitle
@@ -44,9 +42,8 @@ export const contactUsQuery = graphql`
         title
         image {
           asset {
-            fluid(maxWidth: 800) {
-              ...GatsbySanityImageFluid
-            }
+            id
+            gatsbyImageData
           }
         }
         file {
@@ -125,7 +122,7 @@ const ContactUs = ({ data }) => {
               <ContactUsItem
                 key={item._key}
                 title={item.title}
-                icon={item.icon.asset.fluid}
+                icon={item.icon.asset.gatsbyImageData}
                 para={item.subtitle}
                 href={item.href}
               />
@@ -145,7 +142,10 @@ const ContactUs = ({ data }) => {
             <div className="column is-6">
               <div className="my">
                 <figure className="image">
-                  <Img fluid={settings.banner.asset.fluid} alt="deckerdence" />
+                  <SanityImage
+                    gatsbyImage={settings.banner.asset.gatsbyImageData}
+                    alt="deckerdence"
+                  />
                 </figure>
               </div>
             </div>
@@ -162,7 +162,10 @@ const ContactUs = ({ data }) => {
             {settings.file.map(item => (
               <div className="column is-3 has-text-centered">
                 <figure className="image is-128x128">
-                  <Img fluid={item.image.asset.fluid} alt="" />
+                  <SanityImage
+                    gatsbyImage={item.image.asset.gatsbyImageData}
+                    alt=""
+                  />
                 </figure>
                 <DownloadForm title={item.title} file={item.file.asset.url} />
               </div>

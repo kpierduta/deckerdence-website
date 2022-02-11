@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import SanityImage from './global/SanityImage';
 
 const Section = styled.div`
   .title {
@@ -46,13 +45,17 @@ const Content = styled.div`
   padding-bottom: 1rem;
 `;
 
-const Stages = ({ title, subtitle, image, to }) => (
+const Stages = ({ title, image }) => (
   <Section className="column is-3">
     <div className="card-content">
       <div className="card-image">
         <ImageWrapper className="media align">
           <figure className="image is-128x128">
-            <Img className="is-rounded" fluid={image} alt="IconImage" />
+            <SanityImage
+              className="is-rounded"
+              gatsbyImage={image}
+              alt="IconImage"
+            />
           </figure>
         </ImageWrapper>
       </div>

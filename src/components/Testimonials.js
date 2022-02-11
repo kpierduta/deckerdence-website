@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Img from 'gatsby-image';
 import styled from 'styled-components';
+import SanityImage from './global/SanityImage';
 
 const Section = styled.div`
   .main {
@@ -38,9 +38,9 @@ const Testimonials = ({ src, title, alt }) => {
   const [active, setActive] = useState(false);
   return (
     <Section className="column is-4">
-      <div className="main" onClick={() => setActive(true)}>
+      <div className="main" onClick={() => setActive(true)} role="button">
         <figure className="">
-          <Img fluid={src} alt={alt} />
+          <SanityImage gatsbyImage={src} alt={alt} />
         </figure>
         <div className="overlay">
           <div className="text">
@@ -54,7 +54,7 @@ const Testimonials = ({ src, title, alt }) => {
         <div className="modal-background" />
         <div className="modal-content">
           <figure className="image">
-            <Img fluid={src} alt={alt} />
+            <SanityImage gatsbyImage={src} alt={alt} />
           </figure>
         </div>
         <button

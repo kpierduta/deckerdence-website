@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset-advanced';
 
 const mainBrandColor = '#811112';
 const lightShades = 'rgba(255, 255, 255, 0.7)';
@@ -49,20 +48,18 @@ export const theme = {
 };
 
 const GlobalStyle = createGlobalStyle`
-  ${reset};
   @font-face {
-  font-family: BebasNeue-Regular ;
-  src: url("../fonts/BebasNeue-Regular.otf") format("opentype");
+    font-family: BebasNeue-Regular ;
+    src: url("../fonts/BebasNeue-Regular.otf") format("opentype");
 }
-@font-face {
+  @font-face {
     font-family: BebasNeuePro-Book ;
-    src: url("../fonts/BebasNeuePro-Book.ttf") format("opentype");
-}
-@font-face {
-  font-family: BebasNeuePro-Book ;
-  src: url("../fonts/BebasNeuePro-Book.eot") format("opentype");
-}
-
+    src: url("../fonts/BebasNeuePro-Book.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: BebasNeuePro-Book ;
+    src: url("../fonts/BebasNeuePro-Book.eot") format("opentype");
+  }
   body {
     letter-spacing: 0.03rem !important;
     font-family: ${theme.secondaryFontFamily};

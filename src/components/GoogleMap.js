@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { compose, withProps } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap } from 'react-google-maps';
 
@@ -21,6 +22,7 @@ const MyMapComponent = compose(
   }),
   withScriptjs,
   withGoogleMap,
+  // eslint-disable-next-line no-unused-vars
 )(props => (
   <GoogleMap
     defaultZoom={15}

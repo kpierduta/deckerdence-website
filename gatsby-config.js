@@ -11,12 +11,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-sanity',
       options: {
-        projectId: '8zqv9o3f',
+        projectId: config.sanityId,
         dataset: 'production',
       },
     },
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -47,8 +45,10 @@ module.exports = {
         start_url: config.siteUrl,
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
-        display: 'minimal-ui',
-        icon: './static/images/logo.jpg',
+        display: 'standalone',
+        icon: './static/images/favicon.png',
+        description: config.description,
+        lang: `en`,
       },
     },
     {
@@ -59,7 +59,11 @@ module.exports = {
         timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
+    `gatsby-transformer-sharp`,
   ],
 };

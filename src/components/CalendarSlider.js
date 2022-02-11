@@ -350,29 +350,32 @@ const CalendarSlider = () => {
   const settings = {
     dots: false,
     infinite: true,
+    slidesToShow: 6,
     slidesToScroll: 1,
-    className: 'center',
-    centerMode: true,
-    centerPadding: '30px',
-    slidesToShow: 1,
     speed: 400,
-    rows: 1,
-    slidesPerRow: 6,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+    ],
   };
   return (
     <Section className="section is-normal">
-      <div className="columns is-centered">
-        <div className="column is-10">
-          <div>
-            <h1 className="title is-4 has-text-centered">ARCHIVE</h1>
-            <Slider {...settings}>
-              {data.map(item => (
-                <Wrapper key={item.options}>
-                  <img src={item.options} alt="" />
-                </Wrapper>
-              ))}
-            </Slider>
-          </div>
+      <div className="container">
+        <div>
+          <h1 className="title is-4 has-text-centered">ARCHIVE</h1>
+          <Slider {...settings}>
+            {data.map(item => (
+              <Wrapper key={item.options}>
+                <img src={item.options} alt="" />
+              </Wrapper>
+            ))}
+          </Slider>
         </div>
       </div>
     </Section>

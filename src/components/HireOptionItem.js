@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import SanityImage from './global/SanityImage';
 
 const Section = styled.section`
   background-color: ${props => (props.flex ? '#AAB3B6' : '')};
@@ -52,14 +52,14 @@ const HireOptionItem = ({ item, onMouseOver }) => (
       <div className="columns">
         <div className="column is-4 is-desktop">
           <figure className="image is-square">
-            <img
-              src={item.hireOptionBlackImage.asset.fluid.src}
+            <SanityImage
+              gatsbyImage={item.hireOptionBlackImage.asset.gatsbyImageData}
               onFocus={onMouseOver}
               alt="coloredImage"
             />
 
-            <img
-              src={item.hireOptionColoredImage.asset.fluid.src}
+            <SanityImage
+              gatsbyImage={item.hireOptionColoredImage.asset.gatsbyImageData}
               className="img-top"
               alt="blackImage"
             />

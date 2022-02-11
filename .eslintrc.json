@@ -7,8 +7,7 @@
     "browser": true
   },
   "globals": {
-    "graphql": true,
-    "move": true
+    "Razorpay": true
   },
   "settings": {
     "import/core-modules": ["prop-types", "react", "graphql"]

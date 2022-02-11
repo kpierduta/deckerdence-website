@@ -80,8 +80,7 @@ const HomeHero = ({ items }) => {
     <div>
       <Section
         className="section hero is-large is-block"
-        bgImage={items.homeHeroBackgroundImage.asset.url}
-      >
+        bgImage={items.homeHeroBackgroundImage.asset.url}>
         <div className="container">
           <Content className="columns is-centered">
             <div className="column is-8 has-text-centered">
