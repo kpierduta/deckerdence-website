@@ -29,7 +29,7 @@ export const theme = {
   backgroundLight: '#A95259',
   backgroundInputColor: lightShades,
   backgroundInputColorDark: darkShades,
-  cardBackground: '#C4C4C4',
+  tealBackground: '#C4C4C4',
   fontSize: 18,
   fontSizeExtraSmall: 12,
   fontSizeSmall: 14,
