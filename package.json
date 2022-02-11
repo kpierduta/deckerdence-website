@@ -23,8 +23,6 @@
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
     "bulma": "^0.9.3",
-    "dayjs": "^1.10.7",
-    "formik": "^2.2.9",
     "gatsby": "^4.7.1",
     "gatsby-plugin-google-analytics": "^4.7.0",
     "gatsby-plugin-image": "^2.7.0",
