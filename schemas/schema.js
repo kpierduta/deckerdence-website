@@ -1,18 +1,28 @@
 // First, we must import the schema creator
+// eslint-disable-next-line import/no-unresolved
 import createSchema from 'part:@sanity/base/schema-creator';
 
 // Then import schema types from any plugins that might expose them
+// eslint-disable-next-line import/no-unresolved
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // We import object and document schemas
+import pages from './sections/pages';
+import createRedirect from './sections/createRedirect';
+import siteSettings from './sections/siteSettings';
+import team from './sections/team';
+import testimonial from './sections/testimonial';
+import blogPage from './sections/blogPage';
+import galleryPage from './sections/galleryPage';
+import vehicleHirePage from './sections/vehicleHirePage';
+
+// blocks
+import heroBlock from './blocks/heroBlock';
+import headingBlock from './blocks/headingBlock';
+
 import blockContent from './blockContent';
 import about from './about';
-import galleryPage from './galleryPage';
 import mainPage from './mainPage';
-import vehicleHirePage from './vehicleHirePage';
-import team from './team';
-import testimonial from './testimonial';
-import siteSettings from './siteSettings';
 import settingsFeatures from './settingsFeatures';
 import settingsFeaturesItem from './settingsFeaturesItem';
 import settingsVehicleFeature from './settingsVehicleFeature';
@@ -27,7 +37,6 @@ import vehicleInformation from './vehicleInformation';
 import vehicleInformationItem from './vehicleInformationItem';
 import vehicleFeatureItem from './vehicleFeatureItem';
 import vehicleFeature from './vehicleFeature';
-import blogPage from './blogPage';
 import contact from './contact';
 import mainPageArcade from './mainPageArcade';
 import mainPageFinerDetail from './mainPageFinerDetail';
@@ -46,16 +55,25 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
-    about,
-    mainPage,
-    galleryPage,
-    vehicleHirePage,
-    blogPage,
-    agreement,
-    contact,
+
+    // sections schema
+    pages,
+    createRedirect,
     team,
     testimonial,
     siteSettings,
+    blogPage,
+    galleryPage,
+
+    // blocks
+    heroBlock,
+    headingBlock,
+
+    about,
+    mainPage,
+    vehicleHirePage,
+    agreement,
+    contact,
     settingsFeatures,
     settingsFeaturesItem,
     settingsVehicleFeature,

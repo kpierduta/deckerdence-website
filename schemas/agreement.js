@@ -1,4 +1,5 @@
 import { FcPrivacy } from 'react-icons/fc';
+
 export default {
   name: 'agreement',
   title: 'Agreements',

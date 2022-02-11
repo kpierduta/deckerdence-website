@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "DeckerDence"
+    "name": "Deckerdence"
   },
   "api": {
-    "projectId": "8zqv9o3f",
+    "projectId": "hrx9hnjc",
     "dataset": "production"
   },
   "plugins": [
@@ -34,6 +34,10 @@
     {
       "implements": "part:@sanity/dashboard/config",
       "path": "./dashboardConfig.js"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./structures/deskStructure.js"
     }
   ]
 }

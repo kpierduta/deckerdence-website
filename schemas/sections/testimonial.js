@@ -1,9 +1,6 @@
-import { RiTeamLine } from 'react-icons/ri';
-
 export default {
-  name: 'team',
-  title: 'Team',
-  icon: RiTeamLine,
+  name: 'testimonial',
+  title: 'Testimonial',
   type: 'document',
   fields: [
     {
@@ -26,21 +23,27 @@ export default {
       title: 'Title',
       type: 'string',
     },
-    {
-      name: 'subtitle',
-      title: 'Subtitle',
-      type: 'string',
-    },
+
     {
       name: 'description',
       title: 'Description',
       type: 'text',
     },
+    {
+      name: 'name',
+      title: 'Name',
+      type: 'string',
+    },
+    {
+      name: 'date',
+      title: 'Date',
+      type: 'date',
+    },
   ],
   preview: {
     select: {
       title: 'title',
-      subtitle: 'subtitle',
+      subtitle: 'date',
       media: 'image',
     },
   },

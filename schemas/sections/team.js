@@ -1,9 +1,6 @@
-import { FaDatabase } from 'react-icons/fa';
-
 export default {
-  name: 'testimonial',
-  title: 'Testimonials',
-  icon: FaDatabase,
+  name: 'team',
+  title: 'Team',
   type: 'document',
   fields: [
     {
@@ -26,27 +23,21 @@ export default {
       title: 'Title',
       type: 'string',
     },
-
+    {
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'string',
+    },
     {
       name: 'description',
       title: 'Description',
       type: 'text',
     },
-    {
-      name: 'name',
-      title: 'Name',
-      type: 'string',
-    },
-    {
-      name: 'date',
-      title: 'Date',
-      type: 'date',
-    },
   ],
   preview: {
     select: {
       title: 'title',
-      subtitle: 'date',
+      subtitle: 'subtitle',
       media: 'image',
     },
   },

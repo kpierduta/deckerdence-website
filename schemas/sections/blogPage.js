@@ -1,4 +1,5 @@
 import { GrArticle } from 'react-icons/gr';
+
 export default {
   name: 'blogPage',
   title: 'Blog Page',

@@ -10,6 +10,36 @@ export default {
   ],
   fields: [
     {
+      title: 'Site Title/Name / Default SEO Title/Name',
+      name: 'name',
+      type: 'string',
+    },
+    {
+      title: 'Website Url(important)',
+      name: 'siteUrl',
+      type: 'string',
+    },
+    {
+      name: 'logoImage',
+      title: 'Logo Image/svg',
+      type: 'image',
+    },
+    {
+      name: 'defaultSeoImage',
+      title: 'Default SEO Image',
+      type: 'image',
+    },
+    {
+      title: 'Default Seo Description',
+      name: 'defaultSeoDescription',
+      type: 'string',
+    },
+    {
+      title: 'Default Seo Keywords',
+      name: 'defaultSeoKeywords',
+      type: 'string',
+    },
+    {
       name: 'homeSeoTitle',
       title: 'Home Seo Title',
       type: 'string',
@@ -39,6 +69,46 @@ export default {
       name: 'email',
       type: 'string',
       title: 'Email',
+    },
+    {
+      title: 'Address',
+      name: 'address',
+      type: 'string',
+    },
+    {
+      title: 'Location URL for google map',
+      name: 'location',
+      type: 'url',
+    },
+    {
+      title: 'Twitter url',
+      name: 'twitter',
+      type: 'url',
+    },
+    {
+      title: 'Facebook url',
+      name: 'facebook',
+      type: 'url',
+    },
+    {
+      title: 'Instagram url',
+      name: 'instagram',
+      type: 'url',
+    },
+    {
+      title: 'Youtube url',
+      name: 'youtube',
+      type: 'url',
+    },
+    {
+      title: 'Pinterest url',
+      name: 'pinterest',
+      type: 'url',
+    },
+    {
+      title: 'Linkedin url',
+      name: 'linkedin',
+      type: 'url',
     },
     {
       title: 'Home Features',

@@ -1,9 +1,6 @@
-import { FaHireAHelper } from 'react-icons/fa';
-
 export default {
   name: 'vehicleHirePage',
   title: 'Vehicle Hire Page',
-  icon: FaHireAHelper,
   type: 'document',
   fields: [
     {
