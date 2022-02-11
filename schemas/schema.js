@@ -19,6 +19,7 @@ import vehicleHirePage from './sections/vehicleHirePage';
 // blocks
 import heroBlock from './blocks/heroBlock';
 import headingBlock from './blocks/headingBlock';
+import venueBlock from './blocks/venueBlock';
 
 import blockContent from './blockContent';
 import about from './about';
@@ -68,6 +69,7 @@ export default createSchema({
     // blocks
     heroBlock,
     headingBlock,
+    venueBlock,
 
     about,
     mainPage,
