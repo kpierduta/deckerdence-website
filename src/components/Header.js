@@ -22,7 +22,7 @@ const Section = styled.section`
     font-family: ${props => props.theme.secondaryFontFamily} !important;
     font-weight: 400;
     letter-spacing: 1px;
-    font-size: ${props => props.theme.fontSizeExtraLarge}px;
+    font-size: ${props => props.theme.fontSizeExtraLarge};
     height: 3rem;
     color: ${props => props.theme.textColorLite};
     :hover {

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   span {
-    font-size: ${props => props.theme.fontFullLarge}px;
+    font-size: ${props => props.theme.fontFullLarge};
     color: ${props => props.theme.lightAccent};
     padding-top: 1rem;
   }

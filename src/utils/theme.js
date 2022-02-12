@@ -30,14 +30,11 @@ export const theme = {
   backgroundInputColor: lightShades,
   backgroundInputColorDark: darkShades,
   tealBackground: '#C4C4C4',
-  fontSize: 18,
-  fontSizeExtraSmall: 12,
-  fontSizeSmall: 14,
-  fontSizeMedium: 18,
-  fontSizeLarge: 22,
-  fontSizeExtraLarge: 30,
-  fontSizeExtra: 40,
-  fontFullLarge: 60,
+  fontSize: '20px',
+  fontSizeLarge: '24px',
+  fontSizeExtraLarge: '30px',
+  fontSize2xl: '40px',
+  fontFullLarge: '60px',
   textColor: darkShades, // '#2c2c2a',
   textColorInverse: lightShades,
   textColorLite: '#2c2c2a',
@@ -62,24 +59,18 @@ const GlobalStyle = createGlobalStyle`
     src: url("../fonts/BebasNeuePro-Book.eot") format("opentype");
   }
   body {
-    letter-spacing: 0.03rem !important;
     font-family: ${theme.secondaryFontFamily};
     color: ${theme.textColor};
-    font-size: 18px;
+    font-size: ${theme.fontSize};
   }
   .title {
     font-family: ${theme.secondaryFontFamily};
-    line-height: 2.25rem !important;
-    letter-spacing: 2px !important;
   }
   .title.is-4 {
-    font-size: 22px !important;
+    font-size: ${theme.fontSizeLarge} !important;
   }
   .title.is-5 {
-    font-size: 18px !important;
-  }
-  .title.is-6 {
-    font-size: 14px !important;
+    font-size: ${theme.fontSize} !important;
   }
 
   p {
@@ -89,21 +80,16 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${props => props.theme.primaryFontFamily};
   }
   .subtitle.is-4 {
-    font-size: 22px !important;
-  }
-  .subtitle.is-5{
-    font-size: 18px !important;
+    font-size: ${theme.fontSize} !important;
   }
   .subtitle.is-6 {
     font-size: 14px !important;
   }
 
-  p {
-    line-height: 2rem !important;
-  }
   p, .title, .box {
     color: ${theme.textColor};
   }
+
  .has-background-dark {
     background-color: ${theme.backgroundDark} !important;
   }
@@ -116,7 +102,8 @@ const GlobalStyle = createGlobalStyle`
   .button {
     font-family: ${theme.primaryFontFamily};
   }
-  .button.is-danger{
+
+  .button.is-danger {
     color: white;
     font-size: 1.5em;
     padding: 0em 1em;
@@ -130,14 +117,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .has-text-black {
-    color: ${theme.textColorLite} !important;
+    color: ${theme.textDark} !important;
   }
 
-  .is-family-secondary {
-    font-family: ${theme.secondaryFontFamily} !important;
-  }
   .is-family-primary {
     font-family: ${props => props.theme.primaryFontFamily} !important;
+  }
+  .is-family-secondary {
+    font-family: ${theme.secondaryFontFamily} !important;
   }
 `;
 

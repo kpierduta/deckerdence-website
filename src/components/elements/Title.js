@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Wrapper = styled.h1`
   color: ${props =>
     props.dark ? props.theme.textDark : props.theme.lightAccent} !important;
-  font-size: ${props => props.theme.fontSizeExtra}px;
+  font-size: ${props => props.theme.fontSize2xl};
 `;
 
 const Title = ({ children, dark }) => (

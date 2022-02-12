@@ -7,7 +7,7 @@ const Section = styled.section`
       props.hasDarkBg
         ? props.theme.dangerColor
         : props.theme.backgroundDarkSecondary};
-    font-size: ${props => props.theme.fontSizeExtraLarge}px;
+    font-size: ${props => props.theme.fontSizeExtraLarge};
     padding: 4rem 3rem !important;
   }
   p {

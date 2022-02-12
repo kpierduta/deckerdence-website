@@ -3,6 +3,9 @@ import Markdown from 'react-markdown';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
+  .content p {
+    font-size: ${props => props.theme.fontSizeLarge} !important;
+  }
   .content h1,
   h2,
   h3,
