@@ -8,6 +8,7 @@ import Venues from '../components/venue/Venues';
 import VenueInfoBlock from '../components/venue/VenueInfoBlock';
 import Gallery from '../components/gallery/Gallery';
 import Testimonial from '../components/testimonial/Testimonial';
+import ContentBlock from '../components/welcome/ContentBlock';
 
 // sanity blocks
 const Blocks = {
@@ -17,6 +18,7 @@ const Blocks = {
   venueInfoBlock: VenueInfoBlock,
   galleryBlock: Gallery,
   testimonialBlock: Testimonial,
+  contentBlock: ContentBlock,
 };
 
 const ContentBlocks = type => {

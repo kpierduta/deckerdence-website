@@ -20,7 +20,7 @@ export const theme = {
   // Use as the text color for dark-on-light designs,
   // or as the background for inverted designs.
   darkShades,
-  dangerColor: '#811112',
+  dangerColor: '#9A1818',
   primaryColor: mainBrandColor,
   borderColor: '#f7f7f7',
   backgroundColor: '#FFFFFF',
@@ -94,7 +94,7 @@ const GlobalStyle = createGlobalStyle`
   .has-background-dark {
     background-color: ${theme.backgroundDark} !important;
   }
-  .has-background-danger-dark {
+  .has-background-danger-darker {
     background-color : ${theme.dangerColor} !important;
   }
   .has-background-teal {

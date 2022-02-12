@@ -5,7 +5,7 @@ import { Title, PortableText } from '../elements';
 const WelcomeHeading = ({ title, description, variant }) => (
   <section
     className={`section ${
-      !variant ? 'has-background-dark' : 'has-background-danger-dark'
+      !variant ? 'has-background-dark' : 'has-background-danger-darker'
     }`}>
     <div className="container has-text-centered has-text-white">
       <Title>{title}</Title>

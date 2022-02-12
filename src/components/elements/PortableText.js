@@ -3,9 +3,14 @@ import Markdown from 'react-markdown';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  .content p {
+  .content p,
+  .content ul,
+  .content strong {
     font-size: ${props => props.theme.fontSize} !important;
     color: ${props => (props.light ? '#fff' : '#000')};
+  }
+  .content strong {
+    font-weight: 700 !important;
   }
   .content h1,
   h2,
