@@ -15,6 +15,8 @@ import testimonial from './sections/testimonial';
 import blogPage from './sections/blogPage';
 import galleryPage from './sections/galleryPage';
 import vehicleHirePage from './sections/vehicleHirePage';
+import footer from './sections/footer';
+import navigation from './sections/navigation';
 
 // blocks
 import heroBlock from './blocks/heroBlock';
@@ -35,6 +37,12 @@ import formBlock from './blocks/formBlock';
 import hireOptionBlock from './blocks/hireOptionBlock';
 import tableBlock from './blocks/tableBlock';
 import tableItem from './blocks/tableItem';
+
+// settings objects
+
+import footerItem from './settings/footerItem';
+import footerOption from './settings/footerOption';
+import navItem from './settings/navItem';
 
 import blockContent from './blockContent';
 import about from './about';
@@ -79,6 +87,8 @@ export default createSchema({
     testimonial,
     siteSettings,
     blogPage,
+    footer,
+    navigation,
     galleryPage,
 
     // blocks
@@ -100,6 +110,13 @@ export default createSchema({
     hireOptionBlock,
     tableBlock,
     tableItem,
+
+    // settings objects
+    footerItem,
+    footerOption,
+    navItem,
+
+    // blocks need to clean code and delete
 
     about,
     mainPage,

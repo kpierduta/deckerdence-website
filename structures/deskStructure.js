@@ -12,6 +12,8 @@ import { MdOutlineArticle } from 'react-icons/md';
 import { VscEdit } from 'react-icons/vsc';
 import { FcGallery } from 'react-icons/fc';
 import { FaHireAHelper } from 'react-icons/fa';
+import { BiArrowToBottom } from 'react-icons/bi';
+import { CgFormatUppercase } from 'react-icons/cg';
 
 import JsonPreview from './JsonPreview';
 import WebPreview from './WebPreview';
@@ -74,6 +76,18 @@ export default () =>
       S.divider(),
 
       // Global settings
+
+      S.listItem()
+        .title('Footer')
+        .icon(BiArrowToBottom)
+        .child(S.documentTypeList('footer')),
+      S.divider(),
+
+      S.listItem()
+        .title('Navigation (nav)')
+        .icon(CgFormatUppercase)
+        .child(S.documentTypeList('navigation')),
+      S.divider(),
 
       S.listItem()
         .title('Site Settings')
