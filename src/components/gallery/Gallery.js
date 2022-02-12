@@ -6,13 +6,13 @@ const Gallery = ({ galleryBlock = [] }) => {
   return (
     <section className="section">
       <div className="container">
-        {galleryBlock.map(item => {
-          return (
-            <div className="columns">
-              <GalleryItem data={item} />
-            </div>
-          );
-        })}
+        {' '}
+        <div className="columns">
+          {galleryBlock.map(item => {
+            if (!item) return null;
+            return <GalleryItem data={item} />;
+          })}
+        </div>
       </div>
     </section>
   );

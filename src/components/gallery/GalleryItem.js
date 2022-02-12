@@ -36,11 +36,12 @@ const Section = styled.div`
 
 const GalleryItem = ({ data }) => {
   const [active, setActive] = useState(false);
+  console.log(data);
   return (
     <Section className="column is-4">
       <div className="main" onClick={() => setActive(true)} role="button">
         <figure className="">
-          <SanityImage gatsbyImage={data.image.asset.id} alt={data.title} />
+          <SanityImage fluid={data.image.asset.id} alt={data.title} />
         </figure>
         <div className="overlay">
           <div className="text">
@@ -54,7 +55,7 @@ const GalleryItem = ({ data }) => {
         <div className="modal-background" />
         <div className="modal-content">
           <figure className="image">
-            <SanityImage gatsbyImage={data.image.asset.id} alt={data.title} />
+            <SanityImage fluid={data.image.asset.id} alt={data.title} />
           </figure>
         </div>
         <button
