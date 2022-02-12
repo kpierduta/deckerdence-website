@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   .content p {
-    font-size: ${props => props.theme.fontSizeLarge} !important;
+    font-size: ${props => props.theme.fontSize} !important;
     color: ${props => (props.light ? '#fff' : '#000')};
   }
   .content h1,
