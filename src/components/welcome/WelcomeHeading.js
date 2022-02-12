@@ -2,8 +2,11 @@ import React from 'react';
 
 import { Title, PortableText } from '../elements';
 
-const WelcomeHeading = ({ title, description }) => (
-  <section className="section has-background-dark">
+const WelcomeHeading = ({ title, description, variant }) => (
+  <section
+    className={`section ${
+      !variant ? 'has-background-dark' : 'has-background-danger-dark'
+    }`}>
     <div className="container has-text-centered has-text-white">
       <Title>{title}</Title>
       {description && (

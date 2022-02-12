@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import {
-  BannerText,
   EventDescription,
   Testimonials,
   KeyInformation,
@@ -76,7 +75,6 @@ const Homepage = ({ data }) => {
     <Layout>
       {/* <Banner bgImg="/images/new/hero-img.png" /> */}
 
-      <BannerText text="Book a call with us" />
       {/* <Banner bgImg="/images/new/bg1.png" /> */}
       <EventDescription />
       <Testimonials />
@@ -96,15 +94,12 @@ const Homepage = ({ data }) => {
       <GalleryInfo />
       {/* <Banner bgImg="/images/new/wedding.png" /> */}
       <GalleryInfo />
-      <BannerText text="Book a call with us" />
       <Testimonials />
       <Testimonials flex />
       {/* <Banner bgImg="/images/new/hero-img.png" /> */}
       <InfoSteps />
       <Contact />
-      <BannerText text="Hire Options" bgDark />
       <StagesSection data={settings} />
-      <BannerText text="Book a call with us" />
     </Layout>
   );
 };
