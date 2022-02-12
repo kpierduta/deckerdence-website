@@ -3,4 +3,6 @@ export default [
   { type: 'headingBlock' },
   { type: 'venueBlock' },
   { type: 'venueInfoBlock' },
+  { type: 'testimonialBlock' },
+  { type: 'galleryBlock' },
 ];

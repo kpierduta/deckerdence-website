@@ -31,7 +31,7 @@ export default {
     prepare({ title, variant }) {
       return {
         title: title || 'Heading block',
-        subtitle: variant ? 'Variant is dark' : 'Variant is light',
+        subtitle: variant ? 'Variant is light' : 'Variant is dark',
         media: <span style={{ fontSize: '1.5rem' }}>#️⃣</span>,
       };
     },

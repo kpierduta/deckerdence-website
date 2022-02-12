@@ -26,4 +26,16 @@ export default {
       to: [{ type: 'pages' }],
     },
   ],
+  preview: {
+    select: {
+      title: 'title',
+      image: 'image',
+    },
+    prepare({ title, image }) {
+      return {
+        title: title || 'Hero Block',
+        media: image,
+      };
+    },
+  },
 };

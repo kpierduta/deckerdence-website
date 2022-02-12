@@ -23,6 +23,9 @@ import venueItem from './blocks/venueItem';
 import venueBlock from './blocks/venueBlock';
 import venueInfoBlock from './blocks/venueInfoBlock';
 import informationBlock from './blocks/informationBlock';
+import testimonialBlock from './blocks/testimonialBlock';
+import galleryItem from './blocks/galleryItem';
+import galleryBlock from './blocks/galleryBlock';
 
 import blockContent from './blockContent';
 import about from './about';
@@ -76,6 +79,9 @@ export default createSchema({
     venueItem,
     venueBlock,
     venueInfoBlock,
+    testimonialBlock,
+    galleryItem,
+    galleryBlock,
 
     about,
     mainPage,
