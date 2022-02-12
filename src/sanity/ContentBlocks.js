@@ -6,6 +6,7 @@ import HomeBanner from '../components/hero/HomeBanner';
 import WelcomeHeading from '../components/welcome/WelcomeHeading';
 import Venues from '../components/venue/Venues';
 import VenueInfoBlock from '../components/venue/VenueInfoBlock';
+import Gallery from '../components/gallery/Gallery';
 
 // sanity blocks
 const Blocks = {
@@ -13,6 +14,7 @@ const Blocks = {
   headingBlock: WelcomeHeading,
   venueBlock: Venues,
   venueInfoBlock: VenueInfoBlock,
+  galleryBlock: Gallery,
 };
 
 const ContentBlocks = type => {
