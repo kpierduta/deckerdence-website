@@ -13,6 +13,7 @@ module.exports = {
       options: {
         projectId: config.sanityId,
         dataset: 'production',
+        watchMode: true,
       },
     },
     {
