@@ -7,4 +7,6 @@ export default [
   { type: 'galleryBlock' },
   { type: 'contentBlock' },
   { type: 'stepBlock' },
+  { type: 'ownerBlock' },
+  { type: 'teamBlock' },
 ];

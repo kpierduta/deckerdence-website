@@ -29,6 +29,8 @@ import galleryBlock from './blocks/galleryBlock';
 import contentBlock from './blocks/contentBlock';
 import stepBlockItem from './blocks/stepBlockItem';
 import stepBlock from './blocks/stepBlock';
+import ownerBlock from './blocks/ownerBlock';
+import teamBlock from './blocks/teamBlock';
 
 import blockContent from './blockContent';
 import about from './about';
@@ -88,6 +90,8 @@ export default createSchema({
     contentBlock,
     stepBlock,
     stepBlockItem,
+    ownerBlock,
+    teamBlock,
 
     about,
     mainPage,
