@@ -6,25 +6,20 @@ import SanityImage from '../global/SanityImage';
 const CardWrapper = styled.div`
   img {
     width: 200px;
-    padding-bottom: 1.5rem;
   }
   .card-info {
     background: ${props => props.theme.backgroundDarkSecondary};
-    padding: 3rem;
-  }
-  p {
-    padding-top: 2rem;
   }
 `;
 
-const SingleCard = ({ src, title, description }) => (
+const InfoStepsItem = ({ src, title, description }) => (
   <CardWrapper className="column">
-    <div className="has-text-centered">
+    <div className="has-text-centered p-5">
       <SanityImage fluid={src} alt="" />
     </div>
-    <div className="card-info">
-      <h3 className="has-text-weight-bold">{title}</h3>
-      <p>{description}</p>
+    <div className="card-info p-6">
+      <h1 className="has-text-weight-bold">{title}</h1>
+      <p className="pt-4">{description}</p>
     </div>
   </CardWrapper>
 );
@@ -36,7 +31,7 @@ const InfoSteps = ({ stepBlock = [] }) => {
         <div className="columns">
           {stepBlock &&
             stepBlock.map(item => (
-              <SingleCard
+              <InfoStepsItem
                 key={item._key}
                 src={item.image && item.image.asset.id}
                 title={item.title}
