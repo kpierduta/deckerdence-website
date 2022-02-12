@@ -6,4 +6,5 @@ export default [
   { type: 'testimonialBlock' },
   { type: 'galleryBlock' },
   { type: 'contentBlock' },
+  { type: 'stepBlock' },
 ];
