@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import {
-  EventDescription,
   Testimonials,
   KeyInformation,
   GalleryImages,
@@ -76,7 +75,6 @@ const Homepage = ({ data }) => {
       {/* <Banner bgImg="/images/new/hero-img.png" /> */}
 
       {/* <Banner bgImg="/images/new/bg1.png" /> */}
-      <EventDescription />
       <Testimonials />
       {/* <Banner bgImg="/images/new/hero-img.png" /> */}
       <KeyInformation />

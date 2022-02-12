@@ -110,6 +110,9 @@ const GlobalStyle = createGlobalStyle`
   .has-background-danger-dark {
     background-color : ${theme.dangerColor} !important;
   }
+  .has-background-teal {
+    background-color : ${theme.backgroundDarkSecondary} !important;
+  }
   .button {
     font-family: ${theme.primaryFontFamily};
   }
