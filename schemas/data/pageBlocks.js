@@ -5,4 +5,5 @@ export default [
   { type: 'venueInfoBlock' },
   { type: 'testimonialBlock' },
   { type: 'galleryBlock' },
+  { type: 'contentBlock' },
 ];

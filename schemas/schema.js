@@ -26,6 +26,7 @@ import informationBlock from './blocks/informationBlock';
 import testimonialBlock from './blocks/testimonialBlock';
 import galleryItem from './blocks/galleryItem';
 import galleryBlock from './blocks/galleryBlock';
+import contentBlock from './blocks/contentBlock';
 
 import blockContent from './blockContent';
 import about from './about';
@@ -82,6 +83,7 @@ export default createSchema({
     testimonialBlock,
     galleryItem,
     galleryBlock,
+    contentBlock,
 
     about,
     mainPage,
