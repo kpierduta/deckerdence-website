@@ -1,11 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import {
-  KeyInformation,
-  GalleryImages,
-  GalleryInfo,
-} from '../components/newComponents';
+import { GalleryImages, GalleryInfo } from '../components/newComponents';
 import Layout from '../components/Layout';
 import Contact from '../components/Contact';
 import StagesSection from '../components/StagesSection';
@@ -74,7 +70,6 @@ const Homepage = ({ data }) => {
 
       {/* <Banner bgImg="/images/new/bg1.png" /> */}
       {/* <Banner bgImg="/images/new/hero-img.png" /> */}
-      <KeyInformation />
       {/* <Banner bgImg="/images/new/love.png" /> */}
       {/* <WelcomeHeading
         title="DECKERDENCE FEATURES"
