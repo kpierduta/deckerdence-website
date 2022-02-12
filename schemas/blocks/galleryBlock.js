@@ -17,8 +17,8 @@ export default {
   ],
   preview: {
     select: {
-      title: 'title',
-      image: 'image',
+      title: 'galleryBlock.0.title',
+      image: 'galleryBlock.0.image',
     },
     prepare({ title, image }) {
       return {
