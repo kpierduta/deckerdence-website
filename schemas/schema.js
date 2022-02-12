@@ -31,6 +31,10 @@ import stepBlockItem from './blocks/stepBlockItem';
 import stepBlock from './blocks/stepBlock';
 import ownerBlock from './blocks/ownerBlock';
 import teamBlock from './blocks/teamBlock';
+import formBlock from './blocks/formBlock';
+import hireOptionBlock from './blocks/hireOptionBlock';
+import tableBlock from './blocks/tableBlock';
+import tableItem from './blocks/tableItem';
 
 import blockContent from './blockContent';
 import about from './about';
@@ -92,6 +96,10 @@ export default createSchema({
     stepBlockItem,
     ownerBlock,
     teamBlock,
+    formBlock,
+    hireOptionBlock,
+    tableBlock,
+    tableItem,
 
     about,
     mainPage,

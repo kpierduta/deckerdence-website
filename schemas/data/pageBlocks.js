@@ -9,4 +9,7 @@ export default [
   { type: 'stepBlock' },
   { type: 'ownerBlock' },
   { type: 'teamBlock' },
+  { type: 'formBlock' },
+  { type: 'hireOptionBlock' },
+  { type: 'tableBlock' },
 ];
