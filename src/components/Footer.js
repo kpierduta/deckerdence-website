@@ -28,7 +28,7 @@ const Footer = () => (
       <div className="columns is-variable is-6">
         <div className="column is-3 has-text-centered-mobile">
           {data1.map(item => (
-            <FooterOption title={item.title} />
+            <FooterOption key={item.id} title={item.title} />
           ))}
         </div>
         <div className="column is-6 is-flex is-justify-content-center is-align-items-end">
@@ -36,7 +36,7 @@ const Footer = () => (
         </div>
         <div className="column is-3 has-text-right has-text-centered-mobile">
           {data2.map(item => (
-            <FooterOption title={item.title} />
+            <FooterOption key={item.id} title={item.title} />
           ))}
         </div>
       </div>

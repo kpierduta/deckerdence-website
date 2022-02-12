@@ -36,7 +36,6 @@ const Section = styled.div`
 
 const GalleryItem = ({ data }) => {
   const [active, setActive] = useState(false);
-  console.log(data);
   return (
     <Section className="column is-4">
       <div className="main" onClick={() => setActive(true)} role="button">

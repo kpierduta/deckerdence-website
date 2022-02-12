@@ -5,7 +5,6 @@ import {
   KeyInformation,
   GalleryImages,
   GalleryInfo,
-  InfoSteps,
 } from '../components/newComponents';
 import Layout from '../components/Layout';
 import Contact from '../components/Contact';
@@ -90,7 +89,6 @@ const Homepage = ({ data }) => {
       {/* <Banner bgImg="/images/new/wedding.png" /> */}
       <GalleryInfo />
       {/* <Banner bgImg="/images/new/hero-img.png" /> */}
-      <InfoSteps />
       <Contact />
       <StagesSection data={settings} />
     </Layout>
