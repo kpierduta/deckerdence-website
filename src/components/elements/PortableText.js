@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   .content p {
     font-size: ${props => props.theme.fontSizeLarge} !important;
+    color: ${props => (props.light ? '#fff' : '#000')};
   }
   .content h1,
   h2,
@@ -12,7 +13,7 @@ const Wrapper = styled.div`
   h4,
   h5,
   h6 {
-    color: ${props => (props.dark ? '#000' : '#fff')};
+    color: ${props => (props.light ? '#fff' : '#000')};
   }
   .content h1 {
     font-weight: 600;
@@ -21,10 +22,10 @@ const Wrapper = styled.div`
   }
 `;
 
-const PortableText = ({ children }) => {
+const PortableText = ({ children, light }) => {
   if (!children) return null;
   return (
-    <Wrapper>
+    <Wrapper light={light}>
       <Markdown className="content">{children}</Markdown>
     </Wrapper>
   );

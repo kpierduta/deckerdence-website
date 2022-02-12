@@ -30,6 +30,7 @@ export const theme = {
   backgroundInputColor: lightShades,
   backgroundInputColorDark: darkShades,
   tealBackground: '#C4C4C4',
+  tealGrey: '#ACB3B6',
   fontSize: '20px',
   fontSizeLarge: '24px',
   fontSizeExtraLarge: '30px',
@@ -90,7 +91,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${theme.textColor};
   }
 
- .has-background-dark {
+  .has-background-dark {
     background-color: ${theme.backgroundDark} !important;
   }
   .has-background-danger-dark {
@@ -98,6 +99,9 @@ const GlobalStyle = createGlobalStyle`
   }
   .has-background-teal {
     background-color : ${theme.backgroundDarkSecondary} !important;
+  }
+  .has-background-grey-teal {
+    background-color : ${theme.tealGrey} !important;
   }
   .button {
     font-family: ${theme.primaryFontFamily};
@@ -117,7 +121,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .has-text-black {
-    color: ${theme.textDark} !important;
+    color: ${theme.textDark};
   }
 
   .is-family-primary {

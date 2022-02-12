@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import {
-  Testimonials,
   KeyInformation,
   GalleryImages,
   GalleryInfo,
@@ -75,11 +74,9 @@ const Homepage = ({ data }) => {
       {/* <Banner bgImg="/images/new/hero-img.png" /> */}
 
       {/* <Banner bgImg="/images/new/bg1.png" /> */}
-      <Testimonials />
       {/* <Banner bgImg="/images/new/hero-img.png" /> */}
       <KeyInformation />
       {/* <Banner bgImg="/images/new/love.png" /> */}
-      <Testimonials flex />
       {/* <WelcomeHeading
         title="DECKERDENCE FEATURES"
         subTitle="DECKERDENCE VINTAGE BUS BAR"
@@ -92,8 +89,6 @@ const Homepage = ({ data }) => {
       <GalleryInfo />
       {/* <Banner bgImg="/images/new/wedding.png" /> */}
       <GalleryInfo />
-      <Testimonials />
-      <Testimonials flex />
       {/* <Banner bgImg="/images/new/hero-img.png" /> */}
       <InfoSteps />
       <Contact />

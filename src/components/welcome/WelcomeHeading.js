@@ -11,9 +11,7 @@ const WelcomeHeading = ({ title, description, variant }) => (
       <Title>{title}</Title>
       {description && (
         <div className="has-text-white mt-4">
-          <PortableText className="has-text-white mt-4">
-            {description}
-          </PortableText>
+          <PortableText light>{description}</PortableText>
         </div>
       )}
     </div>
