@@ -1,6 +1,8 @@
+import React from 'react';
+
 export default {
   name: 'headingBlock',
-  title: '🏘 Heading Block',
+  title: '#️⃣ Heading Block',
   type: 'object',
 
   fields: [
@@ -24,11 +26,13 @@ export default {
   preview: {
     select: {
       title: 'title',
+      variant: 'variant',
     },
-    prepare(selection) {
-      const { title } = selection;
+    prepare({ title, variant }) {
       return {
         title: title || 'Heading block',
+        subtitle: variant ? 'Variant is dark' : 'Variant is light',
+        media: <span style={{ fontSize: '1.5rem' }}>#️⃣</span>,
       };
     },
   },

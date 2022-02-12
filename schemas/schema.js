@@ -21,6 +21,8 @@ import heroBlock from './blocks/heroBlock';
 import headingBlock from './blocks/headingBlock';
 import venueItem from './blocks/venueItem';
 import venueBlock from './blocks/venueBlock';
+import venueInfoBlock from './blocks/venueInfoBlock';
+import informationBlock from './blocks/informationBlock';
 
 import blockContent from './blockContent';
 import about from './about';
@@ -70,8 +72,10 @@ export default createSchema({
     // blocks
     heroBlock,
     headingBlock,
+    informationBlock,
     venueItem,
     venueBlock,
+    venueInfoBlock,
 
     about,
     mainPage,

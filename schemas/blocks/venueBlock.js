@@ -1,6 +1,8 @@
+import React from 'react';
+
 export default {
   name: 'venueBlock',
-  title: '🏘 Venue Block',
+  title: '🌲 Venue Block',
   type: 'object',
 
   fields: [
@@ -11,4 +13,16 @@ export default {
       of: [{ type: 'venueItem' }],
     },
   ],
+  preview: {
+    select: {
+      title: 'title',
+    },
+    prepare({ title }) {
+      return {
+        title: title || 'Venue Block',
+        subtitle: 'Three venues block',
+        media: <span style={{ fontSize: '1.5rem' }}>🌲</span>,
+      };
+    },
+  },
 };
