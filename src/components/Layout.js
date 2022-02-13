@@ -6,7 +6,7 @@ import 'bulma/css/bulma.css';
 import GlobalStyle, { theme } from '../utils/theme';
 import config from '../utils/config';
 import CookiesPopUp from './CookiesPopUp';
-import Header from './Header';
+import Header from './global/Header';
 import Footer from './Footer';
 
 const Container = styled.div`

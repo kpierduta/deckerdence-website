@@ -51,15 +51,15 @@ const HireOptionItem = ({ item, onMouseOver }) => (
     <div className="container">
       <div className="columns">
         <div className="column is-4 is-desktop">
-          <figure className="image is-square">
+          <figure className="image is-square pt-0">
             <SanityImage
-              gatsbyImage={item.hireOptionBlackImage.asset.gatsbyImageData}
+              fluid={item.hireOptionBlackImage.asset.id}
               onFocus={onMouseOver}
               alt="coloredImage"
             />
 
             <SanityImage
-              gatsbyImage={item.hireOptionColoredImage.asset.gatsbyImageData}
+              fluid={item.hireOptionColoredImage.asset.id}
               className="img-top"
               alt="blackImage"
             />
