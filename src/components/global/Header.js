@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 
 const Section = styled.section`
   padding: 0rem 1.5rem 1.22rem 1.5rem;
@@ -63,53 +63,35 @@ const Button = styled.button`
   color: ${props => props.theme.lightAccent};
 `;
 
-const data2 = [
-  { key: 5, linkTo: '/', name: 'HOME' },
-  { key: 6, linkTo: '/hire', name: 'HIRE OPTIONS' },
-  // {
-  //   key: 7,
-  //   linkTo: '/vintage-bus-bar-hire/unique-wedding-venue',
-  //   name: 'WEDDINGS',
-  //   hidden: true,
-  // },
-  // {
-  //   key: 8,
-  //   linkTo: '/vintage-bus-bar-hire/party-venue-birmingham',
-  //   name: 'PARTIES',
-  //   hidden: true,
-  // },
-  // {
-  //   key: 9.2,
-  //   linkTo: '/vintage-bus-bar-hire/event-venue',
-  //   name: 'EVENTS',
-  //   hidden: true,
-  // },
-
-  // {
-  //   key: 10,
-  //   linkTo: '/vintage-bus-bar-hire/hospitality',
-  //   name: 'HOSPITALITY',
-  //   hidden: true,
-  // },
-
-  // { key: 11, linkTo: '/our-tow-bar', name: 'ADDITIONAL SERVICES' },
-  { key: 12, linkTo: '/about', name: 'About' },
-  // { key: 13, linkTo: '/testimonials', name: 'Testimonials' },
-  // { key: 13.3, linkTo: '/journal', name: 'JOURNAL' },
-  // { key: 14, linkTo: '/contact', name: 'CONTACT' },
-];
+const query = graphql`
+  query headerNavigation {
+    sanityNavigation {
+      _id
+      navigation {
+        _key
+        label
+        linkTo
+      }
+      buttonLabel
+      buttonLinkTo
+    }
+  }
+`;
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
+  const { sanityNavigation: data } = useStaticQuery(query);
 
   return (
     <Section className="section is-normal">
       <div>
         <ContactWrapper className="columns is-hidden-touch">
           <div className="column is-flex navbar-end">
-            <Button type="button" className="px-4 is-capitalise">
-              Book a call with us
-            </Button>
+            <Link to={data.buttonLinkTo}>
+              <Button type="button" className="px-4 is-capitalise">
+                {data.buttonLabel}
+              </Button>
+            </Link>
           </div>
         </ContactWrapper>
         <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -134,17 +116,17 @@ const Header = () => {
           </div>
           <div className={isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
             <div className="navbar-end">
-              {data2.map(item => {
-                return (
-                  <Link
-                    to={item.linkTo}
-                    className={`navbar-item ${item.hidden &&
-                      'is-hidden-desktop'}`}
-                    key={item.key}>
-                    {item.name}
-                  </Link>
-                );
-              })}
+              {data &&
+                data.navigation.map(item => {
+                  return (
+                    <Link
+                      to={item.linkTo}
+                      className="navbar-item"
+                      key={item._key}>
+                      {item.label}
+                    </Link>
+                  );
+                })}
             </div>
           </div>
         </nav>
