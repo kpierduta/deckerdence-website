@@ -7,7 +7,7 @@ import GlobalStyle, { theme } from '../utils/theme';
 import config from '../utils/config';
 import CookiesPopUp from './CookiesPopUp';
 import Header from './global/Header';
-import Footer from './Footer';
+import Footer from './global/Footer';
 
 const Container = styled.div`
   min-height: 70vh;
