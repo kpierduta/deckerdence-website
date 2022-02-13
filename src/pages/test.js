@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { GalleryImages, GalleryInfo } from '../components/newComponents';
 import Layout from '../components/Layout';
 import Contact from '../components/Contact';
 import StagesSection from '../components/StagesSection';
@@ -75,14 +74,7 @@ const Homepage = ({ data }) => {
         title="DECKERDENCE FEATURES"
         subTitle="DECKERDENCE VINTAGE BUS BAR"
       /> */}
-      <GalleryImages />
-      <GalleryInfo />
-      <GalleryImages />
-      <GalleryInfo hasDarkBg />
-      <GalleryImages />
-      <GalleryInfo />
-      {/* <Banner bgImg="/images/new/wedding.png" /> */}
-      <GalleryInfo />
+
       {/* <Banner bgImg="/images/new/hero-img.png" /> */}
       <Contact />
       <StagesSection data={settings} />
