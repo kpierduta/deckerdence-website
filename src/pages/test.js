@@ -3,8 +3,9 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import Contact from '../components/Contact';
-import StagesSection from '../components/StagesSection';
 import HireOptionHero from '../components/HireOptionHero';
+import HireInfoTable from '../components/HireInfoTable';
+import StatsTable from '../components/StatsTable';
 
 export const hireTestQuery = graphql`
   query hireTest {
@@ -63,7 +64,8 @@ const Homepage = ({ data }) => {
         largeText={hire.hireOptionLargeText}
         description={hire.hireOptionDescription}
       />
-
+      <HireInfoTable />
+      <StatsTable />
       {/* <Banner bgImg="/images/new/hero-img.png" /> */}
       <Contact />
       {/* <StagesSection data={settings} /> */}
