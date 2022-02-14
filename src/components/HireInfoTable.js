@@ -4,6 +4,8 @@ import styled from 'styled-components';
 const Section = styled.section`
   h3 {
     color: ${props => props.theme.primaryColor};
+
+    padding-left: 3rem;
   }
   .table-width {
     width: 11rem;
@@ -14,9 +16,37 @@ const Section = styled.section`
 `;
 
 const TableRow = styled.tr`
+  position: relative;
+  th p {
+    padding-left: 3rem;
+  }
   img {
     width: 37px;
     height: auto;
+  }
+`;
+
+const IconContainer = styled.div`
+  position: absolute;
+  z-index: 9999;
+  left: 0px;
+  top: 10px;
+  span {
+    color: ${props => props.theme.dangerColor};
+  }
+  .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+  }
+  :hover .tooltiptext {
+    visibility: visible;
   }
 `;
 
@@ -30,7 +60,7 @@ const Button = styled.button`
 const InfoItem = ({ title, text1, text2, text3 }) => (
   <TableRow>
     <th>
-      <p className="has-text-weight-bold">{title}</p>
+      <p className="has-text-weight-normal is-size-3">{title}</p>
     </th>
     <td className="table-width has-text-centered">
       {text1 ? (
@@ -53,6 +83,12 @@ const InfoItem = ({ title, text1, text2, text3 }) => (
         <img src="images/icon/check.png" alt="status" />
       )}
     </td>
+    <IconContainer>
+      <span className="is-size-3">
+        <i className="fas fa-info-circle" />
+      </span>
+      <span className="tooltiptext is-size-7">Text Here</span>
+    </IconContainer>
   </TableRow>
 );
 
@@ -79,7 +115,9 @@ const HireInfoTable = () => (
         <thead>
           <tr>
             <th>
-              <h3 className="is-size-3 is-uppercase">KEY INFORMATION</h3>
+              <h3 className="is-size-3 is-uppercase has-text-weight-semibold">
+                KEY INFORMATION
+              </h3>
             </th>
             <th className="is-uppercase">Ultimate Deckerdence</th>
             <th className="is-uppercase">Classic Deckerdence</th>
@@ -89,10 +127,10 @@ const HireInfoTable = () => (
         <tfoot>
           <tr>
             <th>
-              <abbr>
+              <p className="has-text-weight-normal is-size-3">
                 Bespoke elements can be added to each Deckerdence option to make
                 Deckerdence your perfect fit
-              </abbr>
+              </p>
             </th>
             <th>
               <Button>

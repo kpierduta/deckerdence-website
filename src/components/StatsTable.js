@@ -5,9 +5,12 @@ const Section = styled.section`
   .container {
     overflow: scroll;
   }
+  th {
+    width: 25%;
+  }
   thead {
     background-color: ${props => props.theme.dangerColor} !important;
-    th {
+    th p {
       font-size: ${props => props.theme.fontSizeExtraLarge};
       padding: 1rem 0.5rem;
       color: ${props => props.theme.lightAccent} !important;
@@ -17,7 +20,6 @@ const Section = styled.section`
     margin-bottom: 0 !important;
   }
   .footer-text {
-    font-size: ${props => props.theme.fontSize};
     padding: 1.5rem 0;
     background-color: ${props => props.theme.backgroundDarkSecondary};
   }
@@ -36,10 +38,24 @@ const TableRow = styled.tr`
 
 const InfoItem = ({ title, text1, text2, text3 }) => (
   <TableRow>
-    <th className="has-text-weight-normal">{title}</th>
-    <td className="has-text-centered">{text1}</td>
-    <td className="has-text-centered">{text2}</td>
-    <td className="has-text-centered">{text3}</td>
+    <th className="has-text-weight-normal">
+      <p className="has-text-weight-normal is-size-3">{title}</p>
+    </th>
+    <td className="has-text-centered">
+      <p className="has-text-weight-normal is-size-3 has-text-centered">
+        {text1}
+      </p>
+    </td>
+    <td className="has-text-centered">
+      <p className="has-text-weight-normal is-size-3 has-text-centered">
+        {text2}
+      </p>
+    </td>
+    <td className="has-text-centered">
+      <p className="has-text-weight-normal is-size-3 has-text-centered">
+        {text3}
+      </p>
+    </td>
   </TableRow>
 );
 
@@ -73,10 +89,26 @@ const StatsTable = () => (
       <table className="table is-fullwidth is-bordered">
         <thead>
           <tr>
-            <th className="is-uppercase">DECKERDENCE UNIQUE MOBILE VENUE</th>
-            <th className="is-uppercase has-text-centered">2022</th>
-            <th className="is-uppercase has-text-centered">2023</th>
-            <th className="is-uppercase has-text-centered">2024</th>
+            <th className="is-uppercase">
+              <p className="has-text-weight-normal is-size-3 has-text-weight-bold">
+                DECKERDENCE UNIQUE MOBILE VENUE
+              </p>
+            </th>
+            <th className="is-uppercase has-text-centered">
+              <p className="has-text-weight-normal is-size-3 has-text-weight-bold">
+                2022
+              </p>
+            </th>
+            <th className="is-uppercase has-text-centered">
+              <p className="has-text-weight-normal is-size-3 has-text-weight-bold">
+                2023
+              </p>
+            </th>
+            <th className="is-uppercase has-text-centered">
+              <p className="has-text-weight-normal is-size-3 has-text-weight-bold">
+                2024
+              </p>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -92,7 +124,7 @@ const StatsTable = () => (
         </tbody>
       </table>
       <div>
-        <p className="has-text-centered footer-text has-text-weight-bold">
+        <p className="has-text-weight-normal footer-text is-size-3 has-text-centered">
           Costs above based on your event hosted at our location, Blyth Hall
           Farm in North Warwickshire. To have Deckerdence at your chosen
           location additional cost from £3,000
