@@ -10,6 +10,10 @@ const Section = styled.div`
       float: right !important;
     }
   }
+  h4 {
+    font-size: ${props => props.theme.fontSizeExtraLarge};
+    font-weight: 400;
+  }
 `;
 
 const query = graphql`
@@ -43,11 +47,12 @@ const Footer = () => {
                 {item.footerOption.length > 1 ? (
                   <div
                     className={`column is-3 has-text-centered-mobile ${item.heading ===
-                      'Third column' && 'has-text-right'}`}>
+                      'Third column' && 'has-text-right'}`}
+                  >
                     {item.footerOption.map(el => {
                       return (
                         <Link to={el.linkTo || '/'} key={el.label}>
-                          <h4 className="title is-5 is-uppercase pb-5">
+                          <h4 className="title is-uppercase pb-6">
                             {el.label}
                           </h4>
                         </Link>
