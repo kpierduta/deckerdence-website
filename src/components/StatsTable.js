@@ -22,6 +22,7 @@ const Section = styled.section`
   .footer-text {
     padding: 1.5rem 0;
     background-color: ${props => props.theme.backgroundDarkSecondary};
+    width: 100%;
   }
   tr td,
   th {
