@@ -45,29 +45,31 @@ const HireOptionTestimonial = ({
   name,
   date,
   alt,
-}) => (
-  <Section className="section" flex={flex}>
-    <div className="container">
-      <div className="columns">
-        <div className="column is-4">
-          <SanityImage gatsbyImage={image} className="is-rounded" alt={alt} />
-        </div>
-        <div className="column is-2 is-desktop" />
-        <Wrapper className="column is-6 has-text-centered" flex={flex}>
-          <div className="container">
-            <HireCard
-              textBlack={flex}
-              title={title}
-              position={position}
-              subtitle={pera}
-              description={name}
-              date={date}
-            />
+}) => {
+  return (
+    <Section className="section" flex={flex}>
+      <div className="container">
+        <div className="columns">
+          <div className="column is-4">
+            <SanityImage fluid={image} className="is-rounded" alt={alt} />
           </div>
-        </Wrapper>
+          <div className="column is-2 is-desktop" />
+          <Wrapper className="column is-6 has-text-centered" flex={flex}>
+            <div className="container">
+              <HireCard
+                textBlack={flex}
+                title={title}
+                position={position}
+                subtitle={pera}
+                description={name}
+                date={date}
+              />
+            </div>
+          </Wrapper>
+        </div>
       </div>
-    </div>
-  </Section>
-);
+    </Section>
+  );
+};
 
 export default HireOptionTestimonial;

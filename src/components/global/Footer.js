@@ -48,6 +48,7 @@ const Footer = () => {
                   <div
                     className={`column is-3 has-text-centered-mobile ${item.heading ===
                       'Third column' && 'has-text-right'}`}
+                    key={item._id}
                   >
                     {item.footerOption.map(el => {
                       return (

@@ -62,7 +62,7 @@ const AboutPage = ({ data }) => {
       {team.map(option => (
         <HireOptionTestimonial
           key={option.node._id}
-          image={option.node.image.asset.gatsbyImageData}
+          image={option.node.image.asset.id}
           flex={option.node.columnReverse}
           title={option.node.title}
           position={option.node.subtitle}

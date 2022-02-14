@@ -4,52 +4,43 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Contact from '../components/Contact';
 import StagesSection from '../components/StagesSection';
+import HireOptionHero from '../components/HireOptionHero';
 
-export const homeQuery = graphql`
-  query homepage {
+export const hireTestQuery = graphql`
+  query hireTest {
     sanitySiteSettings {
-      homeSeoTitle
-      homeSeoKeywords
-      homeSeoMetaDescription
-      homeHeroBackgroundImage {
+      hireOptionSeoTitle
+      hireOptionSeoKeywords
+      hireOptionSeoMetaDescription
+      hireOptionSmallText
+      hireOptionLargeText
+      hireOptionDescription
+      hireOptionBackgroundImage {
         asset {
           url
         }
       }
-      email
-      telephone
-      homeFeatures {
-        items {
-          animations
-          _key
-          buttonLink {
+    }
+    allSanityVehicleHirePage(sort: { fields: order }) {
+      edges {
+        node {
+          order
+          slug {
             current
           }
-          hasRight
-          title
-          description
-          featuresBackgroundImage {
+          _id
+          columnReverse
+          hireOptionTitle
+          hireOptionSubtitle
+          hireOptionDescription
+          hireOptionPrice
+          hireOptionBlackImage {
             asset {
-              url
+              id
+              gatsbyImageData
             }
           }
-          featuresFrameImage {
-            asset {
-              url
-            }
-          }
-        }
-      }
-      simpleStages {
-        mainHeading
-        item {
-          _key
-          title
-          subTitle
-          buttonLink {
-            current
-          }
-          avatar {
+          hireOptionColoredImage {
             asset {
               id
               gatsbyImageData
@@ -62,22 +53,20 @@ export const homeQuery = graphql`
 `;
 
 const Homepage = ({ data }) => {
-  const settings = data.sanitySiteSettings;
+  const hire = data.sanitySiteSettings;
   return (
     <Layout>
-      {/* <Banner bgImg="/images/new/hero-img.png" /> */}
-
-      {/* <Banner bgImg="/images/new/bg1.png" /> */}
-      {/* <Banner bgImg="/images/new/hero-img.png" /> */}
-      {/* <Banner bgImg="/images/new/love.png" /> */}
-      {/* <WelcomeHeading
-        title="DECKERDENCE FEATURES"
-        subTitle="DECKERDENCE VINTAGE BUS BAR"
-      /> */}
+      <HireOptionHero
+        bgImage={hire.hireOptionBackgroundImage.asset.url}
+        frame="/images/hire/optionFrame.png"
+        smallText={hire.hireOptionSmallText}
+        largeText={hire.hireOptionLargeText}
+        description={hire.hireOptionDescription}
+      />
 
       {/* <Banner bgImg="/images/new/hero-img.png" /> */}
       <Contact />
-      <StagesSection data={settings} />
+      {/* <StagesSection data={settings} /> */}
     </Layout>
   );
 };

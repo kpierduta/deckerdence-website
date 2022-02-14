@@ -102,7 +102,8 @@ const HireOptionItem = ({ item, onMouseOver }) => (
           <Link
             to={`/${item.slug.current}`}
             type="button"
-            className="button is-large is-size-5">
+            className="button is-large is-size-5"
+          >
             FIND OUT MORE
           </Link>
         </div>
