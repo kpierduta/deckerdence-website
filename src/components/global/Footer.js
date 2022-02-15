@@ -5,11 +5,6 @@ import { Link, useStaticQuery, graphql } from 'gatsby';
 import SocialIcons from './SocialIcons';
 
 const Section = styled.div`
-  .last-item {
-    :last-child {
-      float: right !important;
-    }
-  }
   h4 {
     font-size: ${props => props.theme.fontSizeExtraLarge};
     font-weight: 400;
@@ -48,12 +43,11 @@ const Footer = () => {
                   <div
                     className={`column is-3 has-text-centered-mobile ${item.heading ===
                       'Third column' && 'has-text-right'}`}
-                    key={item._id}
-                  >
+                    key={item._id}>
                     {item.footerOption.map(el => {
                       return (
                         <Link to={el.linkTo || '/'} key={el.label}>
-                          <h4 className="title is-uppercase pb-6">
+                          <h4 className="title is-uppercase pb-5">
                             {el.label}
                           </h4>
                         </Link>
