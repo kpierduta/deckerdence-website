@@ -69,8 +69,12 @@ const HirePage = ({ data }) => {
         largeText={hire.hireOptionLargeText}
         description={hire.hireOptionDescription}
       />
-      {hireOptions.map(items => (
-        <HireOptionItem item={items.node} key={items.node._id} />
+      {hireOptions.map((items, i) => (
+        <HireOptionItem
+          item={items.node}
+          key={items.node._id}
+          flex={i % 2 === 0}
+        />
       ))}
     </Layout>
   );

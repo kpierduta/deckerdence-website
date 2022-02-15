@@ -46,8 +46,8 @@ const Section = styled.section`
   }
 `;
 
-const HireOptionItem = ({ item, onMouseOver }) => (
-  <Section className="section" flex={item.columnReverse}>
+const HireOptionItem = ({ item, onMouseOver, flex }) => (
+  <Section className="section" flex={flex || item.columnReverse}>
     <div className="container">
       <div className="columns">
         <div className="column is-4 is-desktop">
@@ -102,8 +102,7 @@ const HireOptionItem = ({ item, onMouseOver }) => (
           <Link
             to={`/${item.slug.current}`}
             type="button"
-            className="button is-large is-size-5"
-          >
+            className="button is-large is-size-5">
             FIND OUT MORE
           </Link>
         </div>
