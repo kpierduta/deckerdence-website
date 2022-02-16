@@ -20,10 +20,4 @@ export default {
       type: 'image',
     },
   ],
-  preview: {
-    select: {
-      title: 'title',
-      media: 'image',
-    },
-  },
 };

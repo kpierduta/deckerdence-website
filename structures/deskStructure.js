@@ -70,7 +70,7 @@ export default () =>
       S.divider(),
 
       S.listItem()
-        .title('Hire pages')
+        .title('Hire options')
         .icon(FaHireAHelper)
         .child(S.documentTypeList('vehicleHirePage')),
       S.divider(),

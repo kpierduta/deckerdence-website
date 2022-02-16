@@ -1,6 +1,8 @@
+import React from 'react';
+
 export default {
   name: 'stepBlock',
-  title: '🏘 Step block',
+  title: '🖌️ Step block',
   type: 'object',
 
   fields: [
@@ -11,4 +13,12 @@ export default {
       of: [{ type: 'stepBlockItem' }],
     },
   ],
+  preview: {
+    prepare() {
+      return {
+        title: `Step block `,
+        media: <span style={{ fontSize: '1.5rem' }}> 🖌️</span>,
+      };
+    },
+  },
 };

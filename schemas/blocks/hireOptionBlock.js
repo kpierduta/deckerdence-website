@@ -8,41 +8,14 @@ export default {
       title: 'Title',
       type: 'string',
     },
-    {
-      name: 'mostPopular',
-      title: 'Most Popular',
-      type: 'boolean',
-    },
-    {
-      name: 'subtitle',
-      title: 'Subtitle',
-      type: 'string',
-    },
-    {
-      name: 'price',
-      title: 'Price',
-      type: 'string',
-    },
-    {
-      name: 'description',
-      title: 'Description',
-      type: 'markdown',
-    },
-    {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-    },
   ],
   preview: {
     select: {
       title: 'title',
-      image: 'image',
     },
-    prepare({ title, image }) {
+    prepare({ title }) {
       return {
-        title: title || 'Three Hire option block',
-        media: image,
+        title: title || 'All Hire option block',
         subtitle: 'Three hire options block',
       };
     },
