@@ -4,8 +4,13 @@ export default {
   type: 'object',
   fields: [
     {
-      name: 'title',
-      title: 'Title',
+      name: 'description',
+      title: 'Description',
+      type: 'markdown',
+    },
+    {
+      name: 'linkTo',
+      title: 'Button Link to:-',
       type: 'string',
     },
   ],
