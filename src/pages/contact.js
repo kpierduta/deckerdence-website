@@ -86,7 +86,7 @@ const Header = styled.div`
 `;
 
 const ContactWrapper = styled.div`
-  background-image: url(/images/contacts/downloadBack.jpg);
+  background-image: url('/images/contacts/downloadBack.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   figure {
@@ -143,7 +143,7 @@ const ContactUs = ({ data }) => {
               <div className="my">
                 <figure className="image">
                   <SanityImage
-                    gatsbyImage={settings.banner.asset.gatsbyImageData}
+                    gatsbyImageData={settings.banner.asset.gatsbyImageData}
                     alt="deckerdence"
                   />
                 </figure>
@@ -163,7 +163,7 @@ const ContactUs = ({ data }) => {
               <div className="column is-3 has-text-centered">
                 <figure className="image is-128x128">
                   <SanityImage
-                    gatsbyImage={item.image.asset.gatsbyImageData}
+                    gatsbyImageData={item.image.asset.gatsbyImageData}
                     alt=""
                   />
                 </figure>
