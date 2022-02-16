@@ -2,6 +2,12 @@ export default {
   title: 'Navigation (Navbar)',
   name: 'navigation',
   type: 'document',
+  __experimental_actions: [
+    // 'create',
+    'update',
+    // 'delete',
+    'publish',
+  ],
   fields: [
     {
       title: 'Navigation',
