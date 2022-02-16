@@ -3,10 +3,6 @@ import styled from 'styled-components';
 import SanityImage from './global/SanityImage';
 
 const Section = styled.div`
-  .title {
-    padding: 2rem 0;
-  }
-
   .button {
     margin: 10px 0px 0px 0px;
     border: 2px solid ${props => props.theme.darkShades};
@@ -19,24 +15,13 @@ const Section = styled.div`
     }
   }
 
-  @media screen and (min-width: 769px) {
-    h2 {
-      min-height: 6.5rem !important;
-    }
-  }
-
   .card-image {
     background-color: ${props => props.theme.backgroundColor};
-    padding: 2rem 0;
   }
 `;
 
 const ImageWrapper = styled.div`
   justify-content: center;
-  .image.is-128x128 {
-    height: 14rem;
-    width: 14rem;
-  }
 `;
 
 const Content = styled.div`
@@ -47,17 +32,15 @@ const Content = styled.div`
 `;
 
 const Stages = ({ title, image }) => (
-  <Section className="column is-3">
+  <Section className="column is-4">
     <div className="card-content">
       <div className="card-image">
-        <ImageWrapper className="media align">
-          <figure className="image is-128x128">
-            <SanityImage
-              className="is-rounded"
-              gatsbyImage={image}
-              alt="IconImage"
-            />
-          </figure>
+        <ImageWrapper className="media align ">
+          <SanityImage
+            className="is-rounded"
+            gatsbyImageData={image}
+            alt="IconImage"
+          />
         </ImageWrapper>
       </div>
       <Content>

@@ -90,7 +90,9 @@ const GlobalStyle = createGlobalStyle`
   p, .title, .box {
     color: ${theme.textColor};
   }
-
+.has-background-lightAccent{
+  background-color: ${theme.lightAccent} !important;
+}
   .has-background-dark {
     background-color: ${theme.backgroundDark} !important;
   }
