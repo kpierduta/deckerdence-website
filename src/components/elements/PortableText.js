@@ -13,6 +13,7 @@ const Wrapper = styled.div`
     font-weight: 700 !important;
   }
   .content h1,
+  p,
   h2,
   h3,
   h4,
