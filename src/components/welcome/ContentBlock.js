@@ -12,7 +12,7 @@ const ContentBlock = ({ description, isDark, targetButton }) => (
         }`}>
         {description && (
           <div className="has-text-white has-text-centered mt-4">
-            <PortableText light={!isDark}>{description}</PortableText>
+            <PortableText light={isDark}>{description}</PortableText>
           </div>
         )}
         {targetButton && (
