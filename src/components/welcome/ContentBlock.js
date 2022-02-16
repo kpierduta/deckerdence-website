@@ -11,7 +11,7 @@ const ContentBlock = ({ description, isDark, targetButton }) => (
           !isDark ? 'has-background-dark' : 'has-background-danger-darker'
         }`}>
         {description && (
-          <div className="has-text-white mt-4">
+          <div className="has-text-white has-text-centered mt-4">
             <PortableText light={!isDark}>{description}</PortableText>
           </div>
         )}

@@ -31,7 +31,7 @@ const Content = styled.div`
   padding: 1rem;
 `;
 
-const Stages = ({ title, image }) => (
+const Stages = ({ title, image, price, subtitle }) => (
   <Section className="column is-4">
     <div className="card-content">
       <div className="card-image">
@@ -44,15 +44,15 @@ const Stages = ({ title, image }) => (
         </ImageWrapper>
       </div>
       <Content>
-        <h2 className="title is-4 has-text-centered">{title}</h2>
+        <h2 className="title py-3 is-4 has-text-centered">{title}</h2>
         <p className="subtitle is-5 has-text-weight-normal has-text-centered">
           150 - 300 guests
         </p>
         <p className="subtitle is-5 has-text-weight-normal has-text-centered">
-          Seated up to 350 total capacity
+          {subtitle}
         </p>
         <p className="subtitle is-5 has-text-weight-bold has-text-centered">
-          £18,595
+          {price}
         </p>
       </Content>
     </div>
