@@ -7,7 +7,7 @@ const Diagram = ({ avatar, largeImage }) => (
       <div className="columns is-centered">
         <div className="column is-6">
           <figure className={largeImage ? 'image is-3by2' : ''}>
-            <SanityImage gatsbyImage={avatar} alt="" />
+            <SanityImage gatsbyImageData={avatar} alt="" />
           </figure>
         </div>
       </div>

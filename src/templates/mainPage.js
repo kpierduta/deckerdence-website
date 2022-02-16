@@ -143,7 +143,7 @@ const MainPage = ({ data }) => {
             key={item._key}>
             <figure className={item.imageIsHalf ? '' : ''}>
               <SanityImage
-                gatsbyImage={item.asset.gatsbyImageData}
+                gatsbyImageData={item.asset.gatsbyImageData}
                 alt={item.alt}
               />
             </figure>

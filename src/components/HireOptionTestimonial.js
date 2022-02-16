@@ -51,7 +51,13 @@ const HireOptionTestimonial = ({
       <div className="container">
         <div className="columns">
           <div className="column is-4">
-            <SanityImage fluid={image} className="is-rounded" alt={alt} />
+            {image && (
+              <SanityImage
+                gatsbyImageData={image}
+                className="is-rounded"
+                alt={alt}
+              />
+            )}
           </div>
           <div className="column is-2 is-desktop" />
           <Wrapper className="column is-6 has-text-centered" flex={flex}>

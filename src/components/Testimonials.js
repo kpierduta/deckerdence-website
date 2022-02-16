@@ -40,7 +40,7 @@ const Testimonials = ({ src, title, alt }) => {
     <Section className="column is-4">
       <div className="main" onClick={() => setActive(true)} role="button">
         <figure className="">
-          <SanityImage gatsbyImage={src} alt={alt} />
+          <SanityImage gatsbyImageData={src} alt={alt} />
         </figure>
         <div className="overlay">
           <div className="text">
@@ -54,7 +54,7 @@ const Testimonials = ({ src, title, alt }) => {
         <div className="modal-background" />
         <div className="modal-content">
           <figure className="image">
-            <SanityImage gatsbyImage={src} alt={alt} />
+            <SanityImage gatsbyImageData={src} alt={alt} />
           </figure>
         </div>
         <button

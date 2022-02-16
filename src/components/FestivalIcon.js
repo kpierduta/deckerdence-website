@@ -5,7 +5,7 @@ const FestivalIcon = ({ image, alternative }) => (
   <div className="section column is-3">
     <div className="container">
       <figure className="image">
-        <SanityImage gatsbyImage={image} alt={alternative} />
+        <SanityImage gatsbyImageData={image} alt={alternative} />
       </figure>
     </div>
   </div>

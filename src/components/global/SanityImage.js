@@ -14,7 +14,7 @@ const SanityImage = ({ fluid, gatsbyImageData, alt, gatsbyImage, width }) => {
 
     const imageData = getGatsbyImageData(
       gatsbyImage,
-      { width: 1200 },
+      { width: 1600 },
       sanityConfig,
     );
     return <GatsbyImage image={imageData} alt={alt} />;
@@ -55,5 +55,5 @@ SanityImage.defaultProps = {
   fluid: '',
   gatsbyImageData: '',
   gatsbyImage: '',
-  width: 1200,
+  width: 1600,
 };

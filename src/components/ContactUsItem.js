@@ -42,7 +42,7 @@ const ContactUsItem = ({ title, icon, para, href }) => (
             <ImageWrapper className="media align">
               <figure className="image is-96x96">
                 <SanityImage
-                  gatsbyImage={icon}
+                  gatsbyImageData={icon}
                   alt="deckerdence contact information"
                 />
               </figure>
