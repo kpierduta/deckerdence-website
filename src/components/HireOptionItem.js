@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import SanityImage from './global/SanityImage';
@@ -32,83 +32,78 @@ const Section = styled.section`
     font-family: ${props => props.theme.secondaryFontFamily};
     letter-spacing: 1px;
   }
-  .is-square {
-    width: 100%;
-    height: 100%;
-  }
-  .is-square .img-top {
-    display: none;
-    position: absolute;
-    z-index: 99;
-  }
-  .is-square:hover .img-top {
-    display: inline;
-  }
 `;
 
-const HireOptionItem = ({ item, onMouseOver, flex }) => (
-  <Section className="section" flex={flex || item.columnReverse}>
-    <div className="container">
-      <div className="columns">
-        <div className="column is-4 is-desktop">
-          <figure className="image is-square pt-0">
-            <SanityImage
-              fluid={item.hireOptionBlackImage.asset.id}
-              onFocus={onMouseOver}
-              alt="coloredImage"
-            />
+const HireOptionItem = ({ item, onMouseOver, flex }) => {
+  const [over, setOver] = useState(false);
 
-            <SanityImage
-              fluid={item.hireOptionColoredImage.asset.id}
-              className="img-top"
-              alt="blackImage"
-            />
-          </figure>
-        </div>
-        <div className="column is-3" />
-        <div className="column is-5 has-text-centered">
-          <div className="is-inline-flex">
-            <figure className="image is-24x24">
-              <img
-                src={
-                  item.columnReverse
-                    ? '/images/hire/black-one.png'
-                    : '/images/hire/red.png'
+  return (
+    <Section className="section" flex={flex || item.columnReverse}>
+      <div className="container">
+        <div className="columns">
+          <div className="column is-4 is-desktop">
+            <figure
+              className="image is-square pt-0"
+              onFocus={() => setOver(true)}
+              onBlur={() => setOver(false)}
+              onMouseOver={() => setOver(true)}
+              onMouseOut={() => setOver(false)}>
+              <SanityImage
+                fluid={
+                  over
+                    ? item.hireOptionBlackImage.asset.id
+                    : item.hireOptionColoredImage.asset.id
                 }
-                alt=""
-              />
-            </figure>
-            <h1 className="title is-4">{item.hireOptionTitle}</h1>
-            <figure className="image is-24x24">
-              <img
-                src={
-                  item.columnReverse
-                    ? '/images/hire/black-two.png'
-                    : '/images/hire/red-2.png'
-                }
-                alt=""
+                onFocus={onMouseOver}
+                alt="coloredImage"
               />
             </figure>
           </div>
-          <h2 className="title is-3 is-spaced">{item.hireOptionSubtitle}</h2>
-          <p className="subtitle is-5 has-text-weight-medium">
-            {item.hireOptionDescription}
-          </p>
+          <div className="column is-3" />
+          <div className="column is-5 has-text-centered">
+            <div className="is-inline-flex">
+              <figure className="image is-24x24">
+                <img
+                  src={
+                    item.columnReverse
+                      ? '/images/hire/black-one.png'
+                      : '/images/hire/red.png'
+                  }
+                  alt=""
+                />
+              </figure>
+              <h1 className="title is-4">{item.hireOptionTitle}</h1>
+              <figure className="image is-24x24">
+                <img
+                  src={
+                    item.columnReverse
+                      ? '/images/hire/black-two.png'
+                      : '/images/hire/red-2.png'
+                  }
+                  alt=""
+                />
+              </figure>
+            </div>
+            <h2 className="title is-3 is-spaced">{item.hireOptionSubtitle}</h2>
+            <p className="subtitle is-5 has-text-weight-medium">
+              {item.hireOptionDescription}
+            </p>
 
-          <h3 className="title is-5 price">
-            {'  '}Hire from{'  '}
-            {item.hireOptionPrice}
-          </h3>
-          <Link
-            to={`/${item.slug.current}`}
-            type="button"
-            className="button is-large is-size-5">
-            FIND OUT MORE
-          </Link>
+            <h3 className="title is-5 price">
+              {'  '}Hire from{'  '}
+              {item.hireOptionPrice}
+            </h3>
+            <Link
+              to={`/${item.slug.current}`}
+              type="button"
+              className="button is-large is-size-5">
+              FIND OUT MORE
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
-  </Section>
-);
+    </Section>
+  );
+};
 
 export default HireOptionItem;
