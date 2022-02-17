@@ -51,8 +51,8 @@ const HireOptionItem = ({ item, onMouseOver, flex }) => {
               <SanityImage
                 fluid={
                   over
-                    ? item.hireOptionBlackImage.asset.id
-                    : item.hireOptionColoredImage.asset.id
+                    ? item.hireOptionColoredImage.asset.id
+                    : item.hireOptionBlackImage.asset.id
                 }
                 onFocus={onMouseOver}
                 alt="coloredImage"
