@@ -21,6 +21,7 @@ export const theme = {
   // or as the background for inverted designs.
   darkShades,
   dangerColor: '#9A1818',
+  dangerLite: '#94272F',
   primaryColor: mainBrandColor,
   borderColor: '#f7f7f7',
   backgroundColor: '#FFFFFF',
@@ -34,6 +35,7 @@ export const theme = {
   fontSize: '20px',
   fontSizeLarge: '24px',
   fontSizeExtraLarge: '30px',
+  fontSizeXl: '35px',
   fontSize2xl: '40px',
   fontFullLarge: '60px',
   textColor: darkShades, // '#2c2c2a',

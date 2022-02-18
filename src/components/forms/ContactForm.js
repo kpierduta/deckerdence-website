@@ -5,6 +5,7 @@ import addToMailchimp from 'gatsby-plugin-mailchimp';
 const Section = styled.div`
   .subtitle {
     color: ${props => props.theme.lightShades} !important;
+    font-size: ${props => props.theme.fontSizeXl} !important;
   }
   .input {
     border-radius: 0;
@@ -23,9 +24,12 @@ const Section = styled.div`
     color: ${props => props.theme.dangerColor};
     padding: 0 2.5rem;
   }
+  span {
+    border-bottom: 1px solid ${props => props.theme.textBright};
+  }
 `;
 
-const ContactForm = ({ dottedBorder, para }) => {
+const ContactForm = ({ dottedBorder }) => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const handleSubmit = e => {
@@ -83,9 +87,12 @@ const ContactForm = ({ dottedBorder, para }) => {
             />
           </div>
         </div>
-        <p className="subtitle is-4">{para}</p>
+        <p className="subtitle">
+          In submitting an enquiry, you thereby agree to our
+          <span className="ml-1">terms and conditions.</span>
+        </p>
         <div>
-          <button type="submit" className="button title is-5 ">
+          <button type="submit" className="button title is-5">
             <span className="is-size-5-touch is-uppercase">Download</span>
           </button>
         </div>

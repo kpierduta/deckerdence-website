@@ -17,7 +17,7 @@ const Contact = () => (
     </div>
     <div className="columns is-centered">
       <div className="column is-6">
-        <ContactForm para="In submitting an enquiry, you thereby agree to our terms and conditions." />
+        <ContactForm />
       </div>
     </div>
   </Section>

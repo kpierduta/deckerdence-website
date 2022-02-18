@@ -9,9 +9,9 @@ const Section = styled.section`
     width: 25%;
   }
   thead {
-    background-color: ${props => props.theme.dangerColor} !important;
+    background-color: ${props => props.theme.dangerLite} !important;
     th p {
-      font-size: ${props => props.theme.fontSizeExtraLarge};
+      font-size: ${props => props.theme.fontSizeXl};
       padding: 1rem 0.5rem;
       color: ${props => props.theme.lightAccent} !important;
     }
@@ -91,22 +91,22 @@ const StatsTable = () => (
         <thead>
           <tr>
             <th className="is-uppercase">
-              <p className="has-text-weight-normal is-size-3 has-text-weight-bold">
+              <p className="has-text-weight-normal has-text-weight-bold">
                 DECKERDENCE UNIQUE MOBILE VENUE
               </p>
             </th>
             <th className="is-uppercase has-text-centered">
-              <p className="has-text-weight-normal is-size-3 has-text-weight-bold">
+              <p className="has-text-weight-normal has-text-weight-bold">
                 2022
               </p>
             </th>
             <th className="is-uppercase has-text-centered">
-              <p className="has-text-weight-normal is-size-3 has-text-weight-bold">
+              <p className="has-text-weight-normal has-text-weight-bold">
                 2023
               </p>
             </th>
             <th className="is-uppercase has-text-centered">
-              <p className="has-text-weight-normal is-size-3 has-text-weight-bold">
+              <p className="has-text-weight-normal has-text-weight-bold">
                 2024
               </p>
             </th>
