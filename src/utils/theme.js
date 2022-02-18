@@ -39,6 +39,7 @@ export const theme = {
   textColor: darkShades, // '#2c2c2a',
   textColorInverse: lightShades,
   textColorLite: '#2c2c2a',
+  textBright: '#ffffff',
   textDark: '#000',
   menuTintColor: darkAccent,
   primaryFontFamily: "'BebasNeuePro-Book',sans-serif",
@@ -114,7 +115,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.5em;
     padding: 0em 1em;
     border-radius: 1px;
-    background: #a34442 !important;
+    background: ${theme.dangerColor} !important;
   }
   .button.is-normal {
     background: transparent !important;

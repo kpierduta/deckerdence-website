@@ -57,7 +57,8 @@ const HireOptionBlock = ({ description, linkTo }) => {
           {linkTo && (
             <Link
               className="button is-danger mt-5 has-text-weight-bold"
-              to={linkTo}>
+              to={linkTo}
+            >
               Find Out More
             </Link>
           )}

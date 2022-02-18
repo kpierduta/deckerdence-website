@@ -47,7 +47,8 @@ const HireOptionItem = ({ item, onMouseOver, flex }) => {
               onFocus={() => setOver(true)}
               onBlur={() => setOver(false)}
               onMouseOver={() => setOver(true)}
-              onMouseOut={() => setOver(false)}>
+              onMouseOut={() => setOver(false)}
+            >
               <SanityImage
                 fluid={
                   over
@@ -96,7 +97,8 @@ const HireOptionItem = ({ item, onMouseOver, flex }) => {
             <Link
               to={`/${item.slug.current}`}
               type="button"
-              className="button is-large is-size-5">
+              className="button is-large is-size-5"
+            >
               FIND OUT MORE
             </Link>
           </div>
