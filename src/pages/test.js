@@ -59,7 +59,7 @@ const Homepage = ({ data }) => {
     <Layout>
       <HireOptionHero
         bgImage={hire.hireOptionBackgroundImage.asset.url}
-        frame="/images/hire/optionFrame.png"
+        isDecorative
         smallText={hire.hireOptionSmallText}
         largeText={hire.hireOptionLargeText}
         description={hire.hireOptionDescription}

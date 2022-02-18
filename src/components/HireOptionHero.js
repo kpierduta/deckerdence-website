@@ -16,6 +16,9 @@ const Section = styled.div`
     padding: 5rem 2rem 4rem 2rem;
     justify-content: space-between;
   }
+  .subtitle {
+    padding-top: ${props => (!props.isDecorative ? '3rem' : '0rem')};
+  }
 `;
 
 const HireOptionHero = ({
@@ -24,6 +27,7 @@ const HireOptionHero = ({
   smallText,
   largeText,
   description,
+  isDecorative,
 }) => (
   <Section className="section hero is-medium" bgImage={bgImage} frame={frame}>
     <div className="hero-body">
@@ -36,7 +40,9 @@ const HireOptionHero = ({
             <h1 className="title is-3 has-text-white has-text-weight-semibold">
               {largeText}
             </h1>
-            <img src="/images/hire/decorative-line.png" alt="" />
+            {!isDecorative && (
+              <img src="/images/hire/decorative-line.png" alt="" />
+            )}
             <h1 className="subtitle is-5 has-text-white">{description}</h1>
           </div>
         </div>

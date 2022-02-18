@@ -37,8 +37,8 @@ const IconContainer = styled.div`
   .tooltiptext {
     visibility: hidden;
     width: 180px;
-    background-color: black;
-    color: #fff;
+    background-color: ${props => props.theme.dangerColor};
+    color: ${props => props.theme.textBright};
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
@@ -92,19 +92,30 @@ const InfoItem = ({ title, text1, text2, text3 }) => (
   </TableRow>
 );
 
+const ButtonItem = () => (
+  <Button className="button is-danger">
+    <span className="is-uppercase has-text-weight-semibold">Find out more</span>
+  </Button>
+);
+
 const infoItems = [
   { id: 1, title: 'Guests', text1: ' ', text2: ' ', text3: ' ' },
-  { id: 2, title: 'A truly unique venue' },
-  { id: 3, title: 'Exclusive venue use' },
-  { id: 4, title: 'Personal coordinator in planning and on the day' },
-  { id: 5, title: 'Family and dog friendly' },
-  { id: 6, title: 'A truly unique venue' },
-  { id: 7, title: 'Onsite parking' },
-  { id: 8, title: 'Glamping options on site' },
-  { id: 9, title: 'Great hotel accommodation nearby' },
+  { id: 2, title: 'A truly unique venue', text1: ' ' },
+  { id: 3, title: 'Exclusive venue use', text1: ' ' },
+  {
+    id: 4,
+    title: 'Personal coordinator in planning and on the day',
+    text1: ' ',
+  },
+  { id: 5, title: 'Family and dog friendly', text1: ' ' },
+  { id: 6, title: 'A truly unique venue', text1: ' ' },
+  { id: 7, title: 'Onsite parking', text1: ' ' },
+  { id: 8, title: 'Glamping options on site', text1: ' ' },
+  { id: 9, title: 'Great hotel accommodation nearby', text1: ' ' },
   {
     id: 10,
     title: 'Suppliers - use your own or use our recommended favourites',
+    text1: ' ',
   },
 ];
 
@@ -133,25 +144,13 @@ const HireInfoTable = () => (
               </p>
             </th>
             <th>
-              <Button>
-                <span className="is-uppercase has-text-weight-semibold">
-                  Find out more
-                </span>
-              </Button>
+              <ButtonItem />
             </th>
             <th>
-              <Button>
-                <span className="is-uppercase has-text-weight-semibold">
-                  Find out more
-                </span>
-              </Button>
+              <ButtonItem />
             </th>
             <th>
-              <Button>
-                <span className="is-uppercase has-text-weight-semibold">
-                  Find out more
-                </span>
-              </Button>
+              <ButtonItem />
             </th>
           </tr>
         </tfoot>
