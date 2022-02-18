@@ -89,7 +89,9 @@ const Header = () => {
           <div className="column is-flex navbar-end">
             <Link to={data.buttonLinkTo}>
               <Button type="button" className="px-4 button is-danger">
-                <span className="is-capitalized">{data.buttonLabel}</span>
+                <span className="is-uppercase has-text-weight-bold">
+                  {data.buttonLabel}
+                </span>
               </Button>
             </Link>
           </div>
