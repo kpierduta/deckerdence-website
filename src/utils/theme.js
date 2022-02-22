@@ -99,6 +99,9 @@ const GlobalStyle = createGlobalStyle`
   .has-background-dark {
     background-color: ${theme.backgroundDark} !important;
   }
+  .has-background-danger-ter {
+    background-color: ${theme.dangerLite} !important;
+  }
   .has-background-danger-darker {
     background-color : ${theme.dangerColor} !important;
   }

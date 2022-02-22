@@ -9,6 +9,9 @@ const Wrapper = styled.div`
     font-size: ${props => props.theme.fontSize} !important;
     color: ${props => (props.light ? '#fff' : '#000')};
   }
+  .content p:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
   .content strong {
     font-weight: 700 !important;
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import SanityImage from '../global/SanityImage';
 
 const Section = styled.section`
@@ -18,20 +19,22 @@ const Venues = props => {
         <div className="columns">
           {venue.map(item => (
             <div className="column" key={item.id}>
-              <Card className="has-text-centered p-5">
-                <figure className="image is-128x128 m-auto">
-                  {item.image && (
-                    <SanityImage
-                      fluid={item.image.asset.id}
-                      alt="feature-img"
-                    />
-                  )}
-                </figure>
+              <Link to={item.linkTo ? item.linkTo : '/'}>
+                <Card className="has-text-centered p-5">
+                  <figure className="image is-128x128 m-auto">
+                    {item.image && (
+                      <SanityImage
+                        fluid={item.image.asset.id}
+                        alt="feature-img"
+                      />
+                    )}
+                  </figure>
 
-                <p className="title is-2 has-text-weight-bold mt-5">
-                  {item.title}
-                </p>
-              </Card>
+                  <p className="title is-2 has-text-weight-bold mt-5">
+                    {item.title}
+                  </p>
+                </Card>
+              </Link>
             </div>
           ))}
         </div>

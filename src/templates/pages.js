@@ -9,6 +9,7 @@ import ContentBlocks from '../sanity/ContentBlocks';
 const Pages = ({ data }) => {
   const { page } = data;
   if (!page) return null;
+
   return (
     <Layout>
       <Seo
