@@ -12,6 +12,8 @@ import ContentBlock from '../components/welcome/ContentBlock';
 import InfoSteps from '../components/steps/InfoSteps';
 import KeyInformation from '../components/table/KeyInformation';
 import HireOptionBlock from '../components/hire/HireOptionBlock';
+import OwnerBlock from '../components/team/OwnerBlock';
+import ContactBlock from '../components/contact/ContactBlock';
 
 // sanity blocks
 const Blocks = {
@@ -25,6 +27,8 @@ const Blocks = {
   stepBlock: InfoSteps,
   tableBlock: KeyInformation,
   hireOptionBlock: HireOptionBlock,
+  ownerBlock: OwnerBlock,
+  formBlock: ContactBlock,
 };
 
 const ContentBlocks = type => {

@@ -7,10 +7,11 @@ const Wrapper = styled.h1`
   font-size: ${props => props.theme.fontSize2xl};
 `;
 
-const Title = ({ children, dark }) => (
+const Title = ({ children, dark, className }) => (
   <Wrapper
-    className="title is-uppercase has-text-weight-normal is-size-3-mobile"
-    dark={dark}>
+    className={`title is-uppercase has-text-weight-normal is-size-3-mobile ${className}`}
+    dark={dark}
+  >
     {children}
   </Wrapper>
 );

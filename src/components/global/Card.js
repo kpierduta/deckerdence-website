@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-
-import SanityImage from '../global/SanityImage';
-import PortableText from './PortableText';
+import SanityImage from './SanityImage';
+import PortableText from '../elements/PortableText';
 
 const Wrapper = styled.div`
   background: ${props =>
@@ -60,15 +59,13 @@ const Card = ({ data }) => {
                 >
                   {data.name}
                 </p>
-                {data.date && (
-                  <p
-                    className={`subtitle ${
-                      data.columnReverse ? 'has-text-white' : 'has-text-black'
-                    }`}
-                  >
-                    {data.date}
-                  </p>
-                )}
+                <p
+                  className={`subtitle ${
+                    data.columnReverse ? 'has-text-white' : 'has-text-black'
+                  }`}
+                >
+                  {data.date}
+                </p>
               </div>
             </div>
           </Wrapper>
