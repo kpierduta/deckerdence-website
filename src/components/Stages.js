@@ -9,6 +9,12 @@ const Section = styled.div`
     font-family: ${props => props.theme.secondaryFontFamily};
     letter-spacing: 1px;
   }
+
+  .card-content {
+    align-items: end;
+    height: 100%;
+    display: grid;
+  }
   @media screen and (max-width: 769px) {
     h2 {
       font-size: 16px !important;
@@ -32,7 +38,7 @@ const Content = styled.div`
 `;
 
 const Stages = ({ title, image, price, subtitle }) => (
-  <Section className="column is-4">
+  <Section className="column is-flex">
     <div className="card-content">
       <div className="card-image">
         <ImageWrapper className="media align ">
