@@ -14,5 +14,10 @@ export default {
       title: 'Venue Image',
       type: 'image',
     },
+    {
+      name: 'linkTo',
+      title: 'Link to',
+      type: 'string',
+    },
   ],
 };

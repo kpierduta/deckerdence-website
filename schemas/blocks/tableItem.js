@@ -24,9 +24,9 @@ export default {
       type: 'string',
     },
   ],
-  preview: {
-    select: {
-      title: 'keyInfo',
-    },
-  },
+  // preview: {
+  //   select: {
+  //     title: 'keyInfo',
+  //   },
+  // },
 };

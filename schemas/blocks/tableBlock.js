@@ -4,10 +4,17 @@ export default {
   type: 'object',
   fields: [
     {
-      name: 'essentialInfo',
-      title: 'Essential Info',
+      name: 'tableInfo',
+      title: 'Table Info',
       type: 'array',
       of: [{ type: 'tableItem' }],
     },
   ],
+  preview: {
+    prepare() {
+      return {
+        title: 'Table Block',
+      };
+    },
+  },
 };

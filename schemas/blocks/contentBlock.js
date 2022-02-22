@@ -18,19 +18,27 @@ export default {
       type: 'string',
     },
     {
-      name: 'isDark',
-      title: 'Is Dark',
-      type: 'boolean',
+      title: 'Background Color',
+      description: 'Pick a color',
+      name: 'backgroundColor',
+      type: 'colorlist', // required
+      options: {
+        list: [
+          { title: 'Grey', value: '#E9E9E9' },
+          { title: 'Red', value: '#94272F' },
+          { title: 'White', value: '#FFFFFF' },
+        ],
+      },
     },
   ],
   preview: {
     select: {
-      variant: 'isDark',
+      variant: 'backgroundColor.title',
     },
     prepare({ variant }) {
       return {
         title: 'Content block',
-        subtitle: variant ? 'Variant is light' : 'Variant is dark',
+        subtitle: variant,
         media: <span style={{ fontSize: '1.5rem' }}>#️⃣</span>,
       };
     },

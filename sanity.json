@@ -17,7 +17,8 @@
     "@sanity/dashboard",
     "dashboard-widget-notes",
     "media",
-    "dashboard-widget-netlify"
+    "dashboard-widget-netlify",
+    "color-list"
   ],
   "env": {
     "development": {
