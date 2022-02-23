@@ -2,10 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
-import Contact from '../components/Contact';
-import HireOptionHero from '../components/HireOptionHero';
-import HireInfoTable from '../components/HireInfoTable';
-import StatsTable from '../components/StatsTable';
+import HireInfoTable from '../components/table/HireInfoTable';
+import StatsTable from '../components/table/StatsTable';
 
 export const hireTestQuery = graphql`
   query hireTest {
@@ -53,23 +51,11 @@ export const hireTestQuery = graphql`
   }
 `;
 
-const Homepage = ({ data }) => {
-  const hire = data.sanitySiteSettings;
-
+const Homepage = () => {
   return (
     <Layout>
-      <HireOptionHero
-        bgImage={hire.hireOptionBackgroundImage.asset.url}
-        isDecorative
-        smallText={hire.hireOptionSmallText}
-        largeText={hire.hireOptionLargeText}
-        description={hire.hireOptionDescription}
-      />
       <HireInfoTable />
       <StatsTable />
-      {/* <Banner bgImg="/images/new/hero-img.png" /> */}
-      <Contact />
-      {/* <StagesSection data={settings} /> */}
     </Layout>
   );
 };
