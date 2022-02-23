@@ -55,6 +55,7 @@ export const hireTestQuery = graphql`
 
 const Homepage = ({ data }) => {
   const hire = data.sanitySiteSettings;
+
   return (
     <Layout>
       <HireOptionHero

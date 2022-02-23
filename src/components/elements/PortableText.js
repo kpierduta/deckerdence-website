@@ -30,11 +30,11 @@ const Wrapper = styled.div`
   }
 `;
 
-const PortableText = ({ children, light }) => {
+const PortableText = ({ children, light, className }) => {
   if (!children) return null;
   return (
     <Wrapper light={light}>
-      <Markdown className="content">{children}</Markdown>
+      <Markdown className={`content ${className}`}>{children}</Markdown>
     </Wrapper>
   );
 };
