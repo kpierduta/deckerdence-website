@@ -42,6 +42,12 @@ export default () =>
         .child(S.documentTypeList('team')),
       S.divider(),
 
+      S.listItem()
+        .title('Main Pages')
+        .icon(FcGallery)
+        .child(S.documentTypeList('mainPage')),
+      S.divider(),
+
       // Redirects
 
       S.listItem()
@@ -61,12 +67,6 @@ export default () =>
         .title('Blog')
         .icon(MdOutlineArticle)
         .child(S.documentTypeList('blogPage')),
-      S.divider(),
-
-      S.listItem()
-        .title('Hire options Page')
-        .icon(FaHireAHelper)
-        .child(S.documentTypeList('hireOptionsPage')),
       S.divider(),
 
       S.listItem()

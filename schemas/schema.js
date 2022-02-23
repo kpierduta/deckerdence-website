@@ -15,9 +15,9 @@ import testimonial from './sections/testimonial';
 import blogPage from './sections/blogPage';
 import galleryPage from './sections/galleryPage';
 import vehicleHirePage from './sections/vehicleHirePage';
-import hireOptionsPage from './sections/hireOptionsPage';
 import footer from './sections/footer';
 import navigation from './sections/navigation';
+import mainPage from './sections/mainPage';
 
 // blocks
 import heroBlock from './blocks/heroBlock';
@@ -49,7 +49,6 @@ import navItem from './settings/navItem';
 
 import blockContent from './blockContent';
 import about from './about';
-import mainPage from './mainPage';
 import settingsFeatures from './settingsFeatures';
 import settingsFeaturesItem from './settingsFeaturesItem';
 import settingsVehicleFeature from './settingsVehicleFeature';
@@ -126,7 +125,6 @@ export default createSchema({
     about,
     mainPage,
     vehicleHirePage,
-    hireOptionsPage,
     agreement,
     contact,
     settingsFeatures,
