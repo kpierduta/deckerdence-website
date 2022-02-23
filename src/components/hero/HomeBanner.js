@@ -10,7 +10,6 @@ const Wrapper = styled.div`
   height: 100%;
   width: 100%;
   overflow: hidden;
-  display: inline-block;
   max-height: 100%;
   .m-auto {
     margin: auto;
@@ -25,9 +24,6 @@ const Wrapper = styled.div`
     position: absolute;
     right: 0;
     z-index: 10;
-  }
-  img {
-    object-position: center top;
   }
 `;
 
