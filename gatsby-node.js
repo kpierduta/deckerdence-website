@@ -84,7 +84,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   page.forEach(item => {
     const slug = item.slug.current;
     const pageTemplate = path.resolve('./src/templates/pages.js');
-    console.info(`Creating page for: "${item.title}"...`);
+    console.info(`Creating other main pages for: "${item.title}"...`);
     createPage({
       path: slug === 'homepage' ? '/' : slug,
       component: pageTemplate,
@@ -99,7 +99,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   hirePages.forEach(item => {
     const slug = item.slug.current;
     const pageTemplate = path.resolve('./src/templates/hireOptionPage.js');
-    console.info(`Creating page for: "${item.title}"...`);
+    console.info(`Creating hirePages page for: "${item.title}"...`);
     createPage({
       path: slug,
       component: pageTemplate,
