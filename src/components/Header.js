@@ -68,7 +68,7 @@ const data1 = [
     name: 'PARTIES',
   },
   { key: 3, linkTo: '/vintage-bus-bar-hire/event-venue', name: 'EVENTS' },
-  { key: 4, linkTo: '/vintage-bus-bar-hire/event-venue', name: 'HOSPITALITY' },
+  { key: 4, linkTo: '/vintage-bus-bar-hire/hospitality', name: 'HOSPITALITY' },
 ];
 
 const data2 = [
