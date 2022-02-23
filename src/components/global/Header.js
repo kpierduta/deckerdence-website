@@ -58,7 +58,7 @@ const ContactWrapper = styled.div`
 
 const Button = styled.button`
   /* background-color: ${props => props.theme.dangerColor}; */
-  padding: 10px 20px;
+  /* padding: 10px 15px; */
   cursor: pointer;
   color: ${props => props.theme.textBright};
 `;
@@ -88,10 +88,10 @@ const Header = () => {
         <ContactWrapper className="columns is-hidden-touch">
           <div className="column is-flex navbar-end">
             <Link to={data.buttonLinkTo}>
-              <Button type="button" className="px-4 button is-danger">
-                <span className="is-uppercase has-text-weight-bold">
-                  {data.buttonLabel}
-                </span>
+              <Button
+                type="button"
+                className="px-4 button is-danger is-uppercase has-text-weight-bold">
+                {data.buttonLabel}
               </Button>
             </Link>
           </div>
@@ -110,8 +110,7 @@ const Header = () => {
               data-target="navbarBasicExample"
               onClick={() => {
                 setIsActive(!isActive);
-              }}
-            >
+              }}>
               <span aria-hidden="true" />
               <span aria-hidden="true" />
               <span aria-hidden="true" />
@@ -125,8 +124,7 @@ const Header = () => {
                     <Link
                       to={item.linkTo}
                       className="navbar-item"
-                      key={item._key}
-                    >
+                      key={item._key}>
                       {item.label}
                     </Link>
                   );
