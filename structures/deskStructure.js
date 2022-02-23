@@ -64,6 +64,12 @@ export default () =>
       S.divider(),
 
       S.listItem()
+        .title('Hire options Page')
+        .icon(FaHireAHelper)
+        .child(S.documentTypeList('hireOptionsPage')),
+      S.divider(),
+
+      S.listItem()
         .title('Gallery')
         .icon(FcGallery)
         .child(S.documentTypeList('galleryPage')),

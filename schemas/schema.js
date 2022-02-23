@@ -15,6 +15,7 @@ import testimonial from './sections/testimonial';
 import blogPage from './sections/blogPage';
 import galleryPage from './sections/galleryPage';
 import vehicleHirePage from './sections/vehicleHirePage';
+import hireOptionsPage from './sections/hireOptionsPage';
 import footer from './sections/footer';
 import navigation from './sections/navigation';
 
@@ -36,7 +37,9 @@ import teamBlock from './blocks/teamBlock';
 import formBlock from './blocks/formBlock';
 import hireOptionBlock from './blocks/hireOptionBlock';
 import tableBlock from './blocks/tableBlock';
+import yearlyRevenueBlock from './blocks/yearlyRevenueBlock';
 import tableItem from './blocks/tableItem';
+import yearStatTableItem from './blocks/yearStatTableItem';
 
 // settings objects
 
@@ -109,7 +112,9 @@ export default createSchema({
     formBlock,
     hireOptionBlock,
     tableBlock,
+    yearlyRevenueBlock,
     tableItem,
+    yearStatTableItem,
 
     // settings objects
     footerItem,
@@ -121,6 +126,7 @@ export default createSchema({
     about,
     mainPage,
     vehicleHirePage,
+    hireOptionsPage,
     agreement,
     contact,
     settingsFeatures,

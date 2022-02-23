@@ -7,6 +7,7 @@ export default [
   { type: 'galleryBlock' },
   { type: 'contentBlock' },
   { type: 'stepBlock' },
+  { type: 'yearlyRevenueBlock' },
   { type: 'ownerBlock' },
   { type: 'teamBlock' },
   { type: 'formBlock' },
