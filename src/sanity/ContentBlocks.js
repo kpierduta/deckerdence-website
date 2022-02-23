@@ -11,6 +11,8 @@ import Testimonial from '../components/testimonial/Testimonial';
 import ContentBlock from '../components/welcome/ContentBlock';
 import InfoSteps from '../components/steps/InfoSteps';
 import KeyInformation from '../components/table/KeyInformation';
+import StatsTable from '../components/table/StatsTable';
+
 import RevenueBlock from '../components/table/RevenueBlock';
 import HireOptionBlock from '../components/hire/HireOptionBlock';
 import OwnerBlock from '../components/team/OwnerBlock';
@@ -31,6 +33,7 @@ const Blocks = {
   ownerBlock: OwnerBlock,
   formBlock: ContactBlock,
   revenueBlock: RevenueBlock,
+  yearlyRevenueBlock: StatsTable,
 };
 
 const ContentBlocks = type => {

@@ -124,8 +124,8 @@ const StatsTable = () => (
           ))}
         </tbody>
       </table>
-      <div>
-        <p className="has-text-weight-normal footer-text is-size-3 has-text-centered">
+      <div className="">
+        <p className="px-4 has-text-weight-normal footer-text is-size-3 has-text-centered">
           Costs above based on your event hosted at our location, Blyth Hall
           Farm in North Warwickshire. To have Deckerdence at your chosen
           location additional cost from £3,000
