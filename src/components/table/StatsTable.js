@@ -60,79 +60,57 @@ const InfoItem = ({ title, text1, text2, text3 }) => (
   </TableRow>
 );
 
-const infoItems = [
-  {
-    id: 1,
-    title: 'Essential Deckerdence',
-    text1: '6,595',
-    text2: '7,295',
-    text3: '7,775',
-  },
-  {
-    id: 2,
-    title: 'Classic Deckerdence',
-    text1: '7,795',
-    text2: '8,475',
-    text3: '8,995',
-  },
-  {
-    id: 3,
-    title: 'Ultimate Deckerdence',
-    text1: '8,995',
-    text2: '18,995',
-    text3: '19,300',
-  },
-];
-
-const StatsTable = () => (
-  <Section className="section">
-    <div className="container">
-      <table className="table is-fullwidth is-bordered">
-        <thead>
-          <tr>
-            <th className="is-uppercase">
-              <p className="has-text-weight-normal has-text-weight-bold">
-                DECKERDENCE UNIQUE MOBILE VENUE
-              </p>
-            </th>
-            <th className="is-uppercase has-text-centered">
-              <p className="has-text-weight-normal has-text-weight-bold">
-                2022
-              </p>
-            </th>
-            <th className="is-uppercase has-text-centered">
-              <p className="has-text-weight-normal has-text-weight-bold">
-                2023
-              </p>
-            </th>
-            <th className="is-uppercase has-text-centered">
-              <p className="has-text-weight-normal has-text-weight-bold">
-                2024
-              </p>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {infoItems.map(item => (
-            <InfoItem
-              key={item.id}
-              title={item.title}
-              text1={`£${item.text1}`}
-              text2={`£${item.text2}`}
-              text3={`£${item.text3}`}
-            />
-          ))}
-        </tbody>
-      </table>
-      <div className="">
-        <p className="px-4 has-text-weight-normal footer-text is-size-3 has-text-centered">
-          Costs above based on your event hosted at our location, Blyth Hall
-          Farm in North Warwickshire. To have Deckerdence at your chosen
-          location additional cost from £3,000
-        </p>
+const StatsTable = ({ description, tableInfo = [] }) => {
+  return (
+    <Section className="section">
+      <div className="container">
+        <table className="table is-fullwidth is-bordered">
+          <thead>
+            <tr>
+              <th className="is-uppercase">
+                <p className="has-text-weight-normal has-text-weight-bold">
+                  DECKERDENCE UNIQUE MOBILE VENUE
+                </p>
+              </th>
+              <th className="is-uppercase has-text-centered">
+                <p className="has-text-weight-normal has-text-weight-bold">
+                  2022
+                </p>
+              </th>
+              <th className="is-uppercase has-text-centered">
+                <p className="has-text-weight-normal has-text-weight-bold">
+                  2023
+                </p>
+              </th>
+              <th className="is-uppercase has-text-centered">
+                <p className="has-text-weight-normal has-text-weight-bold">
+                  2024
+                </p>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {tableInfo.map(item => (
+              <InfoItem
+                key={item.id}
+                title={item.title}
+                text1={`£${item.year2022}`}
+                text2={`£${item.year2023}`}
+                text3={`£${item.year2024}`}
+              />
+            ))}
+          </tbody>
+        </table>
+        {description && (
+          <div>
+            <p className="px-4 has-text-weight-normal footer-text is-size-3 has-text-centered">
+              {description}
+            </p>
+          </div>
+        )}
       </div>
-    </div>
-  </Section>
-);
+    </Section>
+  );
+};
 
 export default StatsTable;
