@@ -4,26 +4,66 @@ import styled from 'styled-components';
 const Section = styled.section`
   h3 {
     color: ${props => props.theme.primaryColor};
+    font-size: ${props => props.theme.fontSize2xl};
+    padding-left: 3rem;
+  }
+  th {
+    font-size: ${props => props.theme.fontSizeLarge};
+    font-weight: normal;
   }
   .table-width {
     width: 11rem;
   }
   .container {
-    overflow: scroll;
+    overflow: visible;
+    @media only screen and (max-width: 768px) {
+      overflow: scroll;
+    }
+  }
+  p {
+    font-size: ${props => props.theme.fontSizeExtraLarge};
   }
 `;
 
 const TableRow = styled.tr`
+  position: relative;
   img {
     width: 37px;
     height: auto;
   }
 `;
 
-const InfoItem = ({ title, text1, text2 }) => (
+const IconContainer = styled.div`
+  position: absolute;
+  z-index: 9999;
+  left: -15px;
+  top: 10px;
+  @media only screen and (max-width: 768px) {
+    left: 0px;
+  }
+  span {
+    color: ${props => props.theme.dangerLite};
+  }
+  .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    background-color: ${props => props.theme.dangerLite};
+    color: ${props => props.theme.textBright};
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+  }
+  :hover .tooltiptext {
+    visibility: visible;
+  }
+`;
+
+const InfoItem = ({ title, text1, text2, hasIcon, iconInfo }) => (
   <TableRow>
     <th>
-      <p className="has-text-weight-bold">{title}</p>
+      <p className="has-text-weight-normal">{title}</p>
     </th>
     <td className="table-width has-text-centered">
       {text1 ? (
@@ -39,6 +79,14 @@ const InfoItem = ({ title, text1, text2 }) => (
         <img src="images/icon/check.png" alt="status" />
       )}
     </td>
+    {hasIcon && (
+      <IconContainer>
+        <span className="is-size-3">
+          <i className="fas fa-info-circle" />
+        </span>
+        <span className="tooltiptext is-size-7">{iconInfo}</span>
+      </IconContainer>
+    )}
   </TableRow>
 );
 
@@ -50,21 +98,28 @@ const KeyInformation = ({ tableInfo = [] }) => {
           <thead>
             <tr>
               <th>
-                <h3 className="is-size-3">KEY INFORMATION</h3>
+                <h3 className="is-uppercase has-text-weight-semibold">
+                  KEY INFORMATION
+                </h3>
               </th>
-              <th>DECKERDENCE ESSENTIALS & CLASSIC</th>
-              <th>deckerdence ultimate</th>
+              <th className="is-uppercase">DECKERDENCE ESSENTIALS & CLASSIC</th>
+              <th className="is-uppercase">deckerdence ultimate</th>
             </tr>
           </thead>
           <tbody>
-            {tableInfo.map(item => (
-              <InfoItem
-                key={item._key}
-                title={item.keyInfo}
-                text1={item.classicInfo}
-                text2={item.essentialInfo}
-              />
-            ))}
+            {tableInfo.map(item => {
+              console.log(tableInfo, 'tableInfo');
+              return (
+                <InfoItem
+                  key={item._key}
+                  title={item.keyInfo}
+                  text1={item.classicInfo}
+                  text2={item.essentialInfo}
+                  hasIcon={item.hasIcon}
+                  iconInfo={item.iconInfo}
+                />
+              );
+            })}
           </tbody>
         </table>
       </div>
