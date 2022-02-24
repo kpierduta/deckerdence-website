@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
-import HireInfoTable from '../components/table/HireInfoTable';
 import StatsTable from '../components/table/StatsTable';
 
 export const hireTestQuery = graphql`
@@ -54,7 +53,6 @@ export const hireTestQuery = graphql`
 const Homepage = () => {
   return (
     <Layout>
-      <HireInfoTable />
       <StatsTable />
     </Layout>
   );

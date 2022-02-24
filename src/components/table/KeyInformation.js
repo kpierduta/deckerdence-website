@@ -107,19 +107,16 @@ const KeyInformation = ({ tableInfo = [] }) => {
             </tr>
           </thead>
           <tbody>
-            {tableInfo.map(item => {
-              console.log(tableInfo, 'tableInfo');
-              return (
-                <InfoItem
-                  key={item._key}
-                  title={item.keyInfo}
-                  text1={item.classicInfo}
-                  text2={item.essentialInfo}
-                  hasIcon={item.hasIcon}
-                  iconInfo={item.iconInfo}
-                />
-              );
-            })}
+            {tableInfo.map(item => (
+              <InfoItem
+                key={item._key}
+                title={item.keyInfo}
+                text1={item.classicInfo}
+                text2={item.essentialInfo}
+                hasIcon={item.hasIcon}
+                iconInfo={item.iconInfo}
+              />
+            ))}
           </tbody>
         </table>
       </div>

@@ -84,7 +84,8 @@ const infoItems = [
   },
 ];
 
-const RevenueBlock = () => {
+const RevenueBlock = ({ tableInfo = [] }) => {
+  console.log('tableInfo', tableInfo);
   return (
     <Section className="section">
       <div className="container">
