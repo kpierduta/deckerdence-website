@@ -9,6 +9,11 @@ export default {
       type: 'array',
       of: [{ type: 'yearStatTableItem' }],
     },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+    },
   ],
   preview: {
     prepare() {

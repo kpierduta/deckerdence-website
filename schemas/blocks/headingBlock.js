@@ -17,6 +17,11 @@ export default {
       type: 'markdown',
     },
     {
+      name: 'linkTo',
+      title: 'Link to',
+      type: 'string',
+    },
+    {
       name: 'variant',
       title: 'Variant',
       type: 'boolean',
