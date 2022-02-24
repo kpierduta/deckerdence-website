@@ -37,7 +37,15 @@ const Content = styled.div`
   padding: 1rem;
 `;
 
-const Stages = ({ title, image, price, subtitle }) => (
+const PopularIconWrapper = styled.div`
+  margin-top: -2.5rem;
+  z-index: 9999;
+  p {
+    color: ${props => props.theme.dangerLite};
+  }
+`;
+
+const Stages = ({ title, image, price, subtitle, mostPopular }) => (
   <Section className="column is-flex">
     <div className="card-content">
       <div className="card-image">
@@ -50,6 +58,12 @@ const Stages = ({ title, image, price, subtitle }) => (
         </ImageWrapper>
       </div>
       <Content>
+        {mostPopular && (
+          <PopularIconWrapper className="has-text-centered">
+            <img src="images/star.svg" alt="most-popular" width="40px" />
+            <p className="is-size-5 has-text-weight-bold">Most Popular</p>
+          </PopularIconWrapper>
+        )}
         <h2 className="title py-3 is-4 has-text-centered">{title}</h2>
         <p className="subtitle is-5 has-text-weight-normal has-text-centered">
           150 - 300 guests
