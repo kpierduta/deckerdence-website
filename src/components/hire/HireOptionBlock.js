@@ -38,7 +38,7 @@ const HireOptionBlock = ({ description, linkTo }) => {
             if (!item) return null;
             return (
               <Stages
-                key={item._key}
+                key={item._id}
                 title={item.hireOptionTitle}
                 subtitle={item.hireOptionDescription}
                 image={item.hireOptionColoredImage.asset.gatsbyImageData}

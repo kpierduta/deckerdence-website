@@ -37,29 +37,29 @@ const Footer = () => {
         <div className="columns is-variable is-6 ">
           {data.footer.map(item => {
             if (!item) return null;
+            if (item.footerOption.length > 1)
+              return (
+                <div
+                  className={`column is-3 has-text-centered-mobile ${item.heading ===
+                    'Third column' && 'has-text-right'}`}
+                  key={item._key}
+                >
+                  {item.footerOption.map(el => {
+                    return (
+                      <Link to={el.linkTo || '/'} key={el.label}>
+                        <h4 className="title is-uppercase pb-5">{el.label}</h4>
+                      </Link>
+                    );
+                  })}
+                </div>
+              );
             return (
-              <>
-                {item.footerOption.length > 1 ? (
-                  <div
-                    className={`column is-3 has-text-centered-mobile ${item.heading ===
-                      'Third column' && 'has-text-right'}`}
-                    key={item._id}>
-                    {item.footerOption.map(el => {
-                      return (
-                        <Link to={el.linkTo || '/'} key={el.label}>
-                          <h4 className="title is-uppercase pb-5">
-                            {el.label}
-                          </h4>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                ) : (
-                  <div className="column is-6 is-flex is-justify-content-center is-align-items-end">
-                    <SocialIcons />
-                  </div>
-                )}
-              </>
+              <div
+                key={item._key}
+                className="column is-6 is-flex is-justify-content-center is-align-items-end"
+              >
+                <SocialIcons />
+              </div>
             );
           })}
         </div>

@@ -10,7 +10,7 @@ const Gallery = ({ galleryBlock = [] }) => {
         <div className="columns">
           {galleryBlock.map(item => {
             if (!item) return null;
-            return <GalleryItem data={item} />;
+            return <GalleryItem data={item} key={item._key} />;
           })}
         </div>
       </div>

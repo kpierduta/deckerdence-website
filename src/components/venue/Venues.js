@@ -18,7 +18,7 @@ const Venues = props => {
       <div className="container">
         <div className="columns">
           {venue.map(item => (
-            <div className="column" key={item.id}>
+            <div className="column" key={item._key}>
               <Link to={item.linkTo ? item.linkTo : '/'}>
                 <Card className="has-text-centered p-5">
                   <figure className="image is-128x128 m-auto">

@@ -46,7 +46,7 @@ const HeroBanner = ({ title, description, image, subtitle }) => {
           </div>
         </div>
       </div>
-      <SanityImage fluid={image.asset.id} width="5000" />
+      <SanityImage fluid={image.asset.id} width={5000} />
     </Wrapper>
   );
 };
