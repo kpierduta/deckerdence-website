@@ -1,5 +1,6 @@
 export default [
   { type: 'heroBlock' },
+  { type: 'hireHeroBlock' },
   { type: 'headingBlock' },
   { type: 'venueBlock' },
   { type: 'venueInfoBlock' },
