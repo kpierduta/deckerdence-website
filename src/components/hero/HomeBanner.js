@@ -9,7 +9,6 @@ const Wrapper = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-  overflow: hidden;
   max-height: 100%;
   .m-auto {
     margin: auto;
