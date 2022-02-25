@@ -14,6 +14,11 @@ export default {
       type: 'number',
     },
     {
+      name: 'mostPopular',
+      title: 'Most Popular',
+      type: 'boolean',
+    },
+    {
       name: 'hireOptionTitle',
       title: 'Hire Option Title',
       type: 'string',
@@ -95,11 +100,6 @@ export default {
       description: 'Describe Deckerdence',
     },
 
-    // {
-    //   title: 'First Vehicle Feature',
-    //   name: 'firstVehicleFeature',
-    //   type: 'vehicleFeature',
-    // },
     {
       title: 'First Feature',
       name: 'firstFeature',
