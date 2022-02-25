@@ -38,6 +38,7 @@ const HireOptionBlock = ({ description, linkTo }) => {
             if (!item) return null;
             return (
               <Stages
+                mostPopular={item.mostPopular}
                 key={item._id}
                 title={item.hireOptionTitle}
                 subtitle={item.hireOptionDescription}
@@ -57,8 +58,7 @@ const HireOptionBlock = ({ description, linkTo }) => {
           {linkTo && (
             <Link
               className="button is-danger mt-5 has-text-weight-bold"
-              to={linkTo}
-            >
+              to={linkTo}>
               Find Out More
             </Link>
           )}
