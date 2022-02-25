@@ -37,9 +37,10 @@ const HeroBanner = ({ title, description, image, subtitle }) => {
               <h1 className="title is-4 has-text-white has-text-weight-normal">
                 {title}
               </h1>
-              <h1 className="title is-3 has-text-white has-text-weight-semibold mb-6">
+              <h1 className="title is-3 is-size-5-mobile has-text-white has-text-weight-semibold">
                 {subtitle}
               </h1>
+              <div className="my-3" />
 
               <h1 className="subtitle is-5 has-text-white">{description}</h1>
             </div>
