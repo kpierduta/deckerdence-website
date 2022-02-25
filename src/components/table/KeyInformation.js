@@ -34,6 +34,37 @@ const TableRow = styled.tr`
 `;
 
 const IconContainer = styled.div`
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: ${props => props.theme.dangerLite};
+    color: ${props => props.theme.textBright};
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  .tooltip .tooltiptext::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+
   position: absolute;
   z-index: 9999;
   left: -15px;
@@ -63,7 +94,7 @@ const IconContainer = styled.div`
 const InfoItem = ({ title, text1, text2, hasIcon, iconInfo }) => (
   <TableRow>
     <th>
-      <p className="has-text-weight-normal">{title}</p>
+      <p className="has-text-weight-normal ml-4">{title}</p>
     </th>
     <td className="table-width has-text-centered">
       {text1 ? (
@@ -81,10 +112,12 @@ const InfoItem = ({ title, text1, text2, hasIcon, iconInfo }) => (
     </td>
     {hasIcon && (
       <IconContainer>
-        <span className="is-size-3">
-          <i className="fas fa-info-circle" />
-        </span>
-        <span className="tooltiptext is-size-7">{iconInfo}</span>
+        <div className="tooltip">
+          <span className="is-size-3 ">
+            <i className="fas fa-info-circle" />
+          </span>
+          <span className="tooltiptext is-size-7">{iconInfo}</span>
+        </div>
       </IconContainer>
     )}
   </TableRow>
