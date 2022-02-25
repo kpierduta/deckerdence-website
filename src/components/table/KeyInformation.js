@@ -50,15 +50,15 @@ const IconContainer = styled.div`
     position: absolute;
     z-index: 1;
     bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
+    left: 0%;
+    margin-left: -5px;
   }
 
   .tooltip .tooltiptext::after {
     content: '';
     position: absolute;
     top: 100%;
-    left: 50%;
+    left: 30%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;

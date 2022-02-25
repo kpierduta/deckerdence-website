@@ -30,15 +30,8 @@ const Section = styled.section`
   }
 `;
 
-const TableRow = styled.tr`
-  img {
-    width: 37px;
-    height: auto;
-  }
-`;
-
 const InfoItem = ({ title, text1, text2, text3 }) => (
-  <TableRow>
+  <tr>
     <th className="has-text-weight-normal">
       <p className="has-text-weight-normal is-size-3">{title}</p>
     </th>
@@ -57,7 +50,7 @@ const InfoItem = ({ title, text1, text2, text3 }) => (
         {text3}
       </p>
     </td>
-  </TableRow>
+  </tr>
 );
 
 const infoItems = [
