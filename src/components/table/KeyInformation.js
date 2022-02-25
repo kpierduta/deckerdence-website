@@ -49,7 +49,7 @@ const IconContainer = styled.div`
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    bottom: 150%;
+    bottom: 100%;
     left: 50%;
     margin-left: -60px;
   }
@@ -62,22 +62,21 @@ const IconContainer = styled.div`
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: black transparent transparent transparent;
+    border-color: ${props => props.theme.dangerLite} transparent transparent
+      transparent;
   }
 
   position: absolute;
   z-index: 9999;
   left: -15px;
   top: 10px;
-  @media only screen and (max-width: 768px) {
-    left: 0px;
-  }
+
   span {
     color: ${props => props.theme.dangerLite};
   }
   .tooltiptext {
     visibility: hidden;
-    width: 180px;
+    width: 200px;
     background-color: ${props => props.theme.dangerLite};
     color: ${props => props.theme.textBright};
     text-align: center;
