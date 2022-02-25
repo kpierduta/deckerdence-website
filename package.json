@@ -45,6 +45,7 @@
     "react-modal-image": "^2.5.0",
     "react-slick": "^0.25.2",
     "react-youtube": "^7.11.2",
+    "sharp": "^0.30.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3"
   },

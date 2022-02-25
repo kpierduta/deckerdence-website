@@ -6,12 +6,14 @@ import { PortableText } from '../elements';
 
 const query = graphql`
   query hireOptionQuery {
-    allSanityVehicleHirePage {
+    allSanityVehicleHirePage(sort: { fields: [order] }) {
       nodes {
         _id
         slug {
           current
         }
+        order
+        mostPopular
         hireOptionPrice
         hireOptionTitle
         hireOptionSubtitle

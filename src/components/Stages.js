@@ -60,7 +60,7 @@ const Stages = ({ title, image, price, subtitle, mostPopular }) => (
       <Content>
         {mostPopular && (
           <PopularIconWrapper className="has-text-centered">
-            <img src="images/star.svg" alt="most-popular" width="40px" />
+            <img src="/images/star.svg" alt="most-popular" width="40px" />
             <p className="is-size-5 has-text-weight-bold">Most Popular</p>
           </PopularIconWrapper>
         )}
