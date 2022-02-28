@@ -28,6 +28,12 @@ const Wrapper = styled.div`
     font-weight: 600;
     font-size: 3rem;
   }
+
+  .content h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: ${props => (props.light ? '#fff' : '#000')};
+  }
 `;
 
 const PortableText = ({ children, light, className }) => {

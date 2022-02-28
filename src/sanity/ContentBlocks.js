@@ -15,8 +15,11 @@ import StatsTable from '../components/table/StatsTable';
 
 import RevenueBlock from '../components/table/RevenueBlock';
 import HireOptionBlock from '../components/hire/HireOptionBlock';
+import HireHero from '../components/hero/HireHero';
 import OwnerBlock from '../components/team/OwnerBlock';
 import ContactBlock from '../components/contact/ContactBlock';
+import DetailsCardSection from '../components/DetailsCardSection';
+import VenueSection from '../components/VenueSection';
 
 // sanity blocks
 const Blocks = {
@@ -34,6 +37,9 @@ const Blocks = {
   formBlock: ContactBlock,
   revenueBlock: RevenueBlock,
   yearlyRevenueBlock: StatsTable,
+  hireHeroBlock: HireHero,
+  detailsCard: DetailsCardSection,
+  eventBlock: VenueSection,
 };
 
 const ContentBlocks = type => {

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import BlockContent from '@sanity/block-content-to-react';
+
+import { PortableText } from './elements';
 
 const Section = styled.div`
     background-image: url('${props => props.boxImage}');
@@ -18,7 +19,7 @@ const Section = styled.div`
 const DetailsCard = ({ data, boxImage }) => {
   return (
     <Section className="hero-body" boxImage={boxImage}>
-      <BlockContent blocks={data} />
+      <PortableText>{data}</PortableText>
     </Section>
   );
 };

@@ -15,7 +15,7 @@ const Section = styled.div`
     justify-content: ${props => (props.flex ? 'flex-end' : 'flex-start')};
   }
   .hero {
-    background-image: url(${props => props.frame});
+    background-image: url('/images/frame.png');
     background-size: 100% 100%;
   }
   .hero.is-medium .hero-body {
@@ -25,29 +25,29 @@ const Section = styled.div`
     padding-left: 4rem !important;
   }
   p {
-    color: ${props => (props.color ? '#fff' : '#2c2c2a')} !important;
+    color: #fff !important;
   }
 `;
 
-const VenueSection = ({ frame, text, frameBgImage, flex, color }) => (
-  <Section
-    className="section is-medium"
-    frameBgImage={frameBgImage}
-    flex={flex}
-    color={color}
-    frame={frame}>
-    <div className="container">
-      <div className="columns is-vcentered">
-        <div className="column is-5 hero is-medium">
-          <div className="hero-body">
-            <p className="title is-4 is-size-6-mobile text has-text-centered has-text-weight-semibold">
-              {text}
-            </p>
+const VenueSection = ({ title, image, color }) => {
+  return (
+    <Section
+      className="section is-medium"
+      frameBgImage={image.asset.url}
+      flex
+      color={color}>
+      <div className="container">
+        <div className="columns is-vcentered">
+          <div className="column is-5 hero is-medium">
+            <div className="hero-body">
+              <p className="title is-4 is-size-6-mobile text has-text-centered has-text-weight-semibold">
+                {title}
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </Section>
-);
-
+    </Section>
+  );
+};
 export default VenueSection;

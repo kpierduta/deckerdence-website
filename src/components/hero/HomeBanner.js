@@ -2,51 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import SanityImage from '../global/SanityImage';
 
-const Wrapper = styled.div`
-  border-radius: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  max-height: 100%;
-  .m-auto {
-    margin: auto;
-  }
-  .text-wrapper {
-    align-items: center !important;
-    justify-content: center !important;
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    z-index: 10;
-  }
-`;
+const Wrapper = styled.div``;
 
-const HeroBanner = ({ title, description, image, subtitle }) => {
+const HeroBanner = ({ image }) => {
+  console.log('image', image);
   return (
-    <Wrapper className="is-relative">
-      <div className="w-full">
-        <div className="has-text-center text-white text-wrapper">
-          <div className="columns is-centered">
-            <div className="column is-9 has-text-centered">
-              <h1 className="title is-4 has-text-white has-text-weight-normal">
-                {title}
-              </h1>
-              <h1 className="title is-3 is-size-5-mobile has-text-white has-text-weight-semibold">
-                {subtitle}
-              </h1>
-              <div className="my-3" />
-
-              <h1 className="subtitle is-5 has-text-white">{description}</h1>
-            </div>
-          </div>
+    <Wrapper>
+      {image && image[0] && (
+        <SanityImage fluid={image[0].asset.id} width={5000} />
+      )}
+      <div className="columns mt-4">
+        <div className="column">
+          {image && image[1] && (
+            <SanityImage fluid={image[1].asset.id} width={5000} />
+          )}
+        </div>
+        <div className="column">
+          {image && image[2] && (
+            <SanityImage fluid={image[2].asset.id} width={5000} />
+          )}
         </div>
       </div>
-      <SanityImage fluid={image.asset.id} width={5000} />
     </Wrapper>
   );
 };

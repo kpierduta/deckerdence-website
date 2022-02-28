@@ -45,7 +45,7 @@ const PopularIconWrapper = styled.div`
   }
 `;
 
-const Stages = ({ title, image, price, subtitle, mostPopular }) => (
+const Stages = ({ title, image, price, subtitle, guests, mostPopular }) => (
   <Section className="column is-flex">
     <div className="card-content">
       <div className="card-image">
@@ -66,7 +66,7 @@ const Stages = ({ title, image, price, subtitle, mostPopular }) => (
         )}
         <h2 className="title py-3 is-4 has-text-centered">{title}</h2>
         <p className="subtitle is-5 has-text-weight-normal has-text-centered">
-          150 - 300 guests
+          {guests} guests
         </p>
         <p className="subtitle is-5 has-text-weight-normal has-text-centered">
           {subtitle}
