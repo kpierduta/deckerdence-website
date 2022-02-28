@@ -32,6 +32,9 @@ const Section = styled.div`
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+`;
+
+const Figure = styled.figure`
   img {
     object-fit: cover;
     height: 450px !important;
@@ -43,13 +46,13 @@ const GalleryItem = ({ data }) => {
   return (
     <Section className="column is-4">
       <div className="main" onClick={() => setActive(true)} role="button">
-        <figure className="image">
+        <Figure className="image">
           <SanityImage
             fluid={data.image.asset.id}
             alt={data.title}
             width={2000}
           />
-        </figure>
+        </Figure>
         <div className="overlay">
           <div className="text">
             <h1 className="title is-4 has-text-white has-text-centered">
@@ -62,11 +65,7 @@ const GalleryItem = ({ data }) => {
         <div className="modal-background" />
         <div className="modal-content">
           <figure className="image">
-            <SanityImage
-              fluid={data.image.asset.id}
-              alt={data.title}
-              width={2000}
-            />
+            <SanityImage fluid={data.image.asset.id} alt={data.title} />
           </figure>
         </div>
         <button

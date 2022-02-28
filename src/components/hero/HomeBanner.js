@@ -2,10 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import SanityImage from '../global/SanityImage';
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  img {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+`;
 
 const HeroBanner = ({ image }) => {
-  console.log('image', image);
   return (
     <Wrapper>
       {image && image[0] && (
