@@ -42,8 +42,7 @@ const Footer = () => {
                 <div
                   className={`column is-3 has-text-centered-mobile ${item.heading ===
                     'Third column' && 'has-text-right'}`}
-                  key={item._key}
-                >
+                  key={item._key}>
                   {item.footerOption.map(el => {
                     return (
                       <Link to={el.linkTo || '/'} key={el.label}>
@@ -56,8 +55,7 @@ const Footer = () => {
             return (
               <div
                 key={item._key}
-                className="column is-6 is-flex is-justify-content-center is-align-items-end"
-              >
+                className="column is-6 is-flex is-justify-content-center is-align-items-end">
                 <SocialIcons />
               </div>
             );

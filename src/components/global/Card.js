@@ -20,13 +20,11 @@ const Card = ({ data }) => {
     <section
       className={`section  ${
         data.columnReverse ? 'has-background-grey-teal' : 'has-background-white'
-      }`}
-    >
+      }`}>
       <div className="container">
         <div
           className={`columns is-vcentered  ${data.columnReverse &&
-            'is-flex-direction-row-reverse'}`}
-        >
+            'is-flex-direction-row-reverse'}`}>
           <div className="column is-4">
             {data.image && (
               <SanityImage
@@ -43,8 +41,7 @@ const Card = ({ data }) => {
                 <h1
                   className={`title is-4 mt-3  ${
                     data.columnReverse ? 'has-text-white' : 'has-text-black'
-                  }`}
-                >
+                  }`}>
                   {data.title}
                 </h1>
               )}
@@ -55,15 +52,13 @@ const Card = ({ data }) => {
                 <p
                   className={`subtitle mr-3 ${
                     data.columnReverse ? 'has-text-white' : 'has-text-black'
-                  }`}
-                >
+                  }`}>
                   {data.name}
                 </p>
                 <p
                   className={`subtitle ${
                     data.columnReverse ? 'has-text-white' : 'has-text-black'
-                  }`}
-                >
+                  }`}>
                   {data.date}
                 </p>
               </div>

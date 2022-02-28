@@ -10,8 +10,7 @@ const Wrapper = styled.h1`
 const Title = ({ children, dark, className }) => (
   <Wrapper
     className={`title is-uppercase has-text-weight-normal is-size-3-mobile ${className}`}
-    dark={dark}
-  >
+    dark={dark}>
     {children}
   </Wrapper>
 );

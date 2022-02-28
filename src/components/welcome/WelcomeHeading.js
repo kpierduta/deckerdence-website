@@ -16,8 +16,7 @@ const WelcomeHeading = ({ title, description, variant, linkTo }) => (
   <section
     className={`section ${
       !variant ? 'has-background-dark' : 'has-background-danger-darker'
-    }`}
-  >
+    }`}>
     <Link to={`/${linkTo || '#'}`}>
       <div className="container has-text-centered has-text-white">
         <Heading>{title}</Heading>
