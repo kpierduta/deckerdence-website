@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ButtonGlobal from '../elements/ButtonGlobal';
 
 const Section = styled.section`
   h3 {
@@ -90,7 +91,7 @@ const IconContainer = styled.div`
   }
 `;
 
-const InfoItem = ({ title, text1, text2, hasIcon, iconInfo }) => (
+const InfoItem = ({ title, text1, text2, text3, hasIcon, iconInfo }) => (
   <TableRow>
     <th>
       <p className="has-text-weight-normal ml-4">{title}</p>
@@ -109,6 +110,13 @@ const InfoItem = ({ title, text1, text2, hasIcon, iconInfo }) => (
         <img src="images/icon/check.png" alt="status" />
       )}
     </td>
+    <td className="table-width has-text-centered">
+      {text3 ? (
+        <p>{text3}</p>
+      ) : (
+        <img src="images/icon/check.png" alt="status" />
+      )}
+    </td>
     {hasIcon && (
       <IconContainer>
         <div className="tooltip">
@@ -120,6 +128,12 @@ const InfoItem = ({ title, text1, text2, hasIcon, iconInfo }) => (
       </IconContainer>
     )}
   </TableRow>
+);
+
+const TableButton = () => (
+  <th className="has-text-centered">
+    <ButtonGlobal title="Learn More" />
+  </th>
 );
 
 const KeyInformation = ({ tableInfo = [] }) => {
@@ -134,17 +148,30 @@ const KeyInformation = ({ tableInfo = [] }) => {
                   KEY INFORMATION
                 </h3>
               </th>
-              <th className="is-uppercase">DECKERDENCE ESSENTIALS & CLASSIC</th>
-              <th className="is-uppercase">deckerdence ultimate</th>
+              <th className="is-uppercase">Ultimate Decerdence</th>
+              <th className="is-uppercase">Classic Deckerdence </th>
+              <th className="is-uppercase">Essential Deckerdence</th>
             </tr>
           </thead>
+          <tfoot>
+            <tr>
+              <th>
+                Bespoke elements can be added to each Deckerdence option to make
+                Deckerdence your perfect fit
+              </th>
+              <TableButton />
+              <TableButton />
+              <TableButton />
+            </tr>
+          </tfoot>
           <tbody>
             {tableInfo.map(item => (
               <InfoItem
                 key={item._key}
                 title={item.keyInfo}
-                text1={item.classicInfo}
-                text2={item.essentialInfo}
+                text1={item.ultimateInfo}
+                text2={item.classicInfo}
+                text3={item.essentialInfo}
                 hasIcon={item.hasIcon}
                 iconInfo={item.iconInfo}
               />

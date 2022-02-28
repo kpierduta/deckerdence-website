@@ -1,20 +1,13 @@
 import React from 'react';
-
-import styled from 'styled-components';
-
-const Button = styled.button`
-  background: transparent;
-  border: 2px solid #fff;
-  :hover,
-  :focus {
-    border: 2px solid #fff;
-  }
-`;
+import { Link } from 'gatsby';
 
 const ButtonGlobal = ({ title }) => (
-  <Button className="button is-outlined is-medium is-radiusless" type="button">
+  <Link
+    className="button is-outlined is-medium has-background-danger-ter is-radiusless"
+    type="button"
+  >
     <span className="title is-6 is-uppercase has-text-white">{title}</span>
-  </Button>
+  </Link>
 );
 
 export default ButtonGlobal;
