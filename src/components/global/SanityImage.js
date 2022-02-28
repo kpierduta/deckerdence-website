@@ -5,7 +5,14 @@ import { getGatsbyImageData } from 'gatsby-source-sanity';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import config from '../../utils/config';
 
-const SanityImage = ({ fluid, gatsbyImageData, alt, gatsbyImage, width }) => {
+const SanityImage = ({
+  fluid,
+  gatsbyImageData,
+  alt,
+  gatsbyImage,
+  width,
+  ...props
+}) => {
   if (gatsbyImage) {
     const sanityConfig = {
       projectId: config.sanityId,
@@ -17,13 +24,13 @@ const SanityImage = ({ fluid, gatsbyImageData, alt, gatsbyImage, width }) => {
       { width: 1600 },
       sanityConfig,
     );
-    return <GatsbyImage image={imageData} alt={alt} />;
+    return <GatsbyImage image={imageData} alt={alt} {...props} />;
   }
 
   if (gatsbyImageData) {
     const image = getImage(gatsbyImageData);
 
-    return <GatsbyImage image={image} alt={alt || ''} />;
+    return <GatsbyImage image={image} alt={alt || ''} {...props} />;
   }
 
   if (fluid && width) {
@@ -34,7 +41,7 @@ const SanityImage = ({ fluid, gatsbyImageData, alt, gatsbyImage, width }) => {
 
     const imageData = getGatsbyImageData(fluid, { width }, sanityConfig);
 
-    return <GatsbyImage image={imageData} alt={alt} width={width} />;
+    return <GatsbyImage image={imageData} alt={alt} width={width} {...props} />;
   }
 
   return null;

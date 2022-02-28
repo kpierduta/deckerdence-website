@@ -2,11 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  @media screen and (min-width: 1024px) {
-    padding: 13rem 1.5rem !important;
-  }
-  @media only screen and (min-width: 1408px) {
-    padding: 16rem 1.5rem !important;
+  @media only screen and (min-width: 1409px) {
+    height: 100vh;
   }
   background-image: url(${props => props.frameBgImage});
   background-repeat: no-repeat;
@@ -14,7 +11,7 @@ const Section = styled.div`
   .columns {
     justify-content: ${props => (props.flex ? 'flex-end' : 'flex-start')};
   }
-  .hero {
+  .column {
     background-image: url('/images/frame.png');
     background-size: 100% 100%;
   }
@@ -32,18 +29,17 @@ const Section = styled.div`
 const VenueSection = ({ title, image, color }) => {
   return (
     <Section
-      className="section is-medium"
+      className="section hero is-medium"
       frameBgImage={image.asset.url}
       flex
-      color={color}>
-      <div className="container">
-        <div className="columns is-vcentered">
-          <div className="column is-5 hero is-medium">
-            <div className="hero-body">
-              <p className="title is-4 is-size-6-mobile text has-text-centered has-text-weight-semibold">
-                {title}
-              </p>
-            </div>
+      color={color}
+    >
+      <div className="columns is-vcentered">
+        <div className="column is-5">
+          <div className="hero-body">
+            <p className="title is-4 is-size-6-mobile text has-text-centered has-text-weight-semibold">
+              {title}
+            </p>
           </div>
         </div>
       </div>
