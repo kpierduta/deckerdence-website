@@ -25,12 +25,12 @@ function Seo({ description, lang = 'en', meta, title, image, keywords }) {
       titleTemplate={title ? `%s | ${description}` : null}
       meta={[
         {
-          name: `description`,
-          content: description,
-        },
-        {
           property: `og:title`,
           content: title,
+        },
+        {
+          name: `description`,
+          content: description,
         },
         {
           property: `og:description`,
