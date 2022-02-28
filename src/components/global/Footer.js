@@ -45,7 +45,7 @@ const Footer = () => {
                   key={item._key}>
                   {item.footerOption.map(el => {
                     return (
-                      <Link to={el.linkTo || '/'} key={el.label}>
+                      <Link to={`/${el.linkTo}`} key={el.label}>
                         <h4 className="title is-uppercase pb-5">{el.label}</h4>
                       </Link>
                     );

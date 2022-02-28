@@ -10,7 +10,7 @@ import PartiesHero from '../components/PartiesHero';
 import PageHeading from '../components/PageHeading';
 import HireOptionTestimonial from '../components/HireOptionTestimonial';
 import DetailsCardSection from '../components/DetailsCardSection';
-import VenueSection from '../components/VenueSection';
+// import VenueSection from '../components/VenueSection';
 import GalleryItem from '../components/GalleryItem';
 import Contact from '../components/Contact';
 
@@ -151,7 +151,7 @@ const MainPage = ({ data }) => {
         ))}
       </Section>
       <DetailsCardSection data={page} />
-      {page.Features.items.map(item => (
+      {/* {page.Features.items.map(item => (
         <VenueSection
           key={item._key}
           color={item.hasTextWhite}
@@ -161,7 +161,7 @@ const MainPage = ({ data }) => {
           frameBgImage={item.featuresBackgroundImage.asset.url}
           frame={item.featuresFrameImage.asset.url}
         />
-      ))}
+      ))} */}
 
       <GalleryWrapper className="columns is-variable is-3 is-multiline">
         {page.gallery.map(items => (

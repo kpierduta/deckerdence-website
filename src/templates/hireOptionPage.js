@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 import HireHero from '../components/HireHero';
 import TileItem from '../components/TileItem';
 import BlogCategoryItem from '../components/BlogCategoryItem';
-import VenueSection from '../components/VenueSection';
+// import VenueSection from '../components/VenueSection';
 import Contact from '../components/Contact';
 import FestivalIcon from '../components/FestivalIcon';
 
@@ -127,7 +127,7 @@ const HireOptionPage = ({ data }) => {
           </div>
         </div>
       </section>
-      <VenueSection frameBgImage={hire.firstFeature.asset.url} />
+      {/* <VenueSection frameBgImage={hire.firstFeature.asset.url} /> */}
       <section className="section">
         <div className="container">
           <h1 className="title is-4 has-text-centered is-uppercase">
@@ -147,9 +147,9 @@ const HireOptionPage = ({ data }) => {
           </h1>
         </div>
       </section>
-      <VenueSection frameBgImage={hire.secondFeature.asset.url} />
+      {/* <VenueSection frameBgImage={hire.secondFeature.asset.url} /> */}
       <TileItem data={hire} />
-      <VenueSection frameBgImage={hire.thirdFeature.asset.url} />
+      {/* <VenueSection frameBgImage={hire.thirdFeature.asset.url} /> */}
       <Contact avatar={hire.downloadShowcase.asset.url} />
     </Layout>
   );
