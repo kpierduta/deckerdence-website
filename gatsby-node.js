@@ -31,14 +31,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-      allSanityMainPage {
-        nodes {
-          _id
-          slug {
-            current
-          }
-        }
-      }
+
       allSanityGalleryPage {
         nodes {
           _id
@@ -74,7 +67,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const page = result.data.allSanityPages.nodes || [];
   const redirects = result.data.allSanityCreateRedirect.nodes || [];
   const hirePages = result.data.allSanityVehicleHirePage.nodes || [];
-  const mainPage = result.data.allSanityMainPage.nodes || [];
+  // const mainPage = result.data.allSanityMainPage.nodes || [];
   const galleryPage = result.data.allSanityGalleryPage.nodes || [];
   const blogPage = result.data.allSanityBlogPage.nodes || [];
   const agreement = result.data.allSanityAgreement.nodes || [];
@@ -110,19 +103,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   });
 
-  mainPage.forEach(item => {
-    const slug = item.slug.current;
-    const pageTemplate = path.resolve('./src/templates/mainPage.js');
-    console.info(`Creating main page for: "${item.title}"...`);
-    createPage({
-      path: slug,
-      component: pageTemplate,
-      context: {
-        id: item._id,
-        slug,
-      },
-    });
-  });
+  // mainPage.forEach(item => {
+  //   const slug = item.slug.current;
+  //   const pageTemplate = path.resolve('./src/templates/mainPage.js');
+  //   console.info(`Creating main page for: "${item.title}"...`);
+  //   createPage({
+  //     path: slug,
+  //     component: pageTemplate,
+  //     context: {
+  //       id: item._id,
+  //       slug,
+  //     },
+  //   });
+  // });
 
   galleryPage.forEach(item => {
     const slug = item.slug.current;
