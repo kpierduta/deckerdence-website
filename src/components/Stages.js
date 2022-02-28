@@ -45,38 +45,40 @@ const PopularIconWrapper = styled.div`
   }
 `;
 
-const Stages = ({ title, image, price, subtitle, guests, mostPopular }) => (
-  <Section className="column is-flex">
-    <div className="card-content">
-      <div className="card-image">
-        <ImageWrapper className="media align ">
-          <SanityImage
-            className="is-rounded"
-            gatsbyImageData={image}
-            alt="IconImage"
-          />
-        </ImageWrapper>
+const Stages = ({ title, image, price, subtitle, guests, mostPopular }) => {
+  return (
+    <Section className="column is-flex">
+      <div className="card-content">
+        <div className="card-image">
+          <ImageWrapper className="media align ">
+            <SanityImage
+              className="is-rounded"
+              gatsbyImageData={image}
+              alt="IconImage"
+            />
+          </ImageWrapper>
+        </div>
+        <Content>
+          {mostPopular && (
+            <PopularIconWrapper className="has-text-centered">
+              <img src="/images/star.svg" alt="most-popular" width="40px" />
+              <p className="is-size-5 has-text-weight-bold">Most Popular</p>
+            </PopularIconWrapper>
+          )}
+          <h2 className="title py-3 is-4 has-text-centered">{title}</h2>
+          <p className="subtitle is-5 has-text-weight-normal has-text-centered">
+            {guests} guests
+          </p>
+          <p className="subtitle is-5 has-text-weight-normal has-text-centered">
+            {subtitle}
+          </p>
+          <p className="subtitle is-5 has-text-weight-bold has-text-centered">
+            {price}
+          </p>
+        </Content>
       </div>
-      <Content>
-        {mostPopular && (
-          <PopularIconWrapper className="has-text-centered">
-            <img src="/images/star.svg" alt="most-popular" width="40px" />
-            <p className="is-size-5 has-text-weight-bold">Most Popular</p>
-          </PopularIconWrapper>
-        )}
-        <h2 className="title py-3 is-4 has-text-centered">{title}</h2>
-        <p className="subtitle is-5 has-text-weight-normal has-text-centered">
-          {guests} guests
-        </p>
-        <p className="subtitle is-5 has-text-weight-normal has-text-centered">
-          {subtitle}
-        </p>
-        <p className="subtitle is-5 has-text-weight-bold has-text-centered">
-          {price}
-        </p>
-      </Content>
-    </div>
-  </Section>
-);
+    </Section>
+  );
+};
 
 export default Stages;
