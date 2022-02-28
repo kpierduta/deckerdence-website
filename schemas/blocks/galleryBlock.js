@@ -14,6 +14,11 @@ export default {
         },
       ],
     },
+    {
+      name: 'linkTo',
+      title: 'Link to',
+      type: 'string',
+    },
   ],
   preview: {
     select: {

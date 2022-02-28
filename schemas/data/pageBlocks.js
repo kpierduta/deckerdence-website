@@ -14,4 +14,6 @@ export default [
   { type: 'formBlock' },
   { type: 'hireOptionBlock' },
   { type: 'tableBlock' },
+  { type: 'detailsCard' },
+  { type: 'eventBlock' },
 ];

@@ -44,6 +44,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'guests',
+      title: 'Guests',
+      type: 'string',
+    },
+    {
       name: 'hireOptionBlackImage',
       title: 'Hire Option Black Image',
       type: 'image',

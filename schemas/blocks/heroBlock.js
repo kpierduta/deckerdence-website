@@ -1,6 +1,6 @@
 export default {
   name: 'heroBlock',
-  title: '🏘 Home hero',
+  title: '🏘 Images Block',
   type: 'object',
   description: 'A section containing first basic content.',
   fields: [
@@ -13,7 +13,8 @@ export default {
     {
       name: 'image',
       title: 'Image',
-      type: 'image',
+      type: 'array',
+      of: [{ type: 'image' }],
     },
   ],
   preview: {
@@ -23,7 +24,7 @@ export default {
     },
     prepare({ title, image }) {
       return {
-        title: title || 'Hero Block',
+        title: title || 'Images Block',
         media: image,
       };
     },
