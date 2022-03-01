@@ -18,15 +18,18 @@ const Section = styled.div`
   }
 `;
 
-const HireHero = ({ image, title, description }) => {
+const HireHero = ({ image, title, subtitle, description }) => {
   return (
     <Section className="section hero is-medium" bgImage={image.asset.url}>
       <div className="hero-body">
         <div className="container">
           <div className="columns is-centered">
             <div className="column is-9 has-text-centered">
-              <h1 className="title is-2 has-text-white has-text-weight-semibold">
+              <h1 className="title is-4 has-text-white has-text-weight-normal">
                 {title}
+              </h1>
+              <h1 className="title is-3 has-text-white has-text-weight-semibold my-6">
+                {subtitle}
               </h1>
 
               <h1 className="subtitle is-5 has-text-white">{description}</h1>
