@@ -35,10 +35,11 @@ const Content = styled.div`
   margin-top: 1.5rem;
   padding-bottom: 1rem;
   padding: 1rem;
+  min-height: 300px;
 `;
 
 const PopularIconWrapper = styled.div`
-  margin-top: -2.5rem;
+  margin-top: ${props => props.marginTop};
   z-index: 9999;
   p {
     color: ${props => props.theme.dangerLite};
@@ -60,10 +61,16 @@ const Stages = ({ title, image, price, subtitle, guests, mostPopular }) => {
         </div>
         <Content>
           {mostPopular && (
-            <PopularIconWrapper className="has-text-centered">
+            <PopularIconWrapper
+              className="has-text-centered"
+              marginTop="-2.5rem"
+            >
               <img src="/images/star.svg" alt="most-popular" width="40px" />
               <p className="is-size-5 has-text-weight-bold">Most Popular</p>
             </PopularIconWrapper>
+          )}
+          {!mostPopular && (
+            <PopularIconWrapper marginTop="2.5rem"> </PopularIconWrapper>
           )}
           <h2 className="title py-3 is-4 has-text-centered">{title}</h2>
           <p className="subtitle is-5 has-text-weight-normal has-text-centered">
