@@ -98,7 +98,8 @@ const SocialIcons = () => {
           target="_blank"
           rel="noreferrer"
           key={item.id}
-          className="p-3">
+          className="p-1"
+        >
           <Image src={item.icon} alt={item.name} />
         </a>
       ))}
