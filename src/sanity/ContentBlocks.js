@@ -21,6 +21,7 @@ import ContactBlock from '../components/contact/ContactBlock';
 import DetailsCardSection from '../components/DetailsCardSection';
 import VenueSection from '../components/VenueSection';
 import StagesCard from '../components/StagesCard';
+import CategoryBlock from '../components/CategoryBlock';
 
 // sanity blocks
 const Blocks = {
@@ -42,6 +43,7 @@ const Blocks = {
   detailsCard: DetailsCardSection,
   eventBlock: VenueSection,
   infoCardBlock: StagesCard,
+  categoryBlock: CategoryBlock,
 };
 
 const ContentBlocks = type => {
