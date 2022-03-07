@@ -7,6 +7,7 @@ export default [
   { type: 'testimonialBlock' },
   { type: 'galleryBlock' },
   { type: 'contentBlock' },
+  { type: 'infoCardBlock' },
   { type: 'stepBlock' },
   { type: 'yearlyRevenueBlock' },
   { type: 'ownerBlock' },
