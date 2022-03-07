@@ -34,6 +34,8 @@ import galleryItem from './blocks/galleryItem';
 import galleryBlock from './blocks/galleryBlock';
 import infoCardItem from './blocks/infoCardItem';
 import infoCardBlock from './blocks/infoCardBlock';
+import categoryItem from './blocks/categoryItem';
+import categoryBlock from './blocks/categoryBlock';
 import contentBlock from './blocks/contentBlock';
 import stepBlockItem from './blocks/stepBlockItem';
 import stepBlock from './blocks/stepBlock';
@@ -113,6 +115,8 @@ export default createSchema({
     galleryBlock,
     infoCardItem,
     infoCardBlock,
+    categoryItem,
+    categoryBlock,
     contentBlock,
     stepBlock,
     stepBlockItem,
