@@ -20,6 +20,7 @@ import OwnerBlock from '../components/team/OwnerBlock';
 import ContactBlock from '../components/contact/ContactBlock';
 import DetailsCardSection from '../components/DetailsCardSection';
 import VenueSection from '../components/VenueSection';
+import StagesCard from '../components/StagesCard';
 
 // sanity blocks
 const Blocks = {
@@ -40,6 +41,7 @@ const Blocks = {
   hireHeroBlock: HireHero,
   detailsCard: DetailsCardSection,
   eventBlock: VenueSection,
+  infoCardBlock: StagesCard,
 };
 
 const ContentBlocks = type => {
