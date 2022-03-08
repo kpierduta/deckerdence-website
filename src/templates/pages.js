@@ -16,10 +16,15 @@ const Pages = ({ data }) => {
         title={page.title}
         description={page.seoDescription}
         keywords={page.seoKeywords}
-        image={page.seoFeaturedImage.asset.url}
+        image={
+          page.seoFeaturedImage &&
+          page.seoFeaturedImage.asset &&
+          page.seoFeaturedImage.asset.url
+        }
       />
 
       {page.contentBlocks &&
+        page.contentBlocks &&
         page.contentBlocks.map((block, idx) =>
           React.createElement(ContentBlocks(block._type), {
             idx,
