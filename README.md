@@ -1,4 +1,4 @@
-# Deckerdence Website
+# Deckerdence
 
 A starting point using Deckerdence, bundled with awesome GatsbyJs v2.
 
