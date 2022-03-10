@@ -14,6 +14,16 @@ export default {
         },
       ],
     },
+    {
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+    },
+    {
+      name: 'subTitle',
+      title: 'Sub Title',
+      type: 'string',
+    },
   ],
   preview: {
     select: {
