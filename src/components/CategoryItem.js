@@ -19,9 +19,8 @@ const SideImage = styled.div`
 `;
 
 const CategoryItem = ({ item }) => {
-  console.log(item, 'item');
   return (
-    <div className="column has-text-centered">
+    <div className="column has-text-centered pb-6">
       <div className="columns">
         <Column className="column is-flex">
           <div>

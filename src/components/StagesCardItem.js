@@ -87,15 +87,19 @@ const StagesCardItem = ({
             <PopularIconWrapper marginTop="2.5rem"> </PopularIconWrapper>
           )}
           <h2 className="title py-3 is-4 has-text-centered">{title}</h2>
-          <p className="subtitle is-5 has-text-weight-normal has-text-centered">
-            {guests} guests
-          </p>
+          {guests && (
+            <p className="subtitle is-5 has-text-weight-normal has-text-centered">
+              {guests} guests
+            </p>
+          )}
           <p className="subtitle is-5 has-text-weight-normal has-text-centered">
             {subtitle}
           </p>
-          <p className="subtitle is-5 has-text-weight-bold has-text-centered">
-            {price}
-          </p>
+          {price && (
+            <p className="subtitle is-5 has-text-weight-bold has-text-centered">
+              £{price}
+            </p>
+          )}
         </Content>
       </div>
     </Section>
