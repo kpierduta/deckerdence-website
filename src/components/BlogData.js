@@ -27,7 +27,6 @@ const Wrapper = styled.div`
 `;
 
 const BlogData = ({ title, date, boxImage, color, link }) => {
-  console.log(date.substr(3, date.length), '');
   return (
     <Wrapper className="tile is-child box" boxImage={boxImage} color={color}>
       <p className="title is-4 has-text-weight-semibold has-text-centered text">
@@ -40,7 +39,8 @@ const BlogData = ({ title, date, boxImage, color, link }) => {
         <Link
           to={link}
           className="button is-normal title is-4 has-text-weight-normal is-family-secondary text"
-          type="button">
+          type="button"
+        >
           READ MORE
         </Link>
       </div>

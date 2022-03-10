@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
@@ -65,7 +66,7 @@ const BlogPage = ({ data }) => {
           {blog.map(items => {
             if (
               category === 'ALL CATEGORIES' ||
-              items.node.categorySet === category
+              items.node.categorySet == category
             ) {
               return (
                 <div
@@ -74,7 +75,8 @@ const BlogPage = ({ data }) => {
                     items.node.isSizeHalf
                       ? 'column is-6 is-flex'
                       : 'column is-3 is-flex'
-                  }>
+                  }
+                >
                   <BlogData
                     color={items.node.hasTextBlack}
                     title={items.node.title}
