@@ -1,6 +1,6 @@
 export default {
   name: 'infoCardBlock',
-  title: '🍀 Info Card block',
+  title: '🌠 Info Card block',
   type: 'object',
   fields: [
     {
@@ -21,7 +21,7 @@ export default {
     },
     prepare({ title }) {
       return {
-        title: title || '🍀 Info Card Block',
+        title: title || '🌠 Info Card Block',
       };
     },
   },

@@ -1,6 +1,6 @@
 export default {
   name: 'categoryBlock',
-  title: '🍀 Category Block',
+  title: '🤿 Category Block',
   type: 'object',
   fields: [
     {
@@ -31,7 +31,7 @@ export default {
     },
     prepare({ title }) {
       return {
-        title: title || '🍀 Category Block',
+        title: title || '🤿 Category Block',
       };
     },
   },
