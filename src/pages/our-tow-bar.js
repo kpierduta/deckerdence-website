@@ -102,7 +102,8 @@ const ExtraPage = ({ data }) => {
           <Section
             className="section hero is-medium is-block"
             bgImage={items.backgroundImage.asset.url}
-            flex={items.itemRight}>
+            flex={items.itemRight}
+          >
             <div className="container">
               <div className="columns is-vcentered">
                 <div className="column is-8">
@@ -113,7 +114,7 @@ const ExtraPage = ({ data }) => {
                     <h1 className="title is-4 is-size-6-touch is-uppercase has-text-centered has-text-white">
                       {items.subtitle}
                     </h1>
-                    <p className="subtitle is-6 has-text-centered has-text-white">
+                    <p className="subtitle is-4 has-text-centered has-text-white">
                       {items.description}
                     </p>
                     <div className="has-text-centered button-wrapper">
