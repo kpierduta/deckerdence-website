@@ -152,7 +152,7 @@ const KeyInformation = ({
                   KEY INFORMATION
                 </h3>
               </th>
-              <th className="is-uppercase">Ultimate Decerdence</th>
+              <th className="is-uppercase">Ultimate Deckerdence</th>
               <th className="is-uppercase">Classic Deckerdence </th>
               <th className="is-uppercase">Essential Deckerdence</th>
             </tr>
