@@ -9,6 +9,8 @@ import PageHeading from '../components/PageHeading';
 import BlogCategory from '../components/BlogCategory';
 import BlogData from '../components/BlogData';
 import CalendarSlider from '../components/CalendarSlider';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Section = styled.section`
   .column {
@@ -75,8 +77,7 @@ const BlogPage = ({ data }) => {
                     items.node.isSizeHalf
                       ? 'column is-6 is-flex'
                       : 'column is-3 is-flex'
-                  }
-                >
+                  }>
                   <BlogData
                     color={items.node.hasTextBlack}
                     title={items.node.title}
