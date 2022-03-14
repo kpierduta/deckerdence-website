@@ -42,11 +42,11 @@ export default () =>
         .child(S.documentTypeList('team')),
       S.divider(),
 
-      S.listItem()
-        .title('Main Pages')
-        .icon(FcGallery)
-        .child(S.documentTypeList('mainPage')),
-      S.divider(),
+      // S.listItem()
+      //   .title('Main Pages')
+      //   .icon(FcGallery)
+      //   .child(S.documentTypeList('mainPage')),
+      // S.divider(),
 
       // Redirects
 
@@ -75,11 +75,11 @@ export default () =>
         .child(S.documentTypeList('galleryPage')),
       S.divider(),
 
-      S.listItem()
-        .title('Hire options')
-        .icon(FaHireAHelper)
-        .child(S.documentTypeList('vehicleHirePage')),
-      S.divider(),
+      // S.listItem()
+      //   .title('Hire options')
+      //   .icon(FaHireAHelper)
+      //   .child(S.documentTypeList('vehicleHirePage')),
+      // S.divider(),
 
       // Global settings
 
