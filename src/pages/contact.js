@@ -8,7 +8,7 @@ import PageHeading from '../components/PageHeading';
 import ContactUsItem from '../components/ContactUsItem';
 import MyMapComponent from '../components/GoogleMap';
 import Contact from '../components/Contact';
-import DownloadForm from '../components/forms/DownloadForm';
+// import DownloadForm from '../components/forms/DownloadForm';
 import SanityImage from '../components/global/SanityImage';
 
 export const contactUsQuery = graphql`
@@ -85,15 +85,15 @@ const Header = styled.div`
   padding-bottom: 3rem;
 `;
 
-const ContactWrapper = styled.div`
-  background-image: url('/images/contacts/downloadBack.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  figure {
-    margin: 7px auto !important;
-    margin-bottom: 2rem;
-  }
-`;
+// const ContactWrapper = styled.div`
+//   background-image: url('/images/contacts/downloadBack.jpg');
+//   background-repeat: no-repeat;
+//   background-size: 100% 100%;
+//   figure {
+//     margin: 7px auto !important;
+//     margin-bottom: 2rem;
+//   }
+// `;
 
 const ContactUs = ({ data }) => {
   const settings = data.sanityContact;
@@ -156,7 +156,7 @@ const ContactUs = ({ data }) => {
         </p>
       </Section>
       <Contact avatar={settings.downloadBrochure.asset.url} />
-      <ContactWrapper className="section hero is-medium">
+      {/* <ContactWrapper className="section hero is-medium">
         <div className="container">
           <div className="columns is-multiline">
             {settings.file.map(item => (
@@ -172,7 +172,7 @@ const ContactUs = ({ data }) => {
             ))}
           </div>
         </div>
-      </ContactWrapper>
+      </ContactWrapper> */}
     </Layout>
   );
 };
