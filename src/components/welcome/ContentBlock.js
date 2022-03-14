@@ -16,7 +16,8 @@ const ContentBlock = props => {
       <div className="container has-text-centered">
         <BoxWrapper
           className="box is-radiusless"
-          backgroundColor={backgroundColor.value || '#94272F'}>
+          backgroundColor={backgroundColor.value || '#94272F'}
+        >
           {description && (
             <div className="has-text-white has-text-centered py-4">
               <PortableText light={backgroundColor.title === 'Red'}>
@@ -26,8 +27,9 @@ const ContentBlock = props => {
           )}
           {targetButton && (
             <Link
-              className="button is-danger mt-5 has-text-weight-bold"
-              to={targetButton || '/'}>
+              className="button is-danger mt-5 has-text-weight-bold is-uppercase"
+              to={targetButton || '/'}
+            >
               Find Out More
             </Link>
           )}

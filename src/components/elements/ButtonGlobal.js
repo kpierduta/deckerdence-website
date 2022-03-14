@@ -1,12 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-const ButtonGlobal = ({ title }) => (
-  <Link
-    className="button is-outlined is-medium has-background-danger-ter is-radiusless"
-    type="button"
-  >
-    <span className="title is-6 is-uppercase has-text-white">{title}</span>
+const Button = styled.button`
+  /* background-color: ${props => props.theme.dangerColor}; */
+  /* padding: 10px 15px; */
+  cursor: pointer;
+  color: ${props => props.theme.textBright};
+`;
+
+const ButtonGlobal = ({ title, to, className }) => (
+  <Link to={to}>
+    <Button
+      type="button"
+      className={`button is-danger is-uppercase has-text-weight-bold ${className}`}
+    >
+      {title}
+    </Button>
   </Link>
 );
 

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 
+import { ButtonGlobal } from '../elements';
+
 const Section = styled.section`
   padding: 0rem 1.5rem 1.22rem 1.5rem;
   .navbar {
@@ -56,13 +58,6 @@ const ContactWrapper = styled.div`
   color: ${props => props.theme.textColorLite};
 `;
 
-const Button = styled.button`
-  /* background-color: ${props => props.theme.dangerColor}; */
-  /* padding: 10px 15px; */
-  cursor: pointer;
-  color: ${props => props.theme.textBright};
-`;
-
 const query = graphql`
   query headerNavigation {
     sanityNavigation {
@@ -87,13 +82,7 @@ const Header = () => {
       <div>
         <ContactWrapper className="columns is-hidden-touch">
           <div className="column is-flex navbar-end">
-            <Link to={data.buttonLinkTo}>
-              <Button
-                type="button"
-                className="px-4 button is-danger is-uppercase has-text-weight-bold">
-                {data.buttonLabel}
-              </Button>
-            </Link>
+            <ButtonGlobal to={data.buttonLinkTo} title={data.buttonLabel} />
           </div>
         </ContactWrapper>
         <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -110,7 +99,8 @@ const Header = () => {
               data-target="navbarBasicExample"
               onClick={() => {
                 setIsActive(!isActive);
-              }}>
+              }}
+            >
               <span aria-hidden="true" />
               <span aria-hidden="true" />
               <span aria-hidden="true" />
@@ -124,7 +114,8 @@ const Header = () => {
                     <Link
                       to={item.linkTo}
                       className="navbar-item"
-                      key={item._key}>
+                      key={item._key}
+                    >
                       {item.label}
                     </Link>
                   );

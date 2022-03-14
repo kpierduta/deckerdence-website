@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   .content p,
   .content ul,
   .content strong {
-    font-size: ${props => props.theme.fontSize} !important;
+    font-size: ${props => props.theme.fontSizeLarge} !important;
     color: ${props => (props.light ? '#fff' : '#000')};
   }
   .content p:not(:last-child) {

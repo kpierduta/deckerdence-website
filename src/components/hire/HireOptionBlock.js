@@ -3,6 +3,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import Stages from '../Stages';
 import { PortableText } from '../elements';
+import ButtonGlobal from '../elements/ButtonGlobal';
 
 const query = graphql`
   query hireOptionQuery {
@@ -59,14 +60,9 @@ const HireOptionBlock = ({ description, linkTo }) => {
               <PortableText>{description}</PortableText>
             </div>
           )}
-          {linkTo && (
-            <Link
-              className="button is-danger mt-5 has-text-weight-bold"
-              to={linkTo}
-            >
-              Find Out More
-            </Link>
-          )}
+          <div className="pt-6">
+            {linkTo && <ButtonGlobal title="Find Out More" to={linkTo} />}
+          </div>
         </div>
       </div>
     </div>

@@ -35,6 +35,10 @@ const TableRow = styled.tr`
 `;
 
 const IconContainer = styled.div`
+  position: absolute;
+  z-index: 9999;
+  left: -15px;
+  top: 10px;
   .tooltip {
     position: relative;
     display: inline-block;
@@ -42,46 +46,40 @@ const IconContainer = styled.div`
 
   .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 300px;
     background-color: ${props => props.theme.dangerLite};
     color: ${props => props.theme.textBright};
     text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
+    padding: 10px 10px;
     position: absolute;
     z-index: 1;
-    bottom: 100%;
-    left: 0%;
-    margin-left: -5px;
+    top: 100%;
+    left: 100%;
+    margin-left: -60px;
   }
 
   .tooltip .tooltiptext::after {
     content: '';
     position: absolute;
-    top: 100%;
-    left: 30%;
+    bottom: 100%;
+    left: 15%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: ${props => props.theme.dangerLite} transparent transparent
+    border-color: transparent transparent ${props => props.theme.dangerLite}
       transparent;
   }
-
-  position: absolute;
-  z-index: 9999;
-  left: -15px;
-  top: 10px;
 
   span {
     color: ${props => props.theme.dangerLite};
   }
   .tooltiptext {
     visibility: hidden;
-    width: 200px;
+    width: 300px;
     background-color: ${props => props.theme.dangerLite};
     color: ${props => props.theme.textBright};
     text-align: center;
-    border-radius: 6px;
+    border-radius: 0px;
     padding: 5px 0;
     position: absolute;
     z-index: 1;
@@ -123,20 +121,26 @@ const InfoItem = ({ title, text1, text2, text3, hasIcon, iconInfo }) => (
           <span className="is-size-3 ">
             <i className="fas fa-info-circle" />
           </span>
-          <span className="tooltiptext is-size-7">{iconInfo}</span>
+          <span className="tooltiptext is-size-6">{iconInfo}</span>
         </div>
       </IconContainer>
     )}
   </TableRow>
 );
 
-const TableButton = () => (
+const TableButton = ({ to }) => (
   <th className="has-text-centered">
-    <ButtonGlobal title="Learn More" />
+    <ButtonGlobal title="Learn More" to={to} />
   </th>
 );
 
-const KeyInformation = ({ tableInfo = [] }) => {
+const KeyInformation = ({
+  tableInfo = [],
+  description,
+  ultimateButtonLink,
+  classicButtonLink,
+  essentialButtonLink,
+}) => {
   return (
     <Section className="section">
       <div className="container">
@@ -155,13 +159,10 @@ const KeyInformation = ({ tableInfo = [] }) => {
           </thead>
           <tfoot>
             <tr>
-              <th>
-                Bespoke elements can be added to each Deckerdence option to make
-                Deckerdence your perfect fit
-              </th>
-              <TableButton />
-              <TableButton />
-              <TableButton />
+              <th>{description}</th>
+              <TableButton to={ultimateButtonLink} />
+              <TableButton to={classicButtonLink} />
+              <TableButton to={essentialButtonLink} />
             </tr>
           </tfoot>
           <tbody>

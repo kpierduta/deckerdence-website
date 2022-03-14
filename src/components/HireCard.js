@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Section = styled.div`
   box-shadow: none;
   background-color: transparent;
-  padding-top: 6rem;
+  padding-top: 8rem;
   @media screen and (max-width: 767px) {
     padding-top: 10rem;
     padding-bottom: 4rem;
@@ -41,12 +41,12 @@ const HireCard = ({
         </h1>
       )}
       {position && (
-        <h1 className="subtitle is-6 has-text-white has-text-centered">
+        <h1 className="subtitle is-5 has-text-white has-text-centered">
           {position}
         </h1>
       )}
       {subtitle && (
-        <p className="subtitle is-5  is-size-6-mobile has-text-centered">
+        <p className="subtitle is-4 is-size-6-mobile has-text-centered">
           {subtitle}
         </p>
       )}

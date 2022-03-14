@@ -9,7 +9,7 @@ const Section = styled.div`
     padding: 6rem 1.5rem !important;
   }
   .column {
-    background-image: url('/images/hire/optionFrame.png');
+    background-image: url('/images/parties/t2x.png');
     background-repeat: no-repeat;
     background-position: contain;
     background-size: 100% 100%;
@@ -25,7 +25,7 @@ const HireHero = ({ image, title, subtitle, description }) => {
         <div className="container">
           <div className="columns is-centered">
             <div className="column is-9 has-text-centered">
-              <h1 className="title is-4 has-text-white has-text-weight-normal">
+              <h1 className="title is-2 is-size-5-touch has-text-white centered">
                 {title}
               </h1>
               <h1 className="title is-3 has-text-white has-text-weight-semibold my-6">
