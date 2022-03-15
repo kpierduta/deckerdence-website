@@ -25,10 +25,10 @@ const HireHero = ({ image, title, subtitle, description }) => {
         <div className="container">
           <div className="columns is-centered">
             <div className="column is-9 has-text-centered">
-              <h1 className="title is-2 is-size-5-touch has-text-white centered">
+              <h1 className="title is-2 is-size-5-touch has-text-white centered  my-6">
                 {title}
               </h1>
-              <h1 className="title is-3 has-text-white has-text-weight-semibold my-6">
+              <h1 className="title is-3 has-text-white has-text-weight-semibold mb-6 mt-2">
                 {subtitle}
               </h1>
 
