@@ -85,16 +85,6 @@ const Header = styled.div`
   padding-bottom: 3rem;
 `;
 
-// const ContactWrapper = styled.div`
-//   background-image: url('/images/contacts/downloadBack.jpg');
-//   background-repeat: no-repeat;
-//   background-size: 100% 100%;
-//   figure {
-//     margin: 7px auto !important;
-//     margin-bottom: 2rem;
-//   }
-// `;
-
 const ContactUs = ({ data }) => {
   const settings = data.sanityContact;
   return (
