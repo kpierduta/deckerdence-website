@@ -36,7 +36,7 @@ const Card = ({ data }) => {
           </div>
           <div className="column is-2 is-desktop" />
           <Wrapper className="column hero" isReverse={data.columnReverse}>
-            <div className="py-5 my-5 px-0">
+            <div className="py-6 my-6 px-0">
               {data.title && (
                 <h1
                   className={`title is-4 mt-3  ${
