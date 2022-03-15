@@ -19,10 +19,13 @@
     "build": "gatsby build",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.{js,jsx}\""
   },
+  "engine": {
+    "node": ">=12.13.0"
+  },
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
     "bulma": "^0.9.3",
-    "gatsby": "^3.11.1",
+    "gatsby": "^4.9.3",
     "gatsby-plugin-google-analytics": "^4.9.0",
     "gatsby-plugin-google-tagmanager": "^4.1.1",
     "gatsby-plugin-image": "^1.14.0",
