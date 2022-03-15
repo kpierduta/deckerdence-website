@@ -141,12 +141,14 @@ const ContactUs = ({ data }) => {
 
             <div className="column is-6">
               <div className="my">
-                <figure className="image">
-                  <SanityImage
-                    gatsbyImageData={settings.banner.asset.gatsbyImageData}
-                    alt="deckerdence"
-                  />
-                </figure>
+                {settings.banner && settings.banner.asset && (
+                  <figure className="image">
+                    <SanityImage
+                      gatsbyImageData={settings.banner.asset.gatsbyImageData}
+                      alt="deckerdence"
+                    />
+                  </figure>
+                )}
               </div>
             </div>
           </div>
