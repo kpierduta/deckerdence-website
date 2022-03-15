@@ -77,8 +77,7 @@ const StagesCardItem = ({
           {mostPopular && (
             <PopularIconWrapper
               className="has-text-centered"
-              marginTop="-2.5rem"
-            >
+              marginTop="-2.5rem">
               <img src="/images/star.svg" alt="most-popular" width="40px" />
               <p className="is-size-5 has-text-weight-bold">Most Popular</p>
             </PopularIconWrapper>

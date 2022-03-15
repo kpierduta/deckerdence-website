@@ -13,8 +13,7 @@ const ButtonGlobal = ({ title, to, className }) => (
   <Link to={to}>
     <Button
       type="button"
-      className={`button is-danger is-uppercase has-text-weight-bold ${className}`}
-    >
+      className={`button is-danger is-uppercase has-text-weight-bold ${className}`}>
       {title}
     </Button>
   </Link>

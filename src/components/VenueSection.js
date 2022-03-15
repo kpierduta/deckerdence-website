@@ -32,8 +32,7 @@ const VenueSection = ({ title, image, color }) => {
       className="section hero is-medium"
       frameBgImage={image.asset.url}
       flex
-      color={color}
-    >
+      color={color}>
       <div className="columns is-vcentered">
         <div className="column is-5">
           <div className="hero-body">

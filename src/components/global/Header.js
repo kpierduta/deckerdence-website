@@ -99,8 +99,7 @@ const Header = () => {
               data-target="navbarBasicExample"
               onClick={() => {
                 setIsActive(!isActive);
-              }}
-            >
+              }}>
               <span aria-hidden="true" />
               <span aria-hidden="true" />
               <span aria-hidden="true" />
@@ -114,8 +113,7 @@ const Header = () => {
                     <Link
                       to={item.linkTo}
                       className="navbar-item"
-                      key={item._key}
-                    >
+                      key={item._key}>
                       {item.label}
                     </Link>
                   );

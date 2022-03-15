@@ -102,8 +102,7 @@ const ExtraPage = ({ data }) => {
           <Section
             className="section hero is-medium is-block"
             bgImage={items.backgroundImage.asset.url}
-            flex={items.itemRight}
-          >
+            flex={items.itemRight}>
             <div className="container">
               <div className="columns is-vcentered">
                 <div className="column is-8">
